@@ -1,0 +1,129 @@
+.debate-new,
+.debate-edit {
+  .debate-form {
+    .actions {
+      .checkbox-label {
+        @extend .custom-font-pracharath;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+
+        @include breakpoint(medium) {
+          width: 70%;
+        }
+
+        @include breakpoint(large) {
+          width: 55%;
+        }
+      }
+    }
+  }
+}
+
+.debate-show {
+  padding-bottom: 26px;
+}
+
+.debates-list {
+  .advanced-search-form {
+    .date-filters {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+
+      @include breakpoint(medium) {
+        flex-direction: row;
+      }
+
+      .filter {
+        width: 100%;
+
+        @include breakpoint(medium) {
+          width: 33.33%;
+        }
+      }
+
+      .custom-date-filters {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint(medium) {
+          flex-direction: row;
+          width: 66.66%;
+          align-items: flex-end;
+        }
+
+        .filter {
+          width: 100%;
+
+          @include breakpoint(medium) {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .debate {
+    .panel {
+      .row {
+        flex-direction: column;
+
+        @include breakpoint(medium) {
+          display: flex;
+          align-items: stretch;
+          flex-direction: row;
+        }
+
+        .column {
+          &:first-child:not(:last-child) {
+          }
+
+          &:last-child:not(:first-child) {
+            display: inline-grid;
+
+            .votes {
+              display: flex;
+              flex-wrap: wrap;
+              flex-direction: column;
+              justify-content: center;
+              padding: 0 rem-calc(10);
+
+              @include breakpoint(medium down) {
+                padding: rem-calc(12) rem-calc(14);
+              }
+
+              @include breakpoint(small down) {
+                flex-direction: row;
+                justify-content: space-between;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.trending-tag {
+  .button {
+    &.expanded {
+      @include breakpoint(small down) {
+        display: none;
+      }
+    }
+  }
+
+  .tag-cloud {
+    a {
+      width: 100%;
+      text-align: center;
+      border-radius: 22px;
+      padding: 12px;
+      border: $input-border;
+    }
+  }
+}

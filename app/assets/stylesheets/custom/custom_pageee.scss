@@ -1,0 +1,400 @@
+//custom color
+$black_auth: #000;
+
+.page-login {
+  .wrapper_devise {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include breakpoint(large) {
+      grid-template-columns: 33% 67%;
+    }
+
+    .wrapper_devise_right {
+      .right_side {
+        flex: 1 1 0%;
+        background-color: #fcfcfc;
+        display: flex;
+        justify-content: center;
+
+        min-height: 100vh;
+        .column {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .auth-form {
+            .callout-slide {
+              position: fixed;
+              z-index: 99;
+            }
+            .title-login-page {
+              text-align: center;
+            }
+            .edit_password {
+              .actions {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                .success {
+                  background: $brand;
+                  color: #ffffff;
+                }
+              }
+            }
+            .button-facebook {
+              text-align: left;
+            }
+            .button-google {
+              text-align: left;
+            }
+            .button-twitter {
+              text-align: left;
+            }
+            .auth-divider-login {
+              text-align: center;
+              margin-top: 10px;
+              margin-bottom: 10px;
+              span {
+                font-size: 22px;
+                @extend .custom-font-anakotmai;
+              }
+            }
+            .column {
+              label {
+                color: $black_auth;
+                font-size: 14px;
+                @extend .custom-font-anakotmai;
+                font-weight: normal;
+              }
+            }
+            .line_remember_login {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              justify-content: space-between;
+              align-items: center;
+              align-content: stretch;
+              .checkbox-label {
+                span {
+                  font-size: 18px;
+                  @extend .custom-font-pracharath;
+                  color: $black_auth;
+                }
+              }
+              .float-right {
+                margin-bottom: 13px;
+                font-size: 18px;
+                @extend .custom-font-pracharath;
+              }
+            }
+            .register-page {
+              h2 {
+                text-align: center;
+              }
+              .register_organisation {
+                background-color: rgb(255, 255, 255);
+                text-align: center;
+                @extend .custom-font-anakotmai;
+                border-radius: 28px;
+                margin: 18px;
+                margin-bottom: 15px;
+                margin-top: 20px;
+                a {
+                  font-size: 22px;
+                }
+              }
+              .register_bottom {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                margin: 0 auto;
+                margin-top: 20px;
+                margin-bottom: 22px;
+                label {
+                  font-size: 16px;
+                  @extend .custom-font-pracharath;
+                }
+              }
+            }
+            .register-organization-page {
+              .title_organizations {
+                @include breakpoint(medium) {
+                  text-align: center;
+                  margin-bottom: 30px;
+                }
+              }
+              .register_bottom {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                margin: 0 auto;
+                margin-top: 20px;
+                margin-bottom: 22px;
+                label {
+                  font-size: 16px;
+                  @extend .custom-font-pracharath;
+                }
+              }
+            }
+            .forget_password_page {
+              .title_all {
+                margin-left: 16px;
+              }
+              .new_user {
+                .title_all {
+                  margin-left: 16px;
+                }
+                .row {
+                  .column {
+                    label {
+                      font-size: 14px;
+                      @extend .custom-font-anakotmai;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .account {
+            font-size: 18px;
+            @extend .custom-font-pracharath;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .wrapper_devise_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    padding: 24px 16px;
+    position: static;
+    align-items: flex-start;
+    background-color: #ffffff;
+    @include breakpoint(large) {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    @include breakpoint(medium down) {
+      min-height: 70vh;
+    }
+
+    .back {
+      clear: both;
+      color: $black_auth;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      text-decoration: none;
+      font-size: 22px;
+      @extend .custom-font-anakotmai;
+      font-weight: normal;
+      .icon-angle-left {
+        padding-right: $line-height;
+        font-size: 2rem;
+      }
+    }
+    .back:not([class^="icon-"]) {
+      text-decoration: none;
+    }
+    img {
+      width: 60%;
+      margin: 60px auto;
+    }
+    .list_rule {
+      margin: 0 auto;
+    }
+  }
+  .title_login_header {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: $brand;
+    @extend .custom-font-anakotmai;
+  }
+  .title_login {
+    font-size: 18px;
+    font-weight: lighter;
+    color: $black_auth;
+    @extend .custom-font-pracharath;
+  }
+}
+
+.forget_password {
+  margin-top: 10px;
+  margin-bottom: 18px;
+  font-size: 17.5px;
+}
+.forget_password_login {
+  margin-top: 35px;
+  margin-bottom: 18px;
+  font-size: 17.5px;
+}
+.confirmations {
+  display: block;
+  text-align: center;
+  color: black;
+}
+.edit_user {
+  text-align: left;
+}
+
+.height_password {
+  background-color: red;
+  height: 100vh;
+}
+
+.login_button {
+  font: normal normal normal 18px/30px;
+  @extend .custom-font-pracharath;
+  letter-spacing: 0px;
+  color: $brand;
+  opacity: 1;
+}
+.categories a,
+.geozone a,
+.sidebar-links a {
+  @extend %tag;
+}
+
+.categories a,
+.geozone a {
+  background: $highlight;
+  color: $link;
+
+  &:hover,
+  &.is-active {
+    @extend %brand-background;
+  }
+}
+
+.sidebar-title {
+  border-top: 2px solid $brand;
+  display: inline-block;
+  font-size: rem-calc(16);
+  font-weight: bold;
+  margin: -1px 0 $line-height / 2;
+  padding-top: $line-height / 4;
+  text-transform: uppercase;
+}
+
+// 05. Auth pages
+// --------------
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  background: rgb(244, 244, 244);
+}
+.footer_forget_password {
+  text-align: center;
+}
+.title_forget_password {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.auth-divider {
+  border-top: 1px solid $border;
+  margin-top: $line-height * 1.5;
+  text-align: center;
+
+  span {
+    background: $body-background;
+    box-decoration-break: clone;
+    font-weight: bold;
+    padding: 0 $line-height / 2;
+    position: relative;
+    top: -$line-height / 2;
+  }
+}
+
+@include breakpoint(medium down) {
+  .page-login {
+    .wrapper_devise {
+      display: block;
+      .wrapper_devise_right {
+        background-color: #fcfcfc;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: stretch;
+        min-height: auto;
+        max-height: auto;
+        overflow-y: auto;
+
+        .register-organization-page {
+          .row {
+            .column {
+              .register_bottom {
+                .checkbox-label {
+                  position: relative;
+                  display: flex;
+                  align-items: flex-start;
+                  margin: 0 0 0 -8px;
+                  .check_register_organization {
+                    position: absolute;
+                    margin: 0;
+                    top: 0.5vh;
+                  }
+                  .checkbox {
+                    margin-left: 24px;
+
+                    @include breakpoint(medium down) {
+                      display: flex;
+                      flex-direction: column;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .register-page {
+          .register_bottom {
+            .checkbox-label {
+              position: relative;
+              display: flex;
+              align-items: flex-start;
+              margin: 0 0 0 -8px;
+
+              .check_register_bottom {
+                position: absolute;
+                margin: 0;
+                top: 0.5vh;
+              }
+              .checkbox {
+                margin-left: 24px;
+
+                @include breakpoint(medium down) {
+                  display: flex;
+                  flex-direction: column;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

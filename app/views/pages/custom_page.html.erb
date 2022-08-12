@@ -1,0 +1,72 @@
+<!-- <%= content_for :body_class, "custom-page" %>
+<% provide :title do %><%= @custom_page.title %><% end %>
+
+<div class="row margin-top">
+
+  <div class="small-12 medium-9 column">
+    <h1><%= @custom_page.title %></h1>
+    <% if @custom_page.subtitle.present? %>
+      <h2><%= @custom_page.subtitle %></h2>
+    <% end %>
+
+    <%= auto_link_already_sanitized_html AdminWYSIWYGSanitizer.new.sanitize(@custom_page.content) %>
+  </div>
+  <% if @custom_page.print_content_flag %>
+    <div class="small-12 medium-3 column">
+      <%= render "/shared/print" %>
+    </div>
+  <% end %>
+
+  <% if @cards.any? %>
+    <div class="small-12 column">
+      <%= render "shared/cards", cards: @cards %>
+    </div>
+  <% end %>
+
+</div> -->
+<style>
+  .wrapper-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 62vh;
+  }
+
+  .wrapper-spinner .spinner.loading {
+    position: relative;
+    height: 100px;
+    width: 100px;
+  }
+
+  .wrapper-spinner .spinner.loading:before {
+    content: "";
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-width: 12px;
+    border-style: solid;
+    border-color: #2180c0 #ccc #ccc;
+    border-radius: 100%;
+    animation: rotation .7s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    } to {
+      transform: rotate(359deg);
+    }
+  }
+</style>
+
+<div class="wrapper-spinner">
+  <div class="spinner loading"></div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    if (window.location.pathname) {
+      window.location.href = "../debates";
+    }
+  });
+</script>

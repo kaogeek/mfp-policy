@@ -1,0 +1,19 @@
+<footer>
+  <div class="footer-sections row">
+    <div class="column">
+      <p><%= link_to t("layouts.footer.participation_text"), "https://www.moveforwardparty.org/privacy-policy/" %></p>
+    </div>
+    <div class="column">
+      <%= render Layout::SocialComponent.new %>
+    </div>
+  </div>
+  <div class="subfooter row">
+    <div class="column">
+      <%= t("layouts.footer.subtitle") %>
+    </div>
+    <div class="column">
+      <%= t("layouts.footer.copyright", year: Time.current.year) %>
+    </div>
+  </div>
+</footer>
+

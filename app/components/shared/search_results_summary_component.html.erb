@@ -1,0 +1,16 @@
+<div class="search-results-summary">
+  <% if search_terms || advanced_search_terms %>
+    <h2><%= t("shared.search_results") %></h2>
+    <p>
+      <%= page_entries_info results %>
+      <% if advanced_search_terms.blank? %>
+        <%= summary %>
+      <% end %>
+    </p>
+    <div class="wrapper-reset-value">
+      <a class="reset-vaule-search" href="../debates">ล้างค่าการค้นหา</a>
+    </div>
+  <% else %>
+    <%= content %>
+  <% end %>
+</div>

@@ -1,0 +1,966 @@
+th:
+  account:
+    show:
+      change_credentials_link: เปลี่ยนรายละเอียดการเข้าสู่ระบบของฉัน
+      erase_account_link: ลบบัญชี
+      finish_verification: ยืนยันเสร็จสิ้น
+      notifications: การแจ้งเตือน
+      personal: ข้อมูลส่วนตัว
+      public_interests_my_title_list: แท็กเนื้อหาที่คุณติดตามอยุ่ 
+      public_interests_user_title_list: แท็กเนื้อหาผู้ใช้งานที่ติดตาม
+      save_changes_submit: บันทึกการแก้ไข
+      recommendations: การแนะนำ
+      recommend_debates_to_me: แนะนำข้อเสนอที่น่าสนใจ
+      recommend_proposals_to_me: แนะนำข้อเสนอให้ฉัน
+      title: จัดการบัญชี
+      user_permission_info: บัญชีของคุณสามารถ...
+      user_permission_title: การมีส่วนร่วม
+      user_permission_verify: ขอบคุณที่ช่วยยืนยันบัญชีผู้ใช้งานนะครับ
+      verified_account: ยืนยันบัญชีแล้ว
+      verify_my_account: ยืนยันบัญชีของฉัน
+      username: ชื่อผู้ใช้
+      activities_public: เก็บรักษารายการที่แสดงความคิดเห็น
+      follow_public: เก็บรักษารายการที่ติดตาม
+      notifications: การแจ้งเตือน
+      when_someone_comments_on_my_contents: แจ้งเตือนทางอีเมลเมื่อมีคนมาคอมเมนท์ในข้อเสนอ
+      when_someone_replies_to_my_comments: แจ้งเตือนทางอีเมลเมื่อมีคนมาตอบคอมเมนท์
+      receive_relevant_information_by_email: รับข้อมูลอื่นๆ ทางอีเมล
+      receive_emails_about_direct_messages: แจ้งเตือนทางอีเมลเมื่อมีคนส่งข้อความ
+  application:
+    close: ปิด
+    menu: เมนู
+  comments:
+    actions:
+      confirm_delete: "คุณแน่ใจไหม? การดำเนินการนี้จะลบความคิดเห็นนี้ คุณไม่สามารถยกเลิกการดำเนินการนี้ได้"
+      delete: "ลบความคิดเห็น"
+    comments_closed: คอมเม้นท์ถูกปิด
+    verified_only: ที่จะเข้าร่วม %{verify_account}
+    comment:
+      admin: ผู้ดูแลระบบ
+      author: ผู้เขียน
+      deleted: ความคิดเห็นนี้ถูกลบไปแล้ว
+      moderator: พิธีกร
+      responses:
+        one: 1 ความคิดเห็น
+        other: "%{count} ความคิดเห็น"
+        zero: ไม่มีความคิดเห็น
+      responses_show:
+        one: "1 ความคิดเห็น (แสดงทั้งหมด)"
+        other: "%{count} ความคิดเห็น (แสดงทั้งหมด)"
+        zero: ไม่มีความคิดเห็น
+      responses_collapse:
+        one: "1 ความคิดเห็น (แสดงน้อยลง)"
+        other: "%{count} ความคิดเห็น (แสดงน้อยลง)"
+        zero: ไม่มีความคิดเห็น
+      user_deleted: ผู้ใช้ถูกลบ
+      votes:
+        one: 1 คะแนน
+        other: "%{count} คะแนน"
+        zero: 0 คะแนน
+    form:
+      comment_as_admin: แสดงความคิดเห็นในฐานะผู้ดูแลระบบ
+      comment_as_moderator: แสดงความคิดเห็นในฐานะผู้ดูแล
+      leave_comment: แสดงความคิดเห็นของคุณ
+    orders:
+      most_voted: โหวตมากที่สุด
+      newest: ใหม่ล่าสุด
+      oldest: เก่าสุด
+      most_commented: แสดงความคิดเห็นมากที่สุด
+    show:
+      return_to_commentable: "กลับไป"
+  comments_helper:
+    comment_button: เผยแพร่ความคิดเห็น
+    comment_link: ความคิดเห็น
+    comments_title: ความคิดเห็น
+    reply_button: เผยแพร่คำตอบ
+    reply_link: ตอบกลับ
+  debates:
+    create:
+      form:
+        submit_button: ส่งข้อเสนอ
+    debate:
+      comments:
+        one: 1 ความคิดเห็น
+        other: "%{count} ความคิดเห็น"
+        zero: ไม่มีความคิดเห็น
+      votes:
+        one: 1 คะแนน
+        other: "%{count} คะแนน"
+        zero: 0 คะแนน
+    edit:
+      editing: แก้ไขข้อเสนอ
+      form:
+        submit_button: บันทึกข้อเสนอ
+      show_link: ดูข้อเสนอ
+    form:
+      tags_instructions: แท็กการอภิปราย
+      tags_placeholder: "ป้อนแท็กที่คุณต้องการใช้ โดยคั่นด้วยเครื่องหมายจุลภาค (',')"
+    index:
+      featured_debates: ปักหมุดกระทู้
+      orders:
+        confidence_score: คะแนนสูงสุด
+        created_at: ล่าสุด
+        hot_score: เป็นที่สนใจ
+        most_commented: แสดงความคิดเห็นมากที่สุด
+        relevance: ผลลัพธ์การค้นหา
+        recommendations: แนะนำ
+      recommendations:
+        without_results: ไม่มีอภิปรายที่คุณสนใจ 
+        without_interests: ไม่พบกระทู้ที่เกี่ยวข้อง
+        disable: "คำแนะนำสำหรับการอภิปรายจะหยุดแสดงหากคุณปฏิเสธ ซึ่งคุณสามารถเปิดดูได้อีกครั้งที่หน้าเพจ" #"Recommendations for debates will stop showing if you dismiss them. You can enable them again in 'My account' page"
+        actions:
+          success: "คำแนะนำสำหรับการอภิปรายถูกปิดใช้งานสำหรับบัญชีนี้"
+          error: "เกิดข้อผิดพลาด. โปรดไปที่หน้าเพจเพื่อปิดคำแนะนำสำหรับการอภิปราย"
+      search_form:
+        button: ค้นหา
+        placeholder: ค้นหา...
+        title: ค้นหา
+      start_debate: เขียนข้อเสนอ
+      title: ข้อเสนอ
+      section_header:
+        icon_alt: ไอคอนข้อเสนอ 
+        title: ข้อเสนอถึงพรรค
+        help: ช่วยข้อเสนอ
+      section_footer:
+        title: ช่วยข้อเสนอ
+        description: เปิดการข้อเสนอเพื่อแชร์ความคิดเห็นอื่นๆกับหัวข้อที่คุณกังวล #Start a debate to share opinions with others about the topics you are concerned about.
+        help_text_1: "The space for citizen debates is aimed at anyone who can expose issues of their concern and those who want to share opinions with other people."
+        help_text_2: 'To open a debate you need to sign up on %{org}. Users can also comment on open debates and rate them with the "I agree" or "I disagree" buttons found in each of them.'
+    new:
+      form:
+        submit_button: ส่งข้อเสนอ
+      more_info: การอภิปรายทำงานอย่างไร
+      recommendation_four: Enjoy this space and the voices that fill it. It belongs to you too.
+      recommendation_one: Do not use capital letters for the debate title or for whole sentences. On the internet, this is considered shouting. And nobody likes being shouted at.
+      recommendation_three: Ruthless criticism is very welcome. This is a space for reflection. But we recommend that you stick to elegance and intelligence. The world is a better place with these virtues in it.
+      recommendation_two: การอภิปรายหรือความคิดเห็นใด ๆ ที่กระทำที่ผิดต่อกฎหมายจะถูกลบ, รวมทั้งผู้ที่ตั้งใจจะก่อความวุ่นวายพื้นที่อภิปราย หรืออย่างอื่นที่ไม่ถูกต้อง #Anything else is allowed.
+      recommendations_title: ข้อแนะนำในการสร้างอภิปราย
+      start_new: ส่งข้อเสนอ
+    show:
+      author_deleted: ผู้ใช้ถูกลบ
+      comments:
+        one: 1 ความคิดเห็น
+        other: "%{count} ความคิดเห็น"
+        zero: ไม่มีความคิดเห็น
+      comments_title: ความคิดเห็น
+      edit_debate_link: แก้ไข
+      flag: ความคิดเห็นนี้มีผู้ใช้ท่านอื่นแจ้งว่ามีเนื้อหาไม่เหมาะสม แอดมินกำลังตรวจสอบ
+      share: แชร์
+      author: ผู้เขียน
+    update:
+      form:
+        submit_button: บันทึกข้อเสนอ
+    show_dialog: ไม่ต้องแสดงอีก
+  errors:
+    messages:
+      allowed_file_content_types: "content type must be one of %{types}"
+      user_not_found: User not found
+      invalid_date_range: "Invalid date range"
+  form:
+    accept_terms: ฉันเข้าใจและยอมรับ %{policy} และ %{conditions} ก่อนการโพสต์
+    accept_terms_title: ฉันยอมรับนโยบายความเป็นส่วนตัวและข้อกำหนดและเงื่อนไขการใช้งาน
+    conditions: เงื่อนไขการใช้
+    debate: ข้อเสนอ
+    direct_message: ข้อความส่วนตัว
+    error: ข้อผิดพลาด
+    errors: ข้อผิดพลาด
+    not_saved: "ข้อมูล %{resource} ไม่ถูกต้อง <br>โปรดตรวจสอบช่องที่ทำเครื่องหมายไว้เพื่อทราบวิธีแก้ไข:"
+    policy: ข้อตกลงความเป็นส่วนตัว
+    banner: แบนเนอร์
+    proposal: ข้อเสนอ
+    proposal_notification: การแจ้งเตือน
+    budget/investment: การลงทุน
+    budget/group: กลุ่มงบประมาณ
+    budget/heading: หัวข้องบประมาณ
+    geozone: จีโอโซน
+    legislation/draft_version: ร่าง
+    legislation/process: กระบวนการ
+    legislation/question: คำถาม
+    poll/shift: เลื่อน
+    poll/question/answer: ตอบ
+    user: บัญชี
+    verification/sms: โทรศัพท์
+    signature_sheet: กระดาษรายเซ็น
+    document: เอกสาร
+    topic: หัวข้อ
+    image: ภาพ
+    local_census_record: ข้อมูลเอกสาร
+    local_census_records/import: อัพโหลดข้อมูลเอกสาร
+    site_customization/content_block: เนื้อหาถูกแบน
+    site_customization/page: เพจ
+    sdg/local_target: เป้าหมายท้องถิ่น
+  geozones:
+    none: ทั้งเมือง
+  layouts:
+    application:
+      chrome: Google Chrome
+      firefox: Firefox
+      ie: เราตรวจพบว่าคุณกำลังเรียกดูด้วย Internet Explorer เพื่อประสบการณ์ที่ดียิ่งขึ้น เราขอแนะนำให้ใช้ %{firefox} หรือ %{chrome}.
+      ie_title: เว็บไซต์นี้ไม่ได้รับการปรับให้เหมาะสมสำหรับเบราว์เซอร์ของคุณ
+    dashboard:
+      proposal_header:
+        published: ที่ตีพิมพ์
+        draft: ร่าง
+        retired: ถอนออก
+      proposal_totals:
+        active_resources: ทรัพยากรที่ใช้งานอยู่
+        community: ผู้เข้าร่วมในชุมชนของคุณ
+        show_proposal: แสดงข้อเสนอ
+        preview_proposal: ดูตัวอย่างข้อเสนอ
+        current_goal: เป้าหมายปัจจุบัน
+        supports:
+          zero: ไม่รองรับ
+          one: 1 สนับสนุน
+          other: "สนับสนุน"
+    footer:
+      accessibility: Accessibility
+      conditions: Terms and conditions of use
+      consul: CONSUL application
+      consul_url: https://github.com/consul/consul
+      copyright: © %{year} พรรคก้าวไกล. ALL RIGHTS RESERVED.
+      description: This portal uses the %{consul} which is %{open_source}.
+      open_source: open-source software
+      open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
+      participation_text: นโยบายคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy)
+      participation_title: Participation
+      privacy: Privacy Policy
+      subtitle: สื่ออิเล็กทรอนิกส์ของพรรคก้าวไกลนี้ ได้รับการอุดหนุนงบประมาณจากกองทุนเพื่อการพัฒนาพรรคการเมือง ปี พ.ศ. 2565 ผลิตโดย บริษัท สเปกเตอร์ ซี จำกัด จำนวนที่ผลิต 1 ชิ้น งบประมาณ 150,000 บาท ผลิตวันที่ 1 สิงหาคม 2565
+    header:
+      home: หน้าหลัก
+      administration_menu: เมนู
+      administration: Administration
+      collaborative_legislation: กฎหมายความร่วมมือ
+      debates: หน้าหลัก
+      locale: "ภาษา:"
+      management: Management
+      moderation: Moderation
+      valuation: การประเมินค่า
+      officing: หน่วยเลือกตั้ง
+      help: ช่วยเหลือ
+      my_account_link: บัญชีของฉัน
+      my_activity_link: เนื้อหาของฉัน
+      open_gov: รัฐเปิดเผย
+      proposals: ข้อเสนอ
+      poll_questions: โหวต
+      budgets: งบประมาณแบบมีส่วนร่วม
+      notification_item:
+        new_notifications:
+          one: คุณมีการแจ้งเตือนใหม่
+          other: คุณมี %{count} การแจ้งเตือนใหม่
+          zero: "ไม่มีการแจ้งเตือนใหม่"
+        notifications: การแจ้งเตือน
+      sdg: "SDG"
+  notifications:
+    index:
+      empty_notifications: คุณไม่มีการแจ้งเตือนใหม่
+      mark_all_as_read: ทำเครื่องหมายทั้งหมดว่าอ่านแล้ว
+      read: อ่าน
+      title: การแจ้งเตือน
+      unread: ยังไม่ได้อ่าน
+    notification:
+      action:
+        comments_on:
+          one: มีคนแสดงความคิดเห็น
+          other: มี %{count} ความคิดเห็นใหม่เกี่ยวกับ
+        proposal_notification:
+          one: มีการแจ้งเตือนใหม่หนึ่งรายการเกี่ยวกับ
+          other: มี %{count} การแจ้งเตือนใหม่บน
+        replies_to:
+          one: มีคนตอบกลับความคิดเห็นของคุณ
+          other: มี %{count} ตอบกลับความคิดเห็นของคุณใหม่บน
+      mark_as_read: ทำเครื่องหมายว่าอ่านแล้ว
+      mark_as_unread: ทำเครื่องหมายว่ายังไม่ได้อ่าน
+      notifiable_hidden: ทรัพยากรนี้ไม่สามารถใช้ได้อีกต่อไป
+  map:
+    title: "อำเภอ"
+    proposal_for_district: "เริ่มข้อเสนอสำหรับเขตของคุณ"
+    start_proposal: สร้างข้อเสนอ
+  omniauth:
+    facebook:
+      sign_in: เข้าสู่ระบบด้วย Facebook
+      sign_up: สมัครใช้งานด้วย Facebook
+      name: Facebook
+    finish_signup:
+      title: "รายละเอียดเพิ่มเติม"
+      username_warning: "ชื่อผู้ใช้ของคุณถูกใช้งานแล้ว กรุณาเลือกชื่อผู้ใช้อื่น"
+    google_oauth2:
+      sign_in: ลงชื่อเข้าใช้ด้วย Google
+      sign_up: ลงชื่อสมัครใช้ด้วย Google
+      name: Google
+    wordpress_oauth2:
+      sign_in: เข้าสู่ระบบด้วย Wordpress
+      sign_up: ลงทะเบียนด้วย Wordpress
+      name: Wordpress
+    twitter:
+      sign_in: เข้าสู่ระบบด้วย Twitter
+      sign_up: ลงทะเบียนด้วย Twitter
+      name: Twitter
+    info:
+      sign_in: "ลงชื่อเข้าใช้ด้วย:"
+      sign_up: "ลงทะเบียนด้วย:"
+    or_fill: "หรือกรอกอีเมลและรหัสผ่านที่สมัครไว้:"
+  proposals:
+    create:
+      form:
+        submit_button: สร้างข้อเสนอ
+    created:
+      title: ยินดีด้วย! คุณได้ดำเนินการขั้นตอนแรก
+      motivation: "สิ่งสำคัญคือต้องเตรียมแคมเปญเปิดตัวเพื่อให้ข้อเสนอของคุณประสบความสำเร็จ"
+      motivation_2: "<strong>หากคุณต้องการคำแนะนำในการจัดเตรียมสิ่งพิมพ์ ให้ทิ้งข้อเสนอของคุณไว้เป็นฉบับร่าง แล้วเราจะแนะนำคุณ</strong>"
+      publish: ไม่ ฉันต้องการเผยแพร่ข้อเสนอ
+      dashboard: ใช่ ฉันต้องการความช่วยเหลือและฉันจะเผยแพร่ในภายหลัง
+      preview_title: นี่คือลักษณะของข้อเสนอของคุณเมื่อคุณเผยแพร่
+    share:
+      improve_it: ปรับปรุงแคมเปญของคุณและรับการสนับสนุนเพิ่มเติม
+      dashboard: ดูข้อมูลเพิ่มเติม
+      message: "ฉันสนับสนุนข้อเสนอ %{title} ใน %{handle}. หากคุณสนใจสนับสนุนด้วยเช่นกัน!"
+    edit:
+      editing: แก้ไขข้อเสนอ
+      form:
+        submit_button: บันทึกข้อเสนอ
+      show_link: ดูข้อเสนอ
+    retire_form:
+      title: ถอนข้อเสนอ
+      warning: "หากคุณถอนข้อเสนอ ข้อเสนอจะยังคงยอมรับการสนับสนุน, แต่จะถูกลบออกจากรายการหลักและข้อความจะปรากฏแก่ผู้ใช้ทั้งหมดที่ระบุว่าผู้เขียนเห็นว่าข้อเสนอไม่ควรได้รับการสนับสนุนอีกต่อไป"
+      retired_reason_blank: ตัวเลือก
+      retired_explanation_placeholder: อธิบายสั้นๆ ว่าทำไมคุณถึงคิดว่าข้อเสนอนี้ไม่ควรได้รับการสนับสนุนมากกว่านี้
+      submit_button: ถอนข้อเสนอ
+    retire_options:
+      duplicated: ซ้ำ
+      started: กำลังดำเนินการ
+      unfeasible: เป็นไปไม่ได้
+      done: เสร็จสิ้น
+      other: อื่นๆ
+    form:
+      proposal_responsible_name_note: "(เป็นรายบุคคลหรือเป็นตัวแทนของกลุ่ม จะไม่ปรากฏต่อสาธารณะ)"
+      proposal_summary_note: "(สูงสุด 200 ตัวอักษร)"
+      proposal_video_url_note: คุณสามารถเพิ่มลิงก์ไปยัง YouTube หรือ Vimeo
+      tag_category_label: "หมวดหมู่"
+      tags_instructions: "แท็กข้อเสนอนี้ คุณสามารถเลือกจากหมวดหมู่ที่เสนอหรือเพิ่มของคุณเอง"
+      tags_label: แท็ก
+      tags_placeholder: "ป้อนแท็กที่คุณต้องการใช้ โดยคั่นด้วยเครื่องหมายจุลภาค (',')"
+      map_location: "ที่ตั้งแผนที่"
+      map_location_instructions: "นำทางแผนที่ไปยังตำแหน่งและวางเครื่องหมาย"
+      map_remove_marker: "ลบเครื่องหมายแผนที่"
+    index:
+      featured_proposals: จุดเด่น
+      orders:
+        confidence_score: ความนิยมสูงสุด
+        created_at: ใหม่ล่าสุด
+        hot_score: คะแนนที่มากที่สุด
+        most_commented: แสดงความคิดเห็นมากที่สุด
+        relevance: ความเกี่ยวข้อง
+        archival_date: เก็บถาวร
+        recommendations: คำแนะนำ
+      recommendations:
+        without_results: ไม่มีข้อเสนอที่เกี่ยวข้องกับความสนใจของคุณ
+        without_interests: ไม่พบกระทู้ที่เกี่ยวข้อง
+        disable: "คำแนะนำสำหรับข้อเสนอจะหยุดแสดงหากคุณยกเลิก คุณสามารถเปิดใช้งานได้อีกครั้งใน หน้าบัญชีของเพจ"
+        actions:
+          success: "คำแนะนำสำหรับข้อเสนอถูกปิดใช้งานสำหรับบัญชีนี้แล้ว"
+          error: "เกิดข้อผิดพลาด. โปรดไปที่หน้า บัญชีของเพจ เพื่อปิดใช้งานคำแนะนำสำหรับข้อเสนอด้วยตนเอง"
+      retired_proposals: ถอนข้อเสนอ
+      retired_proposals_link: "ข้อเสนอถอนโดยผู้เขียน"
+      selected_proposals: ข้อเสนอที่เลือก
+      selected_proposals_link: ดูข้อเสนอที่เลือก
+      archived_proposals: ข้อเสนอที่เก็บถาวร
+      proposals_lists: รายการข้อเสนอ
+      retired_links:
+        all: ทั้งหมด
+        duplicated: ซ้ำ
+        started: กำลังดำเนินการ
+        unfeasible: เป็นไปไม่ได้
+        done: เสร็จสิ้น
+        other: อื่นๆ
+      search_form:
+        button: ค้นหา
+        placeholder: ค้นหาข้อเสนอ...
+        title: ค้นหา
+      search_results:
+        one: "คำว่า <strong>'%{search_term}'</strong>"
+        other: "คำว่า <strong>'%{search_term}'</strong>"
+      select_order_long: "คุณกำลังดูข้อเสนอตาม:"
+      start_proposal: สร้างข้อเสนอ
+      title: ข้อเสนอ
+      top_link_proposals: ข้อเสนอที่ได้รับการสนับสนุนมากที่สุดตามหมวดหมู่
+      section_header:
+        icon_alt: ไอคอนข้อเสนอ
+        title: ข้อเสนอ
+        help: ความช่วยเหลือเกี่ยวกับข้อเสนอ
+      section_footer:
+        title: ความช่วยเหลือเกี่ยวกับข้อเสนอ
+        description: ข้อเสนอของพลเมืองเป็นโอกาสให้เพื่อนบ้านและกลุ่มต่างๆ ในการตัดสินใจโดยตรงว่าพวกเขาต้องการให้เมืองของตนเป็นอย่างไร หลังจากได้รับการสนับสนุนที่เพียงพอและเสนอให้มีการลงคะแนนเสียงของประชาชน
+    new:
+      form:
+        submit_button: สร้างข้อเสนอ
+      more_info: ข้อเสนอพลเมืองทำงานอย่างไร
+      recommendation_one: อย่าใช้ตัวพิมพ์ใหญ่สำหรับชื่อข้อเสนอหรือทั้งประโยค บนอินเทอร์เน็ตนี่ถือเป็นการทอกซิน และไม่ชอบให้ใครมาด่า
+      recommendation_three: เพลิดเพลินไปกับพื้นที่นี้และเสียงที่เติมเต็ม มันเป็นของคุณเช่นกัน
+      recommendation_two: ข้อเสนอหรือความคิดเห็นใดๆ ที่เสนอแนะการกระทำที่ผิดกฎหมายจะถูกลบออก เช่นเดียวกับที่ตั้งใจจะก่อวินาศกรรมพื้นที่อภิปราย อนุญาตให้สิ่งอื่นใด
+      recommendations_title: คำแนะนำในการสร้างข้อเสนอ
+      start_new: สร้างข้อเสนอใหม่
+    notice:
+      retired: ถอนข้อเสนอแล้ว
+      published: เผยแพร่ข้อเสนอแล้ว
+    proposal:
+      created: "คุณได้สร้างข้อเสนอแล้ว!"
+      share:
+        guide: "ตอนนี้คุณสามารถแชร์เพื่อให้ผู้คนเริ่มสนับสนุนได้"
+        edit: "ก่อนที่จะแชร์ คุณสามารถเปลี่ยนข้อความได้ตามต้องการ"
+        view_proposal: ไม่ใช่ตอนนี้ ไปที่ข้อเสนอของฉัน
+      already_supported: คุณได้สนับสนุนข้อเสนอนี้แล้ว แบ่งปัน!
+      comments:
+        one: 1 ความคิดเห็น
+        other: "%{count} ความคิดเห็น"
+        zero: ไม่มีความคิดเห็น
+      support: สนับสนุน
+      support_label: "สนับสนุน %{proposal}"
+      support_title: สนับสนุนข้อเสนอนี้
+      supports:
+        one: 1 สนับสนุน
+        other: "%{count} สนับสนุน"
+        zero: ไม่รองรับ
+      votes:
+        one: 1 โหวต
+        other: "%{count} โหวต"
+        zero: ไม่มีการโหวต
+      supports_necessary: "%{number} supports needed"
+      reason_for_supports_necessary: ""
+      total_percent: 100%
+      archived: "This proposal has been archived and can't collect supports."
+      successful: "This proposal has reached the required supports."
+      selected: "Selected proposal"
+    show:
+      author_deleted: User deleted
+      code: "Proposal code:"
+      comments:
+        one: 1 ความคิดเห็น
+        other: "%{count} ความคิดเห็น"
+        zero: ไม่มีความคิดเห็น
+      comments_tab: Comments
+      dashboard_proposal_link: Dashboard
+      flag: This proposal has been flagged as inappropriate by several users.
+      notifications_tab: Notifications
+      milestones_tab: Milestones
+      retired_warning: "The author considers this proposal should not receive more supports."
+      retired_warning_link_to_explanation: Read the explanation before voting for it.
+      retired: Proposal withdrawn by the author
+      share: Share
+      no_notifications: "This proposal has no notifications."
+      embed_video_title: "Video on %{proposal}"
+      title_video_url: "External video"
+      author: ผู้เขียน
+      draft: Proposal in draft. Cannot yet get supports, nor does it appear in the list of proposals.
+    update:
+      form:
+        submit_button: บันทึกข้อเสนอ
+  dashboard:
+    menu:
+      my_proposal: Edit my proposal
+      progress: Progress
+      resources: Resources
+      community: Community
+      polls: Polls
+      mailing: E-mail
+      poster: Poster
+      recommended_actions: Recommended actions
+      messages: Message to users
+      related_content: เนื้อหาที่เกี่ยวข้อง
+    form:
+      request: Request
+    create_request:
+      success: The request has been successfully sent. We will contact you as soon as possible to inform you about it.
+      archived: This proposal is archived and can not request resources.
+    progress:
+      title: Graphic
+      group_by_month: Monthly
+      group_by_week: Weekly
+      group_by_date: Daily
+      progress: Accumulated progress
+      supports: Supports
+      success: Ideal progress
+      new_action: New
+    index:
+      title: Edition
+      edit_proposal_link: Edit proposal
+      publish: Publish proposal
+      retire: Withdraw proposal
+    new_request:
+      links: Links
+    resources:
+      available_resources: Available resources
+    resource:
+      required_days: "%{days} days required"
+      required_supports: "%{supports} supports required"
+      and: and
+      view_resource: See resource
+      resource_requested: Resource already requested
+      request_resource: Request resource
+      resource_locked: Resource locked
+    recommended_actions:
+      title: Recommended actions
+      goto_proposed_actions: Go to recommended actions
+      see_proposed_actions: Check out recommended actions
+      hide_proposed_actions: Hide recommended actions
+      pending_title: Pending
+      show_description: Show description
+      without_pending_actions: No recommended actions pending
+      done_title: Done
+      without_done_actions: No recommended actions done
+    next_goal:
+      title: Goal
+      see_complete_course: Check out the complete course
+      hide_course: Hide course
+    goal:
+      target_supports:
+        one: Get %{count} support for your proposal
+        other: Get %{count} supports for your proposal
+      days:
+        one: "%{count} day"
+        other: "%{count} days"
+      locked_resource: Resource locked
+      ideal_time: Ideal time
+    community:
+      access_community: Access the community
+      latest_activity: "Latest activity of the community: %{at}"
+      participants: Participants
+      debates: Debates
+      comments: Comments
+      latest_comments: Latest messages
+    messages:
+      send_notification: Send notification to proposal followers
+      previous_notifications: See previous notifications
+    polls:
+      index:
+        title: Polls
+        create: Create poll
+        count:
+          one: You have created %{count} poll.
+          other: You have created %{count} polls.
+        links: Links
+        additiontal_information: Additional information
+      new:
+        title: New poll
+        submit: Create poll
+      edit:
+        submit: Update poll
+      poll:
+        responses:
+          one: "%{count} response"
+          other: "%{count} responses"
+        view_results: View results
+        edit_poll: Edit survey
+        show_results_help: If you check this box the results will be public and all users will be able to see them
+        delete: Delete survey
+        alert_notice: This action will remove the survey and all its associated questions.
+        success_notice: Survey deleted successfully
+        unable_notice: You cannot destroy a survey that has responses
+      form:
+        name: Survey title
+        add_question: Add question
+      question_fields:
+        remove_question: Remove question
+        add_answer: Add answer
+      question_answer_fields:
+        remove_answer: Remove answer
+    poster:
+      index:
+        title: Poster preview
+        poster_title: "Do not keep looking,"
+        poster_subtitle: "back me up! ;)"
+        intro_text: "<strong>I am participating in %{org}</strong> with my own citizen proposal and only with your support can we make the city we all want"
+        proposal_code: "Code of the proposal: %{code}"
+        support: Support my proposal
+        footer: "<strong>Visit %{link} and support this proposal.</strong> The more, the better. Let's do our bit. Thank you!"
+      new:
+        title: Poster of your proposal
+      options:
+        preview: Preview
+        download: Download
+    mailing:
+      index:
+        title: E-mail preview
+      new:
+        title: E-mail model to share
+      mailing_options:
+        send: Send to %{address}
+        preview: Preview
+      create:
+        sent: The email has been sent
+    mailer:
+      forward:
+        subtitle: "If you support me, <br>we will achieve it."
+        support_button: Support this proposal
+        share_in: Share in
+        hi: "Hello!"
+        introduction: I am writing to let you know that I am participating in %{org}, the platform we can decide which city we want. And for that, I created my own citizen proposal and now, I'm going to need your support! But do not worry because It is very simple.
+        support: "You just have to click on the button that you will see below 'Support this proposal' and you can inform yourself about before promoting it. Only the proposals that achieve the maximum support will be carried out by the City Council, and I thought that you, I'm sure you help me achieve it!"
+        share: "And if you also do me the great favor of sharing my proposal with your friends, family and contacts, it would be perfect!"
+  polls:
+    all: "ทั้งหมด"
+    no_dates: "ไม่ได้กำหนดวันที่"
+    dates: "ตั้งแต่ %{open_at} ถึง %{closed_at}"
+    final_date: "สรุปผล"
+    index:
+      filters:
+        current: "เปิด"
+        expired: "สิ้นสุด"
+      title: "โพล"
+      participate_button: "เข้าร่วมโพลนี้"
+      participate_button_expired: "สิ้นสุดโพล"
+      no_geozone_restricted: "ทุกเมือง"
+      geozone_restricted: "อำเภอ"
+      geozone_info: "สามารถเข้าร่วมการสำรวจสำมะโนประชากรของ: "
+      already_answer: "คุณได้เข้าร่วมการโหวตโพลนี้แล้ว"
+      not_logged_in: "คุณต้องเข้าสู่ระบบ หรือ ลงทะเบียนเพื่อเข้าร่วม"
+      unverified: "คุณต้องยืนยันบัญชีของคุณเพื่อเข้าร่วม"
+      cant_answer: "โพลนี้ไม่สามารถใช้ได้ในเขตของคุณ"
+      section_header:
+        icon_alt: ไอคอนโหวต
+        title: การโหวต
+        help: ตัวช่วยการโหวต
+      section_footer:
+        title: ตัวช่วยการโหวต
+        description: โพลสำหรับประชาชนเป็นกลไกเพื่อการมีส่วนร่วมโดยที่ประชาชนที่มีสิทธิออกเสียงสามารถตัดสินใจได้โดยตรง
+      no_polls: "ไม่มีการลงคะแนนเปิดสำหรับโหวต."
+    show:
+      already_voted_in_booth: "คุณได้เข้าร่วมบูธจริงแล้ว คุณไม่สามารถเข้าร่วมได้อีก"
+      already_voted_in_web: "คุณได้เข้าร่วมการสำรวจความคิดเห็นนี้แล้ว หากคุณลงคะแนนอีกครั้งจะถูกแก้ไข"
+      back: กลับสูการโหวต
+      cant_answer_not_logged_in: "คุณสามารถ %{signin} หรือ %{signup} เพื่อเข้าร่วม"
+      comments_tab: ความคิดเห็น
+      cant_answer_verify: "คุณสามารถ %{verify_link} เพื่อตอบคำถาม"
+      verify_link: "ตรวจสอบบัญชีของคุณ"
+      cant_answer_expired: "โพลนี้สิ้นสุดแล้ว."
+      cant_answer_wrong_geozone: "เขตของคุณไม่มีสิทธิ์ในการตอบคำถามนี้."
+      more_info_title: "ข้อมูลเพิ่มเติม"
+      documents: เอกสาร
+      zoom_plus: ขยายภาพ
+      read_more: "อ่านเพิ่มเติมเกี่ยวกับ %{answer}"
+      read_less: "อ่านน้อยลงเกี่ยวกับ %{answer}"
+      videos: "วิดีโอภายนอก"
+      info_menu: "ข้อมูล"
+      stats_menu: "สถิติการเข้าร่วม"
+      results_menu: "ผลโพล"
+      stats:
+        total_votes: "จำนวนโหวตที่ได้รับทั้งหมด"
+        votes: "โหวต"
+        web: "เว็บ"
+        mail: "เมล"
+        booth: "บูธ"
+        total: "ทั้งหมด"
+        valid: "ถูกต้อง"
+        white: "ปล่อยว่าง"
+        null_votes: "ไม่ถูกต้อง"
+      results:
+        title: "คำถาม"
+        most_voted_answer: "คำตอบที่ได้รับการโหวตมากที่สุด: "
+    poll_header:
+      back_to_proposal: กลับไปที่ข้อเสนอ
+  poll_questions:
+    show:
+      vote_answer: "โหวต %{answer}"
+      voted: "คุณได้โหวต %{answer}"
+  proposal_notifications:
+    new:
+      title: "ส่งการแจ้งเตือน"
+      submit_button: "ส่งการแจ้งเตือน"
+      info_about_receivers: "การแจ้งเตือนนี้จะถูกส่งไปยัง <strong>%{count} ประชาชน</strong> และจะแสดงใน %{proposal_page}.<br> ระบบจะไม่ส่งการแจ้งเตือนทันที ผู้ใช้จะได้รับอีเมลพร้อมการแจ้งเตือนข้อเสนอทั้งหมดเป็นระยะ."
+      proposal_page: "หน้าข้อเสนอ"
+    show:
+      back: "กลับไปที่เนื้อหาของฉัน"
+  shared:
+    edit: "แก้ไข"
+    filter: "ตัวกรอง"
+    save: "บันทึก"
+    delete: "ลบ"
+    "yes": "ใช่"
+    "no": "ไม่ใช่"
+    search_results: "ผลการค้นหา"
+    advanced_search:
+      date: "ตามวันที่"
+      date_placeholder: "วว/ดด/ปปปป"
+      date_range_blank: "เลือกวันที่"
+      date_1: "24 ชั่วโมงที่ผ่านมา"
+      date_2: "อาทิตย์ที่แล้ว"
+      date_3: "เดือนที่แล้ว"
+      date_4: "ปีที่แล้ว"
+      date_5: "กำหนดเอง"
+      from: "เริ่ม"
+      general: "ค้นหา"
+      goal: "By SDG"
+      goal_blank: "เลือกเป้าหมาย"
+      search: "ค้นหา"
+      target: "ตามเป้าหมาย"
+      target_blank: "เลือกเป้าหมาย"
+      title: "ค้นหาทั้งหมด"
+      to: "ถึง"
+    author_info:
+      author_deleted: ผู้ใช้ถูกลบแล้ว
+      email_deleted: อีเมลถูกลบแล้ว
+    back: ย้อนกลับ
+    check: เลือก
+    check_all: ทั้งหมด
+    check_none: ไม่มี
+    collective: กลุ่ม
+    flag: แจ้งว่าไม่เหมาะสม
+    follow: "ติดตาม"
+    following: "กำลังติดตาม"
+    follow_entity: "ติดตาม %{entity}"
+    followable:
+      budget_investment:
+        create:
+          notice: "คุณกำลังติดตามโครงการลงทุนนี้! <br> เราจะแจ้งให้คุณทราบถึงการเปลี่ยนแปลงที่เกิดขึ้นเพื่อให้คุณได้รับข้อมูลล่าสุด"
+        destroy:
+          notice: "คุณได้หยุดติดตามโครงการลงทุนนี้แล้ว! <br> คุณจะไม่ได้รับการแจ้งเตือนเกี่ยวกับโครงการนี้อีกต่อไป"
+      proposal:
+        create:
+          notice: "ตอนนี้คุณกำลังปฏิบัติตามข้อเสนอนี้! <br> เราจะแจ้งให้คุณทราบถึงการเปลี่ยนแปลงที่เกิดขึ้นเพื่อให้คุณได้รับข้อมูลล่าสุด"
+        destroy:
+          notice: "คุณได้หยุดทำตามข้อเสนอนี้แล้ว! <br> คุณจะไม่ได้รับการแจ้งเตือนเกี่ยวกับข้อเสนอนี้อีกต่อไป"
+    print:
+      print_button: พิมพ์ข้อมูลนี้
+    search: ค้นหา
+    show: แสดง
+    suggest:
+      debate:
+        found:
+          one: "มีการโต้เถียงกับคำว่า '%{query}', คุณสามารถเข้าร่วมได้แทนที่จะเปิดใหม่"
+          other: "มีข้อเสนอเรื่อง '%{query}', คุณสามารถเข้าร่วมได้แทนที่จะสร้างใหม่"
+        message: "You are seeing %{limit} of %{count} debates containing the term '%{query}'"
+        see_all: "แสดงทั้งหมด"
+      budget_investment:
+        found:
+          one: "There is an investment with the term '%{query}', you can participate in it instead of opening a new one."
+          other: "There are investments with the term '%{query}', you can participate in them instead of opening a new one."
+        message: "You are seeing %{limit} of %{count} investments containing the term '%{query}'"
+        see_all: "แสดงทั้งหมด"
+      proposal:
+        found:
+          one: "There is a proposal with the term '%{query}', you can contribute to it instead of creating a new"
+          other: "There are proposals with the term '%{query}', you can contribute to them instead of creating a new"
+        message: "You are seeing %{limit} of %{count} proposals containing the term '%{query}'"
+        see_all: "แสดงทั้งหมด"
+    tags_cloud:
+      tags: หมวดหมู่
+      districts: "Districts"
+      districts_list: "Districts list"
+      categories: "Categories"
+    target_blank: " (link opens in new window)"
+    you_are_in: "คุณกำลังอยู่ใน "
+    unflag: ยกเลิกแจ้ง
+    unfollow_entity: "ยกเลิกติดตาม %{entity}"
+    outline:
+      searcher: Searcher
+    go_to_page: "ไปที่ "
+    share: Share
+    orbit:
+      previous_slide: Previous Slide
+      next_slide: Next Slide
+    documentation: Additional documentation
+    view_mode:
+      title: View mode
+      cards: Cards
+      list: List
+    recommended_index:
+      title: Recommendations
+      see_more: See more recommendations
+      hide: Hide recommendations
+    translations:
+      select_language_prompt: Choose language
+      remove_language: Remove language
+      add_language: Add language
+      languages_in_use:
+        zero: "0 languages in use"
+        one: "1 language in use"
+        other: "%{count} languages in use"
+    optional: "Optional fields"
+    required: "เขียนพรรคก้าวไกลที่คุณอยากเห็น!"
+  social:
+    facebook: "%{org} Facebook"
+    twitter: "%{org} Twitter"
+    youtube: "%{org} YouTube"
+    telegram: "%{org} Telegram"
+    instagram: "%{org} Instagram"
+  stats:
+    index:
+      visits: Visits
+      debates: Debates
+      proposals: Proposals
+      comments: Comments
+      proposal_votes: Votes on proposals
+      debate_votes: Votes on debates
+      comment_votes: Votes on comments
+      votes: Total votes
+      verified_users: Verified users
+      unverified_users: Unverified users
+  unauthorized:
+    default: You do not have permission to access this page.
+    manage:
+      all: "You do not have permission to carry out the action '%{action}' on %{subject}."
+  users:
+    login_to_comment: "คุณต้อง %{signin} หรือ %{signup} เพื่อแสดงความคิดเห็น"
+    login_to_continue: "คุณต้อง %{signin} หรือ %{signup} เพื่อจะดำเนินการต่อ"
+    signin: "เข้าสู่ระบบ"
+    signup: "สร้างบัญชี"
+    verify_account: "ตรวจสอบบัญชีของคุณ"
+    direct_messages:
+      new:
+        direct_messages_bloqued: "ผู้ใช้รายนี้ตัดสินใจที่จะไม่รับข้อความส่วนตัว"
+        submit_button: ส่งข้อความ
+        title: ส่งข้อความส่วนตัวถึง %{receiver}
+        verified_only: ส่งข้อความส่วนตัวถึง %{verify_account}
+      show:
+        receiver: ส่งข้อความส่วนตัวถึง %{receiver}
+    show:
+      deleted: Deleted
+      deleted_debate: This debate has been deleted
+      deleted_proposal: This proposal has been deleted
+      deleted_budget_investment: This investment project has been deleted
+      proposals: Proposals
+      proposals_status: Status
+      debates: ข้อเสนอ
+      budget_investments: Budget investments
+      comments: ความคิดเห็น
+      actions: Actions
+      filters:
+        comments:
+          one: 1 ความคิดเห็น
+          other: "%{count} ความคิดเห็น"
+        debates:
+          one: 1 ข้อเสนอ
+          other: "%{count} ข้อเสนอ"
+        proposals:
+          one: 1 Proposal
+          other: "%{count} Proposals"
+        budget_investments:
+          one: 1 Investment
+          other: "%{count} Investments"
+        follows:
+          one: 1 Following
+          other: "%{count} Following"
+      no_activity: ไม่พบข้อเสนอ และ ความคิดเห็นของคุณ
+      no_private_messages: "This user doesn't accept private messages."
+      private_activity: This user decided to keep the activity list private.
+      send_private_message: "ส่งข้อความส่วนตัว"
+      delete_alert: "Are you sure you want to delete your investment project? This action can't be undone"
+    proposals:
+      retired: "Withdrawn proposal"
+      draft: Draft
+      published: Published
+      see: "See proposal"
+      actions: Actions
+      retired_help_text: Dashboard not available for withdrawn proposals
+  votes:
+    agree: I agree
+    agree_label: "I agree with %{title}"
+    anonymous: Too many anonymous votes to admit vote %{verify_account}.
+    disagree: I disagree
+    disagree_label: "I don't agree with %{title}"
+    organizations: Organizations are not permitted to vote
+    supports: การสนับสนุน
+    verified_only: Only verified users can vote on proposals; %{verify_account}.
+    budget_investments:
+      not_verified: Only verified users can vote on investment projects; %{verify_account}.
+      unfeasible: Unfeasible investment projects can not be supported
+      not_voting_allowed: Voting phase is closed
+      different_heading_assigned:
+        one: "You can only support investment projects in %{count} district. You have already supported investments in %{supported_headings}."
+        other: "You can only support investment projects in %{count} districts. You have already supported investments in %{supported_headings}."
+  welcome:
+    feed:
+      most_active:
+        debates: "ข้อเสนอที่มีความเคลื่อนไหวมากที่สุด"
+        proposals: "ข้อเสนอที่มีความเคลื่อนไหวมากที่สุด"
+        processes: "เปิดกระบวนการ"
+      see_all:
+        debates: ดูข้อเสนอทั้งหมด
+        proposals: ดูข้อเสนอทั้งหมด
+        processes: ดูกระบวนการทั้งหมด
+      no_items:
+        debates: ไม่มีข้อเสนอในขณะนี้
+        proposals: ไม่มีข้อเสนอในขณะนี้
+        processes: ไม่มีกระบวนการในขณะนี้
+      process_label: กระบวนการ
+      see_process: ดูกระบวนการ
+    cards:
+      title: จุดเด่น
+    recommended:
+      title: คำแนะนำที่คุณอาจสนใจ
+      help: "คำแนะนำเหล่านี้สร้างโดยแท็กของข้อเสนอที่คุณกำลังติดตาม"
+      debates:
+        title: ข้อเสนอที่แนะนำ
+        btn_text_link: ข้อเสนอที่แนะนำทั้งหมด
+      proposals:
+        title: ข้อเสนอที่แนะนำ
+        btn_text_link: ข้อเสนอที่แนะนำทั้งหมด
+      budget_investments:
+        title: แนะนำการลงทุน
+      slide: "ดู %{title}"
+    welcome:
+      go_to_index: ไปที่หน้าแรก
+      start_using_consul: ไปที่หน้าแรก
+      title: การมีส่วนร่วม
+      user_permission_info: ด้วยบัญชีของคุณ คุณสามารถ...
+      user_permission_verify: "ในการดำเนินการต่อไปนี้ให้ตรวจสอบบัญชีของคุณ"
+      user_permission_verify_my_account: ยืนยันบัญชีของฉัน
+  invisible_captcha:
+    sentence_for_humans: "หากคุณเป็นมนุษย์อย่าสนใจฟิลด์นี้"
+    timestamp_error_message: "ขออภัย มันเร็วเกินไป! กรุณาส่งใหม่"
+  related_content:
+    title: "เนื้อหาที่เกี่ยวข้อง"
+    add: "เพิ่มเนื้อหาที่เกี่ยวข้อง"
+    label: "ลิงค์เนื้อหาที่เกี่ยวข้อง"
+    placeholder: "%{url}"
+    help: "คุณสามารถเพิ่มลิงค์ของ %{models} ภายใน %{org}."
+    submit: "เพิ่ม"
+    error: "ลิงก์ไม่ถูกต้อง อย่าลืมเริ่มต้นด้วย %{url}."
+    error_duplicate: "เนื้อหาที่เกี่ยวข้องที่คุณกำลังเพิ่มมีอยู่แล้ว"
+    error_itself: "ลิงก์ไม่ถูกต้อง คุณไม่สามารถเชื่อมโยงเนื้อหากับตัวเองได้"
+    success: "คุณได้เพิ่มเนื้อหาที่เกี่ยวข้องใหม่"
+    is_related: "มันเป็นเนื้อหาที่เกี่ยวข้อง?"
+    score_positive: "ใช่"
+    score_negative: "ไม่ใช่"
+    content_title:
+      proposal: "ข้อเสนอ"
+      debate: "ข้อเสนอ"
+      budget_investment: "งบประมาณการลงทุน"
+  admin/widget:
+    header:
+      title: ผู้ดูแลระบบ
+  annotator:
+    help:
+      alt: เลือกข้อความที่คุณต้องการแสดงความคิดเห็นแล้วกดที่ปุ่มดินสอ
+      text: หากต้องการแสดงความคิดเห็นในเอกสารนี้ คุณต้องทำการ %{sign_in} หรือ %{sign_up} จากนั้นเลือกข้อความที่คุณต้องการแสดงความคิดเห็นแล้วกดที่ปุ่มดินสอ
+      title: ฉันจะแสดงความคิดเห็นในเอกสารนี้ได้อย่างไร
+  links:
+    form:
+      delete_button: ลบ
+      cancel_button: ยกเลิก
+    nested_links:
+      title: ลิงค์
+      note: เพิ่มลิงค์ที่สนใจ
+      add_new_link: เพิ่มลิงค์ใหม่
+  communities:
+    show:
+      surveys: แบบสำรวจ
+      complete_survey: กรอกแบบสำรวจ
+    subnav:
+      surveys: แบบสำรวจ
+    poll:
+      take_part: มีส่วนร่วมจาก %{from} ถึง %{to}
+  remote_translations:
+    text: ไม่มีเนื้อหาของหน้านี้ในภาษาของคุณ
+    all_remote_translations_enqueued_text: ในช่วงเวลาสั้นๆ การรีเฟรชหน้า จะให้คุณสามารถดูเนื้อหาทั้งหมดในภาษาของคุณ
+    create:
+      enqueue_remote_translation: มีการร้องขอการแปลอย่างถูกต้อง
+    button: แปลหน้า
+  tags:
+    list:
+      filter:
+        more:
+          one: "เพิ่มแท็กอื่น"
+          other: "%{count} แท็ก"
+  machine_learning:
+    comments_summary: "สรุปความคิดเห็น"
+    info_text: "เนื่อหาที่สร้างขึ้นโดยปัญญาประดิษฐ์หรืิอเครื่องจักร"

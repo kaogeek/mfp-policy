@@ -1,0 +1,153 @@
+th:
+  mailers:
+    title: "ก้าวไกล Next"
+    no_reply: "อีเมลฉบับนี้ส่งจากระบบอัตโนมัติ กรุณาอย่าตอบกลับ"
+    already_confirmed:
+      info: "บัญชีของคุณได้รับการยืนยันแล้ว ขอบคุณที่มาร่วมออกแบบพรรคก้าวไกลให้เป็นพรรคที่ประชาชนร่วมออกแบบ"
+      new_password: "หากคุณลืมรหัสผ่าน คุณสามารถรีเซ็ตรหัสผ่านได้ที่:"
+      subject: บัญชีของคุณได้รับการยืนยันแล้ว
+    comment:
+      hi: สวัสดี
+      new_comment_by: มีความคิดเห็นใหม่จาก <strong>%{commenter}</strong>
+      subject: มีคนแสดงความคิดเห็นเกี่ยวกับ %{commentable}
+      title: ความคิดเห็นใหม่
+    config:
+      notifications_link: การแจ้งเตือน
+      unsubscribe_text: 'หากต้องการยกเลิกการสมัครรับอีเมลนี้ โปรดไปที่ %{notifications} และ เลือกปิด "การแจ้งเตือน".'
+    email_verification:
+      click_here_to_verify: LINK
+      instructions_2: อีเมลนี้จะตรวจสอบบัญชีของคุณด้วย <b>%{document_type} %{document_number}</b>. หากสิ่งนี้ไม่ใช่คำขอของคุณ โปรดอย่าคลิกลิงก์ก่อนหน้าและไม่ต้องสนใจอีเมลนี้
+      instructions: เพื่อให้การยืนยันบัญชีผู้ใช้ของคุณเสร็จสมบูรณ์ กรุณาคลิก %{verification_link}.
+      subject: ยืนยันอีเมลของคุณ
+      thanks: ขอบคุณครับ
+      title: "ยืนยันอีเมลของคุณ"
+      text: "ยืนยันบัญชีของคุณโดยใช้ลิงก์ต่อไปนี้"
+    reply:
+      hi: สวัสดี
+      new_reply_by: มีความคิดเห็นใหม่จาก <strong>%{commenter}</strong> ไปยังความคิดเห็นของคุณเกี่ยวกับ
+      subject: มีคนตอบกลับความคิดเห็นของคุณ
+      title: มีการตอบกลับความคิดเห็นของคุณ
+    proposal_notification_digest:
+      info: "แจ้งเตือนการเผยแพร่เนื้อหาโดยผู้เขียนข้อเสนอที่คุณสนับสนุนใน %{org_name}."
+      title: "การแจ้งเตือนข้อเสนอใน %{org_name}"
+      share: แบ่งปัน
+      comment: เสนอความคิดเห็น
+      unsubscribe_text: "หากคุณไม่ต้องการรับการแจ้งเตือนใด ๆ, โปรดไปที่ %{notifications} และ เลือกปิด 'แจ้งเตือนทางอีเมล'."
+      unfollow: "เข้าสู่ข้อเสนอนี้และเลิกติดตามเพื่อหยุดรับการแจ้งเตือน"
+    direct_message_for_receiver:
+      subject: "คุณได้รับข้อความส่วนตัวใหม่"
+      reply: ตอบกลับ %{sender}
+      unsubscribe_text: "หากคุณไม่ต้องการรับข้อความส่วนตัว, ไปที่ %{notifications} และ เลือกปิด 'แจ้งเตือนทางอีเมลเมื่อมีคนส่งข้อความ'."
+    direct_message_for_sender:
+      subject: "คุณได้ส่งข้อความส่วนตัว"
+      title: "คุณได้ส่งข้อความส่วนตัว"
+      text: "คุณได้ส่งข้อความส่วนตัวถึง <strong>%{receiver}</strong> โดยมีข้อความ:"
+    user_invite:
+      ignore: "หากคุณไม่ได้ร้องขอคำเชิญนี้ ไม่ต้องกังวล คุณสามารถเพิกเฉยต่ออีเมลนี้ได้"
+      text: "ขอบคุณที่สมัครเข้าร่วม %{org}! คุณสามารถเริ่มเข้าร่วมได้ในไม่กี่วินาที เพียงกรอกแบบฟอร์มด้านล่าง:"
+      thanks: "ขอบคุณครับ."
+      title: "ยินดีต้อนรับสู่ %{org}"
+      button: ลงทะเบียน
+      subject: "ขอเชิญเข้าร่วม %{org_name}"
+    budget_investment_created:
+      subject: "ขอบคุณที่สร้างโครงการลงทุน!"
+      title: "ขอบคุณที่สร้างโครงการลงทุน!"
+      intro: "สวัสดี <strong>%{author}</strong>,"
+      text: "ขอบคุณที่สร้างโครงการลงทุน <strong>%{investment}</strong> สำหรับงบประมาณ <strong>%{budget}</strong>."
+      follow: "เราจะแจ้งให้คุณทราบเกี่ยวกับความคืบหน้าของกระบวนการ ซึ่งคุณสามารถติดตามได้ที่ <strong>%{link}</strong>."
+      follow_link: "งบประมาณแบบมีส่วนร่วม"
+      sincerely: "ขอแสดงความนับถือ,"
+      share: "แบ่งปันโครงการของคุณ"
+    budget_investment_unfeasible:
+      title: "โครงการลงทุนของคุณถูกตัดสินว่าไม่สามารถทำได้"
+      hi: "เรียนผู้ใช้งาน,"
+      new: "ขอเรียนเชิญคุณร่วมการออกความเห็นสำหรับ <strong>การลงทุนใหม่</strong> กรุณาคลิกลิงค์: %{url}."
+      new_href: "โครงการลงทุนใหม่"
+      sincerely: "ขอแสดงความนับถือ"
+      sorry: "ขออภัยในความไม่สะดวกและเราขอขอบคุณอีกครั้งสำหรับการเข้าร่วมอันมีค่าของคุณ."
+      subject: "โครงการลงทุนของคุณ '%{code}' ถูกตัดสินว่าว่าไม่สามารถทำได้"
+    budget_investment_selected:
+      subject: "โครงการลงทุนของคุณ '%{code}' ได้รับการคัดเลือก"
+      title: "โครงการลงทุนของคุณ ได้รับการคัดเลือก"
+      hi: "เรียนผู้ใช้งาน,"
+      share: "เริ่มโหวต, แชร์โครงการของคุณ เพื่อให้ฝันของคุณเป็นตริง."
+      share_button: "แบ่งปันโครงการลงทุนของคุณ"
+      thanks: "ขอขอบคุณสำหรับการเข้าร่วม"
+      sincerely: "ขอแสดงความนับถือ"
+    budget_investment_unselected:
+      subject: "โครงการลงทุนของคุณ '%{code}' ไม่ได้รับเลือก"
+      title: "โครงการลงทุนของคุณ ไม่ได้รับเลือก"
+      hi: "เรียนผู้ใช้งาน,"
+      thanks: "ขอขอบคุณสำหรับการเข้าร่วม"
+      sincerely: "ขอแสดงความนับถือ"
+    evaluation_comment:
+      subject: "ความคิดเห็นต่อการประเมิน"
+      title: ความคิดเห็นสำหรับ %{investment}
+      hi: สวัสดี
+      new_comment_by: มีความคิดเห็นจาก <strong>%{commenter}</strong> ต่อโครงการลงทุน %{investment}
+      commenter_info: "%{commenter}, %{time}:"
+    machine_learning_error:
+      link: "Visit Machine Learning panel"
+      subject: "Machine Learning - An error has occurred running the script"
+      text: "An error has occurred running the Machine Learning script."
+      title: "Machine Learning script"
+    machine_learning_success:
+      link: "Visit Machine Learning panel"
+      subject: "Machine Learning - Content has been generated successfully"
+      text: "Content has been generated successfully."
+      title: "Machine Learning script"
+    new_actions_notification_rake_created:
+      subject: "More news about your citizen proposal"
+      hi: "Hello %{name},"
+      new_resource: "NEW UNLOCKED RESOURCE"
+      introduction: "As you know, on the %{created_at_day} day of the %{created_at_month} you created the proposal in draft mode %{title}."
+      text_1: "Whenever you want you can publish on this link: %{link_to_published}. If you're still not sure..."
+      text_2: "Seize this moment! Learn, add other people with the same interests and prepare the diffusion that you will need when you publish your proposal definitively."
+      text_3: "And to accompany you in this challenge, here are the news..."
+      text_4: "Take a look at this NEW recommended ACTION:"
+      text_5: "The next action we recommend is:"
+      footer_text: "As always, enter the Proposals Panel and we will tell you in detail how to use these resources and how to get the most out of it."
+      dashboard_button: "Go ahead, discover them!"
+    new_actions_notification_rake_published:
+      subject: "More news about your citizen proposal"
+      hi: "Hello %{name},"
+      new_resource: "NEW UNLOCKED RESOURCE"
+      introduction: "As you know, on the %{published_at_day} day of the %{published_at_month} you published the proposal %{title}."
+      text_1: "Well, you've got %{votes_count} support so far Congratulations!"
+      text_2: "And so, you have a new resource available to help you keep moving forward."
+      text_3: "You are missing %{days_count} days before your proposal gets the %{max_votes_count} supports and goes to referendum. Cheer up and keep spreading. Are you short of ideas?"
+      text_4: "NEW RECOMMENDED DIFFUSION ACTION"
+      text_5: "There's more yet, see the following action:"
+      footer_text: "As always, enter the Proposals Panel and we will tell you in detail how to use these resources and how to get the most out of it."
+      dashboard_button: "Go ahead, discover them!"
+    new_actions_notification_on_create:
+      subject: "Your draft citizen proposal is created"
+      hi: "สวัสดี %{name}!"
+      introduction: "Your %{title} proposal has been successfully created."
+      text_1: "Take advantage that your proposal is not public yet and get ready to contact a lot of people."
+      text_2: "When you are ready publish your citizen proposal from this <a href='%{link}'>link</a>."
+      text_3: "We know that creating a proposal with a hook and getting the necessary support can seem complicated. But don't worry because we are going to help you!"
+      text_4: "You have a tool that will be your new best ally: The Citizen Proposals panel."
+      list_1: "Enter every day in the panel of your proposal to use the tips and resources that we will share with you."
+      list_2: "These tips, actions and resources will give you ideas and also practical solutions to get more support and a wider community. Dont forget them!"
+      list_3: "As you gain more support, you will unlock new and better resources. At the moment, you have an e-mail template to send massively to all your contacts, a poster to print, among other features and rewards that you will discover. Dont stop adding support and we will not stop rewarding and helping you!"
+      list_4: "You have %{max_month} months since you publish the proposal to get %{max_votes} support and your proposal can become a reality. But the first days are the most important. It is a challenge. Get ready!"
+      text_5: "And for you to start with all the motivation,"
+      text_6: "here you have several resources and a whole list of tips that will come to you every day to prepare the broadcast!"
+      dashboard_button: "Go ahead, discover them!"
+    new_actions_notification_on_published:
+      subject: "Your citizen proposal is already published. Don't stop spreading!"
+      hi: "Congratulations %{name}! Your proposal %{title} has been created successfully."
+      text_1: "And now, go for your first 100 supports!"
+      text_2: "Why 100?"
+      text_3: "Our experience tells us that the first day is fundamental. Because in addition to having the energy to launch something new, being a newly published proposal, you will have the important visibility of being among the new proposals highlighted."
+      text_4: "Get 100 supports on the first day, and you will have a first community to back you up."
+      text_5: "That is why we challenge you to get it, but not without a lot of help!"
+      text_6: "Remember that in your Proposal Panel you have new resources available and recommendations for dissemination actions."
+      list_1: "Come in every day to see your progress and use the tips and resources we will share with you. They are ideas and also practical solutions to get the support you need."
+      list_2: "As you get more support, you will unlock new and better resources. Do not stop adding support and we will not stop rewarding and helping you!"
+      text_7: "And for you to start at full speed..."
+      text_8: "Here is a great resource at your disposal!"
+      text_9: "You will also find this new recommended dissemination action..."
+      text_10: "You sure have more resources to use!"
+      dashboard_button: "Go ahead, discover them!"
