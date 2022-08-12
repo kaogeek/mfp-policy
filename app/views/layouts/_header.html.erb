@@ -1,0 +1,83 @@
+<header>
+  <% if display_remote_translation_info?(@remote_translations, I18n.locale) %>
+    <%= render "shared/remote_translations_button", remote_translations: @remote_translations %>
+  <% end %>
+
+  <% if false %>
+  <!--
+  ****************************
+  HIDE FOR PROJECT `MFP-NEXT`
+  ---------------------------
+  Only TH locale is provided
+  ****************************
+
+  <div class="top-links">
+    <%= render "shared/locale_switcher" %>
+    <div class="hide-for-small-only">
+      <%= render "shared/top_links" %>
+    </div>
+  </div>
+  -->
+  <% end %>
+
+  <div class="top-bar">
+    <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+      <button type="button" class="menu-button" data-toggle>
+        <span class="menu-icon"></span>
+        <%= t("application.menu") %>
+      </button>
+    </span>
+
+    <h1 class="top-bar-title">
+      <!-- <%= link_to root_path, accesskey: "0" do %>
+        <%= image_tag(image_path_for("logo_header.png"), alt: setting["org_name"]) %>
+      <% end %> -->
+      <%= link_to '/debates', accesskey: "0" do %>
+        <%= image_tag(image_path_for("logo_header.png"), alt: setting["org_name"]) %>
+      <% end %>
+    </h1>
+
+    <div id="responsive-menu">
+      <div class="top-bar-right custom-font-anakotmai">
+        <ul class="menu" data-responsive-menu="medium-dropdown">
+          <%= render "shared/admin_login_items" %>
+          <!-- <%= render "layouts/notification_item" %> -->
+          <%= render "devise/menu/login_items" %>
+        </ul>
+
+        <div class="show-for-small-only">
+          <div class="subnavigation subnavigation-with-top-links">
+            <%= render "shared/subnavigation" %>
+            <%= render "shared/top_links" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="navigation_bar" class="subnavigation">
+    <div class="hide-for-small-only">
+      <%= render "shared/subnavigation" %>
+    </div>
+
+    <%= yield :header_addon %>
+  </div>
+</header>
+
+<script>
+  $(document).ready(function(){
+    $(".menu-button").click(function() {
+      if ($("#responsive-menu").css("display") === 'none') {
+        $(".top-bar").css("background", "#FFF");
+      } else {
+        $(".top-bar").css("background", "linear-gradient(0deg, rgba(230,229,229,1) 0%, rgba(255,255,255,1) 20%)");
+      }
+    });
+
+    $(window).resize(function(){
+      if ($(window).width() >= 640) {
+        $(".top-bar").css("background", "#FFF");
+      }
+    });
+  });
+</script>

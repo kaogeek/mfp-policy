@@ -1,0 +1,32 @@
+.social {
+  @include grid-column;
+  // Override styles for MFP-NEXT
+  // text-align: right;
+  text-align: center;
+
+  @include breakpoint(medium) {
+    // Override styles for MFP-NEXT
+    // width: 1 * 100% / 3;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    font-size: rem-calc(24);
+    margin: 0 $line-height / 2;
+    text-decoration: none;
+
+    &:hover {
+      @include brand-text;
+    }
+  }
+}
