@@ -4,6 +4,7 @@
              search_path: proposals_path(page: 1),
              i18n_namespace: "proposals.index.search_form" %>
 <% end %>
+
 <% content_for :canonical do %>
   <%= render "shared/canonical", href: proposals_url %>
 <% end %>
@@ -115,14 +116,26 @@
         <p class="small">
           <%= link_to t("proposals.index.selected_proposals_link"), proposals_path(selected: "all") %>
         </p>
-
-        <% if params[:retired].blank? %>
-          <%= render "categories" %>
-          <%= render "shared/tag_cloud", taggable: "Proposal" %>
-          <%= render "geozones" %>
-        <% end %>
-        <%= render "retired" %>
-        <%= render "proposals_lists" %>
+        <!-- 
+          <% if params[:retired].blank? %>
+            <%= render "categories" %>
+            <%= render "shared/tag_cloud", taggable: "Proposal" %>
+            <%= render "geozones" %>
+          <% end %>
+          <%= render "retired" %>
+          <%= render "proposals_lists" %> -->
+          <div class="tag-cloud">
+            <div class="sidebar-divider"></div>
+              <h1 class="sidebar-title"><%= t("shared.tags_cloud.tags") %></h1>
+              <br>
+              <a href="/debates?search=ผู้แทนฯ+ที่คุณอยากเห็น">ผู้แทนฯ ที่คุณอยากเห็น</a>
+              <a href="/debates?search=สื่อของพรรค">สื่อของพรรค</a>
+              <a href="/debates?search=นำเสนอนโยบาย">นำเสนอนโยบาย</a>
+              <a href="/debates?search=งานสภา">งานสภา</a>
+              <a href="/debates?search=การทำงานพื้นที่">การทำงานพื้นที่</a>
+              <a href="/debates?search=การสร้างเครือข่ายและกิจกรรมสมาชิก">การสร้างเครือข่ายและกิจกรรมสมาชิก</a>
+              <a href="/debates?search=ระดมทุน">ระดมทุน</a>
+          </div>
       </aside>
     </div>
 
