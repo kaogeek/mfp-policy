@@ -4,4 +4,21 @@
   <h1><%= t("community.topic.edit") %></h1>
 
   <%= render "form" %>
+
+    <script>
+      /**
+      * overwrites by MFPPolicy
+      * @author Panuwat Chaiwongthon
+      */
+      if(window.location.pathname.includes('communities')){
+        $('#navigation_bar .hide-for-small-only li a[href="/proposals"]').addClass('is-active')
+
+        $('.back').removeAttr('href')
+        $('.back').click(() => {
+          const splitPath = window.location.pathname.split('/');
+          splitPath.pop();
+          window.location.href = splitPath.join(',').replace(/,/g, '/');
+        })
+      }
+  </script>
 </main>

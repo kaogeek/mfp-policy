@@ -30,4 +30,19 @@
         mobile: @poll.name %>
     </aside>
   </div>
+
+   <script>
+     /**
+      * overwrites by MFPPolicy
+      * @author Panuwat Chaiwongthon
+      */
+      if($('#navigation_bar .hide-for-small-only li a[href="/polls"]').display !== 'none') {
+      $('#navigation_bar .hide-for-small-only li a[href="/proposals"]').addClass('is-active')
+      }
+      if(sessionStorage.getItem('path-forward')){
+        $($('.polls-show-header a')[0])
+        .attr('href', sessionStorage.getItem('path-forward'))
+        sessionStorage.removeItem('path-forward')
+      }
+  </script>
 </div>

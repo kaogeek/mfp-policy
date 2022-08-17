@@ -43,4 +43,14 @@
       <%= render "topics/comments" %>
     </div>
   </div>
+
+    <script>
+     /**
+      * overwrites by MFPPolicy
+      * @author Panuwat Chaiwongthon
+      */
+      if(window.location.pathname.includes('communities')){
+        $('#navigation_bar .hide-for-small-only li a[href="/proposals"]').addClass('is-active')
+      }
+  </script>
 </div>

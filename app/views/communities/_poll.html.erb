@@ -7,4 +7,16 @@
     <%= t("communities.poll.take_part",
            from: l(poll.starts_at.to_date), to: l(poll.ends_at.to_date)) %>
   </p>
+
+   <script>
+      /**
+      * overwrites by MFPPolicy
+      * @author Panuwat Chaiwongthon
+      */
+      if(window.location.pathname.includes('communities')){
+        $('.community-poll a').click(() => {
+        sessionStorage.setItem('path-forward', window.location.pathname + window.location.hash)
+        })
+      }
+  </script>
 </div>

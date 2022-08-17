@@ -6,7 +6,7 @@ th:
       finish_verification: ยืนยันเสร็จสิ้น
       notifications: การแจ้งเตือน
       personal: ข้อมูลส่วนตัว
-      public_interests_my_title_list: แท็กเนื้อหาที่คุณติดตามอยุ่ 
+      public_interests_my_title_list: แท็กเนื้อหาที่คุณติดตามอยุ่
       public_interests_user_title_list: แท็กเนื้อหาผู้ใช้งานที่ติดตาม
       save_changes_submit: บันทึกการแก้ไข
       recommendations: การแนะนำ
@@ -105,7 +105,7 @@ th:
         relevance: ผลลัพธ์การค้นหา
         recommendations: แนะนำ
       recommendations:
-        without_results: ไม่มีอภิปรายที่คุณสนใจ 
+        without_results: ไม่มีอภิปรายที่คุณสนใจ
         without_interests: ไม่พบกระทู้ที่เกี่ยวข้อง
         disable: "คำแนะนำสำหรับการอภิปรายจะหยุดแสดงหากคุณปฏิเสธ ซึ่งคุณสามารถเปิดดูได้อีกครั้งที่หน้าเพจ" #"Recommendations for debates will stop showing if you dismiss them. You can enable them again in 'My account' page"
         actions:
@@ -118,7 +118,7 @@ th:
       start_debate: เขียนข้อเสนอ
       title: ข้อเสนอ
       section_header:
-        icon_alt: ไอคอนข้อเสนอ 
+        icon_alt: ไอคอนข้อเสนอ
         title: ข้อเสนอถึงพรรค
         help: ช่วยข้อเสนอ
       section_footer:
