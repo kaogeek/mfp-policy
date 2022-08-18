@@ -22,7 +22,13 @@
 
   &.light {
     @include full-width-background;
-    background: #ecf0f1;
+    /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+    */
+    // background: #ecf0f1;
+    background: $new-content-background;
+
   }
 
   &.header-card {
@@ -55,7 +61,6 @@
 // ----------------------
 
 .more-info-content {
-
   h3 {
     @include brand-text;
   }
@@ -107,7 +112,6 @@
 // ----------------------
 
 .more-info-sidebar {
-
   .sidebar-card {
     border: 1px solid $border;
     margin-bottom: $line-height;
