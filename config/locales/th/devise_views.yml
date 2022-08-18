@@ -1,0 +1,151 @@
+th:
+  devise_views:
+    rule:
+      title: ช่วยอ่านตรงนี้สักนิด
+      rule_1: 1. เขียนข้อเสนออย่างสร้างสรรค์
+      rule_2: 2. อย่าเขียนอะไรที่ผิดกฏหมายหรือพาดพิงชื่อบุคคลให้เกิดความเสียหาย
+      rule_3: 3. งดใช้ถ้อยคำหยาบคาย เสี่ยงก่อดราม่า
+      rule_4: 4. ถ้าผิดกฏ แอดมินขออนุญาตจัดการให้มีความเหมาะสมนะ :)
+    confirmations:
+      new:
+        submit: ส่งคำแนะนำอีกครั้ง
+        title: ส่งอีเมลยืนยันอีกครั้ง
+      show:
+        instructions: ยืนยันบัญชีด้วยอีเมล %{email}
+        new_password_confirmation_label: ยืนยันรหัสผ่านใหม่
+        new_password_label: รหัสผ่านใหม่
+        please_set_password: โปรดเลือกรหัสผ่านใหม่ของคุณ (อนุญาตให้คุณเข้าสู่ระบบด้วยอีเมล)
+        submit: ยืนยัน
+        title: ยืนยันบัญชีของฉัน
+    mailer:
+      confirmation_instructions:
+        confirm_link: กดยืนยันแอคเคาท์
+        text: "ความเห็นของทุกท่านคืออิฐคนละก้อนที่สร้างพรรคก้าวไกล:"
+        title: สร้างพรรคร่วมกับเรา
+        welcome: ต้อนรับคุณ
+      reset_password_instructions:
+        change_link: เปลี่ยนรหัสผ่าน
+        hello: สวัสดีคุณ
+        ignore_text: ""
+        info_text: ""
+        text: "เราได้รับคำขอเปลี่ยนรหัสผ่านของคุณแล้ว กดเปลี่ยนได้ที่ ลิ้ง นี้เลย:"
+        title: เปลี่ยนรหัสผ่าน
+      unlock_instructions:
+        hello: สวัสดี
+        info_text: บัญชีของคุณถูกบล็อกเนื่องจากการพยายามลงชื่อเข้าใช้ที่ล้มเหลวหลายครั้งมากเกินไป
+        instructions_text: "กรุณาคลิกที่ลิงค์นี้เพื่อปลดล็อคบัญชีของคุณ:"
+        title: บัญชีของคุณถูกล็อค
+        unlock_link: ปลดล็อคบัญชีของฉัน
+    menu:
+      login_items:
+        login: เข้าสู่ระบบ
+        logout: ออกจากระบบ
+        signup: สร้างบัญชี
+    organizations:
+      registrations:
+        new:
+          password_confirmation_label: ยืนยันรหัสผ่าน
+          responsible_name_note: ซึ่งจะเป็นผู้แทนสมาคม/กลุ่มที่เสนอชื่อ
+          submit: ลงทะเบียน
+          title: ลงทะเบียนเป็นองค์กรหรือกลุ่ม
+          name_organizations: ชื่อองค์กร
+          person_in_charge_of_the_group: ผู้รับผิดชอบกลุ่ม
+          email: อีเมล์
+          phone: หมายเลขโทรศัพท์
+          password: รหัสผ่าน
+          confirm_password: ยืนยันรหัสผ่าน
+          placeholder_name_organizations: ชื่อที่ปรากฏข้างโพสต์ของคุณ
+          placeholder_person_incharge_of_the_group: บุคคลนี้จะเป็นแทนสมาคม/กลุ่มที่เสนอชื่อไว้
+          placeholder_email: โปรดใส่ Email ที่ใช้ในการเข้าระบบ
+          placeholder_phone: หมายเลขโทรศัพท์ขององค์กร
+          placeholder_password: โปรดใส่รหัสผ่าน
+          placeholder_confirm_password: โปรดใส่รหัสผ่านอีกครั้ง
+        success:
+          back_to_index: ฉันเข้าใจ; กลับไปที่หน้าหลัก
+          instructions_1: "<strong>เราจะติดต่อกลับโดยเร็วที่สุด</strong> เพื่อยืนยันว่าคุณเป็นตัวแทนของกลุ่มนี้จริงๆ"
+          instructions_2: ในขณะที่ <strong>อีเมลได้รับการตรวจสอบแล้ว</strong>, เราได้ส่งให้คุณ <strong>ลิงค์เพื่อยืนยันบัญชีของคุณ</strong>.
+          instructions_3: ทำการยืนยันอีกครั้งหนึ่ง เพราะอาจจะไม่ได้ทำการระบุตัวตน
+          thank_you: ขอขอบคุณที่ลงทะเบียนกลุ่มของคุณบนเว็บไซต์ ตอนนี้<strong>อยู่ระหว่างการตรวจสอบ</strong>.
+          title: การลงทะเบียนองค์กร / กลุ่ม
+    passwords:
+      edit:
+        change_submit: เปลี่ยนรหัสผ่าน
+        password_confirmation_label: ยืนยันรหัสผ่าน
+        password_label: รหัสผ่านใหม่
+        title: เปลี่ยนรหัสผ่าน
+        email: อีเมลที่ใช้สมัคร
+        placeholder_email: กรอกอีเมลที่สมัครไว้
+        submit: ลงทะเบียน
+        edit_password: อีเมล
+        forget_password: ส่งอีเมลยืนยันอีกครั้ง
+      new:
+        password: ลืมรหัสผ่าน
+        send_submit: ส่งคำแนะนำ
+        title: ลืมรหัสผ่าน?
+    sessions:
+      new:
+        remember_me: จดจำฉัน
+        submit: เข้าสู่ระบบ
+        title: เข้าสู่ระบบ
+    shared:
+      links:
+        login: เข้าสู่ระบบ
+        new_confirmation: ส่งอีเมลยืนยันอีกครั้ง
+        new_confirmation_organization: ส่งอีเมลยืนยันอีกครั้ง
+        new_password: ลืมรหัสผ่าน?
+        new_unlock: ยังไม่ได้รับคำแนะนำในการปลดล็อก?
+        signin_with_provider: ข้าสู่ระบบด้วย %{provider}
+        signup: ไม่มีบัญชี? %{signup_link}
+        signup_link: สร้างบัญชี
+    unlocks:
+      new:
+        email_label: อีเมล
+        submit: ส่งคำแนะนำในการปลดล็อกอีกครั้ง
+        title: ส่งคำแนะนำการปลดล็อกอีกครั้ง
+    users:
+      registrations:
+        delete_form:
+          erase_reason_label: สาเหตุ
+          info: ถ้าหากได้ทำงานลบบัญชีออกไปแล้ว จะไม่สามารถย้อนกลับมาแก้ไขใหม่ได้.
+          info_reason: โปรดใส่ข้อความในช่องว่างเพื่อทำการลบบัญชี
+          submit: ลบบัญชี
+          title: ลบบัญชี
+        edit:
+          current_password_label: รหัสผ่านปัจจุบัน
+          edit: แก้ไข
+          email_label: อีเมล
+          leave_blank: สามารถปล่อยเป็นช่องว่างได้ถ้าไม่มีการเปลี่ยนแปลงรหัสผ่าน
+          need_current: ต้องการการยืนยันรหัสผ่านปัจจุบันเพื่อทำการเปลี่ยนแปลงข้อมูล
+          password_confirmation_label: ยืนยันรหัสผ่าน
+          password_label: รหัสผ่านใหม่
+          update_submit: เปลี่ยนแปลง
+          waiting_for: "รอการยืนยันของ:"
+        new:
+          cancel: ยกเลิกเข้าสู่ระบบ
+          organization_signup: คุณเป็นตัวแทนขององค์กรหรือส่วนรวม? %{signup_link}
+          organization_signup_link: ลงทะเบียนสำหรับตัวแทนขององค์กร
+          login_username: อีเมล์หรือผู้ใช้
+          username: ชื่อผู้ใช้
+          email: อีเมล
+          password: รหัสผ่าน
+          password_confirmation_label: ยืนยันรหัสผ่าน
+          placeholder_login_username: โปรดใส่อีเมลที่คุณสมัคร
+          placeholder_username: ชื่อที่ปรากฏข้างโพสต์ของคุณ
+          placeholder_email: อีเมล์หรือผู้ใช้
+          placeholder_password: โปรดใส่รหัสผ่าน
+          placeholder_confirm_password: โปรดใส่รหัสผ่านอีกครั้ง
+          submit: ลงทะเบียน
+          terms: การลงทะเบียนถือว่าคุณยอมรับ %{terms}
+          new_terms: การลงทะเบียนถือว่าคุณยอมรับ
+          terms_link: ข้อกำหนดและเงื่อนไขการใช้งาน
+          terms_title: การลงทะเบียนถือว่าคุณยอมรับข้อกำหนดและเงื่อนไขการใช้งาน
+          title: ลงทะเบียน
+          username_is_available: ชื่อผู้ใช้สามารถใช้ได้
+          username_is_not_available: ชื่อผู้ใช้นี้ถูกใช้ไปแล้ว
+          username_note: ชื่อที่ปรากฏข้างโพสต์ของคุณ
+        success:
+          back_to_index: ฉันเข้าใจ; กลับหน้าหลัก
+          instructions_1: โปรด <b>ตรวจอีเมล</b> - ที่เราได้ทำการส่งไปแล้ว <b>เพื่อยืนยันบัญชีของคุณ</b>.
+          instructions_2: เมื่อได้รับการยืนยันแล้ว คุณสามารถเริ่มเข้าร่วมได้
+          thank_you: ขอบคุณสำหรับการลงทะเบียนสำหรับเว็บไซต์ ตอนนี้คุณต้อง <b>ยืนยันที่อยู่อีเมลของคุณ</b>
+          title: ยืนยันที่อยู่อีเมล

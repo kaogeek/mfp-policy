@@ -1,0 +1,70 @@
+th:
+  valuation:
+    header:
+      title: การประเมินค่า
+    menu:
+      title: การประเมินค่า
+      budgets: งบประมาณการมีส่วนร่วม
+    budgets:
+      index:
+        title: งบประมาณการมีส่วนร่วม
+        filters:
+          current: เปิด
+          finished: ที่เสร็จเรียบร้อย
+        table_name: ชื่อ
+        table_phase: ระยะ
+        table_assigned_investments_valuation_open: Investment projects assigned with valuation open
+        table_actions: การปฏิบัติ
+        evaluate: ประเมิน
+        no_budgets: "ไม่มีงบประมาณ"
+    budget_investments:
+      index:
+        headings_filter_all: หัวเรื่องทั้งหมด
+        filters:
+          valuation_open: เปิด
+          valuating: อยู่ระหว่างการประเมินมูลค่า
+          valuation_finished: ประเมินเสร็จแล้ว
+        assigned_to: "มอบหมายให้ %{valuator}"
+        title: โครงการลงทุน
+        edit: แก้ไขเอกสาร
+        # TODO
+        table_id: ID
+        table_title: หัวข้อ
+        table_heading_name: ชื่อหัวเรื่อง
+        table_actions: การปฏิบัติ
+        no_investments: "ไม่มีโครงการลงทุน"
+      show:
+        back: กลับ
+        title: โครงการลงทุน
+        info: ข้อมูลผู้เขียน
+        by: ส่งโดย
+        sent: ส่งที่
+        heading: หัวเรื่อง
+        dossier: เอกสาร
+        edit_dossier: แก้ไขเอกสาร
+        price: ราคา
+        price_first_year: ค่าใช้จ่ายในปีแรก
+        # TODO
+        currency: "€"
+        feasibility: ความเป็นไปได้
+        feasible: ทำได้
+        unfeasible: เป็นไปไม่ได้
+        undefined: ไม่ได้กำหนด
+        valuation_finished: ประเมินเสร็จแล้ว
+        duration: ระยะเวลา
+        responsibles: ความรับผิดชอบ
+        assigned_admin: ผู้ดูแลระบบที่ได้รับมอบหมาย
+        assigned_valuators: Assigned valuators
+        preview: ดูตัวอย่างการลงทุน
+      edit:
+        dossier: เอกสาร
+        price: "ราคา (%{currency})"
+        price_first_year: "ค่าใช้จ่ายในปีแรก (%{currency}) <small>(ไม่จำเป็น ข้อมูลไม่เป็นสาธารณะ)</small>"
+        feasibility: ความเป็นไปได้
+        valuation_finished_alert: "คุณแน่ใจหรือไม่ว่าต้องการทำเครื่องหมายรายงานนี้ว่าเสร็จสมบูรณ์ หากทำแล้วจะไม่สามารถแก้ไขได้อีกต่อไป"
+        not_feasible_alert: "อีเมลจะถูกส่งไปยังผู้เขียนโครงการทันทีพร้อมรายงานความไม่สามารถทำได้"
+        save: บันทึกข้อเสนอ
+      notice:
+        valuate: "อัพเดทเอกสารแล้ว"
+      valuation_comments: ความคิดเห็นเกี่ยวกับการประเมินมูลค่า
+      not_in_valuating_phase: สามารถประเมินการลงทุนได้เฉพาะเมื่องบประมาณอยู่ในขั้นตอนการประเมินค่า

@@ -1,0 +1,227 @@
+th:
+  budgets:
+    ballots:
+      show:
+        title: บัตรลงคะแนนของคุณ
+        amount_progress: "%{amount_spent} / %{amount_limit}"
+        amount_available:
+          knapsack: "ยังสามารถใช้งานได้ <span>%{count}</span>"
+          approval:
+            zero: "ส่งเพื่อ <span>%{count}</span> โหวต."
+            one: "ส่งเพื่อ <span>%{count}</span> โหวต."
+            other: "ส่งเพื่อ <span>%{count}</span> โหวต."
+        amount_spent:
+          knapsack: "จำนวนเงินที่ใช้ไป <span>%{count}</span>"
+          approval:
+            zero: "โหวตให้: <span>%{count}</span>"
+            one: "โหวตให้: <span>%{count}</span>"
+            other: "โหวตให้: <span>%{count}</span>"
+        amount_limit:
+          knapsack: "งบประมาณทั้งหมด <span>%{count}</span>"
+          approval:
+            one: "คุณสามารถโหวต <span>1</span> โครงการ"
+            other: "คุณสามารถโหวตได้ถึง <span>%{count}</span> โครงการ"
+        no_balloted_group_yet: "คุณย้งไม่ได้ลงคะแนนในกลุ่มนี้, ไปลงคะแนนกันเลย!"
+        remove: ลบโหวต
+        remove_label: "ลบโหวตของคุณ %{investment}"
+        voted:
+          one: "คุณโหวตแล้ว <span>one</span> investment."
+          other: "คุณโหวตแล้ว <span>%{count}</span> investments."
+        voted_info: "บัตรลงคะแนนของคุณได้รับการยืนยันแล้ว!"
+        voted_info_2: "แต่ก่อนที่ขั้นตอนนี้จะสิ้นสุดลงคุณสามารถเปลี่ยนการลงคะแนนเสียงได้ตลอดเวลา"
+        zero: คุณยังไม่ได้ร่วมโหวตโครงการ.
+      reasons_for_not_balloting:
+        not_verified: เฉพาะผู้ใช้ที่ผ่านการยืนยันตัวตนเท่านั้นที่สามารถลงคะแนนได้; %{verify_account}.
+        not_selected: ไม่รองรับโครงการลงทุนที่ไม่ได้เลือก
+        not_enough_money: "คุณได้กำหนดงบประมาณที่มีอยู่แล้ว.<br><small>คุณสามารถทำ %{change_ballot} ได้ทุกเวลา</small>"
+        no_ballots_allowed: ปิดขั้นตอนที่เลือก
+        different_heading_assigned: "คุณได้โหวตหัวข้ออื่นแล้ว: %{heading_link}"
+        not_enough_available_votes: "คุณมีจำนวนโหวตสูงสุดแล้ว"
+        change_ballot: เปลี่ยนคะแนนโหวตของคุณ
+        casted_offline: คุณได้เข้าร่วมแบบออฟไลน์แล้ว
+    groups:
+      show:
+        title: เลือกหัวข้อเรื่อง
+    phase:
+      drafting: ฉบับร่าง (ไม่ปรากฏต่อสาธารณะ)
+      informing: ข้อมูล
+      accepting: รับโครงการ
+      reviewing: รีวิวโครงการ
+      selecting: เลือกโครงการ
+      valuating: การประเมินมูลค่าโครงการhically
+      publishing_prices: แสดงราคาโครงการ
+      balloting: โหวตโครงการ
+      reviewing_ballots: กำลังตรวจสอบการลงคะแนน
+      finished: เสร็จสิ้น
+    index:
+      title: งบประมาณการมีส่วนร่วม
+      empty_budgets: ไม่มีงบประมาณ.
+      section_header:
+        icon_alt: ไอคอน
+        title: งบประมาณการมีส่วนร่วม
+        help: ช่วยเหลือด้านงบประมาณการมีส่วนร่วม
+      all_phases: ขั้นตอนงบประมาณแบบมีส่วนร่วม
+      next_phase: ขั้นตอนต่อไป
+      prev_phase: ขั้นตอนก่อนหน้า
+      current_phase: ขั้นตอนปัจจุบัน
+      map: ข้อเสนอการลงทุนด้านงบประมาณอยู่ในตำแหน่งทางภูมิศาสตร์
+      finished_budgets: งบประมาณแบบมีส่วนร่วมเสร็จสมบูรณ์
+      see_results: ดูผลลัพธ์
+      section_footer:
+        title: ช่วยเหลือด้านงบประมาณการมีส่วนร่วม
+        description: ด้วยงบประมาณแบบมีส่วนร่วม ประชาชนจะตัดสินใจว่าโครงการใดถูกกำหนดให้เป็นส่วนหนึ่งของงบประมาณ.
+      milestones: เหตุการณ์สำคัญ
+    investments:
+      form:
+        title: "สร้างงบประมาณการลงทุน"
+        subtitle: "%{heading} (%{price})"
+        subtitle_without_price: "%{heading}"
+        tag_category_label: "หมวดหมู่"
+        tags_instructions: "ติดแท็กข้อเสนอนี้. คุณสามารถเลือกจากหมวดหมู่ที่เสนอหรือคุณสามารถเพิ่มเติมของคุณเอง"
+        tags_label: แท็ก
+        tags_placeholder: "ป้อนแท็กที่คุณต้องการใช้ โดยคั่นด้วยเครื่องหมายจุลภาค (',')"
+        map_location: "ที่ตั้งแผนที่"
+        map_location_instructions: "นำทางแผนที่ไปยังตำแหน่งและติดเครื่องหมาย"
+        map_remove_marker: "ลบเครื่องหมาย"
+      index:
+        title: งบประมาณแบบมีส่วนร่วม
+        unfeasible: โครงการลงทุนที่ไม่สามารถทำได้
+        unfeasible_text: "การลงทุนต้องผ่านเกณฑ์(ถูกกฎหมาย เป็นรูปธรรม ไม่เกินวงเงินงบประมาณ) ประกาศความเป็นไปได้และขั้นตอนการลงคะแนนเสียงขั้นสุดท้าย.การลงทุนทั้งหมดที่ไม่เป็นไปตามเกณฑ์เหล่านี้จะถูกทำเครื่องหมายว่าไม่สามารถเผยแพร่ได้ พร้อมกับรายงานความเป็นไปไม่ได้."
+        by_heading: "ขอบเขตโครงการลงทุนที่มี: %{heading}"
+        search_form:
+          button: ค้นหา
+          placeholder: ค้นหาโครงการ การลงทุน...
+          title: ค้นหา
+        sidebar:
+          my_ballot: บัตรลงคะแนนของฉัน
+          voted_info:
+            knapsack:
+              one: "<strong>คุณโยนข้อเสนอที่ด้วยค่าใช้จ่าย %{amount_spent}</strong>"
+              other: "<strong>คุณโหวต %{count} ค่าใช้จ่าย %{amount_spent}</strong>"
+            approval:
+              one: "<strong>คุณโหวตหนึ่งข้อเสนอ</strong>"
+              other: "<strong>คุณโหวต %{count} หัวข้อ</strong>"
+          change_vote_info:
+            knapsack: "คุณสามารถ %{link} ได้ตลอดเวลาจนถึง %{phase_end_date}. ไม่ต้องใช้จ่ายเงินทั้งหมดที่มีอยู่."
+            approval: "คุณสามารถ %{link} ได้ตลอดเวลาจนถึง %{phase_end_date}."
+          change_vote_link: "เปลี่ยนการโหวตของคุณ"
+          different_heading_assigned: "คุณมีคะแนนโหวตที่ใช้งานอยู่ในหัวข้ออื่น: %{heading_link}"
+          change_ballot: "หากคุณเปลี่ยนใจ คุณสามารถลบการโหวตของคุณใน %{check_ballot} แล้วโหวตใหม่อีกครั้ง."
+          check_ballot_link: "ส่งคะแนนของฉัน"
+          zero: คุณยังไม่ได้ลงคะแนนในการลงทุนใดๆในกลุ่มนี้.
+          verified_only: "สร้างงบประมาณการลงทุนใหม่ %{verify}."
+          create: "สร้างงบประมาณการลงทุน"
+          not_logged_in: "คุณต้องสร้างงบประมาณการลงทุนใหม่ %{sign_in} or %{sign_up}."
+        filter: "กรองรายการ"
+        filters:
+          not_unfeasible: "ใช้งานอยู่"
+          selected: "ใช้งานอยู่"
+          unfeasible: "ไม่สามารถปฏิบัติได้"
+          unselected: "ไม่ได้รับเลือกให้เป็นผู้ลงคะแนนเสียงรอบสุดท้าย"
+          winners: "ชนะการโหวต"
+        orders:
+          random: สุ่ม
+          confidence_score: ความนิยมสูงสุด
+          price: ราคา
+      share:
+        message: "ฉันสร้างโครงการลงทุน %{title} ใน %{handle}. สร้างโครงการลงทุนร่วมกัน!"
+      show:
+        author_deleted: ลบผู้ใช้งาน
+        price_explanation: รายละเอียดและราคา
+        unfeasibility_explanation: คำอธิบายความเป็นไปไม่ได้
+        code: "รหัสโครงการ: <strong>%{code}</strong>"
+        location: "ที่ตั้ง: <strong>%{location}</strong>"
+        organization_name: "เสนอให้: <strong>%{name}</strong>"
+        share: แชร์
+        title: โครงการลงทุน
+        supports: ซัพพอร์ต
+        votes: โหวต
+        price: ราคา
+        comments_tab: คอมเม้นต์
+        milestones_tab: เหตุการณ์สำคัญ
+        author: ผู้เขียน
+        project_unfeasible: "โครงการลงทุนนี้ <strong>ถูกติดเครื่องหมายว่าไม่สามารถปฏิบัติได้</strong> จะไม่เข้าสู่ขั้นตอนการลงคะแนนเสียง."
+        project_selected: "โครงการลงทุนนี้ <strong>ได้รับการคัดเลือก</strong> สำหรับขั้นตอนการลงคะแนน."
+        project_winner: "โครงการลงทุนที่ประสบความสำเร็จ"
+        project_not_selected: "โครงการลงทุนนี้ <strong>ไม่ได้รับการคัดเลือก</strong> สำหรับขั้นตอนการลงคะแนน."
+        see_price_explanation: ดูรายละเอียดราคา
+      wrong_price_format: เฉพาะตัวเลขจำนวนเต็ม
+      investment:
+        add: โหวต
+        add_label: "โหวต %{investment}"
+        already_added: คุณได้เพิ่มโครงการลงทุนนี้แล้ว
+        support_title: สนับสนุนโครงการ
+        supports:
+          one: 1 สนับสนุน
+          other: "%{count} สนับสนุน"
+          zero: ไม่สนับสนุน
+      header:
+        check_ballot: "ส่งบัตรลงคะแนนของฉัน"
+        different_heading_assigned: "คุณมีคะแนนโหวตที่ใช้งานอยู่ในหัวข้ออื่น: %{heading_link}"
+        change_ballot: "หากคุณเปลี่ยนใจ คุณสามารถลบการโหวตของคุณใน %{check_ballot} แล้วโหวตใหม่อีกครั้ง."
+        check_ballot_link: "ส่งคะแนนของฉัน"
+        price: "งบประมาณทั้งหมด"
+      votes:
+        already_supported: "คุณได้สนับสนุนโครงการลงทุนนี้แล้ว. แบ่งปัน!"
+        confirm_group:
+          one: "คุณสามารถสนับสนุนการลงทุนใน %{count} เขต. หากคุณดำเนินการต่อ คุณจะไม่สามารถเปลี่ยนแปลงการเลือกตั้งเขตของคุณ คุณแน่ใจไหม?"
+          other: "คุณสามารถสนับสนุนการลงทุนใน %{count} เขต. หากคุณดำเนินการต่อ คุณจะไม่สามารถเปลี่ยนแปลงการเลือกตั้งเขตของคุณ คุณแน่ใจไหม?"
+        remove_support: "ลบการสนันสนุนของคุณ"
+        remove_support_label: "ลบการสนับสนุนโครงการ %{investment}"
+        support: "สนันสนุน"
+        support_label: "สนันสนุน %{investment}"
+    investments_list:
+      investment:
+        price: "ราคา"
+        read_more: "อ่านต่อ"
+        supports: "สนันสนุน"
+      see_all: "ดูโครงการการลงทุนทั้งหมด"
+      title: "รายการโครงการการลงทุน"
+    show:
+      see_results: ดูผลลัพธ์
+    supports_info:
+      different: "คุณสามารถสนับสนุนหลายโครงการที่แตกต่างกันได้."
+      next: "สนับสนุนโครงการที่คุณต้องการเห็นเพื่อไปยังขั้นตอนต่อไป."
+      scrolling: "เลื่อนเพื่อดูความคิดทั้งหมด"
+      share: "คุณสามารถแชร์โปรเจ็กต์ที่คุณสนับสนุนผ่านโซเชียลมีเดียเพื่อดึงดูดความสนใจและสนับสนุนพวกเขามาสนันสนุนโครงการของคุณ!"
+      supported:
+        one: "จนถึงตอนนี้คุณได้รับการสนับสนุน <strong>1 โครงการ</strong>."
+        other: "จนถึงตอนนี้คุณได้รับการสนับสนุน <strong>%{count} โครงการ</strong>."
+      supported_not_logged_in: "เข้าสู่ระบบเพื่อเริ่มต้น<strong>สนับสนุน โครงการ</strong>."
+      time: "ยังมีเวลาถึง %{phase_end_date} เพื่อสนับสนุนโครงการ."
+      title: "ถึงเวลา <strong>สนับสนุน</strong> โครงการ!"
+    results:
+      link: ผลลัพธ์
+      page_title: "%{budget} - ผลลัพธ์"
+      heading: "ผลงบประมาณแบบมีส่วนร่วม"
+      heading_selection_title: "ตามภูมิภาค"
+      ballot_lines_count: โหวต
+      hide_discarded_link: ซ่อน
+      show_all_link: แสดงทั้งหมด
+      price: ราคา
+      amount_available: งบประมาณที่มีอยู่
+      accepted: "ยอมรับการลงทุน: "
+      discarded: "ปฏิเสธการลงทุน: "
+      incompatibles: ไม่เข้ากัน
+      investment_title: ชื่อโครงการ
+      investment_proyects: รายชื่อโครงการลงทุนทั้งหมด
+      unfeasible_investment_proyects: รายการทั้งหมดของการลงทุนที่เป็นไปไม่ได้
+      not_selected_investment_proyects: รายชื่อโครงการลงทุนทั้งหมดที่ไม่ได้คัดเลือกเพื่อลงคะแนนเสียง
+    executions:
+      link: "เหตุการณ์สำคัญ"
+      page_title: "%{budget} - เหตุการณ์สำคัญ"
+      heading: "ความสำเร็จของงบประมาณแบบมีส่วนร่วม"
+      heading_selection_title: "ตามภูมิภาค"
+      no_winner_investments: "ไม่มีโรงการการลงทุนที่ชนะการโหวต"
+      filters:
+        status:
+          label: "ถานะปัจจุบันของโครงการ"
+          all: "ทั้งหมด (%{count})"
+        milestone_tag:
+          label: "ติดแท็กเหตุการณ์สำคัญ"
+          all: "ทั้งหมด (%{count})"
+    phases:
+      errors:
+        dates_range_invalid: "วันที่เริ่มต้นต้องไม่เท่ากับวันที่สิ้นสุด"
+        prev_phase_dates_invalid: "วันที่เริ่มต้นต้องช้ากว่าวันที่เริ่มต้นของขั้นตอนก่อนหน้าของการเปิดใช้งาน (%{phase_name})"
+        next_phase_dates_invalid: "วันที่สิ้นสุดต้องมาก่อนวันที่สิ้นสุดของระยะที่เปิดใช้งานถัดไป (%{phase_name})"

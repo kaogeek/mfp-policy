@@ -1,0 +1,178 @@
+<!-- The Modal -->
+<div id="myModal" class="dialog-modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-detail">
+      <iframe src="https://www.youtube.com/embed/ilRoBBBlX4Y?&rel=0&autoplay=1&mute=1" frameborder="0" allowtransparency="true" allowfullscreen>
+      </iframe>
+      <div class="wrapper-show-dialog">
+        <input type="checkbox" id="show-dialog" onclick="clickSub()">
+        <label for="show-dialog"><%= t("debates.show_dialog") %></label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% provide :title do %><%= t("debates.index.title") %><% end %>
+<% content_for :header_addon do %>
+  <%= render "shared/search_form",
+             search_path: debates_path(page: 1),
+             i18n_namespace: "debates.index.search_form" %>
+<% end %>
+<% content_for :canonical do %>
+  <%= render "shared/canonical", href: debates_url %>
+<% end %>
+
+<main>
+  <% if @search_terms || @advanced_search_terms %>
+    <%= render Shared::SearchResultsSummaryComponent.new(
+      results: @debates,
+      search_terms: @search_terms,
+      advanced_search_terms: @advanced_search_terms
+    ) %>
+  <% else %>
+    <%= render "shared/section_header", i18n_namespace: "debates.index.section_header", image: "debates" %>
+  <% end %>
+
+  <% if feature?("user.recommendations") && @recommended_debates.present? %>
+    <%= render "shared/recommended_index", recommended: @recommended_debates,
+                                           disable_recommendations_path: recommendations_disable_debates_path,
+                                           namespace: "debates" %>
+  <% end %>
+
+  <div class="row">
+    <div id="debates" class="debates-list small-12 medium-9 column">
+
+      <%= render Shared::BannerComponent.new("debates") %>
+
+      <% unless @search_terms || !has_featured? %>
+        <%= render "featured_debates" %>
+      <% end %>
+
+      <div class="row">
+        <div class="small-12 column">
+          <%= render "view_mode" %>
+        </div>
+      </div>
+
+      <%= render Shared::AdvancedSearchComponent.new %>
+
+      <%= render "shared/order_links", i18n_namespace: "debates.index" %>
+
+      <div class="show-for-small-only">
+        <%= link_to t("debates.index.start_debate"), new_debate_path, class: "button expanded" %>
+      </div>
+
+      <% if @debates.any? || current_user.blank? %>
+        <% if debates_default_view? %>
+          <%= render @debates %>
+        <% else %>
+          <% @debates.each do |debate| %>
+            <%= render "debates/debate_minimal", debate: debate %>
+          <% end %>
+        <% end %>
+      <% else %>
+        <%= empty_recommended_debates_message_text(current_user) %>
+      <% end %>
+      <%= paginate @debates %>
+
+       <!-- <% unless @search_terms || @advanced_search_terms %>
+        <div id="section_help" class="margin" data-magellan-target="section_help">
+          <p class="lead">
+            <strong><%= t("debates.index.section_footer.title") %></strong>
+          </p>
+          <p><%= t("debates.index.section_footer.description") %></p>
+          <p><%= t("debates.index.section_footer.help_text_1") %></p>
+          <p><%= sanitize(t("debates.index.section_footer.help_text_2",
+                    org: link_to(setting["org_name"], new_user_registration_path))) %></p>
+          </p>
+        </div>
+      <% end %> -->
+    </div>
+
+    <div class="small-12 medium-3 column trending-tag">
+
+      <aside class="margin-bottom">
+        <%= link_to t("debates.index.start_debate"), new_debate_path, class: "button expanded" %>
+        <!-- <%= render "shared/tag_cloud", taggable: "Debate" %> -->
+
+        <br>
+        <div class="tag-cloud">
+          <div class="sidebar-divider"></div>
+          <h1 class="sidebar-title"><%= t("shared.tags_cloud.tags") %></h1>
+          <br>
+          <a href="/debates?search=ผู้แทนฯ+ที่คุณอยากเห็น">ผู้แทนฯ ที่คุณอยากเห็น</a>
+          <a href="/debates?search=สื่อของพรรค">สื่อของพรรค</a>
+          <a href="/debates?search=นำเสนอนโยบาย">นำเสนอนโยบาย</a>
+          <a href="/debates?search=งานสภา">งานสภา</a>
+          <a href="/debates?search=การทำงานพื้นที่">การทำงานพื้นที่</a>
+          <a href="/debates?search=การสร้างเครือข่ายและกิจกรรมสมาชิก">การสร้างเครือข่ายและกิจกรรมสมาชิก</a>
+          <a href="/debates?search=ระดมทุน">ระดมทุน</a>
+        </div>
+      </aside>
+    </div>
+
+  </div>
+</main>
+
+<script>
+  // Get the html
+  var daddy = document.getElementsByTagName("html");
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the <span> element that closes the modal
+  var close = document.getElementsByClassName("close")[0];
+
+  // value key localStorage
+  var key = 'teaser';
+
+  // When the user clicks the button, open the modal 
+  function clickDialog() {
+    modal.style['display'] = "flex";
+    daddy[0].style['overflow-y'] = "hidden";
+    document.getElementById("show-dialog").checked = true;
+    clickSub();
+  };
+
+  // When the user clicks on <span> (x), close the modal
+  close.onclick = function() {
+    modal.style['display'] = "none";
+    daddy[0].style['overflow-y'] = "";
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style['display'] = "none";
+      daddy[0].style['overflow-y'] = "";
+    }
+  };
+
+  // When the user clicks dialog video 
+  function clickSub() {
+    if (document.getElementById("show-dialog").checked === true) {
+      localStorage.setItem(key, getToDate(7).getTime());
+    }
+  }
+
+  // Get the date
+  function getToDate(value) {
+    return new Date(Date.now() + (value * 24 * 60 * 60 * 1000));
+  }
+
+  $( document ).ready(function() {
+    if (!localStorage.getItem(key)) {
+      clickDialog();
+    } else {
+      if (localStorage.getItem(key) < getToDate(0).getTime()) {
+        clickDialog();
+        localStorage.removeItem(key);
+      }
+    }
+  });
+</script>

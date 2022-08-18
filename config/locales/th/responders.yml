@@ -1,0 +1,38 @@
+th:
+  flash:
+    actions:
+      create:
+        notice: "สร้าง %{resource_name} สำเร็จแล้ว"
+        debate: "สร้างข้อเสนอสำเร็จแล้ว"
+        direct_message: "ข้อความของคุณถูกส่งเรียบร้อยแล้ว"
+        poll: "สร้างโพลสำเร็จ"
+        poll_booth: "สร้างบูธสำเร็จ"
+        poll_question_answer: "สร้างคำตอบสำหรับโพลสำเร็จ"
+        poll_question_answer_video: "อัพโหลดวิดิโอสำเร็จ"
+        poll_question_answer_image: "อัพโหลดรูปสำเร็จ"
+        proposal: "Proposal created successfully."
+        proposal_notification: "Your message has been sent correctly."
+        budget_investment: "Budget Investment created successfully."
+        signature_sheet: "Signature sheet created successfully"
+        support: "Investment supported successfully"
+        topic: "Topic created successfully."
+        valuator_group: "Valuator group created successfully"
+      save_changes:
+        notice: บันทึกการเปลี่ยนแปลงสำเร็จ
+      update:
+        notice: "บันทึกการเปลี่ยนแปลง %{resource_name} สำเร็จ"
+        debate: "อัปเดตข้อเสนอเรียบร้อยแล้ว"
+        poll: "แก้ไขโพลสำเร็จ."
+        poll_booth: "แก้ไขบูธสำเร็จ"
+        active_poll: "แก้ไขคำอธิบายโพลสำเร็จ"
+        proposal: "Proposal updated successfully."
+        budget_investment: "Investment project updated succesfully."
+        topic: "Topic updated successfully."
+        valuator_group: "Valuator group updated successfully"
+        translation: "Translation updated successfully"
+      destroy:
+        budget_investment: "Investment project deleted succesfully."
+        error: "Could not delete"
+        topic: "Topic deleted successfully."
+        poll_question_answer_video: "Answer video deleted successfully."
+        valuator_group: "Valuator group deleted successfully"
