@@ -5,7 +5,7 @@
 
 ![CONSUL logo](https://github.com/kaogeek/mfp-next/raw/main/public/mfp-next_logo.jpg)
 
-# ก้าวไกล NEXT
+# ก้าวไกล Policy
 
 ขีดเขียนเส้นทางใหม่ ก้าวไกลไปด้วยกัน
 
