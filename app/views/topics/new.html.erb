@@ -3,6 +3,7 @@
 
   <h1><%= t("community.topic.create") %></h1>
 
+ <!--
   <aside>
     <h2><%= t("community.topic.sidebar.recommendations_title") %></h2>
 
@@ -12,6 +13,18 @@
       <li><%= t("community.topic.sidebar.recommendation_three") %></li>
     </ul>
   </aside>
+  -->
 
   <%= render "form" %>
+
+    <script>
+       /**
+      * overwrites by MFPPolicy
+      * @author Panuwat Chaiwongthon
+      */
+      if(window.location.pathname.includes('communities')){
+        $('#navigation_bar .hide-for-small-only li a[href="/proposals"]').addClass('is-active')
+      }
+    </script>
+
 </main>
