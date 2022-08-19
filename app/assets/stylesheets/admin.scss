@@ -75,7 +75,6 @@ $table-header: #ecf1f6;
   .top-bar {
     height: auto;
     padding-top: $line-height / 2;
-
     @include breakpoint(small only) {
       .top-bar-left ul {
         display: inline-block;

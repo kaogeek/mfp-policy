@@ -194,7 +194,7 @@
     font-size: $small-font-size;
     margin-bottom: $line-height / 2;
     position: relative;
-    // Override extend for MFP-NEXT
+    // Override extend for MFP-POLICY
     @extend .custom-info;
 
     span:not(.label) {
@@ -343,7 +343,7 @@
 }
 
 .show-actions-menu {
-  [class^="icon-"] {
+  [class^='icon-'] {
     display: inline-block;
     vertical-align: middle;
   }
@@ -362,7 +362,13 @@
 
   .filter-subnav {
     @include full-width-background;
-    background: $highlight;
+    // background: $highlight;
+    /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+    */
+    background: $new-nav-background;
+
     margin-bottom: $line-height;
     padding-top: $line-height / 4;
   }
@@ -428,22 +434,23 @@
 
 %panel {
   background: $body-background;
-  // Override styles for MFP-NEXT
+  // Override styles for MFP-POLICY
   // border: 1px solid;
   // border-color: #e5e6e9 #dfe0e4 #d0d1d5;
   // border-radius: 0;
   // box-shadow: 0 1px 3px 0 $border;
   // padding: rem-calc(12) rem-calc(12) 0;
+  // border: 1px solid #ececec;
+  // box-shadow: 0px 8px 10px #00000030;
+  background: $new-card-background;
 
-  border: 1px solid #ececec;
-  box-shadow: 0px 8px 10px #00000030;
   margin-bottom: rem-calc(12);
   min-height: rem-calc(192);
   border-radius: rem-calc(12);
   overflow: hidden;
 
   @include breakpoint(medium) {
-    // Override styles for MFP-NEXT
+    // Override styles for MFP-POLICY
     // margin-bottom: rem-calc(-1);
     // padding-bottom: rem-calc(12);
     // border-radius: rem-calc(12);
@@ -484,7 +491,7 @@
 .budget-investment,
 .legislation,
 .communities-show {
-  // Override styles for MFP-NEXT
+  // Override styles for MFP-POLICY
   // margin: $line-height / 4 0;
   margin: $line-height / 2 0;
 
@@ -500,7 +507,7 @@
     min-height: rem-calc(180);
     position: relative;
 
-    // Override styles for MFP-NEXT
+    // Override styles for MFP-POLICY
     padding: rem-calc(12) 0 rem-calc(12) rem-calc(24);
 
     @include breakpoint(small down) {
@@ -548,8 +555,9 @@
   .topic-info {
     color: $text-medium;
     font-size: $small-font-size;
-    margin: rem-calc(6) 0 0;
-    // Override extend for MFP-NEXT
+    // Override extend for MFP-POLICY
+    // margin: rem-calc(6) 0 0;
+    margin: rem-calc(10) 0;
     @extend .custom-info;
 
     .icon-comments {
@@ -566,7 +574,7 @@
   .proposal-description,
   .investment-project-description,
   .budget-investment-description {
-    // Override style for MFP-NEXT
+    // Override style for MFP-POLICY
     // font-size: rem-calc(13);
     font-size: rem-calc(18);
     height: rem-calc(72);
@@ -582,7 +590,7 @@
   }
 
   .truncate {
-    background: image-url("truncate.png");
+    background: image-url('truncate.png');
     background-repeat: repeat-x;
     bottom: 0;
     height: rem-calc(24);
@@ -626,7 +634,7 @@
       font-weight: bold;
       float: right;
       line-height: $line-height * 2;
-      // Override extend for MFP-NEXT
+      // Override extend for MFP-POLICY
       @extend .custom-font-anakotmai;
 
       @include breakpoint(medium) {
@@ -755,17 +763,25 @@
 .help-header,
 .section-header {
   @include full-width-background;
-  @include full-width-border(bottom, 1px solid #eee);
-  // Override styles for MFP-NEXT
+  /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+  */
+  // @include full-width-border(bottom, 1px solid #eee);
+  @include full-width-border(bottom, 1px solid $new-color-border);
+  /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+  */
   // background: #fafafa;
-  background: #fff;
+  background: $new-header-background;
   margin-top: -$line-height;
   margin-bottom: $line-height;
   padding-bottom: $line-height / 2;
   padding-top: $line-height;
 
   h1 {
-    // Override styles for MFP-NEXT
+    // Override styles for MFP-POLICY
     // font-size: rem-calc(24);
     // text-transform: uppercase;
     font-size: rem-calc(32);
@@ -795,21 +811,21 @@
     padding: $line-height / 4;
     width: rem-calc(36);
 
-    // Override styles for MFP-NEXT
+    // Override styles for MFP-POLICY
     display: flex;
     align-items: center;
     justify-content: center;
 
     &::before {
       color: $text;
-      font-family: "icons";
+      font-family: 'icons';
     }
   }
 
   &.default {
     .button {
       &::before {
-        content: "\51";
+        content: '\51';
       }
     }
   }
@@ -817,7 +833,7 @@
   &.minimal {
     .button {
       &::before {
-        content: "\22";
+        content: '\22';
       }
     }
   }
@@ -826,8 +842,8 @@
     position: relative;
 
     &::before {
-      content: "\22";
-      font-family: "icons";
+      content: '\22';
+      font-family: 'icons';
       left: 0;
       position: absolute;
       top: 6px;
@@ -838,8 +854,8 @@
     position: relative;
 
     &::before {
-      content: "\51";
-      font-family: "icons";
+      content: '\51';
+      font-family: 'icons';
       left: 0;
       position: absolute;
       top: 6px;
@@ -850,8 +866,8 @@
     @include brand-text;
 
     &::after {
-      content: "\6c";
-      font-family: "icons";
+      content: '\6c';
+      font-family: 'icons';
       font-size: $tiny-font-size;
     }
   }
@@ -1020,7 +1036,7 @@
 
     &::after {
       border-bottom: 2px solid #fff;
-      content: "";
+      content: '';
       margin: 0 auto;
       padding-top: $line-height / 2;
       display: block;
@@ -1152,8 +1168,8 @@
 
     &::before {
       color: $brand;
-      content: "\57";
-      font-family: "icons";
+      content: '\57';
+      font-family: 'icons';
       font-size: $small-font-size;
       line-height: 0;
       position: absolute;
@@ -1233,8 +1249,8 @@
   padding: $line-height / 4;
 
   &::after {
-    content: "\56";
-    font-family: "icons";
+    content: '\56';
+    font-family: 'icons';
     font-size: $small-font-size;
     font-weight: normal;
     line-height: $line-height;
@@ -1368,8 +1384,8 @@
 
     &::after {
       color: #1b254c;
-      content: "\59";
-      font-family: "icons" !important;
+      content: '\59';
+      font-family: 'icons' !important;
       left: 34px;
       position: absolute;
       top: 5px;
@@ -1548,7 +1564,7 @@
     &.not-logged-in::after,
     &.already-answer::after,
     &.unverified::after {
-      font-family: "icons" !important;
+      font-family: 'icons' !important;
       left: 34px;
       position: absolute;
       top: 5px;
@@ -1559,7 +1575,7 @@
 
       &::after {
         color: $color-info;
-        content: "\6c";
+        content: '\6c';
       }
     }
 
@@ -1568,7 +1584,7 @@
 
       &::after {
         color: $color-alert;
-        content: "\74";
+        content: '\74';
       }
     }
 
@@ -1577,7 +1593,7 @@
 
       &::after {
         color: $color-info;
-        content: "\6f";
+        content: '\6f';
       }
     }
 
@@ -1586,7 +1602,7 @@
 
       &::after {
         color: $color-warning;
-        content: "\6f";
+        content: '\6f';
       }
     }
 
@@ -1595,7 +1611,7 @@
 
       &::after {
         color: $color-success;
-        content: "\59";
+        content: '\59';
       }
     }
   }
@@ -1656,9 +1672,9 @@
       &::after {
         background: #92ba48;
         border-radius: rem-calc(20);
-        content: "\6c";
+        content: '\6c';
         color: #fff;
-        font-family: "icons" !important;
+        font-family: 'icons' !important;
         font-size: rem-calc(12);
         padding: $line-height / 4;
         position: absolute;
