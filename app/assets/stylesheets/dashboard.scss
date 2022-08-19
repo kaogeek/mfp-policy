@@ -31,7 +31,13 @@
 }
 
 .dashboard-proposals-stats {
-  border: 2px solid $highlight;
+  /**
+   Override class for MFP-POLICY
+   @author Panuwat Chaiwongthon
+  */
+  // border: 2px solid $highlight;
+  background-color: $color-background-card;
+
   border-radius: rem-calc(6);
   margin-bottom: $line-height;
   padding: $line-height / 2;
@@ -48,11 +54,21 @@
 
   .counter-divider {
     @include breakpoint(medium) {
-      border-left: 2px solid $highlight;
+      /**
+       Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+      */
+      // border-left: 2px solid $highlight;
+      border-left: 2px solid $color-border;
     }
 
     @include breakpoint(large) {
-      border-right: 2px solid $highlight;
+      /**
+       Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+    */
+      // border-right: 2px solid $highlight;
+      border-right: 2px solid $color-border;
     }
   }
 
@@ -91,7 +107,6 @@
 }
 
 .dashboard-related-content {
-
   .related-content {
     border-top: 0;
 
@@ -183,7 +198,7 @@
 
     &::before {
       color: #fb9497;
-      content: "\74";
+      content: '\74';
     }
   }
 
@@ -191,8 +206,8 @@
     border: 2px solid;
     border-radius: rem-calc(40);
     color: #00cb96;
-    content: "\6c";
-    font-family: "icons";
+    content: '\6c';
+    font-family: 'icons';
     font-size: rem-calc(20);
     height: rem-calc(36);
     position: absolute;
@@ -208,6 +223,7 @@
   }
 
   h4 {
+    color: invert($color: $black);
     margin-top: $line-height;
   }
 
@@ -237,8 +253,8 @@
     background: $body-background;
     border: 1px solid $border;
     border-radius: rem-calc(36);
-    content: "\77";
-    font-family: "icons";
+    content: '\77';
+    font-family: 'icons';
     font-size: rem-calc(24);
     height: rem-calc(36);
     left: -18px;
@@ -263,7 +279,7 @@
   position: relative;
 
   &::before {
-    font-family: "icons";
+    font-family: 'icons';
     font-size: rem-calc(24);
     left: 6px;
     position: absolute;
@@ -272,23 +288,20 @@
 }
 
 .goal-supports {
-
   &::before {
-    content: "\77";
+    content: '\77';
   }
 }
 
 .goal-resource {
-
   &::before {
-    content: "\74";
+    content: '\74';
   }
 }
 
 .goal-days {
-
   &::before {
-    content: "\67";
+    content: '\67';
   }
 }
 
@@ -302,10 +315,15 @@
 // -----------
 
 .dashboard-sidebar {
-  background: #fbfbfb;
+  /**
+   Override class for MFP-POLICY
+   @author Panuwat Chaiwongthon
+*/
+  // background: #fbfbfb;
+  background: $color-background-sidebar;
   border-right: 1px solid $border;
 
-  [class^="icon-"] {
+  [class^='icon-'] {
     color: $text;
     display: inline-block;
     font-size: rem-calc(24);
@@ -316,7 +334,6 @@
   }
 
   ul {
-
     li {
       line-height: $line-height * 2;
       padding-left: $line-height;
@@ -337,9 +354,15 @@
     position: relative;
 
     &::before {
-      background: linear-gradient(to right, rgba(231, 236, 240, 1) 0%, rgba(251, 251, 251, 1) 90%);
+      // background: linear-gradient(to right, rgba(231, 236, 240, 1) 0%, rgba(251, 251, 251, 1) 90%);
+      background: linear-gradient(
+        to right,
+        $color-background-sidebar 0%,
+        $color-background-sidebar 90%
+      );
+
       border-left: 4px solid;
-      content: "";
+      content: '';
       height: rem-calc(48);
       left: 0;
       padding-left: rem-calc(20);
@@ -351,7 +374,7 @@
       @include brand-text;
     }
 
-    [class^="icon-"] {
+    [class^='icon-'] {
       @include brand-text;
     }
   }
@@ -377,13 +400,12 @@
 // -------------
 
 .dashboard-community {
-
   .community-number {
     font-size: rem-calc(24);
     font-weight: bold;
   }
 
-  [class^="icon-"] {
+  [class^='icon-'] {
     color: $text-medium;
     display: inline-block;
     font-size: rem-calc(24);
@@ -404,9 +426,7 @@
 // ---------
 
 .proposal-graph {
-
   .c3-ygrid-lines {
-
     line {
       stroke: #005c92;
     }
@@ -433,7 +453,12 @@
 }
 
 .poll-card {
-  background: #e7f3fd;
+  /**
+   Override class for MFP-POLICY
+   @author Panuwat Chaiwongthon
+  */
+  // background: #e7f3fd;
+  background: $color-background-card;
   border-radius: rem-calc(4);
   margin-bottom: $line-height;
   min-height: $line-height * 9;
@@ -454,8 +479,8 @@
 
     &::before {
       color: $brand;
-      content: "\6d";
-      font-family: "icons";
+      content: '\6d';
+      font-family: 'icons';
       left: 6px;
       position: absolute;
     }
@@ -476,7 +501,6 @@
 // -----------------
 
 .dashboard-mail-preview {
-
   max-width: rem-calc(600);
 
   .mail-header {
@@ -550,7 +574,7 @@
 
     &::before {
       background: $pdf-secondary;
-      content: "";
+      content: '';
       position: absolute;
     }
 
@@ -589,7 +613,6 @@
 }
 
 .dashboard-poster-preview {
-
   .preview-width {
     width: rem-calc(661);
   }
@@ -648,7 +671,6 @@
   }
 
   .poster-content {
-
     img {
       max-width: rem-calc(40);
       vertical-align: top;
@@ -681,9 +703,7 @@
 // 11. Poster PDF
 // --------------
 
-
 .dashboard-poster-pdf {
-
   .poster-header {
     font-weight: normal;
     height: 60cm;

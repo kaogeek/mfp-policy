@@ -83,7 +83,7 @@ $white: #fefefe !default;
     @author Panuwat Chaiwongthon
 */
 // $body-background: $white !default;
-$body-background: $new-content-background !default;
+$body-background: $color-background-content !default;
 
 $body-font-color: $black !default;
 // Override class for MFP-POLICY
@@ -467,27 +467,41 @@ $form-label-color: $black !default;
 $form-label-font-size: rem-calc(14) !default;
 $form-label-font-weight: $global-weight-normal !default;
 $form-label-line-height: 1.8 !default;
-$select-background: $white !default;
-$select-triangle-color: $dark-gray !default;
+/**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+*/
+// $select-background: $white !default;
+// $select-triangle-color: $dark-gray !default;
+$select-background: $color-background-form !default;
+$select-triangle-color: $color-text-base !default;
 // Override select radius for MFP-POLICY.
 // $select-radius: $global-radius !default;
-$select-radius: rem-calc(8) !default;
+$select-radius: rem-calc(10) !default;
 /**
     Override class for MFP-POLICY
     @author Panuwat Chaiwongthon
 */
 // $input-color: $black !default;
-$input-color: $new-color-input !default;
-$input-placeholder-color: $medium-gray !default;
+// $input-placeholder-color: $medium-gray !default;
+$input-color: $color-text-input !default;
+$input-placeholder-color: $color-text-placeholder !default;
 $input-font-family: inherit !default;
 $input-font-size: rem-calc(16) !default;
 $input-font-weight: $global-weight-normal !default;
 $input-line-height: $global-lineheight !default;
-$input-background: $white !default;
-$input-background-focus: $white !default;
-$input-background-disabled: $light-gray !default;
-$input-border: 1px solid $medium-gray !default;
-$input-border-focus: 1px solid $dark-gray !default;
+// $input-background: $white !default;
+// $input-background-focus: $white !default;
+// $input-background-disabled: $light-gray !default;
+// $input-border: 1px solid $medium-gray !default;
+// $input-border-focus: 1px solid $dark-gray !default;
+
+$input-background: $color-background-form !default;
+$input-background-focus: $color-background-form !default;
+$input-background-disabled: $color-background-form-disabled !default;
+$input-border: none !default;
+$input-border-focus: none !default;
+
 // Override button padding for MFP-POLICY.
 // $input-padding: $form-spacing / 2 !default;
 $input-padding: rem-calc(6 15) !default;
@@ -502,7 +516,7 @@ $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out !default;
 $input-number-spinners: true !default;
 // Override input radius for MFP-POLICY.
 // $input-radius: $global-radius !default;
-$input-radius: rem-calc(8) !default;
+$input-radius: rem-calc(10) !default;
 $form-button-radius: $global-radius !default;
 
 // 21. Label
@@ -793,7 +807,13 @@ $switch-paddle-transition: all 0.25s ease-out !default;
 // 50. Table
 // ---------
 
-$table-background: $white !default;
+/**
+   Override class for MFP-POLICY
+   @author Panuwat Chaiwongthon
+*/
+// $table-background: $white !default;
+$table-background: $color-background-table !default;
+
 $table-color-scale: 5% !default;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale) !default;
 $table-padding: rem-calc(8 10 10) !default;

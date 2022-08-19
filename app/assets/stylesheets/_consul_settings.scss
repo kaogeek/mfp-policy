@@ -18,7 +18,7 @@
  */
 
 // $black: #222 !default;
-$black: $new-color-text-base !default;
+$black: $color-text-base !default;
 $white: #fdfdfd !default;
 
 //$body-font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif !important !default;
@@ -107,10 +107,10 @@ $dark: $brand-secondary !default;
 // $text-medium: #515151 !default;
 // $text-light: #bfbfbf !default;
 // $border: #dee0e3 !default;
-$text: $new-color-text-base !default;
-$text-medium: $new-color-text-medium !default;
-$text-light: $new-color-text-light !default;
-$border: $new-color-border !default;
+$text: $color-text-content !default;
+$text-medium: $color-text-medium !default;
+$text-light: $color-text-medium !default;
+$border: $color-border !default;
 
 $link: $brand !default;
 $link-hover: darken($link, 20%) !default;

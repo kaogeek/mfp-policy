@@ -1,7 +1,8 @@
 .search-results-summary {
   @include grid-column-gutter;
   @include full-width-background;
-  background: $highlight;
+  // background: $highlight;
+  background: $color-background-content;
   margin-bottom: $line-height;
   margin-top: -$line-height;
   padding-bottom: $line-height;
