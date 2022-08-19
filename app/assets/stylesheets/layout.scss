@@ -23,7 +23,7 @@
 // 23. Maps
 // 24. Homepage
 // 25. LocalCensusRecords
-// Override for MFP-NEXT
+// Override for MFP-POLICY
 // 26. font Anakotmai
 // 27. font Pracharath
 // 28. font Tag label
@@ -121,8 +121,8 @@ a {
 
 a,
 button,
-[type="button"],
-[type="submit"] {
+[type='button'],
+[type='submit'] {
   &:focus {
     outline: $outline-focus;
   }
@@ -359,7 +359,7 @@ button,
   top: $line-height / 2;
 }
 
-// Override class for MFP-NEXT
+// Override class for MFP-POLICY
 .back {
   @extend .custom-font-anakotmai;
 }
@@ -372,11 +372,12 @@ button,
   padding-right: $line-height / 2;
 }
 
-.back:not([class^="icon-"]) {
+.back:not([class^='icon-']) {
   text-decoration: underline;
 }
 
 .tabs-content {
+  background: none;
   border: 0;
 }
 
@@ -385,7 +386,12 @@ button,
   border-right: 0;
   border-top: 0;
   margin-bottom: $line-height;
-
+  /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+  */
+  padding: 0 rem-calc(10);
+  background: $new-nav-background !important;
   .tabs-title {
     font-size: $base-font-size;
     margin-right: $line-height;
@@ -394,23 +400,26 @@ button,
   .tabs-title > a {
     color: $text-medium;
     position: relative;
-
     &:hover {
       @include brand-text;
       background: none;
       text-decoration: none;
     }
 
-    &[aria-selected="true"],
+    &[aria-selected='true'],
     &.is-active {
       @include brand-text;
       border-bottom: 0;
       font-weight: bold;
-
+      /**
+        Override class for MFP-POLICY
+        @author Panuwat Chaiwongthon
+      */
+      background: $new-nav-background !important;
       &::after {
         border-bottom: 2px solid;
         bottom: 0;
-        content: "";
+        content: '';
         left: 0;
         position: absolute;
         width: 100%;
@@ -488,7 +497,7 @@ button,
       }
     }
 
-    [for="show_menu"] {
+    [for='show_menu'] {
       display: none;
     }
   }
@@ -509,16 +518,16 @@ button,
       }
     }
 
-    [name="show_menu"]:checked + nav,
+    [name='show_menu']:checked + nav,
     > nav:focus-within {
       left: 0;
 
       + * {
         overflow-x: hidden;
 
-        [for="show_menu"]::after {
+        [for='show_menu']::after {
           @include reveal-overlay;
-          content: "";
+          content: '';
           cursor: pointer;
           display: block;
           z-index: 11;
@@ -527,7 +536,7 @@ button,
     }
   }
 
-  [name="show_menu"] {
+  [name='show_menu'] {
     display: none;
   }
 }
@@ -554,7 +563,7 @@ body > header,
       margin: 0;
       padding: rem-calc(6);
 
-      [type="submit"] {
+      [type='submit'] {
         @include brand-text;
         background: none;
         border: 0;
@@ -583,8 +592,9 @@ body > header,
   }
 
   .top-bar {
-    // Set top-bar bg to white for MFP-NEXT
+    // Set top-bar bg to white for MFP-POLICY
     // @extend %brand-background;
+
   }
 }
 
@@ -596,9 +606,12 @@ body > header,
 }
 
 .top-bar {
-  // Override styles for MFP-NEXT
-  // background-color: inherit;
-  background-color: #fff;
+  /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+  */
+  // background-color: #fff;
+  background-color: $new-header-background !important;
   padding: 0;
 
   @include breakpoint(medium) {
@@ -645,7 +658,7 @@ body > header,
       text-align: left;
 
       @include breakpoint(medium) {
-        // Override style for MFP-NEXT
+        // Override style for MFP-POLICY
         // @include brand-text;
         // background: $body-background;
         color: $white;
@@ -667,17 +680,28 @@ body > header,
       margin-bottom: $line-height;
       margin-top: $line-height / 2;
       padding-bottom: $line-height;
-
       .submenu {
         margin-top: 0;
       }
     }
 
     &.is-dropdown-submenu {
-      background: $body-background;
+      /**
+      Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+    */
+      border-radius: rem-calc(5);
+      border-color: transparent;
+      background: $new-card-background;
+
+      // background: $body-background;
       color: $text;
       margin: 0;
-      margin-top: rem-calc(-12);
+      /**
+        Override class for MFP-POLICY
+        @author Panuwat Chaiwongthon
+      */
+      // margin-top: rem-calc(-12);
       padding: 0;
       z-index: 9;
     }
@@ -767,7 +791,7 @@ body > header,
       display: inline-block;
 
       &::after {
-        content: "|";
+        content: '|';
       }
 
       &:last-child::after {
@@ -781,15 +805,18 @@ body > header,
   display: flex;
   flex-direction: column;
 
-  // Add style for MFP-NEXT
+  // Add style for MFP-POLICY
   font-family: $header-font-family;
 
   @include breakpoint(medium) {
-    // Override style for MFP-NEXT
+    /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+  */
     // background: $body-background;
-    // color: $text;
-    background: #f0f0f0;
-    color: $text-color-reduce;
+    // color: $text-color-reduce;
+    color: $text;
+    background: $new-nav-background;
 
     flex-direction: row;
     padding-bottom: 0;
@@ -822,7 +849,7 @@ body > header,
 
     @include breakpoint(medium) {
       display: block;
-      // Override style for MFP-NEXT
+      // Override style for MFP-POLICY
       // font-weight: bold;
       width: auto;
 
@@ -845,18 +872,18 @@ body > header,
   }
 
   .input-group {
-    // Override style for MFP-NEXT
+    // Override style for MFP-POLICY
     // padding-top: $line-height / 4;
     padding-top: $line-height / 2.5;
 
-    // Add style for MFP-NEXT
+    // Add style for MFP-POLICY
     align-items: center;
 
     @include breakpoint(medium) {
       margin-bottom: 0;
     }
 
-    // Add style for MFP-NEXT
+    // Add style for MFP-POLICY
     label {
       width: 100%;
 
@@ -872,11 +899,11 @@ body > header,
 
   .input-group-field {
     margin-bottom: 0 !important;
-    // Add style for MFP-NEXT
+    // Add style for MFP-POLICY
     border-radius: rem-calc(8);
     font-family: $body-font-family;
 
-    // Add style for MFP-NEXT
+    // Add style for MFP-POLICY
     &::placeholder {
       color: $text-color-reduce;
     }
@@ -886,12 +913,12 @@ body > header,
     line-height: $line-height * 1.5;
     padding-bottom: 0;
 
-    // Override styles for MFP-NEXT
+    // Override styles for MFP-POLICY
     position: absolute;
     right: rem-calc(6);
 
     button {
-      // Override styles for MFP-NEXT
+      // Override styles for MFP-POLICY
       // background: $border;
       background: $brand;
       border: 1px solid #ccc;
@@ -900,7 +927,7 @@ body > header,
       line-height: $line-height * 1.2;
       padding: 0.85rem 0.65rem;
 
-      // Override style for MFP-NEXT.
+      // Override style for MFP-POLICY.
       // color: $text;
       // color: $text-color-reduce;
 
@@ -909,7 +936,7 @@ body > header,
       padding-top: 0;
     }
 
-    // Override style for MFP-NEXT.
+    // Override style for MFP-POLICY.
     &:last-child > * {
       border-radius: 0.4rem !important;
     }
@@ -964,9 +991,17 @@ body > header,
   h2 {
     font-size: $base-font-size;
   }
+
+  /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+  */
+  span {
+    font-size: $base-font-size;
+  }
 }
 
-.search-form-header [type="text"] {
+.search-form-header [type='text'] {
   max-width: none;
 }
 
@@ -979,7 +1014,7 @@ footer {
   }
 
   .logo a {
-    font-family: "Lato" !important;
+    font-family: 'Lato' !important;
     text-decoration: none;
 
     &:hover {
@@ -1007,7 +1042,7 @@ footer {
   }
 
   .footer-sections {
-    // Override class for MFP-NEXT
+    // Override class for MFP-POLICY
     &.row {
       display: flex;
       flex-wrap: wrap;
@@ -1091,7 +1126,7 @@ footer {
   font-size: $small-font-size;
   padding-top: $line-height / 2;
 
-  // Override class for MFP-NEXT
+  // Override class for MFP-POLICY
   &.row {
     display: flex;
     flex-wrap: wrap;
@@ -1182,7 +1217,7 @@ footer {
 }
 
 .auth-image {
-  background: $brand image-url("auth_bg.jpg");
+  background: $brand image-url('auth_bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   color: $white;
@@ -1243,7 +1278,7 @@ form {
     font-weight: bold;
   }
 
-  [type="radio"] {
+  [type='radio'] {
     height: $line-height !important;
     vertical-align: top;
 
@@ -1256,7 +1291,7 @@ form {
     }
   }
 
-  [type]:not([type="button"], [type="checkbox"], [type="file"], [type="radio"], [type="submit"]) {
+  [type]:not([type='button'], [type='checkbox'], [type='file'], [type='radio'], [type='submit']) {
     // background: #f8f8f8;
     height: $input-height;
     margin-bottom: rem-calc(16);
@@ -1270,12 +1305,12 @@ form {
     }
   }
 
-  [type="checkbox"] + label,
-  [type="radio"] + label {
+  [type='checkbox'] + label,
+  [type='radio'] + label {
     margin-right: 0;
   }
 
-  [type="file"] {
+  [type='file'] {
     margin: $line-height / 2 0 $line-height / 2 $line-height / 4;
   }
 
@@ -1342,7 +1377,7 @@ form {
   @extend .custom-font-anakotmai;
 
   @include breakpoint(medium) {
-    // Override style for MFP-NEXT
+    // Override style for MFP-POLICY
     // position: absolute;
     right: 24px;
     top: 24px;
@@ -1351,7 +1386,7 @@ form {
 
   .notice {
     height: $line-height * 4;
-    // Override style for MFP-NEXT
+    // Override style for MFP-POLICY
     width: 100%;
 
     .notice-text {
@@ -1523,7 +1558,7 @@ form {
 
   &::before {
     background: $border;
-    content: "";
+    content: '';
     height: 100%;
     left: 7px;
     position: absolute;
@@ -1567,15 +1602,15 @@ form {
     }
 
     &::before {
-      content: "\43";
+      content: '\43';
     }
   }
 
   &::before {
     background: $body-background;
     color: $brand;
-    content: "\4d";
-    font-family: "icons" !important;
+    content: '\4d';
+    font-family: 'icons' !important;
     font-size: $small-font-size;
     height: rem-calc(20);
     left: -24px;
@@ -1699,8 +1734,14 @@ table {
 
 .button.button-twitter {
   @include has-fa-icon(twitter, brands);
-  background: #ecf7fc;
-  border-left: 3px solid #45b0e3;
+  /**
+   Override class for MFP-POLICY
+   @author Panuwat Chaiwongthon
+   */
+  // border-left: 3px solid #45b0e3;
+  // background: #ffffff;
+  background: $new-nav-background;
+  border-radius: rem-calc(25);
 
   &::before {
     color: #45b0e3;
@@ -1739,8 +1780,13 @@ table {
 
 .button.button-facebook {
   @include has-fa-icon(facebook-f, brands);
-  background: #ffffff;
-  border-radius: 25px;
+   /**
+   Override class for MFP-POLICY
+   @author Panuwat Chaiwongthon
+   */
+  // background: #ffffff;
+  background: $new-nav-background;
+  border-radius: rem-calc(25);
   &::before {
     color: #3b5998;
     margin-left: 20px;
@@ -1758,8 +1804,13 @@ table {
 
 .button.button-google {
   @include has-fa-icon(google, brands);
-  background: #ffffff;
-  border-radius: 25px;
+   /**
+   Override class for MFP-POLICY
+   @author Panuwat Chaiwongthon
+   */
+  // background: #ffffff;
+  background: $new-nav-background;
+  border-radius: rem-calc(25);
   &::before {
     background: conic-gradient(
         from -45deg,
@@ -1837,13 +1888,13 @@ table {
     &::after {
       content: none;
       color: $text-medium;
-      font-family: "icons" !important;
+      font-family: 'icons' !important;
       position: absolute;
       right: 0;
       top: 24px;
 
       @include breakpoint(medium) {
-        content: "c";
+        content: 'c';
       }
     }
   }
@@ -2044,7 +2095,7 @@ table {
       margin-bottom: 0;
     }
 
-    [class^="icon-"] {
+    [class^='icon-'] {
       font-size: $base-font-size;
       text-decoration: none;
       vertical-align: sub;
@@ -2066,7 +2117,7 @@ table {
     margin: $line-height / 4 0;
     padding: $line-height / 4;
     position: relative;
-    // Override extend for MFP-NEXT
+    // Override extend for MFP-POLICY
     @extend .custom-info;
 
     &:empty {
@@ -2191,7 +2242,7 @@ table {
   display: inline-block;
   font-size: $small-font-size;
   line-height: rem-calc(32); // Same as avatar height
-  // Override extend for MFP-NEXT
+  // Override extend for MFP-POLICY
   @extend .custom-font-anakotmai;
 
   .user-name {
@@ -2392,7 +2443,7 @@ table {
   }
 
   .card .orbit .orbit-wrapper .truncate {
-    background: image-url("truncate.png");
+    background: image-url('truncate.png');
     background-repeat: repeat-x;
     bottom: 0;
     height: rem-calc(20);
@@ -2612,7 +2663,7 @@ table {
     float: right;
   }
 
-  &[aria-expanded="false"] + form {
+  &[aria-expanded='false'] + form {
     display: none;
   }
 }
@@ -2916,7 +2967,7 @@ table {
 // 28. font Tag label
 // ------------------------
 
-label:not([for*="search_text"]):not(.checkbox-label) {
+label:not([for*='search_text']):not(.checkbox-label) {
   margin-left: 8px;
   margin-bottom: 8px;
   @extend .custom-font-anakotmai;

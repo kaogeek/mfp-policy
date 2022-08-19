@@ -78,10 +78,17 @@ $medium-gray: #cacaca !default;
 $dark-gray: #8a8a8a !default;
 $black: #0a0a0a !default;
 $white: #fefefe !default;
-$body-background: $white !default;
+/**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+*/
+// $body-background: $white !default;
+$body-background: $new-content-background !default;
+
 $body-font-color: $black !default;
+// Override class for MFP-POLICY
 //$body-font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
-$body-font-family: "Pracharath", sans-serif !default;
+$body-font-family: 'Pracharath', sans-serif !default;
 $body-antialiased: true !default;
 $global-margin: 1rem !default;
 $global-padding: 1rem !default;
@@ -123,60 +130,60 @@ $grid-column-gutter: (
   medium: 30px,
 ) !default;
 $grid-column-align-edge: true !default;
-$grid-column-alias: "columns" !default;
+$grid-column-alias: 'columns' !default;
 $block-grid-max: 8 !default;
 
 // 4. Base Typography
 // ------------------
 
 //$header-font-family: $body-font-family !default;
-$header-font-family: "Anakotmai", "HelveticaNeue-Medium",
-  "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$header-font-family: 'Anakotmai', 'HelveticaNeue-Medium',
+  'Helvetica Neue Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $header-font-weight: $global-weight-normal !default;
 $header-font-style: normal !default;
-$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace !default;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace !default;
 $header-color: inherit !default;
 $header-lineheight: 1.4 !default;
 $header-margin-bottom: 0.5rem !default;
 $header-styles: (
   small: (
-    "h1": (
-      "font-size": 24,
+    'h1': (
+      'font-size': 24,
     ),
-    "h2": (
-      "font-size": 20,
+    'h2': (
+      'font-size': 20,
     ),
-    "h3": (
-      "font-size": 19,
+    'h3': (
+      'font-size': 19,
     ),
-    "h4": (
-      "font-size": 18,
+    'h4': (
+      'font-size': 18,
     ),
-    "h5": (
-      "font-size": 17,
+    'h5': (
+      'font-size': 17,
     ),
-    "h6": (
-      "font-size": 16,
+    'h6': (
+      'font-size': 16,
     ),
   ),
   medium: (
-    "h1": (
-      "font-size": 48,
+    'h1': (
+      'font-size': 48,
     ),
-    "h2": (
-      "font-size": 40,
+    'h2': (
+      'font-size': 40,
     ),
-    "h3": (
-      "font-size": 31,
+    'h3': (
+      'font-size': 31,
     ),
-    "h4": (
-      "font-size": 25,
+    'h4': (
+      'font-size': 25,
     ),
-    "h5": (
-      "font-size": 20,
+    'h5': (
+      'font-size': 20,
     ),
-    "h6": (
-      "font-size": 16,
+    'h6': (
+      'font-size': 16,
     ),
   ),
 ) !default;
@@ -213,7 +220,7 @@ $blockquote-padding: rem-calc(9 20 0 19) !default;
 $blockquote-border: 1px solid $medium-gray !default;
 $cite-font-size: rem-calc(13) !default;
 $cite-color: $dark-gray !default;
-$cite-pseudo-content: "\2014 \0020" !default;
+$cite-pseudo-content: '\2014 \0020' !default;
 $keystroke-font: $font-family-monospace !default;
 $keystroke-color: $black !default;
 $keystroke-background: $light-gray !default;
@@ -296,8 +303,8 @@ $breadcrumbs-item-color-disabled: $medium-gray !default;
 $breadcrumbs-item-margin: 0.75rem !default;
 $breadcrumbs-item-uppercase: true !default;
 $breadcrumbs-item-separator: true !default;
-$breadcrumbs-item-separator-item: "/" !default;
-$breadcrumbs-item-separator-item-rtl: "\\" !default;
+$breadcrumbs-item-separator-item: '/' !default;
+$breadcrumbs-item-separator-item-rtl: '\\' !default;
 $breadcrumbs-item-separator-color: $medium-gray !default;
 
 // 11. Button
@@ -305,13 +312,13 @@ $breadcrumbs-item-separator-color: $medium-gray !default;
 
 //$button-font-family: inherit !default;
 $button-font-family: $header-font-family !default;
-// Override button padding for MFP-NEXT.
+// Override button padding for MFP-POLICY.
 $button-padding: 0.85em 1em !default;
 // $button-padding: 0.4em 1.1em !default;
 $button-margin: 0 0 $global-margin 0 !default;
 $button-fill: solid !default;
 $button-background: $brand !default;
-// Override button button background hover for MFP-NEXT.
+// Override button button background hover for MFP-POLICY.
 // $button-background-hover: scale-color(
 //   $button-background,
 //   $lightness: -15%
@@ -319,7 +326,7 @@ $button-background: $brand !default;
 $button-background-hover: #f57832 !default;
 $button-color: $white !default;
 $button-color-alt: $black !default;
-// Override button border radius for MFP-NEXT.
+// Override button border radius for MFP-POLICY.
 // $button-radius: $global-radius !default;
 $button-radius: 0.4rem;
 $button-hollow-border-width: 1px !default;
@@ -340,7 +347,7 @@ $button-transition: background-color 0.25s ease-out, color 0.25s ease-out !defau
 
 $buttongroup-margin: 1rem !default;
 $buttongroup-spacing: 1px !default;
-$buttongroup-child-selector: ".button" !default;
+$buttongroup-child-selector: '.button' !default;
 $buttongroup-expand-max: 6 !default;
 $buttongroup-radius-on-each: true !default;
 
@@ -456,15 +463,21 @@ $input-prefix-background: $light-gray !default;
 $input-prefix-border: 1px solid $medium-gray !default;
 $input-prefix-padding: 1rem !default;
 $form-label-color: $black !default;
+
 $form-label-font-size: rem-calc(14) !default;
 $form-label-font-weight: $global-weight-normal !default;
 $form-label-line-height: 1.8 !default;
 $select-background: $white !default;
 $select-triangle-color: $dark-gray !default;
-// Override select radius for MFP-NEXT.
+// Override select radius for MFP-POLICY.
 // $select-radius: $global-radius !default;
 $select-radius: rem-calc(8) !default;
-$input-color: $black !default;
+/**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+*/
+// $input-color: $black !default;
+$input-color: $new-color-input !default;
 $input-placeholder-color: $medium-gray !default;
 $input-font-family: inherit !default;
 $input-font-size: rem-calc(16) !default;
@@ -475,19 +488,19 @@ $input-background-focus: $white !default;
 $input-background-disabled: $light-gray !default;
 $input-border: 1px solid $medium-gray !default;
 $input-border-focus: 1px solid $dark-gray !default;
-// Override button padding for MFP-NEXT.
+// Override button padding for MFP-POLICY.
 // $input-padding: $form-spacing / 2 !default;
 $input-padding: rem-calc(6 15) !default;
-// Override box shadow for MFP-NEXT.
+// Override box shadow for MFP-POLICY.
 // $input-shadow: inset 0 1px 2px rgba($black, 0.1) !default;
 $input-shadow: unset !default;
-// Override focus box shadow for MFP-NEXT.
+// Override focus box shadow for MFP-POLICY.
 // $input-shadow-focus: 0 0 5px $medium-gray !default;
 $input-shadow-focus: unset !default;
 $input-cursor-disabled: not-allowed !default;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out !default;
 $input-number-spinners: true !default;
-// Override input radius for MFP-NEXT.
+// Override input radius for MFP-POLICY.
 // $input-radius: $global-radius !default;
 $input-radius: rem-calc(8) !default;
 $form-button-radius: $global-radius !default;
@@ -556,7 +569,7 @@ $offcanvas-transition-length: 0.5s !default;
 $offcanvas-transition-timing: ease !default;
 $offcanvas-fixed-reveal: true !default;
 $offcanvas-exit-background: rgba($white, 0.25) !default;
-$maincontent-class: "off-canvas-content" !default;
+$maincontent-class: 'off-canvas-content' !default;
 
 // 26. Orbit
 // ---------

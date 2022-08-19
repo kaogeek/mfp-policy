@@ -70,19 +70,19 @@
     line-height: $line-height * 2;
     padding-right: $line-height / 2;
     vertical-align: top;
-    // Override extend for MFP-NEXT
+    // Override extend for MFP-POLICY
     @extend .custom-font-anakotmai;
 
     @include breakpoint(medium) {
       display: block;
       line-height: $line-height;
       padding-right: 0;
-      // Override style for MFP-NEXT
+      // Override style for MFP-POLICY
       font-size: $small-font-size * 1.2;
     }
 
     @include breakpoint(large) {
-      // Override style for MFP-NEXT
+      // Override style for MFP-POLICY
       font-size: $small-font-size * 1.5;
     }
   }

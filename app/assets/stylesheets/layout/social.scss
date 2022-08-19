@@ -1,11 +1,11 @@
 .social {
   @include grid-column;
-  // Override styles for MFP-NEXT
+  // Override styles for MFP-POLICY
   // text-align: right;
   text-align: center;
 
   @include breakpoint(medium) {
-    // Override styles for MFP-NEXT
+    // Override styles for MFP-POLICY
     // width: 1 * 100% / 3;
     text-align: right;
     padding-left: 0;

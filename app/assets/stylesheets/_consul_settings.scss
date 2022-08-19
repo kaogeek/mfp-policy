@@ -11,54 +11,61 @@
 // 1. Foundation settings overrides
 // ---------------------------------
 
-$black: #222 !default;
+
+/**
+ Override class for MFP-POLICY
+ @author Panuwat Chaiwongthon
+ */
+
+// $black: #222 !default;
+$black: $new-color-text-base !default;
 $white: #fdfdfd !default;
 
 //$body-font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif !important !default;
-$body-font-family: "Pracharath", sans-serif !default;
+$body-font-family: 'Pracharath', sans-serif !default;
 
 $global-radius: rem-calc(3) !default;
 $global-width: rem-calc(1200) !default;
 
 $header-styles: (
   small: (
-    "h1": (
-      "font-size": 34,
+    'h1': (
+      'font-size': 34,
     ),
-    "h2": (
-      "font-size": 24,
+    'h2': (
+      'font-size': 24,
     ),
-    "h3": (
-      "font-size": 20,
+    'h3': (
+      'font-size': 20,
     ),
-    "h4": (
-      "font-size": 18,
+    'h4': (
+      'font-size': 18,
     ),
-    "h5": (
-      "font-size": 16,
+    'h5': (
+      'font-size': 16,
     ),
-    "h6": (
-      "font-size": 14,
+    'h6': (
+      'font-size': 14,
     ),
   ),
   medium: (
-    "h1": (
-      "font-size": 44,
+    'h1': (
+      'font-size': 44,
     ),
-    "h2": (
-      "font-size": 34,
+    'h2': (
+      'font-size': 34,
     ),
-    "h3": (
-      "font-size": 24,
+    'h3': (
+      'font-size': 24,
     ),
-    "h4": (
-      "font-size": 19,
+    'h4': (
+      'font-size': 19,
     ),
-    "h5": (
-      "font-size": 16,
+    'h5': (
+      'font-size': 16,
     ),
-    "h6": (
-      "font-size": 13,
+    'h6': (
+      'font-size': 13,
     ),
   ),
 ) !default;
@@ -75,7 +82,7 @@ $show-header-for-stacked: true !default;
 // --------------------
 
 $body-margin: calc(50vw - #{$global-width / 2}) !default;
-$full-width-margin: unquote("#{$global-width / 2} - 50vw") !default;
+$full-width-margin: unquote('#{$global-width / 2} - 50vw') !default;
 
 // $base-font-size:      rem-calc(17) !default;
 // Scale up to offset Pracharath's font size.
@@ -86,17 +93,24 @@ $base-line: rem-calc(26) !default;
 $line-height: rem-calc(24) !default;
 $tiny-font-size: rem-calc(12) !default;
 
-$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$font-family-serif: Georgia, 'Times New Roman', Times, serif !default;
 
 $brand: #e67e44 !default;
 $brand-secondary: darken($brand, 10%) !default;
 $dark: $brand-secondary !default;
 
-$text: $black !default;
-$text-medium: #515151 !default;
-$text-light: #bfbfbf !default;
-
-$border: #dee0e3 !default;
+/**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+*/
+// $text: $black !default;
+// $text-medium: #515151 !default;
+// $text-light: #bfbfbf !default;
+// $border: #dee0e3 !default;
+$text: $new-color-text-base !default;
+$text-medium: $new-color-text-medium !default;
+$text-light: $new-color-text-light !default;
+$border: $new-color-border !default;
 
 $link: $brand !default;
 $link-hover: darken($link, 20%) !default;
