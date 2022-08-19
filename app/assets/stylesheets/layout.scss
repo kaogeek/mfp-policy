@@ -143,8 +143,14 @@ button,
 
 .button-gray {
   @extend .button;
-  background: #f0f0f0 !important;
-  color: $text-color-reduce !important;
+  /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+  */
+  // background: #f0f0f0 !important;
+  background: $color-background-button-dark !important;
+
+  color: $color-text-button-light !important;
 }
 
 .button {
@@ -265,7 +271,11 @@ button,
   border-bottom: 1px solid $border;
   clear: both;
   margin-bottom: $line-height / 2;
-
+  /**
+      Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+  */
+  @extend .custom-font-anakotmai;
   li {
     font-size: $base-font-size;
     margin-bottom: 0;
@@ -298,7 +308,12 @@ button,
     }
 
     &:not(.is-active) {
-      margin-bottom: $line-height / 3;
+      /**
+      Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+    */
+      // margin-bottom: $line-height / 3;
+      margin-bottom: $line-height / 2;
     }
   }
 
@@ -357,6 +372,12 @@ button,
 
 .close-button {
   top: $line-height / 2;
+  // Override class for MFP-POLICY
+  color: invert($color: $color-text-content);
+
+  &:hover {
+    color: invert($color: $color-text-content);
+  }
 }
 
 // Override class for MFP-POLICY
@@ -367,7 +388,9 @@ button,
 .back,
 .icon-angle-left {
   clear: both;
-  color: $text-medium;
+  // Override class for MFP-POLICY
+  // color: $text-medium;
+  color: $color-text-button-light;
   display: inline-block;
   padding-right: $line-height / 2;
 }
@@ -391,7 +414,7 @@ button,
     @author Panuwat Chaiwongthon
   */
   padding: 0 rem-calc(10);
-  background: $new-nav-background !important;
+  background: $color-background-nav !important;
   .tabs-title {
     font-size: $base-font-size;
     margin-right: $line-height;
@@ -415,7 +438,7 @@ button,
         Override class for MFP-POLICY
         @author Panuwat Chaiwongthon
       */
-      background: $new-nav-background !important;
+      background: $color-background-nav !important;
       &::after {
         border-bottom: 2px solid;
         bottom: 0;
@@ -585,7 +608,11 @@ body > header,
 
 .public > .wrapper > header,
 .proposal-dashboard > header {
-  @include full-width-border(bottom, 1px solid $border);
+  /**
+   Override class for MFP-POLICY
+   @author Panuwat Chaiwongthon
+  */
+  // @include full-width-border(bottom, 1px solid $border);
 
   > * {
     @include full-width-background($adjust-padding: true);
@@ -594,7 +621,6 @@ body > header,
   .top-bar {
     // Set top-bar bg to white for MFP-POLICY
     // @extend %brand-background;
-
   }
 }
 
@@ -611,7 +637,7 @@ body > header,
     @author Panuwat Chaiwongthon
   */
   // background-color: #fff;
-  background-color: $new-header-background !important;
+  background-color: $color-background-header !important;
   padding: 0;
 
   @include breakpoint(medium) {
@@ -692,10 +718,10 @@ body > header,
     */
       border-radius: rem-calc(5);
       border-color: transparent;
-      background: $new-card-background;
+      background: $color-background-card;
 
       // background: $body-background;
-      color: $text;
+      color: $color-text-light;
       margin: 0;
       /**
         Override class for MFP-POLICY
@@ -816,7 +842,7 @@ body > header,
     // background: $body-background;
     // color: $text-color-reduce;
     color: $text;
-    background: $new-nav-background;
+    background: $color-background-nav;
 
     flex-direction: row;
     padding-bottom: 0;
@@ -920,8 +946,8 @@ body > header,
     button {
       // Override styles for MFP-POLICY
       // background: $border;
+      // border: 1px solid #ccc;
       background: $brand;
-      border: 1px solid #ccc;
       border-left: 0;
       height: $line-height * 1.2;
       line-height: $line-height * 1.2;
@@ -963,7 +989,8 @@ body > header,
   margin-bottom: $line-height;
 
   a {
-    color: inherit;
+    // color: inherit;
+    color: $color-text-navbar;
     display: inline-block;
     font-weight: bold;
     margin-right: $line-height / 2;
@@ -987,16 +1014,11 @@ body > header,
       text-decoration: none;
     }
   }
-
-  h2 {
-    font-size: $base-font-size;
-  }
-
-  /**
+ /**
     Override class for MFP-POLICY
     @author Panuwat Chaiwongthon
   */
-  span {
+  h2, span {
     font-size: $base-font-size;
   }
 }
@@ -1122,7 +1144,12 @@ footer {
 }
 
 .subfooter {
-  border-top: 1px solid $text-light;
+  /**
+   Override class for MFP-POLICY
+   @author Panuwat Chaiwongthon
+   */
+  // border-top: 1px solid $text-light;
+  border-top: 1px solid $color-border;
   font-size: $small-font-size;
   padding-top: $line-height / 2;
 
@@ -1584,11 +1611,20 @@ form {
   }
 
   &.unread {
-    background: $highlight-soft;
-    border: 1px solid $highlight;
+    /**
+      Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+  */
+    // background: $highlight-soft;
+    // border: 1px solid $highlight;
+    background-color: $color-background-card;
+    transition: ease-in-out 200ms;
+    border: none;
+    border-radius: rem-calc(5);
 
     &:hover {
-      background: $highlight;
+      // background: $highlight;
+      background-color: $color-background-card-hover;
     }
   }
 
@@ -1642,7 +1678,12 @@ form {
 .level-5,
 .is-author,
 .is-association {
-  color: #000;
+  /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+  */
+  // color: #000;
+  color: $color-text-content;
 }
 
 .is-author {
@@ -1677,7 +1718,8 @@ table {
   width: 100%;
 
   th {
-    background: #f8f9fb;
+    // background: #f8f9fb;
+    background: $color-background-table;
   }
 
   tr {
@@ -1723,7 +1765,7 @@ table {
 .button.button-google,
 .button.button-wordpress {
   box-shadow: 0px 0px 2px #00000030;
-  color: $text;
+  color: $button-color;
   font-weight: bold;
 
   &::before {
@@ -1740,7 +1782,7 @@ table {
    */
   // border-left: 3px solid #45b0e3;
   // background: #ffffff;
-  background: $new-nav-background;
+  background: $color-background-button-social;
   border-radius: rem-calc(25);
 
   &::before {
@@ -1780,12 +1822,12 @@ table {
 
 .button.button-facebook {
   @include has-fa-icon(facebook-f, brands);
-   /**
+  /**
    Override class for MFP-POLICY
    @author Panuwat Chaiwongthon
    */
   // background: #ffffff;
-  background: $new-nav-background;
+  background: $color-background-button-social;
   border-radius: rem-calc(25);
   &::before {
     color: #3b5998;
@@ -1804,12 +1846,12 @@ table {
 
 .button.button-google {
   @include has-fa-icon(google, brands);
-   /**
+  /**
    Override class for MFP-POLICY
    @author Panuwat Chaiwongthon
    */
   // background: #ffffff;
-  background: $new-nav-background;
+  background: $color-background-button-social;
   border-radius: rem-calc(25);
   &::before {
     background: conic-gradient(
@@ -2190,6 +2232,10 @@ table {
     padding: $line-height / 4 0;
     overflow: hidden;
 
+    /**
+      Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+    */
     &.level-1,
     &.level-2,
     &.level-3,
@@ -2198,7 +2244,9 @@ table {
     &.is-author,
     &.is-admin,
     &.is-moderator {
-      background: rgba(70, 219, 145, 0.3);
+      // background: rgba(70, 219, 145, 0.3);
+      background: $color-background-content;
+
       padding: $line-height / 4 $line-height / 2;
     }
 
@@ -2207,13 +2255,15 @@ table {
     }
 
     &.level-5 {
-      background: rgba(255, 241, 204, 1);
+      // background: rgba(255, 241, 204, 1);
+      background: $color-background-content;
     }
 
     &.is-author,
     &.is-admin,
     &.is-moderator {
-      background: rgba(45, 144, 248, 0.15);
+      background: $color-background-content;
+      // background: rgba(45, 144, 248, 0.15);
     }
   }
 }

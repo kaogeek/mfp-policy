@@ -116,7 +116,7 @@
         <p class="small">
           <%= link_to t("proposals.index.selected_proposals_link"), proposals_path(selected: "all") %>
         </p>
-        <!-- 
+        <!--
           <% if params[:retired].blank? %>
             <%= render "categories" %>
             <%= render "shared/tag_cloud", taggable: "Proposal" %>
@@ -128,16 +128,26 @@
             <div class="sidebar-divider"></div>
               <h1 class="sidebar-title"><%= t("shared.tags_cloud.tags") %></h1>
               <br>
-              <a href="/debates?search=ผู้แทนฯ+ที่คุณอยากเห็น">ผู้แทนฯ ที่คุณอยากเห็น</a>
-              <a href="/debates?search=สื่อของพรรค">สื่อของพรรค</a>
-              <a href="/debates?search=นำเสนอนโยบาย">นำเสนอนโยบาย</a>
-              <a href="/debates?search=งานสภา">งานสภา</a>
-              <a href="/debates?search=การทำงานพื้นที่">การทำงานพื้นที่</a>
-              <a href="/debates?search=การสร้างเครือข่ายและกิจกรรมสมาชิก">การสร้างเครือข่ายและกิจกรรมสมาชิก</a>
-              <a href="/debates?search=ระดมทุน">ระดมทุน</a>
           </div>
       </aside>
     </div>
+ <script>
+    $(document).ready(() => {
+        const categories = [
+        "ผู้แทนฯ ที่คุณอยากเห็น",
+        "สื่อของพรรค",
+        "นำเสนอนโยบาย",
+        "การทำงานพื้นที่",
+        "การสร้างเครือข่ายและกิจกรรมสมาชิก",
+        "ระดมทุน"
+        ];
 
+       const prepareHTML = categories.map((category) =>
+          `<a href="/proposals?search=${category.replace(/\s/, '+')}">${category}</a>`
+        );
+        $('.tag-cloud').append(prepareHTML)
+
+      });
+ </script>
   </div>
 </main>

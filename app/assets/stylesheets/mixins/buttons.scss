@@ -64,7 +64,11 @@
   }
 
   &[aria-pressed="true"] {
-    background: $primary-color;
+    /**
+      Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+    */
+    // background: $primary-color;
     padding-right: 2.5em;
     text-align: left;
 
