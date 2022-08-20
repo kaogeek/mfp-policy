@@ -12,6 +12,12 @@
     display: inline-block;
     position: relative;
 
+  /**
+     Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+   */
+    @extend .custom-font-pracharath;
+
     &::after {
       color: $light-gray;
       font-size: $small-font-size;
