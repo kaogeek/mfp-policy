@@ -2,10 +2,11 @@
   <% provide :title do %><%= t("devise_views.organizations.registrations.new.title") %><% end %>
   <h2 class = "title_organizations"><%= t("devise_views.organizations.registrations.new.title") %></h2>
 
+
   <%= form_for(resource, as: :user, url: organization_registration_path) do |f| %>
     <!-- <%= render "shared/errors", resource: resource %> -->
     <div class="row">
-      <div class="small-12 column">
+      <div class="small-12 medium-12 column">
 
         <%= f.fields_for :organization do |fo| %>
           <%= fo.text_field :name, autofocus: true, maxlength: Organization.name_max_length,label: t("devise_views.organizations.registrations.new.name_organizations"),
@@ -30,7 +31,7 @@
                             label: t("devise_views.organizations.registrations.new.confirm_password"),
                             placeholder: t("devise_views.organizations.registrations.new.placeholder_confirm_password")
                             %>
-        <div class = "small-12 medium-9 large-12 register_bottom">
+        <div class = "small-12 medium-12 large-12 register_bottom">
           <%= f.check_box :terms_of_service,class: "check_register_organization",
             title: t("devise_views.users.registrations.new.terms_title"),
             label: t("devise_views.users.registrations.new.terms",
@@ -40,8 +41,8 @@
                                     target: "_blank")
                     ) %>
         </div>
-        <div class="small-12 medium-7 small-centered ">
-          <%= f.submit t("devise_views.organizations.registrations.new.submit"), class: "button expanded" %>
+        <div class="small-12 medium-12 small-centered ">
+          <%= f.submit t("devise_views.organizations.registrations.new.submit"), class: "button expanded button-submit" %>
         </div>
       </div>
     </div>
@@ -56,3 +57,4 @@ $('.register_bottom a').click(function() {
     return false;
   });
 </script>
+

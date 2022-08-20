@@ -1,5 +1,9 @@
-//custom color
-$black_auth: #000;
+$font-size-h-1: 42px;
+$font-size-h-2: 22px;
+
+$font-size-1: 18px;
+$font-size-2: 16px;
+$font-size-3: 14px;
 
 .page-login {
   .wrapper_devise {
@@ -7,29 +11,46 @@ $black_auth: #000;
     grid-template-columns: 1fr;
 
     @include breakpoint(large) {
-      grid-template-columns: 33% 67%;
+      grid-template-columns: 40% 60%;
     }
 
     .wrapper_devise_right {
       .right_side {
-        flex: 1 1 0%;
         background-color: $color-background-content;
         display: flex;
         justify-content: center;
-
         min-height: 100vh;
+        .auth-wrapper {
+          width: 100%;
+          overflow-y: scroll;
+          @include breakpoint(large) {
+            height: 100vh;
+            padding: 10px 13%;
+          }
+
+        }
         .column {
           display: flex;
           flex-direction: column;
           justify-content: center;
           .auth-form {
+            .button-submit {
+              border-radius: 25px;
+              height: 45px;
+              padding: 10px;
+              font-size: $font-size-1;
+            }
             .callout-slide {
               position: fixed;
               z-index: 99;
             }
+
             .title-login-page {
               text-align: center;
+              font-weight: 400;
+              font-size: $font-size-h-1;
             }
+
             .edit_password {
               .actions {
                 display: flex;
@@ -43,54 +64,64 @@ $black_auth: #000;
                 }
               }
             }
-            .button-facebook {
-              text-align: left;
-            }
-            .button-google {
-              text-align: left;
-            }
+
+            .button-facebook,
+            .button-google,
             .button-twitter {
               text-align: left;
             }
+
             .auth-divider-login {
               text-align: center;
-              margin-top: 10px;
-              margin-bottom: 10px;
-              span {
-                font-size: 22px;
-                @extend .custom-font-anakotmai;
-              }
+              margin-bottom: 20px;
+              font-size: $font-size-h-2;
+              color: $color-text-desc;
+              @extend .custom-font-anakotmai;
             }
+
             .column {
-              label {
-                font-size: 14px;
+              label:not(.checkbox-label) {
+                font-size: $font-size-3;
                 @extend .custom-font-anakotmai;
                 font-weight: normal;
               }
             }
+
             .line_remember_login {
-              display: flex;
-              flex-direction: row;
-              flex-wrap: nowrap;
-              justify-content: space-between;
-              align-items: center;
-              align-content: stretch;
+              padding: 0px 25px;
+              margin-bottom: 15px;
+              .remember-n-forgot-wrapper {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                align-content: stretch;
+              }
+
               .checkbox-label {
                 span {
-                  font-size: 18px;
+                  color: $color-text-desc;
+                  font-size: $font-size-3;
                   @extend .custom-font-pracharath;
                 }
               }
+
               .float-right {
                 margin-bottom: 13px;
-                font-size: 18px;
+                font-size: $font-size-2;
                 @extend .custom-font-pracharath;
               }
+
             }
+
             .register-page {
               h2 {
                 text-align: center;
+                font-size: $font-size-h-1;
+                font-weight: 400;
               }
+
               .register_organization {
                 background-color: $color-background-button-dark;
                 text-align: center;
@@ -99,9 +130,10 @@ $black_auth: #000;
                 padding: rem-calc(10);
                 margin: rem-calc(20) rem-calc(15);
                 a {
-                  font-size: 22px;
+                  font-size: $font-size-h-2;
                 }
               }
+
               .register_bottom {
                 display: flex;
                 flex-direction: column;
@@ -112,8 +144,8 @@ $black_auth: #000;
                 margin: 0 auto;
                 margin-top: 20px;
                 margin-bottom: 22px;
-                label {
-                  font-size: 16px;
+                label:not(.checkbox-label) {
+                  font-size: $font-size-3;
                   @extend .custom-font-pracharath;
                 }
               }
@@ -125,6 +157,7 @@ $black_auth: #000;
                   margin-bottom: 30px;
                 }
               }
+
               .register_bottom {
                 display: flex;
                 flex-direction: column;
@@ -135,24 +168,25 @@ $black_auth: #000;
                 margin: 0 auto;
                 margin-top: 20px;
                 margin-bottom: 22px;
-                label {
-                  font-size: 16px;
+                label:not(.checkbox-label) {
+                  font-size: $font-size-3;
                   @extend .custom-font-pracharath;
                 }
               }
             }
+
             .forget_password_page {
               .title_all {
-                margin-left: 16px;
+                margin-left: rem-calc(16);
               }
               .new_user {
                 .title_all {
-                  margin-left: 16px;
+                  margin-left: rem-calc(16);
                 }
                 .row {
                   .column {
                     label {
-                      font-size: 14px;
+                      font-size: $font-size-3;
                       @extend .custom-font-anakotmai;
                     }
                   }
@@ -160,8 +194,11 @@ $black_auth: #000;
               }
             }
           }
-          .account {
-            font-size: 18px;
+
+          .account , .suggest-account{
+            color: $color-text-desc;
+            margin-bottom: 5px;
+            font-size: $font-size-3;
             @extend .custom-font-pracharath;
             text-align: center;
           }
@@ -169,23 +206,33 @@ $black_auth: #000;
       }
     }
   }
+
   .wrapper_devise_left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: auto;
-    padding: 24px 16px;
-    position: static;
-    align-items: flex-start;
+    padding: rem-calc(30);
+    .banner-logo {
+      height: calc(100vh - 100px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: rem-calc(105);
+        font-weight: 400;
+        white-space: nowrap;
+      }
+    }
+
     background-color: $color-background-content-strong;
     @include breakpoint(large) {
-      position: sticky;
-      top: 0;
       height: 100vh;
     }
 
     @include breakpoint(medium down) {
-      min-height: 70vh;
+      padding: rem-calc(20) rem-calc(30);
+      .banner-logo {
+        height: 15vh;
+      }
     }
 
     .back {
@@ -194,33 +241,47 @@ $black_auth: #000;
       align-items: center;
       justify-content: left;
       text-decoration: none;
-      font-size: 22px;
-      @extend .custom-font-anakotmai;
       font-weight: normal;
+      font-size: $font-size-h-2;
+      @extend .custom-font-anakotmai;
+
       .icon-angle-left {
         padding-right: $line-height;
         font-size: 2rem;
       }
+
+      @include breakpoint(medium down) {
+        margin-bottom: rem-calc(15);
+      }
+
+      &:hover {
+        color: $color-text-light;
+      }
     }
-    .back:not([class^="icon-"]) {
+
+    .back:not([class^='icon-']) {
       text-decoration: none;
     }
-    img {
-      width: 60%;
-      margin: 60px auto;
-    }
-    .list_rule {
-      margin: 0 auto;
-    }
+
+    // img {
+    //   width: 60%;
+    //   margin: 60px auto;
+    // }
+    // .list_rule {
+    //   margin: 0 auto;
+    // }
   }
+
   .title_login_header {
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: $font-size-h-1;
+
     color: $brand;
     @extend .custom-font-anakotmai;
   }
+
   .title_login {
-    font-size: 18px;
+    font-size: $font-size-1;
     font-weight: lighter;
     @extend .custom-font-pracharath;
   }
@@ -229,18 +290,21 @@ $black_auth: #000;
 .forget_password {
   margin-top: 10px;
   margin-bottom: 18px;
-  font-size: 17.5px;
+  font-size: $font-size-3;
 }
+
 .forget_password_login {
   margin-top: 35px;
   margin-bottom: 18px;
-  font-size: 17.5px;
+  font-size: $font-size-3;
 }
+
 .confirmations {
   display: block;
   text-align: center;
   color: black;
 }
+
 .edit_user {
   text-align: left;
 }
@@ -251,12 +315,11 @@ $black_auth: #000;
 }
 
 .login_button {
-  font: normal normal normal 18px/30px;
-  @extend .custom-font-pracharath;
-  letter-spacing: 0px;
+  font-size: $font-size-2;
   color: $brand;
-  opacity: 1;
+  @extend .custom-font-pracharath;
 }
+
 .categories a,
 .geozone a,
 .sidebar-links a {
@@ -277,7 +340,7 @@ $black_auth: #000;
 .sidebar-title {
   border-top: 2px solid $brand;
   display: inline-block;
-  font-size: rem-calc(16);
+  font-size: $font-size-2;
   font-weight: bold;
   margin: -1px 0 $line-height / 2;
   padding-top: $line-height / 4;
@@ -296,9 +359,11 @@ $black_auth: #000;
   height: 100vh;
   background: rgb(244, 244, 244);
 }
+
 .footer_forget_password {
   text-align: center;
 }
+
 .title_forget_password {
   display: flex;
   flex-direction: row;
@@ -323,9 +388,7 @@ $black_auth: #000;
 @include breakpoint(medium down) {
   .page-login {
     .wrapper_devise {
-      display: block;
       .wrapper_devise_right {
-        background-color: #fcfcfc;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
