@@ -37,6 +37,8 @@
   */
   // border: 2px solid $highlight;
   background-color: $color-background-card;
+  @extend .custom-font-anakotmai;
+  font-size: 16px;
 
   border-radius: rem-calc(6);
   margin-bottom: $line-height;
@@ -59,7 +61,7 @@
       @author Panuwat Chaiwongthon
       */
       // border-left: 2px solid $highlight;
-      border-left: 2px solid $color-border;
+      border-left: 1px solid $color-border;
     }
 
     @include breakpoint(large) {
@@ -68,24 +70,24 @@
       @author Panuwat Chaiwongthon
     */
       // border-right: 2px solid $highlight;
-      border-right: 2px solid $color-border;
+      border-right: 1px solid $color-border;
     }
   }
 
   .counter-value {
     font-size: rem-calc(20);
-    font-weight: bold;
+    // font-weight: bold;
   }
 
   .counter-label {
     color: $text-medium;
-    font-weight: bold;
+    // font-weight: bold;
   }
 
   .progress {
     background: #f0efea;
-    border-radius: rem-calc(6);
-    height: $line-height / 2;
+    // border-radius: rem-calc(6);
+    height: $line-height / 1.5;
   }
 
   .progress-meter {
@@ -96,7 +98,7 @@
 
   .next-goal-progress {
     font-size: $small-font-size;
-    font-weight: bold;
+    // font-weight: bold;
     text-align: right;
   }
 }
@@ -320,11 +322,12 @@
    @author Panuwat Chaiwongthon
 */
   // background: #fbfbfb;
-  background: $color-background-sidebar;
-  border-right: 1px solid $border;
+  // border-right: 1px solid $border;
+  background: $color-background-header;
 
   [class^='icon-'] {
-    color: $text;
+    // color: $text;
+    color: $color-text-base;
     display: inline-block;
     font-size: rem-calc(24);
     line-height: $line-height;
@@ -337,6 +340,11 @@
     li {
       line-height: $line-height * 2;
       padding-left: $line-height;
+      /**
+         Override class for MFP-POLICY
+        @author Panuwat Chaiwongthon
+      */
+      font-size: 16px;
     }
 
     &.resources {
@@ -350,16 +358,21 @@
   }
 
   .is-active {
-    @include brand-text;
+    color: $color-text-base;
+    // @include brand-text;
     position: relative;
-
+    /**
+         Override class for MFP-POLICY
+        @author Panuwat Chaiwongthon
+      */
+    background: $color-background-sidebar;
     &::before {
+      /**
+         Override class for MFP-POLICY
+        @author Panuwat Chaiwongthon
+      */
       // background: linear-gradient(to right, rgba(231, 236, 240, 1) 0%, rgba(251, 251, 251, 1) 90%);
-      background: linear-gradient(
-        to right,
-        $color-background-sidebar 0%,
-        $color-background-sidebar 90%
-      );
+      background: $color-background-sidebar;
 
       border-left: 4px solid;
       content: '';
@@ -371,11 +384,21 @@
     }
 
     a {
-      @include brand-text;
+      /**
+         Override class for MFP-POLICY
+        @author Panuwat Chaiwongthon
+      */
+      // @include brand-text;
+      color: $color-text-base;
     }
 
     [class^='icon-'] {
-      @include brand-text;
+      /**
+         Override class for MFP-POLICY
+        @author Panuwat Chaiwongthon
+      */
+      // @include brand-text;
+      color: $color-text-base;
     }
   }
 
@@ -390,8 +413,9 @@
     border-bottom: 2px solid;
 
     .has-tip {
-      @include brand-text;
+      // @include brand-text;
       font-weight: bold;
+      color: $color-text-base;
     }
   }
 }
@@ -406,7 +430,9 @@
   }
 
   [class^='icon-'] {
-    color: $text-medium;
+    // color: $text-medium;
+    color: $color-text-base;
+
     display: inline-block;
     font-size: rem-calc(24);
     line-height: $line-height;
