@@ -1014,11 +1014,12 @@ body > header,
       text-decoration: none;
     }
   }
- /**
+  /**
     Override class for MFP-POLICY
     @author Panuwat Chaiwongthon
   */
-  h2, span {
+  h2,
+  span {
     font-size: $base-font-size;
   }
 }
@@ -1358,7 +1359,12 @@ form {
   .radio {
     font-weight: normal;
     line-height: $line-height;
-    vertical-align: middle;
+    /**
+      Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+    */
+    vertical-align: text-top;
+    // vertical-align: middle;
   }
 }
 
@@ -1770,7 +1776,13 @@ table {
 
   &::before {
     font-size: rem-calc(24);
-    margin-right: $font-icon-margin;
+    /**
+      Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+    */
+    // margin-right: $font-icon-margin;
+    margin-right: rem-calc(15);
+
   }
 }
 
@@ -3029,4 +3041,9 @@ label:not([for*='search_text']):not(.checkbox-label) {
 .custom-info {
   @extend .custom-font-anakotmai;
   font-weight: 100;
+}
+
+.checkbox-label > [type='checkbox'] {
+  height: rem-calc(17);
+  width: rem-calc(17);
 }
