@@ -367,7 +367,7 @@
     Override class for MFP-POLICY
     @author Panuwat Chaiwongthon
     */
-    background: $new-nav-background;
+    background: $color-background-nav;
 
     margin-bottom: $line-height;
     padding-top: $line-height / 4;
@@ -433,7 +433,7 @@
 }
 
 %panel {
-  background: $body-background;
+  // background: $body-background;
   // Override styles for MFP-POLICY
   // border: 1px solid;
   // border-color: #e5e6e9 #dfe0e4 #d0d1d5;
@@ -442,7 +442,7 @@
   // padding: rem-calc(12) rem-calc(12) 0;
   // border: 1px solid #ececec;
   // box-shadow: 0px 8px 10px #00000030;
-  background: $new-card-background;
+  background: $color-background-card;
 
   margin-bottom: rem-calc(12);
   min-height: rem-calc(192);
@@ -576,6 +576,8 @@
   .budget-investment-description {
     // Override style for MFP-POLICY
     // font-size: rem-calc(13);
+    color: $color-text-desc;
+
     font-size: rem-calc(18);
     height: rem-calc(72);
     line-height: $line-height;
@@ -768,13 +770,13 @@
     @author Panuwat Chaiwongthon
   */
   // @include full-width-border(bottom, 1px solid #eee);
-  @include full-width-border(bottom, 1px solid $new-color-border);
+  @include full-width-border(bottom, 1px solid $color-border);
   /**
     Override class for MFP-POLICY
     @author Panuwat Chaiwongthon
   */
   // background: #fafafa;
-  background: $new-header-background;
+  background: $color-background-header;
   margin-top: -$line-height;
   margin-bottom: $line-height;
   padding-bottom: $line-height / 2;
@@ -802,6 +804,12 @@
   .dropdown-pane {
     width: auto;
     min-width: 140px;
+    /**
+        Override class for MFP-POLICY
+        @author Panuwat Chaiwongthon
+    */
+    border: none;
+    background-color: $color-background-card;
   }
 
   .button {
@@ -1419,7 +1427,13 @@
 
 .polls-show-header {
   @include full-width-background;
-  background: #fafafa;
+  /**
+      Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+  */
+  // background: #fafafa;
+  @extend .custom-font-anakotmai;
+  background: $color-background-content;
 }
 
 .poll-more-info,
@@ -1435,14 +1449,20 @@
 }
 
 .poll-more-info {
-  border-top: 1px solid #eee;
+  border-top: 1px solid $color-border;
 }
 
 .poll-more-info-answers {
   @include full-width-background;
-  @include full-width-border(top, 1px solid #eee);
-  @include full-width-border(bottom, 1px solid #eee);
-  background: #fafafa;
+  /**
+   Override class for MFP-POLICY
+   @author Panuwat Chaiwongthon
+   */
+ // @include full-width-border(top, 1px solid #eee);
+ // @include full-width-border(bottom, 1px solid #eee);
+  // background: #fafafa;
+  background: $color-background-content;
+
 
   .column:nth-child(odd) {
     border-right: 2px solid;
@@ -1524,12 +1544,23 @@
 }
 
 .image-container {
-  background: #fafafa;
+/**
+  Override class for MFP-POLICY
+  @author Panuwat Chaiwongthon
+*/
+  // background: #fafafa;
+  background: $color-background-content-strong;
+
   overflow: hidden;
   position: relative;
 }
 
 .poll {
+  /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+  */
+  background: $color-background-card;
   &.with-image {
     @include breakpoint(medium) {
       padding: 0 $line-height / 2 0 0;
@@ -1545,7 +1576,12 @@
 
 .poll,
 .poll-question {
-  border: 1px solid $border;
+  /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+  */
+  // border: 1px solid $border;
+  border: none;
   margin-bottom: $line-height / 2;
   padding: $line-height / 2;
   position: relative;
@@ -1637,12 +1673,19 @@
 }
 
 .section-title-divider {
-  border-bottom: 1px solid #eee;
-  color: #000;
+  /**
+      Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+  */
+  // color: #000;
+  // border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $color-border;
+  color: $color-text-content;
+
   margin: $line-height 0;
 
   span {
-    border-bottom: 1px solid;
+    // border-bottom: 1px solid;
   }
 }
 

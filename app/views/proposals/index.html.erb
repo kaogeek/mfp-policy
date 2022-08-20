@@ -4,6 +4,7 @@
              search_path: proposals_path(page: 1),
              i18n_namespace: "proposals.index.search_form" %>
 <% end %>
+
 <% content_for :canonical do %>
   <%= render "shared/canonical", href: proposals_url %>
 <% end %>
@@ -115,16 +116,38 @@
         <p class="small">
           <%= link_to t("proposals.index.selected_proposals_link"), proposals_path(selected: "all") %>
         </p>
-
-        <% if params[:retired].blank? %>
-          <%= render "categories" %>
-          <%= render "shared/tag_cloud", taggable: "Proposal" %>
-          <%= render "geozones" %>
-        <% end %>
-        <%= render "retired" %>
-        <%= render "proposals_lists" %>
+        <!--
+          <% if params[:retired].blank? %>
+            <%= render "categories" %>
+            <%= render "shared/tag_cloud", taggable: "Proposal" %>
+            <%= render "geozones" %>
+          <% end %>
+          <%= render "retired" %>
+          <%= render "proposals_lists" %> -->
+          <div class="tag-cloud">
+            <div class="sidebar-divider"></div>
+              <h1 class="sidebar-title"><%= t("shared.tags_cloud.tags") %></h1>
+              <br>
+          </div>
       </aside>
     </div>
+ <script>
+    $(document).ready(() => {
+        const categories = [
+        "ผู้แทนฯ ที่คุณอยากเห็น",
+        "สื่อของพรรค",
+        "นำเสนอนโยบาย",
+        "การทำงานพื้นที่",
+        "การสร้างเครือข่ายและกิจกรรมสมาชิก",
+        "ระดมทุน"
+        ];
 
+       const prepareHTML = categories.map((category) =>
+          `<a href="/proposals?search=${category.replace(/\s/, '+')}">${category}</a>`
+        );
+        $('.tag-cloud').append(prepareHTML)
+
+      });
+ </script>
   </div>
 </main>

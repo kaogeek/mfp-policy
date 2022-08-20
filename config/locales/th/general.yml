@@ -230,7 +230,7 @@ th:
       administration_menu: เมนู
       administration: Administration
       collaborative_legislation: กฎหมายความร่วมมือ
-      debates: หน้าหลัก
+      debates: ข้อเสนอ
       locale: "ภาษา:"
       management: Management
       moderation: Moderation
@@ -240,7 +240,7 @@ th:
       my_account_link: บัญชีของฉัน
       my_activity_link: เนื้อหาของฉัน
       open_gov: รัฐเปิดเผย
-      proposals: ข้อเสนอ
+      proposals: หน้าหลัก
       poll_questions: โหวต
       budgets: งบประมาณแบบมีส่วนร่วม
       notification_item:
@@ -298,7 +298,7 @@ th:
     info:
       sign_in: "ลงชื่อเข้าใช้ด้วย:"
       sign_up: "ลงทะเบียนด้วย:"
-    or_fill: "หรือกรอกอีเมลและรหัสผ่านที่สมัครไว้:"
+    or_fill: "หรือกรอกแบบฟอร์มต่อไปนี้:"
   proposals:
     create:
       form:

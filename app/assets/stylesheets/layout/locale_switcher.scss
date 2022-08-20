@@ -1,5 +1,9 @@
 .locale {
-  margin-bottom: $line-height / 4;
+  /**
+     Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+   */
+  // margin-bottom: $line-height / 4;
   margin-top: $line-height / 4;
   position: relative;
 
@@ -7,6 +11,12 @@
     @include has-fa-icon(angle-down, solid, after);
     display: inline-block;
     position: relative;
+
+  /**
+     Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+   */
+    @extend .custom-font-pracharath;
 
     &::after {
       color: $light-gray;
@@ -16,7 +26,12 @@
       position: absolute;
       right: 2px;
       top: 50%;
-      transform: translateY(-50%);
+      /**
+       Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+      */
+      // transform: translateY(-50%);
+      transform: translate(-50%, -75%);
     }
 
     label {
