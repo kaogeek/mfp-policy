@@ -388,8 +388,9 @@
 .debates-list,
 .proposals-list,
 .budget-investments-list {
+  // Override class for MFP-POLICY
   @include breakpoint(medium) {
-    margin-bottom: rem-calc(48);
+    // margin-bottom: rem-calc(48);
   }
 }
 
@@ -592,7 +593,7 @@
   }
 
   .truncate {
-    background: image-url('truncate.png');
+    //background: image-url('truncate.png');
     background-repeat: repeat-x;
     bottom: 0;
     height: rem-calc(24);
@@ -770,7 +771,7 @@
     @author Panuwat Chaiwongthon
   */
   // @include full-width-border(bottom, 1px solid #eee);
-  @include full-width-border(bottom, 1px solid $color-border);
+  // @include full-width-border(bottom, 1px solid $color-border);
   /**
     Override class for MFP-POLICY
     @author Panuwat Chaiwongthon
@@ -813,11 +814,18 @@
   }
 
   .button {
-    background: #eee;
+    /**
+        Override class for MFP-POLICY
+        @author Panuwat Chaiwongthon
+    */
+    // background: rgb(0, 0, 0);
+    background: transparent;
+
     height: rem-calc(36);
     margin-bottom: 0;
     padding: $line-height / 4;
     width: rem-calc(36);
+    border: 1px solid white;
 
     // Override styles for MFP-POLICY
     display: flex;
@@ -825,7 +833,12 @@
     justify-content: center;
 
     &::before {
-      color: $text;
+      /**
+        Override class for MFP-POLICY
+        @author Panuwat Chaiwongthon
+    */
+      // color: $text;
+      color: $color-text-base;
       font-family: 'icons';
     }
   }
@@ -1458,11 +1471,10 @@
    Override class for MFP-POLICY
    @author Panuwat Chaiwongthon
    */
- // @include full-width-border(top, 1px solid #eee);
- // @include full-width-border(bottom, 1px solid #eee);
+  // @include full-width-border(top, 1px solid #eee);
+  // @include full-width-border(bottom, 1px solid #eee);
   // background: #fafafa;
   background: $color-background-content;
-
 
   .column:nth-child(odd) {
     border-right: 2px solid;
@@ -1544,7 +1556,7 @@
 }
 
 .image-container {
-/**
+  /**
   Override class for MFP-POLICY
   @author Panuwat Chaiwongthon
 */

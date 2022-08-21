@@ -614,6 +614,9 @@ body > header,
   */
   // @include full-width-border(bottom, 1px solid $border);
 
+  // Override style for MFP-POLICY
+  // @include full-width-border(bottom, 1px solid $border);
+
   > * {
     @include full-width-background($adjust-padding: true);
   }
@@ -1131,7 +1134,8 @@ footer {
 .footer {
   background: #212121;
   clear: both;
-  margin-top: $line-height * 2;
+  // Override class for MFP-POLICY
+  // margin-top: $line-height * 2;
   padding-bottom: $line-height;
   padding-top: $line-height;
 
@@ -2583,9 +2587,15 @@ table {
 
 .recommended-index {
   @include full-width-background;
-  @include full-width-border(bottom, 1px solid #eee);
-  @include full-width-border(top, 1px solid #fafafa);
-  background: #fafafa;
+  /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+*/
+  // @include full-width-border(bottom, 1px solid #eee);
+  // @include full-width-border(top, 1px solid #fafafa);
+  // background: #fafafa;
+  border: none;
+  background-color: $color-background-content;
   margin-bottom: $line-height;
   margin-top: rem-calc(-25);
   padding: $line-height 0 $line-height / 2;
@@ -2612,13 +2622,13 @@ table {
 
   .recommendation {
     background: $body-background;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    // box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
     display: block;
     margin-bottom: $line-height / 4;
     padding: $line-height / 2;
 
     &:hover {
-      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15);
+      // box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15);
     }
   }
 }

@@ -10,6 +10,7 @@
 <% end %>
 
 <main>
+
   <% if [
           @search_terms,
           @advanced_search_terms,
@@ -31,18 +32,19 @@
     <%= render "shared/section_header", i18n_namespace: "proposals.index.section_header", image: "proposals" %>
   <% end %>
 
+
   <% if show_recommended_proposals? %>
     <%= render "shared/recommended_index", recommended: @recommended_proposals,
                                            disable_recommendations_path: recommendations_disable_proposals_path,
                                            namespace: "proposals" %>
   <% end %>
 
-  <div class="row">
+  <div class="row proposals-page">
     <div id="proposals" class="proposals-list small-12 medium-9 column">
 
       <%= render Shared::BannerComponent.new("proposals") %>
 
-      <% if show_featured_proposals? %>
+    <!--  <% if show_featured_proposals? %>
         <div id="featured-proposals" class="row featured-proposals">
           <div class="small-12 column">
             <h2>
@@ -54,6 +56,8 @@
           <% end %>
         </div>
       <% end %>
+
+      -->
 
       <% unless params[:selected].present? %>
         <div class="row">
@@ -94,12 +98,12 @@
         <%= paginate @proposals %>
 
         <% unless @search_terms || @advanced_search_terms %>
-          <div id="section_help" class="margin" data-magellan-target="section_help">
+        <!--  <div id="section_help" class="margin" data-magellan-target="section_help">
             <p class="lead">
               <strong><%= t("proposals.index.section_footer.title") %></strong>
             </p>
             <p><%= t("proposals.index.section_footer.description") %></p>
-          </div>
+          </div> -->
         <% end %>
       </div>
     </div>
@@ -111,12 +115,11 @@
                     class: "button expanded" %>
 
         <div class="sidebar-divider"></div>
-        <h2 class="sidebar-title"><%= t("proposals.index.selected_proposals") %></h2>
-        <br>
+       <!-- <h2 class="sidebar-title"><%= t("proposals.index.selected_proposals") %></h2>
         <p class="small">
           <%= link_to t("proposals.index.selected_proposals_link"), proposals_path(selected: "all") %>
         </p>
-        <!--
+
           <% if params[:retired].blank? %>
             <%= render "categories" %>
             <%= render "shared/tag_cloud", taggable: "Proposal" %>

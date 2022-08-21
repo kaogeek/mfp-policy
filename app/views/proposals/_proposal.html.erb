@@ -7,12 +7,12 @@
 
     <% if proposal.image.present? %>
       <div class="row">
-        <div class="small-12 medium-3 large-2 column text-center">
+        <div class="small-12 medium-3 large-3 column text-center">
           <%= image_tag proposal.image.variant(:thumb),
                         alt: proposal.image.title.unicode_normalize %>
         </div>
 
-        <div class="<%= css_for_proposal_info_row(proposal) %>">
+    <div class="<%= css_for_proposal_info_row(proposal) %>">
     <% else %>
       <div class="row">
         <div class="<%= css_for_proposal_info_row(proposal) %>">
@@ -21,7 +21,7 @@
           <% cache [locale_and_user_status(proposal), "index", proposal, proposal.author] do %>
             <h3><%= link_to proposal.title, namespaced_proposal_path(proposal) %></h3>
             <p class="proposal-info">
-              <span class="icon-comments"></span>&nbsp;
+              <span class="icon-comments"></span>
               <%= link_to t("proposals.proposal.comments", count: proposal.comments_count),
                           namespaced_proposal_path(proposal, anchor: "comments") %>
 
