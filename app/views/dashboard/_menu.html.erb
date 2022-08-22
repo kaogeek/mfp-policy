@@ -45,7 +45,7 @@
           </li>
         <% end %>
 
-        <% if can?(:manage_mailing, proposal) %>
+        <!-- <% if can?(:manage_mailing, proposal) %>
           <li>
             <%= link_to new_proposal_dashboard_mailing_path(proposal),
                         class: ("submenu-active" if mailing_menu_active?) do %>
@@ -67,7 +67,7 @@
               </span>
             <% end %>
           </li>
-        <% end %>
+        <% end %> -->
 
         <% resources.each do |resource| %>
           <li>
@@ -90,7 +90,7 @@
     <% end %>
   </li>
 
-  <li class="section-title <%= "is-active" if messages_menu_active? %>">
+ <!-- <li class="section-title <%= "is-active" if messages_menu_active? %>">
     <span class="icon-letter"></span>
     <%= link_to messages_proposal_dashboard_path(proposal) do %>
       <strong><%= t("dashboard.menu.messages") %></strong>
@@ -103,4 +103,5 @@
       <strong><%= t("dashboard.menu.related_content") %></strong>
     <% end %>
   </li>
+  -->
 </ul>

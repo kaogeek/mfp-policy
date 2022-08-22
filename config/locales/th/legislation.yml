@@ -101,7 +101,7 @@ th:
         answer_question: Submit answer
         next_question: Next question
         first_question: First question
-        share: Share
+        share: แชร์
         title: Collaborative legislation process
       participation:
         phase_not_open: This phase is not open
@@ -110,7 +110,7 @@ th:
         verified_only: Only verified users can participate, %{verify_account}.
         debate_phase_not_open: Debate phase has finished and answers are not accepted anymore
     shared:
-      share: Share
+      share: แชร์
       share_comment: Comment on %{version_name} from process draft %{process_name}
     proposals:
       form:

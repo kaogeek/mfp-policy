@@ -4,7 +4,7 @@
 
 <% recipients_count = @newsletter.valid_segment_recipient? ? @newsletter.list_of_recipient_emails.count : 0 %>
 
-<div class="small-12 column callout highlight">
+<div class="small-12 column callout">
   <div class="small-12 medium-2 column">
     <strong><%= t("admin.newsletters.show.sent_at") %></strong><br>
     <% if @newsletter.draft? %>

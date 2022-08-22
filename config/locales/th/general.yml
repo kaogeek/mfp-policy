@@ -199,17 +199,17 @@ th:
       ie_title: เว็บไซต์นี้ไม่ได้รับการปรับให้เหมาะสมสำหรับเบราว์เซอร์ของคุณ
     dashboard:
       proposal_header:
-        published: ที่ตีพิมพ์
-        draft: ร่าง
+        published: เผยแพร่
+        draft: บันทึกเป็นร่าง
         retired: ถอนออก
       proposal_totals:
-        active_resources: ทรัพยากรที่ใช้งานอยู่
-        community: ผู้เข้าร่วมในชุมชนของคุณ
+        active_resources: เครื่องมือที่ใช้อยู่
+        community: ผู้เข้าร่วมในกระทู้
         show_proposal: แสดงข้อเสนอ
-        preview_proposal: ดูตัวอย่างข้อเสนอ
-        current_goal: เป้าหมายปัจจุบัน
+        preview_proposal: กลับไปที่ข้อเสนอ
+        current_goal: เป้าหมาย
         supports:
-          zero: ไม่รองรับ
+          zero: ยังไม่ถึง
           one: 1 สนับสนุน
           other: "สนับสนุน"
     footer:
@@ -446,7 +446,7 @@ th:
       retired_warning: "The author considers this proposal should not receive more supports."
       retired_warning_link_to_explanation: Read the explanation before voting for it.
       retired: Proposal withdrawn by the author
-      share: Share
+      share: แชร์
       no_notifications: "This proposal has no notifications."
       embed_video_title: "Video on %{proposal}"
       title_video_url: "External video"
@@ -457,15 +457,15 @@ th:
         submit_button: บันทึกข้อเสนอ
   dashboard:
     menu:
-      my_proposal: Edit my proposal
-      progress: Progress
-      resources: Resources
-      community: Community
-      polls: Polls
-      mailing: E-mail
-      poster: Poster
+      my_proposal: ปรับแต่งข้อเสนอ
+      progress: ความคืบหน้า
+      resources: เครื่องมือรณรงค์
+      community: ห้องกระทู้
+      polls: แบบสำรวจ
+      mailing: อีเมล
+      poster: โปสเตอร์
       recommended_actions: Recommended actions
-      messages: Message to users
+      messages: ส่งข้อความหาเพื่อนๆ
       related_content: เนื้อหาที่เกี่ยวข้อง
     form:
       request: Request
@@ -473,28 +473,28 @@ th:
       success: The request has been successfully sent. We will contact you as soon as possible to inform you about it.
       archived: This proposal is archived and can not request resources.
     progress:
-      title: Graphic
-      group_by_month: Monthly
-      group_by_week: Weekly
-      group_by_date: Daily
-      progress: Accumulated progress
-      supports: Supports
-      success: Ideal progress
-      new_action: New
+      title: สถิติผู้สนับสนุน
+      group_by_month: รายเดือน
+      group_by_week: รายสัปดาห์
+      group_by_date: รายวัน
+      progress: ผลรวมความคืบหน้า
+      supports: สนับสนุน
+      success: ความคืบหน้าของอดุมการณ์
+      new_action: ใหม่
     index:
-      title: Edition
-      edit_proposal_link: Edit proposal
-      publish: Publish proposal
-      retire: Withdraw proposal
+      title: ปรับแต่งข้อเสนอ
+      edit_proposal_link: แก้ข้อเสนอ
+      publish: เผยแพร่ข้อเสนอ
+      retire: ถอนข้อเสนอ
     new_request:
       links: Links
     resources:
-      available_resources: Available resources
+      available_resources: เครื่องมือรณรงค์ สำหรับคุณ
     resource:
       required_days: "%{days} days required"
       required_supports: "%{supports} supports required"
       and: and
-      view_resource: See resource
+      view_resource: ใช้เครื่องมือนี้
       resource_requested: Resource already requested
       request_resource: Request resource
       resource_locked: Resource locked
@@ -522,48 +522,48 @@ th:
       locked_resource: Resource locked
       ideal_time: Ideal time
     community:
-      access_community: Access the community
-      latest_activity: "Latest activity of the community: %{at}"
-      participants: Participants
-      debates: Debates
-      comments: Comments
-      latest_comments: Latest messages
+      access_community: เข้าร่วมห้องกระทู้
+      latest_activity: "กิจกรรมล่าสุดของห้องกระทู้: %{at}"
+      participants: ผู้เข้าร่วมในกระทู้
+      debates: หัวข้อ
+      comments: ความคิดเห็น
+      latest_comments: ข้อความล่าสุด
     messages:
-      send_notification: Send notification to proposal followers
-      previous_notifications: See previous notifications
+      send_notification: ส่งข้อความไปหาผู้ติดตาม
+      previous_notifications: ย้อนดูข้อความทั้งหมด
     polls:
       index:
-        title: Polls
-        create: Create poll
+        title: แบบสำรวจ
+        create: สร้างแบบสำรวจใหม่
         count:
-          one: You have created %{count} poll.
-          other: You have created %{count} polls.
+          one:  คุณได้สร้างแบบสำรวจมา %{count} ชุด
+          other:  คุณได้สร้างแบบสำรวจมา %{count} ชุด
         links: Links
         additiontal_information: Additional information
       new:
-        title: New poll
-        submit: Create poll
+        title: สร้างแบบสำรวจใหม่
+        submit: สร้างแบบสำรวจเลย
       edit:
         submit: Update poll
       poll:
         responses:
-          one: "%{count} response"
-          other: "%{count} responses"
-        view_results: View results
-        edit_poll: Edit survey
+          one: "%{count} คำตอบกลับ"
+          other: "%{count} คำตอบกลับ"
+        view_results: ดูผลโพล
+        edit_poll: แก้ไขแบบสำรวจ
         show_results_help: If you check this box the results will be public and all users will be able to see them
-        delete: Delete survey
+        delete: ลบแบบสำรวจ
         alert_notice: This action will remove the survey and all its associated questions.
         success_notice: Survey deleted successfully
         unable_notice: You cannot destroy a survey that has responses
       form:
-        name: Survey title
-        add_question: Add question
+        name: ชื่อแบบสำรวจ
+        add_question: เพิ่มคำถาม
       question_fields:
-        remove_question: Remove question
-        add_answer: Add answer
+        remove_question: ลบคำถาม
+        add_answer: เพิ่มคำตอบ
       question_answer_fields:
-        remove_answer: Remove answer
+        remove_answer: ลบคำตอบ
     poster:
       index:
         title: Poster preview
@@ -642,7 +642,7 @@ th:
       videos: "วิดีโอภายนอก"
       info_menu: "ข้อมูล"
       stats_menu: "สถิติการเข้าร่วม"
-      results_menu: "ผลโพล"
+      results_menu: "ผลลัพธ์"
       stats:
         total_votes: "จำนวนโหวตที่ได้รับทั้งหมด"
         votes: "โหวต"
@@ -666,7 +666,7 @@ th:
     new:
       title: "ส่งการแจ้งเตือน"
       submit_button: "ส่งการแจ้งเตือน"
-      info_about_receivers: "การแจ้งเตือนนี้จะถูกส่งไปยัง <strong>%{count} ประชาชน</strong> และจะแสดงใน %{proposal_page}.<br> ระบบจะไม่ส่งการแจ้งเตือนทันที ผู้ใช้จะได้รับอีเมลพร้อมการแจ้งเตือนข้อเสนอทั้งหมดเป็นระยะ."
+      info_about_receivers: "การแจ้งเตือนนี้จะถูกส่งไปถึง <strong>%{count} คน</strong> และจะแสดงขึ้นใน %{proposal_page}.<br> ระบบจะไม่ส่งการแจ้งเตือนทันที ผู้ใช้จะได้รับอีเมลพร้อมการแจ้งเตือนข้อเสนอทั้งหมดเป็นระยะ."
       proposal_page: "หน้าข้อเสนอ"
     show:
       back: "กลับไปที่เนื้อหาของฉัน"
@@ -754,15 +754,15 @@ th:
     outline:
       searcher: Searcher
     go_to_page: "ไปที่ "
-    share: Share
+    share: แชร์
     orbit:
       previous_slide: Previous Slide
       next_slide: Next Slide
     documentation: Additional documentation
     view_mode:
-      title: View mode
-      cards: Cards
-      list: List
+      title: การแสดงผล
+      cards: การ์ด
+      list: รายการ
     recommended_index:
       title: Recommendations
       see_more: See more recommendations
@@ -818,8 +818,8 @@ th:
       deleted_debate: This debate has been deleted
       deleted_proposal: This proposal has been deleted
       deleted_budget_investment: This investment project has been deleted
-      proposals: Proposals
-      proposals_status: Status
+      proposals: ข้อเสนอ
+      proposals_status: สถานะ
       debates: ข้อเสนอ
       budget_investments: Budget investments
       comments: ความคิดเห็น
@@ -832,14 +832,14 @@ th:
           one: 1 ข้อเสนอ
           other: "%{count} ข้อเสนอ"
         proposals:
-          one: 1 Proposal
-          other: "%{count} Proposals"
+          one: 1 ข้อเสนอ
+          other: "%{count} ข้อเสนอ"
         budget_investments:
           one: 1 Investment
           other: "%{count} Investments"
         follows:
-          one: 1 Following
-          other: "%{count} Following"
+          one: 1 การติดตาม
+          other: "%{count} การติดตาม"
       no_activity: ไม่พบข้อเสนอ และ ความคิดเห็นของคุณ
       no_private_messages: "This user doesn't accept private messages."
       private_activity: This user decided to keep the activity list private.
@@ -847,10 +847,10 @@ th:
       delete_alert: "Are you sure you want to delete your investment project? This action can't be undone"
     proposals:
       retired: "Withdrawn proposal"
-      draft: Draft
-      published: Published
+      draft: บันทึกเป็นร่าง
+      published: เผยแพร่
       see: "See proposal"
-      actions: Actions
+      actions: ข้อมูลเพิ่มเติม
       retired_help_text: Dashboard not available for withdrawn proposals
   votes:
     agree: I agree
