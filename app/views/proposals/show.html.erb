@@ -26,8 +26,8 @@
 
         <h1><%= @proposal.title %></h1>
         <% if @proposal.retired? %>
-          <div data-alert class="callout alert margin-top proposal-retired">
-            <strong>
+          <div data-alert class="callout alert margin-top -retired">
+            <strong>proposal
               <%= t("proposals.show.retired_warning") %><br>
               <%= link_to t("proposals.show.retired_warning_link_to_explanation"),
                           "#retired_explanation" %>
