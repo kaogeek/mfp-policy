@@ -37,7 +37,7 @@
   */
   // border: 2px solid $highlight;
   background-color: $color-background-card;
-  @extend .custom-font-anakotmai;
+  font-family: "Anakotmai" sans-serif;
   font-size: 16px;
 
   border-radius: rem-calc(6);
