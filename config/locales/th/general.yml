@@ -240,7 +240,7 @@ th:
       my_account_link: บัญชีของฉัน
       my_activity_link: เนื้อหาของฉัน
       open_gov: รัฐเปิดเผย
-      proposals: หน้าหลัก
+      proposals: นโยบายประชาชน
       poll_questions: โหวต
       budgets: งบประมาณแบบมีส่วนร่วม
       notification_item:
@@ -385,11 +385,12 @@ th:
       top_link_proposals: ข้อเสนอที่ได้รับการสนับสนุนมากที่สุดตามหมวดหมู่
       section_header:
         icon_alt: ไอคอนข้อเสนอ
-        title: ข้อเสนอ
+        title: นโยบายประชาชน
         help: ความช่วยเหลือเกี่ยวกับข้อเสนอ
       section_footer:
-        title: ความช่วยเหลือเกี่ยวกับข้อเสนอ
-        description: ข้อเสนอของพลเมืองเป็นโอกาสให้เพื่อนบ้านและกลุ่มต่างๆ ในการตัดสินใจโดยตรงว่าพวกเขาต้องการให้เมืองของตนเป็นอย่างไร หลังจากได้รับการสนับสนุนที่เพียงพอและเสนอให้มีการลงคะแนนเสียงของประชาชน
+        title: นโยบายประชาชน คือ อะไร ?
+        description: นโยบายประชาชน เป็นพื้นที่ให้เสนอนโยบายที่คุณอยากเห็น หรือเลือกสนับสนุนนโยบายของเพื่อนๆที่ถูกใจคุณ
+                     สำหรับข้อเสนอที่ได้รับเสียงสนับสนุนเกินเป้าหมาย ผู้เสนอจะได้มีโอกาสนำเสนอกับทีมนโยบายของพรรคก้าวไกลโดยตรง
     new:
       form:
         submit_button: สร้างข้อเสนอ
@@ -418,13 +419,13 @@ th:
       support_title: สนับสนุนข้อเสนอนี้
       supports:
         one: 1 สนับสนุน
-        other: "%{count} สนับสนุน"
+        other: "%{count} เสียงสนับสนุน"
         zero: ไม่รองรับ
       votes:
         one: 1 โหวต
         other: "%{count} โหวต"
         zero: ไม่มีการโหวต
-      supports_necessary: "%{number} supports needed"
+      supports_necessary: "ต้องการ %{number} เสียงสนับสนุน"
       reason_for_supports_necessary: ""
       total_percent: 100%
       archived: "This proposal has been archived and can't collect supports."
