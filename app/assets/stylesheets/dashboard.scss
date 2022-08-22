@@ -37,7 +37,7 @@
   */
   // border: 2px solid $highlight;
   background-color: $color-background-card;
-  font-family: "Anakotmai" sans-serif;
+  font-family: 'Anakotmai' sans-serif;
   font-size: 16px;
 
   border-radius: rem-calc(6);
@@ -324,6 +324,7 @@
   // background: #fbfbfb;
   // border-right: 1px solid $border;
   background: $color-background-header;
+  font-family: 'Anakotmai', sans-serif;
 
   [class^='icon-'] {
     // color: $text;
@@ -358,7 +359,7 @@
   }
 
   .is-active {
-    color: $color-text-base;
+    color: $brand;
     // @include brand-text;
     position: relative;
     /**
@@ -472,10 +473,22 @@
 }
 
 .answer-fields {
-  background: #fbfbfb;
-  border: 1px solid $border;
+  /**
+   Override class for MFP-POLICY
+   @author Panuwat Chaiwongthon
+  */
+  // background: #fbfbfb;
+  // border: 1px solid $border;
+  background: $color-background-card;
+  border: none;
+  border-radius: 10px;
   margin-bottom: $line-height;
   padding: $line-height;
+
+  input,
+  textarea {
+    background-color: $color-background-form-strong;
+  }
 }
 
 .poll-card {
@@ -811,3 +824,4 @@
     padding-left: 4cm;
   }
 }
+

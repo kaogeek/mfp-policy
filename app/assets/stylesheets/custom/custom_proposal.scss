@@ -174,5 +174,38 @@
         }
       }
     }
+
+    .proposal-edit {
+      label:not([for*='search_text']):not(.checkbox-label) {
+        font-size: 14px;
+        margin-bottom: 0px;
+      }
+      .is-invalid-input:not(:focus) {
+        color: $color-alert;
+      }
+
+      select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+        background-size: rem-calc(12);
+      }
+      select.is-invalid-input:not(:focus) {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23cc4b37' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+      }
+    }
+  }
+  .following {
+    .interests {
+      border-left: 1px solid $color-border;
+    }
+    .public-interests {
+      .tags {
+        span {
+          border: none;
+          color: $color-text-base;
+          border-radius: 20px;
+          background-color: $color-background-card;
+        }
+      }
+    }
   }
 }

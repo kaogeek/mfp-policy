@@ -1,0 +1,124 @@
+.admin-content {
+  .proposals-list {
+    #proposals-list .clear .panel {
+      background: $color-background-card;
+    }
+    .proposal {
+      .panel {
+        .row {
+          flex-direction: column;
+
+          @include breakpoint(medium) {
+            display: flex;
+            align-items: stretch;
+            flex-direction: row;
+          }
+
+          .column {
+            &:last-child:not(:first-child) {
+              display: inline-grid;
+
+              .votes {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 rem-calc(10);
+
+                @include breakpoint(medium down) {
+                  padding: rem-calc(12) rem-calc(14);
+                }
+
+                @include breakpoint(small down) {
+                  flex-direction: row;
+                  justify-content: space-between;
+                }
+              }
+            }
+            .proposal-content {
+              padding-left: 0;
+              h3 {
+                margin-top: 5px;
+                font-size: 25px;
+                font-weight: 400;
+              }
+              .icon-comments {
+                &::before {
+                  content: '';
+                }
+              }
+              .tags li a {
+                color: $color-text-button-light;
+                background: $color-background-card-hover;
+              }
+
+              .proposal-info {
+                color: $color-text-base;
+                margin: 0px;
+                font-size: 14px;
+                a {
+                  color: $color-text-base;
+                }
+                .label {
+                  border-radius: 15px;
+                }
+              }
+              .proposal-description {
+                margin-bottom: 10px;
+                font-size: 16px;
+              }
+            }
+
+            .supports {
+              @extend .custom-font-anakotmai;
+              .total-supports {
+                font-weight: 400;
+                span {
+                  abbr {
+                    font-size: 14px;
+                    font-family: 200;
+                    @extend .custom-font-pracharath;
+                  }
+                }
+              }
+              .button-support {
+                color: $color-text-button-dark;
+                background-color: $brand;
+              }
+
+              .progress {
+                border: none;
+                background-color: $color-background-progress-bar;
+
+                .percentage {
+                  line-height: 1.9;
+                  font-weight: 300;
+                  font-size: 10px;
+                }
+                .meter {
+                  height: rem-calc(14);
+                  background-color: $brand;
+                  border-radius: 0.1875rem;
+                }
+              }
+              .social-share-full {
+                .social-share-button a {
+                  transition: ease-in-out 300ms;
+                  border-radius: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .with-image {
+        img {
+          border-bottom-left-radius: 10px;
+          border-top-left-radius: 10px;
+          width: 160px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
