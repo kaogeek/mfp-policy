@@ -74,8 +74,8 @@ th:
         one: Ballot sheet
         other: Ballot sheets
       proposal:
-        one: "Citizen proposal"
-        other: "ข้อเสนอของประขาชน"
+        one: "นโยบายประชาชน"
+        other: "นโยบายประชาชน"
       sdg/goal:
         one: "goal"
         other: "goals"
@@ -260,7 +260,7 @@ th:
         retired_reason: "เหตุผลในการถอนข้อเสนอ"
         selected: "Mark as selected"
         terms_of_service: "Terms of service"
-        video_url: "External video URL"
+        video_url: "คลิปวิดีโอ"
       proposal/translation:
         title: "Proposal title"
         description: "Proposal text"

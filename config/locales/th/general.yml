@@ -6,7 +6,7 @@ th:
       finish_verification: ยืนยันเสร็จสิ้น
       notifications: การแจ้งเตือน
       personal: ข้อมูลส่วนตัว
-      public_interests_my_title_list: แท็กเนื้อหาที่คุณติดตามอยุ่
+      public_interests_my_title_list: แท็กเนื้อหานโยบายที่ติดตามอยู่
       public_interests_user_title_list: แท็กเนื้อหาผู้ใช้งานที่ติดตาม
       save_changes_submit: บันทึกการแก้ไข
       recommendations: การแนะนำ
@@ -304,15 +304,15 @@ th:
       form:
         submit_button: สร้างข้อเสนอ
     created:
-      title: ยินดีด้วย! คุณได้ดำเนินการขั้นตอนแรก
-      motivation: "สิ่งสำคัญคือต้องเตรียมแคมเปญเปิดตัวเพื่อให้ข้อเสนอของคุณประสบความสำเร็จ"
+      title: ข้อเสนอของคุณพร้อมแล้ว
+      motivation: "คุณต้องการเผยแพร์ข้อเสนอทันทีหรือไม่"
       motivation_2: "<strong>หากคุณต้องการคำแนะนำในการจัดเตรียมสิ่งพิมพ์ ให้ทิ้งข้อเสนอของคุณไว้เป็นฉบับร่าง แล้วเราจะแนะนำคุณ</strong>"
-      publish: ไม่ ฉันต้องการเผยแพร่ข้อเสนอ
-      dashboard: ใช่ ฉันต้องการความช่วยเหลือและฉันจะเผยแพร่ในภายหลัง
-      preview_title: นี่คือลักษณะของข้อเสนอของคุณเมื่อคุณเผยแพร่
+      publish: ใช่ - เผยแพร์เลย
+      dashboard: ไม่ - บันทึกเป็นร่างไว้ก่อน
+      preview_title: ข้อเสนอของคุณจะมีหน้าตาแบบนี้ เมื่อเผยแพร่ออกไป
     share:
-      improve_it: ปรับปรุงแคมเปญของคุณและรับการสนับสนุนเพิ่มเติม
-      dashboard: ดูข้อมูลเพิ่มเติม
+      improve_it: สนใจดูสถิติการสนับสนุน และ เพิ่มช่องทางการรณรงค์?
+      dashboard: ไปที่ dashboard ของคุณ
       message: "ฉันสนับสนุนข้อเสนอ %{title} ใน %{handle}. หากคุณสนใจสนับสนุนด้วยเช่นกัน!"
     edit:
       editing: แก้ไขข้อเสนอ
@@ -334,7 +334,7 @@ th:
     form:
       proposal_responsible_name_note: "(เป็นรายบุคคลหรือเป็นตัวแทนของกลุ่ม จะไม่ปรากฏต่อสาธารณะ)"
       proposal_summary_note: "(สูงสุด 200 ตัวอักษร)"
-      proposal_video_url_note: คุณสามารถเพิ่มลิงก์ไปยัง YouTube หรือ Vimeo
+      proposal_video_url_note: คุณสามารถเพิ่มลิงก์ไปสู่คลิปวิดีโอใน YouTube หรือ Vimeo
       tag_category_label: "หมวดหมู่"
       tags_instructions: "แท็กข้อเสนอนี้ คุณสามารถเลือกจากหมวดหมู่ที่เสนอหรือเพิ่มของคุณเอง"
       tags_label: แท็ก
@@ -402,13 +402,13 @@ th:
       start_new: สร้างข้อเสนอใหม่
     notice:
       retired: ถอนข้อเสนอแล้ว
-      published: เผยแพร่ข้อเสนอแล้ว
+      published: ข้อเสนอ ถูกเผยแพร่เรียบร้อย
     proposal:
-      created: "คุณได้สร้างข้อเสนอแล้ว!"
+      created: "คุณได้สร้างนโยบายเรียบร้อยแล้ว!"
       share:
-        guide: "ตอนนี้คุณสามารถแชร์เพื่อให้ผู้คนเริ่มสนับสนุนได้"
-        edit: "ก่อนที่จะแชร์ คุณสามารถเปลี่ยนข้อความได้ตามต้องการ"
-        view_proposal: ไม่ใช่ตอนนี้ ไปที่ข้อเสนอของฉัน
+        guide: "ข้อเสนอของคุณถูกเผยแพร่สู่สาธารณะแล้ว!"
+        edit: "แชร์เพิ่มเติมในช่องทางต่างๆ เพื่อเพิ่มผู้สนับสนุน"
+        view_proposal: กลับไปที่ข้อเสนอของฉัน
       already_supported: คุณได้สนับสนุนข้อเสนอนี้แล้ว แบ่งปัน!
       comments:
         one: 1 ความคิดเห็น
@@ -438,18 +438,18 @@ th:
         one: 1 ความคิดเห็น
         other: "%{count} ความคิดเห็น"
         zero: ไม่มีความคิดเห็น
-      comments_tab: Comments
+      comments_tab: ความเห็น
       dashboard_proposal_link: Dashboard
       flag: This proposal has been flagged as inappropriate by several users.
-      notifications_tab: Notifications
-      milestones_tab: Milestones
-      retired_warning: "The author considers this proposal should not receive more supports."
-      retired_warning_link_to_explanation: Read the explanation before voting for it.
-      retired: Proposal withdrawn by the author
+      notifications_tab: การแจ้งเตือน
+      milestones_tab: หมุดหมายสำคัญ
+      retired_warning: "ผู้เสนอไม่ต้องการให้ข้อเสนอนี้ได้รับการสนับสนุนต่อ"
+      retired_warning_link_to_explanation: กดที่นี้เพื่อ่านคำอธิบายก่อนลงเสียงสนับสนุน
+      retired: ข้อเสนอ ถูกถอนโดยผู้เสนอ
       share: แชร์
       no_notifications: "This proposal has no notifications."
       embed_video_title: "Video on %{proposal}"
-      title_video_url: "External video"
+      title_video_url: "คลิปวิดีโอ "
       author: ผู้เขียน
       draft: Proposal in draft. Cannot yet get supports, nor does it appear in the list of proposals.
     update:
@@ -665,6 +665,8 @@ th:
   proposal_notifications:
     new:
       title: "ส่งการแจ้งเตือน"
+      create_proposals_notification: ข้อเสนอ ถูกร่างขึ้นมาเรียบร้อย
+      created_proposals_notification: ข้อเสนอ ถูกเผยแพร่เรียบร้อย
       submit_button: "ส่งการแจ้งเตือน"
       info_about_receivers: "การแจ้งเตือนนี้จะถูกส่งไปถึง <strong>%{count} คน</strong> และจะแสดงขึ้นใน %{proposal_page}.<br> ระบบจะไม่ส่งการแจ้งเตือนทันที ผู้ใช้จะได้รับอีเมลพร้อมการแจ้งเตือนข้อเสนอทั้งหมดเป็นระยะ."
       proposal_page: "หน้าข้อเสนอ"
@@ -707,7 +709,7 @@ th:
     flag: แจ้งว่าไม่เหมาะสม
     follow: "ติดตาม"
     following: "กำลังติดตาม"
-    follow_entity: "ติดตาม %{entity}"
+    follow_entity: "ติดตามข้อเสนอนี้"
     followable:
       budget_investment:
         create:
@@ -716,9 +718,9 @@ th:
           notice: "คุณได้หยุดติดตามโครงการลงทุนนี้แล้ว! <br> คุณจะไม่ได้รับการแจ้งเตือนเกี่ยวกับโครงการนี้อีกต่อไป"
       proposal:
         create:
-          notice: "ตอนนี้คุณกำลังปฏิบัติตามข้อเสนอนี้! <br> เราจะแจ้งให้คุณทราบถึงการเปลี่ยนแปลงที่เกิดขึ้นเพื่อให้คุณได้รับข้อมูลล่าสุด"
+          notice: "คุณได้กดติดตามความคืบหน้าของข้อเสนอนี้! <br> เราจะแจ้งให้คุณทราบ หากมีความคืบหน้าใดๆ"
         destroy:
-          notice: "คุณได้หยุดทำตามข้อเสนอนี้แล้ว! <br> คุณจะไม่ได้รับการแจ้งเตือนเกี่ยวกับข้อเสนอนี้อีกต่อไป"
+          notice: "คุณได้ยกเลิกการติดตามความคืบหน้าของข้อเสนอนี้ <br> คุณจะไม่ได้รับการแจ้งเตือนเกี่ยวกับข้อเสนออีกต่อไป"
     print:
       print_button: พิมพ์ข้อมูลนี้
     search: ค้นหา
@@ -787,7 +789,7 @@ th:
     index:
       visits: Visits
       debates: Debates
-      proposals: Proposals
+      proposals: ข้อเสนอ
       comments: Comments
       proposal_votes: Votes on proposals
       debate_votes: Votes on debates
@@ -823,7 +825,7 @@ th:
       debates: ข้อเสนอ
       budget_investments: Budget investments
       comments: ความคิดเห็น
-      actions: Actions
+      actions: ข้อมูลเพิ่มเติม
       filters:
         comments:
           one: 1 ความคิดเห็น
@@ -838,15 +840,15 @@ th:
           one: 1 Investment
           other: "%{count} Investments"
         follows:
-          one: 1 การติดตาม
-          other: "%{count} การติดตาม"
+          one: 1 ติดตามนโยบาย
+          other: "%{count} ติดตามนโยบาย"
       no_activity: ไม่พบข้อเสนอ และ ความคิดเห็นของคุณ
       no_private_messages: "This user doesn't accept private messages."
       private_activity: This user decided to keep the activity list private.
       send_private_message: "ส่งข้อความส่วนตัว"
       delete_alert: "Are you sure you want to delete your investment project? This action can't be undone"
     proposals:
-      retired: "Withdrawn proposal"
+      retired: "ถอนข้อเสนอ"
       draft: บันทึกเป็นร่าง
       published: เผยแพร่
       see: "See proposal"

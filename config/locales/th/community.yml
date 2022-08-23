@@ -1,11 +1,12 @@
 th:
   community:
     sidebar:
-      title: Community
+      title: ห้องกระทู้ สำหรับข้อเสนอ
       description:
-        proposal: Participate in the user community of this proposal.
+        proposal: มาร่วมพูดคุยแลกเปลี่ยนความเห็นกับ
+                  เพื่อนๆกันเพิ่มเติมเกี่ยวกับข้อเสนอนี้
         investment: Participate in the user community of this investment.
-      button_to_access: Access the community
+      button_to_access: เข้าร่วมห้องกระทู้
     show:
       title:
         proposal: ห้องกระทู้

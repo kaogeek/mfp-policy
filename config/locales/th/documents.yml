@@ -8,7 +8,7 @@ th:
       title_placeholder: เพิ่มคำอธิบายสำหรับเอกสาร
       delete_button: ลบเอกสาร
       cancel_button: ยกเลิก
-      note: "คุณสามารถอัปโหลดได้สูงสุด %{max_documents_allowed} ชนิดของไฟล์เอกสาร: %{accepted_content_types}, up to %{max_file_size} MB ต่อไฟล์."
+      note: "คุณสามารถอัปโหลดเอกสารได้สูงสุด %{max_documents_allowed} ( ไฟล์ %{accepted_content_types}, ไม่เกิน %{max_file_size} MB ต่อไฟล์)"
       add_new_document: เพิ่มเอกสารใหม่
     actions:
       destroy:
