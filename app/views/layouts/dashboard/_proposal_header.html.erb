@@ -17,5 +17,13 @@
 <% end %>
 
 <% if content_for?(:action_title) %>
-  <h3 class="title"><%= yield(:action_title) %></h3>
+  <h3 class="title title-<%= yield(:action_title) %>"><%= yield(:action_title) %></h3>
 <% end %>
+
+<script>
+  $(document).ready(() => {
+    if(window.location.pathname.includes('/dashboard/progress') ){
+      $('.title-สถิติผู้สนับสนุน').css('display', 'none');
+    }
+  })
+</script>
