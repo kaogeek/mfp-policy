@@ -118,7 +118,7 @@ $breakpoints: (
   xxlarge: 1440px,
 ) !default;
 $print-breakpoint: large !default;
-$breakpoint-classes: (small medium large) !default;
+$breakpoint-classes: (small medium large ) !default;
 
 // 3. The Grid
 // -----------
@@ -354,12 +354,21 @@ $buttongroup-radius-on-each: true !default;
 // 13. Callout
 // -----------
 
-$callout-background: $white !default;
-$callout-background-fade: 85% !default;
-$callout-border: 1px solid rgba($black, 0.25) !default;
+/**
+   Override class for MFP-POLICY
+   @author Panuwat Chaiwongthon
+*/
+// $callout-background: $white !default;
+// $callout-background-fade: 85% !default;
+$callout-background: $color-background-card !default;
+$callout-background-fade: 0% !default;
+// $callout-border: 1px solid rgba($black, 0.25) !default;
+$callout-border: none !default;
 $callout-margin: 0 0 1rem 0 !default;
 $callout-padding: 1rem !default;
-$callout-font-color: $body-font-color !default;
+// $callout-font-color: $body-font-color !default;
+$callout-font-color: $color-text-base !default;
+
 $callout-font-color-alt: $body-background !default;
 $callout-radius: $global-radius !default;
 $callout-link-tint: 30% !default;

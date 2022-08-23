@@ -12,10 +12,10 @@
                         alt: proposal.image.title.unicode_normalize %>
         </div>
 
-    <div class="<%= css_for_proposal_info_row(proposal) %>">
+      <div class="<%= css_for_proposal_info_row(proposal) %>">
     <% else %>
-      <div class="row">
-        <div class="<%= css_for_proposal_info_row(proposal) %>">
+      <div class="row no-images">
+        <div class="small-12  medium-3  <%= css_for_proposal_info_row(proposal) %>">
       <% end %>
         <div class="proposal-content">
           <% cache [locale_and_user_status(proposal), "index", proposal, proposal.author] do %>

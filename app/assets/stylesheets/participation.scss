@@ -793,12 +793,20 @@
 }
 
 .view-mode {
+  @extend .custom-font-anakotmai;
+
   ul {
     margin-bottom: 0;
 
     li {
       padding: $line-height / 4 0;
       padding-left: $line-height;
+      /**
+        Override class for MFP-POLICY
+        @author Panuwat Chaiwongthon
+    */
+      font-size: 14px;
+      font-weight: 300;
     }
   }
 
@@ -1756,13 +1764,16 @@
       text-align: left;
 
       &.win {
-        background: #009fde;
+        // background: #009fde;
+        background: $brand;
+
       }
     }
 
     td {
       &.win {
-        background: #ccedf8;
+        // background: #ccedf8;
+        background: $color-background-card-hover;
         font-weight: bold;
       }
     }

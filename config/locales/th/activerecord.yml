@@ -1,7 +1,7 @@
 th:
   attributes:
     geozone_id: "Scope of operation"
-    results_enabled: "Show results"
+    results_enabled: "แสดงผลสำรวจต่อสาธารณะ"
     stats_enabled: "Show stats"
     advanced_stats_enabled: "Show advanced stats"
     name: Name
@@ -74,8 +74,8 @@ th:
         one: Ballot sheet
         other: Ballot sheets
       proposal:
-        one: "Citizen proposal"
-        other: "Citizen proposals"
+        one: "นโยบายประชาชน"
+        other: "นโยบายประชาชน"
       sdg/goal:
         one: "goal"
         other: "goals"
@@ -257,15 +257,15 @@ th:
         question: "Question"
         description: "Description"
         responsible_name: "Full name of the person submitting the proposal"
-        retired_reason: "Reason to withdraw the proposal"
+        retired_reason: "เหตุผลในการถอนข้อเสนอ"
         selected: "Mark as selected"
         terms_of_service: "Terms of service"
-        video_url: "External video URL"
+        video_url: "คลิปวิดีโอ"
       proposal/translation:
         title: "Proposal title"
         description: "Proposal text"
         summary: "Proposal summary"
-        retired_explanation: "Explanation"
+        retired_explanation: "คำอธิบาย"
       user:
         login: "Email or username"
         email: "Email"
@@ -296,13 +296,13 @@ th:
       poll:
         name: "Name"
         title: "Name"
-        starts_at: "Start Date"
-        ends_at: "Closing Date"
+        starts_at: "เริ่มวันที่"
+        ends_at: "สิ้นสุดวันที่"
         geozone_restricted: "Restricted by geozone"
         summary: "Summary"
-        description: "Description"
+        description: "รายละเอียด"
       active_poll/translation:
-        description: "Description"
+        description: "รายละเอียด"
       poll/booth:
         name: "Name"
         location: "Location"
@@ -312,7 +312,7 @@ th:
         description: "Description"
       poll/question:
         poll_id: "Poll"
-        title: "Question"
+        title: "คำถาม"
         summary: "Summary"
         description: "Description"
         external_url: "Link to additional documentation"
@@ -325,8 +325,8 @@ th:
       poll/shift:
         task: "Task"
       proposal_notification:
-        body: "Message"
-        title: "Title"
+        body: "ข้อความ"
+        title: "ห้วข้อ"
       signature_sheet:
         title: "Title"
         signable_type: "Signable type"
@@ -377,8 +377,8 @@ th:
       tag:
         name: "Type the name of the topic"
       topic:
-        title: "Title"
-        description: "Initial text"
+        title: "หัวข้อพูดคุย"
+        description: "รายละเอียด"
       banner:
         background_color: Background color
         font_color: Font color
@@ -448,11 +448,11 @@ th:
         title: Title
         attachment: "Choose image"
       poll/question/answer:
-        title: Answer
-        description: Description
+        title: คำตอบ
+        description: รายละเอียด
       poll/question/answer/translation:
-        title: Answer
-        description: Description
+        title: คำตอบ
+        description: รายละเอียด
       poll/question/answer/video:
         title: Title
         url: External video

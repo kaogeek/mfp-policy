@@ -98,12 +98,12 @@
         <%= paginate @proposals %>
 
         <% unless @search_terms || @advanced_search_terms %>
-        <!--  <div id="section_help" class="margin" data-magellan-target="section_help">
+        <div id="section_help" class="margin" data-magellan-target="section_help">
             <p class="lead">
               <strong><%= t("proposals.index.section_footer.title") %></strong>
             </p>
             <p><%= t("proposals.index.section_footer.description") %></p>
-          </div> -->
+        </div>
         <% end %>
       </div>
     </div>
@@ -115,34 +115,62 @@
                     class: "button expanded" %>
 
         <div class="sidebar-divider"></div>
-       <!-- <h2 class="sidebar-title"><%= t("proposals.index.selected_proposals") %></h2>
+      <h2 class="sidebar-title"><%= t("proposals.index.selected_proposals") %></h2>
         <p class="small">
           <%= link_to t("proposals.index.selected_proposals_link"), proposals_path(selected: "all") %>
         </p>
 
-          <% if params[:retired].blank? %>
-            <%= render "categories" %>
-            <%= render "shared/tag_cloud", taggable: "Proposal" %>
-            <%= render "geozones" %>
-          <% end %>
-          <%= render "retired" %>
-          <%= render "proposals_lists" %> -->
-          <div class="tag-cloud">
-            <div class="sidebar-divider"></div>
-              <h1 class="sidebar-title"><%= t("shared.tags_cloud.tags") %></h1>
-              <br>
+        <div class="tag-cloud">
+          <div class="sidebar-divider"></div>
+          <h1 class="sidebar-title"><%= t("shared.tags_cloud.tags") %></h1>
+          <br>
+          <%# <a href="/proposals?search=เศรษฐกิจ">เศรษฐกิจ</a>
+          <a href="/proposals?search=เกษตร">เกษตร</a>
+          <a href="/proposals?search=พลังงาน">พลังงาน</a>
+          <a href="/proposals?search=สาธารณสุข">สาธารณสุข</a>
+          <a href="/proposals?search=การศึกษา">การศึกษา</a>
+          <a href="/proposals?search=คมนาคม">คมนาคม</a>
+          <a href="/proposals?search=สิ่งแวดล้อม">สิ่งแวดล้อม</a>
+          <a href="/proposals?search=แรงงาน">แรงงาน</a>
+          <a href="/proposals?search=สวัสดิการ">สวัสดิการ</a>
+          <a href="/proposals?search=ระบบราชการ">ระบบราชการ</a>
+          <a href="/proposals?search=การทุจริต">การทุจริต</a>
+          <a href="/proposals?search=ดิจิทัล">ดิจิทัล</a>
+          <a href="/proposals?search=ประชาธิปไตย">ประชาธิปไตย</a>
+          <a href="/proposals?search=สิทธิมนุษยชน">สิทธิมนุษยชน</a>
+          <a href="/proposals?search=ความเท่าเทียมทางเพศ">ความเท่าเทียมทางเพศ</a>
+          <a href="/proposals?search=ความปลอดภัย">ความปลอดภัย</a>
+          <a href="/proposals?search=กองทัพ">กองทัพ</a>
+          <a href="/proposals?search=ตำรวจ">ตำรวจ</a>
+          <a href="/proposals?search=วัฒนธรรม">วัฒนธรรม</a>
+          <a href="/proposals?search=การต่างประเทศ">การต่างประเทศ</a> %>
           </div>
+          <%= render "proposals_lists" %>
       </aside>
     </div>
  <script>
     $(document).ready(() => {
         const categories = [
-        "ผู้แทนฯ ที่คุณอยากเห็น",
-        "สื่อของพรรค",
-        "นำเสนอนโยบาย",
-        "การทำงานพื้นที่",
-        "การสร้างเครือข่ายและกิจกรรมสมาชิก",
-        "ระดมทุน"
+        "เศรษฐกิจ",
+        "เกษตร",
+        "พลังงาน",
+        "สาธารณสุข",
+        "การศึกษา",
+        "คมนาคม",
+        "สิ่งแวดล้อม",
+        "แรงงาน",
+        "สวัสดิการ",
+        "ระบบราชการ",
+        "การทุจริต",
+        "ดิจิทัล",
+        "ประชาธิปไตย",
+        "สิทธิมนุษยชน",
+        "ความเท่าเทียมทางเพศ",
+        "ความปลอดภัย",
+        "กองทัพ",
+        "ตำรวจ",
+        "วัฒนธรรม",
+        "การต่างประเทศ",
         ];
 
        const prepareHTML = categories.map((category) =>

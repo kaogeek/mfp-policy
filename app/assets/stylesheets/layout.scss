@@ -608,12 +608,6 @@ body > header,
 
 .public > .wrapper > header,
 .proposal-dashboard > header {
-  /**
-   Override class for MFP-POLICY
-   @author Panuwat Chaiwongthon
-  */
-  // @include full-width-border(bottom, 1px solid $border);
-
   // Override style for MFP-POLICY
   // @include full-width-border(bottom, 1px solid $border);
 
@@ -1119,7 +1113,7 @@ footer {
         }
 
         @include breakpoint(medium down) {
-          margin-bottom: 10px;
+          // margin-bottom: 10px;
         }
       }
     }
@@ -1136,16 +1130,23 @@ footer {
   clear: both;
   // Override class for MFP-POLICY
   // margin-top: $line-height * 2;
-  padding-bottom: $line-height;
-  padding-top: $line-height;
+  // padding-bottom: $line-height;
+  // padding-top: $line-height;
+
+  // Override class for MFP-POLICY
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 
   .public & {
     @include full-width-background;
   }
 
-  .social {
-    color: #f57832;
-  }
+  // Override class for MFP-POLICY
+  // .social {
+  //   color: #f57832;
+  // }
 }
 
 .subfooter {
@@ -1377,7 +1378,7 @@ form {
       Override class for MFP-POLICY
       @author Panuwat Chaiwongthon
     */
-   background-color: $color-background-content;
+  background-color: $color-background-content;
   &.highlight {
     display: inline-block;
     padding-top: $line-height;
@@ -1791,7 +1792,6 @@ table {
     */
     // margin-right: $font-icon-margin;
     margin-right: rem-calc(15);
-
   }
 }
 
@@ -2440,7 +2440,11 @@ table {
 
   .interests {
     @include breakpoint(medium) {
-      border-left: 1px solid #ececec;
+        /**
+          Override class for MFP-POLICY
+          @author Panuwat Chaiwongthon
+        */
+      // border-left: 1px solid #ececec;
       padding-left: $line-height;
     }
   }
@@ -3058,7 +3062,92 @@ label:not([for*='search_text']):not(.checkbox-label) {
   font-weight: 100;
 }
 
+// 30. checkbox size
+// ------------------------
 .checkbox-label > [type='checkbox'] {
   height: rem-calc(17);
   width: rem-calc(17);
+}
+
+// 31. social button
+// ------------------------
+.custom-social-group {
+  margin-bottom: 10px;
+  .social-button-twitter {
+    background-color: #45b0e3;
+    border-radius: 10px;
+    color: $white;
+    height: 42px;
+    padding-top: 4px;
+    width: 42px;
+
+    .icon-twitter {
+      line-height: 1.7;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  }
+
+  .social-button-facebook {
+    background-color: #3b5998;
+    border-radius: 10px;
+    color: $white;
+    height: 42px;
+    padding-top: 4px;
+    width: 42px;
+
+    .icon-facebook {
+      line-height: 1.7;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  }
+
+  .social-button-youtube,
+  .social-button-telegram,
+  .social-button-instagram {
+    display: none;
+  }
+}
+
+// 32. progress bar
+// ------------------------
+.turbolinks-progress-bar {
+  background-color: $brand;
+}
+
+.ui-datepicker {
+  .ui-datepicker-header {
+    .ui-datepicker-prev, .ui-datepicker-next {
+      padding-top: 3px;
+    }
+  }
+  thead tr th {
+    border: none;
+    padding: 5px;
+    background-color: $color-background-card-hover;
+  }
+  tr,
+  td {
+    border: none;
+  }
+  .ui-datepicker-calendar {
+    .ui-state-default {
+      background-color: $color-background-card;
+      padding: 8px;
+      font-weight: 600;
+      color: $color-text-base;
+    }
+    .ui-datepicker-unselectable.ui-state-disabled {
+      background-color: $color-background-card-hover;
+    }
+    .ui-state-highlight {
+      background-color: $brand;
+      color: $color-text-button-dark;
+    }
+  }
+}
+
+.is-invalid-input:not(:focus) {
+  color: $color-alert;
 }

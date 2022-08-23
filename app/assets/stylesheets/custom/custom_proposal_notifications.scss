@@ -1,0 +1,10 @@
+.custom-show-notification-page {
+  padding: 10px 20px;
+}
+
+.custom-notification-page {
+  label:not([for*='search_text']):not(.checkbox-label) {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+}

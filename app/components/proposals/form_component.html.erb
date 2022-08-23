@@ -49,43 +49,118 @@
       </div>
     <% end %>
 
-    <div>
-      <%= f.select :geozone_id, geozone_select_options,
-        include_blank: t("geozones.none") %>
-    </div>
+    <!--  <div>
+        <%= f.select :geozone_id, geozone_select_options,
+          include_blank: t("geozones.none") %>
+      </div>
 
-    <% if feature?(:map) %>
+      <% if feature?(:map) %>
+          <div>
+            <%= render "map_locations/form_fields",
+                      form:     f,
+                      map_location: proposal.map_location || MapLocation.new,
+                      label:    t("proposals.form.map_location"),
+                      help:     t("proposals.form.map_location_instructions"),
+                      remove_marker_label: t("proposals.form.map_remove_marker"),
+                      parent_class: "proposal",
+                      i18n_namespace: "proposals" %>
+          </div>
+        <% end %> -->
+
       <div>
-        <%= render "map_locations/form_fields",
-                   form:     f,
-                   map_location: proposal.map_location || MapLocation.new,
-                   label:    t("proposals.form.map_location"),
-                   help:     t("proposals.form.map_location_instructions"),
-                   remove_marker_label: t("proposals.form.map_remove_marker"),
-                   parent_class: "proposal",
-                   i18n_namespace: "proposals" %>
+        <!--  <%= f.label :tag_list, t("proposals.form.tags_label") %>
+          <p class="help-text" id="tag-list-help-text"><%= t("proposals.form.tags_instructions") %></p>
+
+          <div id="category_tags" class="tags">
+            <%= f.label :category_tag_list, t("proposals.form.tag_category_label") %>
+            <% categories.each do |tag| %>
+              <a class="js-add-tag-link"><%= tag.name %></a>
+            <% end %>
+          </div> -->
+
+        <br>
+        <label for="select_mul"><%= t("activerecord.attributes.debate.category") %></label>
+                <div id="category" class="multiSelect">
+                <select id="select_mul" multiple class="multiSelect_field">
+                  <option value="เศรษฐกิจ ">
+                    เศรษฐกิจ
+                  </option>
+                  <option value="เกษตร">
+                    เกษตร
+                  </option>
+                  <option value="พลังงาน">
+                    พลังงาน
+                  </option>
+                  <option value="สาธารณสุข">
+                    สาธารณสุข
+                  </option>
+                  <option value="การศึกษา">
+                    การศึกษา
+                  </option>
+                  <option value="คมนาคม">
+                    คมนาคม
+                  </option>
+                  <option value="สิ่งแวดล้อม">
+                    สิ่งแวดล้อม
+                  </option>
+                  <option value="แรงงาน">
+                    แรงงาน
+                  </option>
+                  <option value="สวัสดิการ">
+                    สวัสดิการ
+                  </option>
+                  <option value="ระบบราชการ">
+                    ระบบราชการ
+                  </option>
+                  <option value="การทุจริต">
+                   การทุจริต
+                  </option>
+                  <option value="ดิจิทัล">
+                    ดิจิทัล
+                  </option>
+                  <option value="ประชาธิปไตย">
+                    ประชาธิปไตย
+                  </option>
+                  <option value="สิทธิมนุษยชน">
+                    สิทธิมนุษยชน
+                  </option>
+                  <option value="ความเท่าเทียมทางเพศ">
+                    ความเท่าเทียมทางเพศ
+                  </option>
+                  <option value="ความปลอดภัย">
+                    วามปลอดภัย
+                  </option>
+                  <option value="กองทัพ">
+                    กองทัพ
+                  </option>
+                  <option value="ตำรวจ">
+                    ตำรวจ
+                  </option>
+                  <option value="วัฒนธรรม">
+                    วัฒนธรรม
+                  </option>
+                  <option value="การต่างประเทศ">
+                    การต่างประเทศ
+                  </option>
+                </select>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="iconX">
+                  <g stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </g>
+                </symbol>
+              </svg>
+        <div style="display: none;">
+          <%= f.text_field :tag_list, value: proposal.tag_list.to_s,
+                            label: false,
+                            placeholder: t("proposals.form.tags_placeholder"),
+                            class: "tag-autocomplete",
+                            aria: { describedby: "tag-list-help-text" },
+                            data: { js_url: suggest_tags_path } %>
+        </div>
       </div>
-    <% end %>
-
-    <div>
-      <%= f.label :tag_list, t("proposals.form.tags_label") %>
-      <p class="help-text" id="tag-list-help-text"><%= t("proposals.form.tags_instructions") %></p>
-
-      <div id="category_tags" class="tags">
-        <%= f.label :category_tag_list, t("proposals.form.tag_category_label") %>
-        <% categories.each do |tag| %>
-          <a class="js-add-tag-link"><%= tag.name %></a>
-        <% end %>
-      </div>
-
-      <br>
-      <%= f.text_field :tag_list, value: proposal.tag_list.to_s,
-                        label: false,
-                        placeholder: t("proposals.form.tags_placeholder"),
-                        class: "js-tag-list tag-autocomplete",
-                        aria: { describedby: "tag-list-help-text" },
-                        data: { js_url: suggest_tags_path } %>
-    </div>
 
     <% if current_user.unverified? %>
       <div>
@@ -112,3 +187,215 @@
     <%= f.submit(class: "button", value: t("proposals.#{action_name}.form.submit_button")) %>
   </div>
 <% end %>
+
+
+<script>
+$('.actions a').click(function() {
+    window.open('https://www.moveforwardparty.org/privacy-policy/','_blank');
+    return false;
+  });
+  $(document).ready(function () {
+    $(".multiSelect").each((e) => {
+      const self = $(this);
+      const field = self.find(".multiSelect_field");
+      const fieldOption = field.find("option");
+      const placeholder = field.attr("data-placeholder");
+
+      field.hide().after(`<div class="multiSelect_dropdown"></div>
+                                  <ul class="multiSelect_list"></ul>
+                                  <span class="multiSelect_arrow"></span>`);
+
+      fieldOption.each(function (e) {
+        $(".multiSelect_list").append(
+          `<li id="list-${e}" class="multiSelect_option" data-value="` +
+            $(this).val().trim() +
+            `">
+                    <a class="multiSelect_text">` +
+            $(this).text() +
+            `</a>
+                </li>`
+        );
+        // $(".multiSelect_list").append(
+        //   `<li id="${($(this).text().trim()
+        //   .toLowerCase()).replace(/^\s+|\s+$/gm, '')}" class="multiSelect_option" data-value="` +
+        //     $(this).val().trim() +
+        //     `">
+        //           <a class="multiSelect_text">` +
+        //     $(this).text() +
+        //     `</a>
+        //       </li>`
+        // );
+      });
+
+      const dropdown = self.find(".multiSelect_dropdown");
+      const list = self.find(".multiSelect_list");
+      const option = self.find(".multiSelect_option");
+      const optionText = self.find(".multiSelect_text");
+
+      dropdown.attr("data-multiple", "true");
+      list.css("top", dropdown.height() + 5);
+
+      option.click(function (e) {
+        const self = $(this);
+        e.stopPropagation();
+        self.addClass("-selected");
+        field
+          .find("option:contains(" + self.children().text() + ")")
+          .prop("selected", true);
+
+        dropdown
+          .append(function (e) {
+            return $(
+              '<span class="multiSelect_choice"' +
+                'data-value="' +
+                self
+                  .children()
+                  .text()
+                  .replace(/^\s+|\s+$/gm, "") +
+                '">' +
+                self.children().text() +
+                '<svg class="multiSelect_deselect -iconX"><use href="#iconX"></use></svg></span>'
+            ).click(function (e) {
+              const self = $(this);
+              e.stopPropagation();
+              self.remove();
+              list
+                .find(".multiSelect_option:contains(" + self.text() + ")")
+                .removeClass("-selected");
+              list
+                .css("top", dropdown.height() + 5)
+                .find(".multiSelect_noselections")
+                .remove();
+              field
+                .find("option:contains(" + self.text() + ")")
+                .prop("selected", false);
+              if (dropdown.children(":visible").length === 0) {
+                dropdown.removeClass("-hasValue");
+              }
+              if ($("#category span.multiSelect_choice").length < 1) {
+                $(".send-debates").attr("disabled", true);
+              } else {
+                $(".send-debates").attr("disabled", false);
+              }
+            });
+          })
+          .addClass("-hasValue");
+        list.css("top", dropdown.height() + 5);
+        if (!option.not(".-selected").length) {
+          list.append('<h5 class="multiSelect_noselections">ไม่มีการเลือก</h5>');
+        }
+        if ($("#category span.multiSelect_choice").length < 1) {
+          $(".send-debates").attr("disabled", true);
+        } else {
+          $(".send-debates").attr("disabled", false);
+        }
+      });
+
+      dropdown.click(function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        dropdown.toggleClass("-open");
+        list
+          .toggleClass("-open")
+          .scrollTop(0)
+          .css("top", dropdown.height() + 5);
+      });
+
+      $(document).on("click touch", function (e) {
+        if (dropdown.hasClass("-open")) {
+          dropdown.toggleClass("-open");
+          list.removeClass("-open");
+        }
+      });
+    });
+
+    $(".send-debates").on("click", (e) => {
+      let categories = [];
+      $("#category span.multiSelect_choice").map((index, elem) => {
+        categories.push($(elem).attr("data-value").trim());
+      });
+      $("#debate_tag_list").val(categories);
+    });
+
+    if ($("#debate_tag_list").val()) {
+      $(".send-debates").attr("disabled", false);
+      $(".multiSelect").each(function (e) {
+        const self = $(this);
+        const field = self.find(".multiSelect_field");
+        const fieldOption = field.find("option");
+        const placeholder = field.attr("data-placeholder");
+
+        const dropdown = self.find(".multiSelect_dropdown");
+        const list = self.find(".multiSelect_list");
+        const option = self.find(".multiSelect_option");
+        const optionText = self.find(".multiSelect_text");
+
+        $("#debate_tag_list")
+          .val()
+          .split(",")
+          .map((elem, index) => {
+            dropdown.attr("data-multiple", "true");
+            const li = $(".multiSelect_list li");
+            for (let i = 0; i < li.length; i++) {
+              if (
+                $(li[i]).data("value") === elem.trim().replace(/^\s+|\s+$/gm, "")
+              ) {
+                // const self = $('.multiSelect_list li#'+elem.trim().replace(/^\s+|\s+$/gm, ''));
+                const self = $(".multiSelect_list li#list-" + i);
+                if (self.length) {
+                  self.addClass("-selected");
+                  field
+                    .find("option:contains(" + self.children().text() + ")")
+                    .prop("selected", true);
+                  dropdown
+                    .append(function (e) {
+                      return $(
+                        '<span class="multiSelect_choice"' +
+                          'data-value="' +
+                          self.children().text() +
+                          '">' +
+                          self.children().text() +
+                          '<svg class="multiSelect_deselect -iconX"><use href="#iconX"></use></svg></span>'
+                      ).click(function (e) {
+                        const self = $(this);
+                        e.stopPropagation();
+                        self.remove();
+                        list
+                          .find(
+                            ".multiSelect_option:contains(" + self.text() + ")"
+                          )
+                          .removeClass("-selected");
+                        list
+                          .css("top", dropdown.height() + 5)
+                          .find(".multiSelect_noselections")
+                          .remove();
+                        field
+                          .find("option:contains(" + self.text() + ")")
+                          .prop("selected", false);
+                        if (dropdown.children(":visible").length === 0) {
+                          dropdown.removeClass("-hasValue");
+                        }
+                        if ($("#category span.multiSelect_choice").length < 1) {
+                          $(".send-debates").attr("disabled", true);
+                        } else {
+                          $(".send-debates").attr("disabled", false);
+                        }
+                      });
+                    })
+                    .addClass("-hasValue");
+                }
+              }
+            }
+          });
+      });
+    } else {
+      $(".send-debates").attr("disabled", true);
+    }
+
+    $(document).on('click', '.actions a', function(e){
+      e.preventDefault();
+      var url = $(this).attr('href');
+      window.open(url, '_blank');
+    });
+  });
+</script>

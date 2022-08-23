@@ -4,6 +4,12 @@
 // folder and they will be loaded automatically.
 
 .multiSelect {
+  /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+  */
+  background: $color-background-form;
+  border-radius: 15px;
   position: relative;
 }
 
@@ -85,7 +91,7 @@
   left: 0;
   z-index: 9999;
   right: 0;
-  background: #fff;
+  background: $color-background-card;
   border-radius: 4px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -100,7 +106,7 @@
     -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
   -webkit-transform: scale(0.8) translate(0, 4px);
   transform: scale(0.8) translate(0, 4px);
-  border: 1px solid #d9dbde;
+  border: 1px solid $color-border;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.12);
 }
 
@@ -119,8 +125,8 @@
 }
 
 .multiSelect_option:hover .multiSelect_text {
-  color: #fff;
-  background: #4d84fe;
+  color: $color-text-base;
+  background: $color-background-content-strong;
   text-decoration: unset;
 }
 
@@ -128,7 +134,7 @@
   cursor: pointer;
   display: block;
   padding: 5px 13px;
-  color: #000;
+  color: $color-text-base;
   font-size: $form-label-font-size * 1.2;
   font-weight: $form-label-font-weight;
   line-height: $form-label-line-height;
@@ -209,8 +215,8 @@
 }
 
 .multiSelect_choice {
-  background: rgba(77, 132, 254, 0.1);
-  color: #000;
+  background: $color-background-content-strong;
+  color: $color-text-base;
   padding: 4px 12px 4px 16px;
   margin: 5px;
   display: inline-block;
