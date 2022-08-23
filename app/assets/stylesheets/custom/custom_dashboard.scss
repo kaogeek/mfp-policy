@@ -1,68 +1,119 @@
-
-.admin-content {
-  .dashboard-proposals-stats {
-    @extend .custom-font-anakotmai;
-
-    .next-goal-progress {
-    @extend .custom-font-pracharath;
-    }
-
-    .progress {
-      background-color: $color-background-progress-bar;
-    }
-  }
-  .label {
-    border-radius: 10px;
-    @extend .custom-font-anakotmai;
-  }
-
-  .new_poll {
-    margin-top: 20px;
-    label:not([for*='search_text']):not(.checkbox-label) {
-      font-size: 14px;
-      margin-bottom: 0px;
-    }
-  }
-
-  .poll-count {
+:root {
+  .font-dashboard-side {
     font-size: 14px;
     font-weight: 400;
-    @extend .custom-font-anakotmai;
+    margin-left: 5px;
   }
+}
 
-  .c3-tooltip-container {
-    .c3-tooltip th,
-    tr,
-    td {
-      color: #000;
-      @extend .custom-font-pracharath;
+.menu-and-content {
+  .dashboard-sidebar {
+    .section-title {
+      strong {
+        @extend .font-dashboard-side;
+      }
+      .resources {
+        border-width: 2px;
+
+        a {
+          @extend .font-dashboard-side;
+        }
+      }
+      // span[class*='icon-'] {
+      //   min-width: 24px;
+      //   height: 24px;
+      //   border-radius: 5px;
+      //   background-size: contain;
+      //   background-repeat: no-repeat;
+      //   background-position: center;
+      //   &::before {
+      //     content: '';
+      //   }
+      // }
+
+      // .icon-proposals {
+      //   background-image: image-url('dashboard-proposal.png');
+      // }
+
+      // .icon-stats {
+      //   background-image: image-url('dashboard-progress.png');
+      // }
+
+      // .icon-zip {
+      //   background-image: image-url('dashboard-tool.png');
+      // }
+
+      // .icon-organizations {
+      //   background-image: image-url('dashboard-community.png');
+      // }
     }
   }
 
-  .c3 path,
-  .c3 line {
-    stroke: $white;
-    stroke-width: 2;
-  }
-
-  #proposal-graph {
-    path.domain {
-      stroke: $white;
-    }
-    .tick text {
-      fill: $white;
-      font-size: 10px;
+  .admin-content {
+    .dashboard-proposals-stats {
       @extend .custom-font-anakotmai;
+
+      .next-goal-progress {
+        @extend .custom-font-pracharath;
+      }
+
+      .progress {
+        background-color: $color-background-progress-bar;
+      }
     }
-    text.c3-axis-y-label {
-      fill: $white;
+
+    .label {
+      border-radius: 10px;
+    }
+
+    .new_poll {
+      margin-top: 20px;
+      label:not([for*='search_text']):not(.checkbox-label) {
+        font-size: 14px;
+        margin-bottom: 0px;
+      }
+    }
+
+    .poll-count {
       font-size: 14px;
+      font-weight: 400;
       @extend .custom-font-anakotmai;
     }
-    .c3-legend-item text {
-      fill: $white;
-      font-size: 12px;
-      @extend .custom-font-anakotmai;
+
+    .c3-tooltip-container {
+      .c3-tooltip th,
+      tr,
+      td {
+        color: #000;
+        @extend .custom-font-pracharath;
+      }
+    }
+
+    .c3 path,
+    .c3 line {
+      stroke: $white;
+      stroke-width: 2;
+    }
+
+    #proposal-graph {
+      path.domain {
+        stroke: $white;
+      }
+      .tick text {
+        fill: $white;
+        font-size: 10px;
+        @extend .custom-font-anakotmai;
+      }
+      text.c3-axis-y-label {
+        fill: $white;
+        font-size: 14px;
+        @extend .custom-font-anakotmai;
+      }
+      .c3-legend-item text {
+        fill: $white;
+        font-size: 12px;
+        @extend .custom-font-anakotmai;
+      }
     }
   }
 }

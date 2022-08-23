@@ -451,7 +451,7 @@ th:
       embed_video_title: "Video on %{proposal}"
       title_video_url: "คลิปวิดีโอ "
       author: ผู้เขียน
-      draft: Proposal in draft. Cannot yet get supports, nor does it appear in the list of proposals.
+      draft: นโยบายประชาชนในร่าง ยังไม่สามารถรับการสนับสนุนได้ และไม่ปรากฏในรายการนโยบายประชาชน
     update:
       form:
         submit_button: บันทึกข้อเสนอ
