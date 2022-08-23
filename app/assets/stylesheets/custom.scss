@@ -4,6 +4,12 @@
 // folder and they will be loaded automatically.
 
 .multiSelect {
+  /**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+  */
+  background: white;
+  border-radius: 15px;
   position: relative;
 }
 

@@ -2440,7 +2440,11 @@ table {
 
   .interests {
     @include breakpoint(medium) {
-      border-left: 1px solid #ececec;
+        /**
+          Override class for MFP-POLICY
+          @author Panuwat Chaiwongthon
+        */
+      // border-left: 1px solid #ececec;
       padding-left: $line-height;
     }
   }
