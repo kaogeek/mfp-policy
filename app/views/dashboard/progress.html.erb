@@ -1,6 +1,6 @@
+ <!--
 <% if proposal.published? %>
   <% content_for :action_title, t("dashboard.progress.title") %>
-
   <div class="row expanded">
     <div class="small-12 column">
       <%= link_to t("dashboard.progress.group_by_date"),
@@ -16,7 +16,7 @@
   </div>
 
   <div class="small-12 column">
-    <div id="proposal-graph"
+   <div id="proposal-graph"
          data-proposal-graph-url="<%= proposal_dashboard_supports_path(proposal, format: :json) %>"
          data-successful-proposal-graph-url="<%= proposal_dashboard_successful_supports_path(proposal, format: :json) %>"
          data-proposal-achievements-url="<%= proposal_dashboard_achievements_path(proposal, format: :json) %>"
@@ -31,6 +31,7 @@
 
   <%= javascript_include_tag "dashboard_graphs", "data-turbolinks-track" => "reload" %>
 <% end %>
+  -->
 
 <%= render "next_goal" %>
 

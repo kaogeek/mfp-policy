@@ -2,6 +2,49 @@
   &.proposals-page {
     background-color: $color-background-content;
 
+    .social-share-full {
+      .social-share-button a {
+        transition: ease-in-out 300ms;
+        border-radius: 10px;
+      }
+    }
+    .sidebar-title {
+      @extend .custom-font-anakotmai;
+    }
+    .supports {
+      @extend .custom-font-anakotmai;
+      .total-supports {
+        font-weight: 400;
+        span {
+          abbr {
+            font-size: 14px;
+            font-family: 200;
+            @extend .custom-font-pracharath;
+          }
+        }
+      }
+      .button-support {
+        color: $color-text-button-dark;
+        background-color: $brand;
+      }
+
+      .progress {
+        border: none;
+        background-color: $color-background-progress-bar;
+
+        .percentage {
+          line-height: 1.9;
+          font-weight: 300;
+          font-size: 10px;
+        }
+        .meter {
+          height: rem-calc(14);
+          background-color: $brand;
+          border-radius: 0.1875rem;
+        }
+      }
+    }
+
     .subnavigation {
       .search-form-header {
         .input-group-field {
@@ -24,7 +67,6 @@
           .proposals-list {
             #proposals-list .clear .panel {
               background: $color-background-card;
-
             }
             .proposal {
               .panel {
@@ -38,20 +80,19 @@
 
                   .column {
                     padding-right: -15px;
-                    img{
+                    img {
                       margin-left: -40px;
                     }
                     @include breakpoint(small down) {
-                      img{
+                      img {
                         margin: 13px 0 0 0;
                         border-radius: 13px;
                       }
                     }
                     &:last-child:not(:first-child) {
                       display: inline-grid;
-
                     }
-                    
+
                     .proposal-content {
                       h3 {
                         margin-top: 5px;
@@ -84,46 +125,6 @@
                         font-size: 16px;
                       }
                     }
-
-                    .supports {
-                      @extend .custom-font-anakotmai;
-                      .total-supports {
-                        font-weight: 400;
-                        span {
-                          abbr {
-                            font-size: 14px;
-                            font-family: 200;
-                            @extend .custom-font-pracharath;
-                          }
-                        }
-                      }
-                      .button-support {
-                        color: $color-text-button-dark;
-                        background-color: $brand;
-                      }
-
-                      .progress {
-                        border: none;
-                        background-color: $color-background-progress-bar;
-
-                        .percentage {
-                          line-height: 1.9;
-                          font-weight: 300;
-                          font-size: 10px;
-                        }
-                        .meter {
-                          height: rem-calc(14);
-                          background-color: $brand;
-                          border-radius: 0.1875rem;
-                        }
-                      }
-                      .social-share-full {
-                        .social-share-button a {
-                          transition: ease-in-out 300ms;
-                          border-radius: 10px;
-                        }
-                      }
-                    }
                   }
                 }
               }
@@ -135,31 +136,31 @@
                   object-fit: cover;
                 }
               }
-              @include breakpoint(small down){
-                .with-image{
-                  .row{
-                    .proposal-content{
+              @include breakpoint(small down) {
+                .with-image {
+                  .row {
+                    .proposal-content {
                       margin-top: 15px;
                     }
                   }
-                  .supports-container{
-                    .supports{
+                  .supports-container {
+                    .supports {
                       margin: 0 10px 0 10px;
                     }
                   }
                 }
-                .no-images{
-                  .supports-container{
-                    .supports{
+                .no-images {
+                  .supports-container {
+                    .supports {
                       margin: 0 10px 0 10px;
                     }
                   }
-                } 
+                }
               }
-              .no-images{
-                .supports-container{
+              .no-images {
+                .supports-container {
                   margin-left: 34px;
-                  .supports{
+                  .supports {
                     margin-right: 14.8px;
                   }
                 }
@@ -194,6 +195,25 @@
               margin-right: 15px;
             }
           }
+        }
+      }
+    }
+    .proposal-show {
+      .tags {
+        a {
+          border: none;
+          color: $color-text-base;
+          border-radius: 20px;
+          background-color: $color-background-card;
+        }
+      }
+
+      .geozone {
+        a {
+          border: none;
+          color: $color-text-base;
+          border-radius: 20px;
+          background-color: $color-background-card-hover;
         }
       }
     }
@@ -233,12 +253,11 @@
   }
 }
 
-
 @media screen and (max-width: 1199px) {
-  .public{
-    .wrapper{
-      main .proposals-page .proposals-list .proposal .panel .no-images{
-        .supports-container{
+  .public {
+    .wrapper {
+      main .proposals-page .proposals-list .proposal .panel .no-images {
+        .supports-container {
           margin-left: 25px;
         }
       }
@@ -247,16 +266,13 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .public{
-    .wrapper{
-      main .proposals-page .proposals-list .proposal .panel .no-images{
-        .supports-container{
+  .public {
+    .wrapper {
+      main .proposals-page .proposals-list .proposal .panel .no-images {
+        .supports-container {
           margin-left: -10px;
         }
       }
     }
   }
 }
-
-
-
