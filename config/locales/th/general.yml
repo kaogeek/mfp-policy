@@ -381,7 +381,7 @@ th:
         other: "คำว่า <strong>'%{search_term}'</strong>"
       select_order_long: "คุณกำลังดูข้อเสนอตาม:"
       start_proposal: สร้างข้อเสนอ
-      title: ข้อเสนอ
+      title: นโยบายโดยประชาชน
       top_link_proposals: ข้อเสนอที่ได้รับการสนับสนุนมากที่สุดตามหมวดหมู่
       section_header:
         icon_alt: ไอคอนข้อเสนอ

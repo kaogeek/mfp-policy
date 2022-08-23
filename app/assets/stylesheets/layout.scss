@@ -830,6 +830,8 @@ body > header,
 
   // Add style for MFP-POLICY
   font-family: $header-font-family;
+  color: $color-text-base;
+  background: $color-background-nav;
 
   @include breakpoint(medium) {
     /**
@@ -838,8 +840,6 @@ body > header,
   */
     // background: $body-background;
     // color: $text-color-reduce;
-    color: $color-text-base;
-    background: $color-background-nav;
 
     flex-direction: row;
     padding-bottom: 0;
@@ -1308,6 +1308,7 @@ form {
   }
 
   fieldset legend {
+    @extend .custom-font-anakotmai;
     font-weight: bold;
   }
 
@@ -2440,7 +2441,7 @@ table {
 
   .interests {
     @include breakpoint(medium) {
-        /**
+      /**
           Override class for MFP-POLICY
           @author Panuwat Chaiwongthon
         */
@@ -3077,14 +3078,19 @@ label:not([for*='search_text']):not(.checkbox-label) {
     background-color: #45b0e3;
     border-radius: 10px;
     color: $white;
-    height: 42px;
     padding-top: 4px;
-    width: 42px;
+    transition: ease-out 300ms;
 
     .icon-twitter {
-      line-height: 1.7;
-      font-size: 18px;
       margin-top: 10px;
+      &:hover {
+        background-color: $white;
+        color: #45b0e3;
+      }
+    }
+    &:hover {
+      background-color: $white;
+      color: #45b0e3;
     }
   }
 
@@ -3092,14 +3098,20 @@ label:not([for*='search_text']):not(.checkbox-label) {
     background-color: #3b5998;
     border-radius: 10px;
     color: $white;
-    height: 42px;
     padding-top: 4px;
-    width: 42px;
+    width: 48px;
+    transition: ease-out 300ms;
 
     .icon-facebook {
-      line-height: 1.7;
-      font-size: 18px;
       margin-top: 10px;
+      &:hover {
+        background-color: $white;
+        color: #3b5998;
+      }
+    }
+    &:hover {
+      background-color: $white;
+      color: #3b5998;
     }
   }
 
@@ -3118,7 +3130,8 @@ label:not([for*='search_text']):not(.checkbox-label) {
 
 .ui-datepicker {
   .ui-datepicker-header {
-    .ui-datepicker-prev, .ui-datepicker-next {
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
       padding-top: 3px;
     }
   }
