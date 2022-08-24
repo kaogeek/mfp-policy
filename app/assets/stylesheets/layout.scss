@@ -3079,17 +3079,22 @@ label:not([for*='search_text']):not(.checkbox-label) {
 
 // 31. social button
 // ------------------------
+.social a {
+  font-size: rem-calc(20) !important;
+}
 .custom-social-group {
-  margin-bottom: 10px;
+  margin-bottom: rem-calc(10);
   .social-button-twitter {
     background-color: #45b0e3;
-    border-radius: 10px;
+    border-radius: rem-calc(10);
     color: $white;
-    padding-top: 4px;
     transition: ease-out 300ms;
+    padding: rem-calc(5) rem-calc(3);
+    padding-top: rem-calc(7);
 
     .icon-twitter {
-      margin-top: 10px;
+      margin-top: rem-calc(10);
+      font-size: rem-calc(20);
       &:hover {
         background-color: $white;
         color: #45b0e3;
@@ -3103,14 +3108,16 @@ label:not([for*='search_text']):not(.checkbox-label) {
 
   .social-button-facebook {
     background-color: #3b5998;
-    border-radius: 10px;
+    border-radius: rem-calc(10);
     color: $white;
-    padding-top: 4px;
-    width: 48px;
+    min-width: rem-calc(49);
     transition: ease-out 300ms;
+    padding: rem-calc(5) rem-calc(3);
+    padding-top: rem-calc(7);
 
     .icon-facebook {
-      margin-top: 10px;
+      margin-top: rem-calc(10);
+      font-size: rem-calc(20);
       &:hover {
         background-color: $white;
         color: #3b5998;
