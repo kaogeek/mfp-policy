@@ -31,7 +31,7 @@
         mobile: @proposal.title %>
 
       <% if can?(:dashboard, @proposal) %>
-        <div class="callout light margin">
+        <div class="callout margin">
           <p class="text-center">
             <strong><%= t("proposals.share.improve_it") %></strong>
           </p>
@@ -48,7 +48,7 @@
     </div>
 
     <div class="small-12 medium-4 column">
-      <div class="callout light">
+      <div class="callout">
         <p>
           <strong><%= @proposal.title %></strong><br>
           <%= t("proposals.show.code") %> <%= @proposal.code %>

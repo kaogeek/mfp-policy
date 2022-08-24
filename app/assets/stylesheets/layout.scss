@@ -779,7 +779,14 @@ body > header,
   }
 
   &.is-dropdown-submenu-parent > a::after {
-    border-top-color: currentcolor;
+    right: 7px;
+    width: 8px;
+    height: 8px;
+    border: none;
+    margin-top: -5px;
+    border-top: 2px solid $white;
+    border-left: 2px solid $white;
+    transform: rotate(-135deg);
   }
 }
 
@@ -830,6 +837,8 @@ body > header,
 
   // Add style for MFP-POLICY
   font-family: $header-font-family;
+  color: $color-text-base;
+  background: $color-background-nav;
 
   @include breakpoint(medium) {
     /**
@@ -838,8 +847,6 @@ body > header,
   */
     // background: $body-background;
     // color: $text-color-reduce;
-    color: $color-text-base;
-    background: $color-background-nav;
 
     flex-direction: row;
     padding-bottom: 0;
@@ -1308,6 +1315,7 @@ form {
   }
 
   fieldset legend {
+    @extend .custom-font-anakotmai;
     font-weight: bold;
   }
 
@@ -2440,7 +2448,7 @@ table {
 
   .interests {
     @include breakpoint(medium) {
-        /**
+      /**
           Override class for MFP-POLICY
           @author Panuwat Chaiwongthon
         */
@@ -3071,35 +3079,53 @@ label:not([for*='search_text']):not(.checkbox-label) {
 
 // 31. social button
 // ------------------------
+.social a {
+  font-size: rem-calc(20) !important;
+}
 .custom-social-group {
-  margin-bottom: 10px;
+  margin-bottom: rem-calc(10);
   .social-button-twitter {
     background-color: #45b0e3;
-    border-radius: 10px;
+    border-radius: rem-calc(10);
     color: $white;
-    height: 42px;
-    padding-top: 4px;
-    width: 42px;
+    transition: ease-out 300ms;
+    padding: rem-calc(5) rem-calc(3);
+    padding-top: rem-calc(7);
 
     .icon-twitter {
-      line-height: 1.7;
-      font-size: 18px;
-      margin-top: 10px;
+      margin-top: rem-calc(10);
+      font-size: rem-calc(20);
+      &:hover {
+        background-color: $white;
+        color: #45b0e3;
+      }
+    }
+    &:hover {
+      background-color: $white;
+      color: #45b0e3;
     }
   }
 
   .social-button-facebook {
     background-color: #3b5998;
-    border-radius: 10px;
+    border-radius: rem-calc(10);
     color: $white;
-    height: 42px;
-    padding-top: 4px;
-    width: 42px;
+    min-width: rem-calc(49);
+    transition: ease-out 300ms;
+    padding: rem-calc(5) rem-calc(3);
+    padding-top: rem-calc(7);
 
     .icon-facebook {
-      line-height: 1.7;
-      font-size: 18px;
-      margin-top: 10px;
+      margin-top: rem-calc(10);
+      font-size: rem-calc(20);
+      &:hover {
+        background-color: $white;
+        color: #3b5998;
+      }
+    }
+    &:hover {
+      background-color: $white;
+      color: #3b5998;
     }
   }
 
@@ -3116,9 +3142,12 @@ label:not([for*='search_text']):not(.checkbox-label) {
   background-color: $brand;
 }
 
+// 33. datepicker
+// ------------------------
 .ui-datepicker {
   .ui-datepicker-header {
-    .ui-datepicker-prev, .ui-datepicker-next {
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
       padding-top: 3px;
     }
   }
@@ -3148,6 +3177,14 @@ label:not([for*='search_text']):not(.checkbox-label) {
   }
 }
 
+// 34. form is invalid
+// ------------------------
 .is-invalid-input:not(:focus) {
   color: $color-alert;
+}
+
+// 35. tooltip
+// ------------------------
+.tooltip {
+  @extend .custom-font-anakotmai;
 }

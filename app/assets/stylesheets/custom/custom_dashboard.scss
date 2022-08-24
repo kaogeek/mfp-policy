@@ -1,19 +1,79 @@
+:root {
+  .font-dashboard-side {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 5px;
+  }
+}
 
-.admin-content {
+.menu-and-content {
+  .dashboard-sidebar {
+    .section-title {
+      strong {
+        @extend .font-dashboard-side;
+      }
+      .resources {
+        border-width: 2px;
+
+        a {
+          @extend .font-dashboard-side;
+        }
+      }
+      // span[class*='icon-'] {
+      //   min-width: 24px;
+      //   height: 24px;
+      //   border-radius: 5px;
+      //   background-size: contain;
+      //   background-repeat: no-repeat;
+      //   background-position: center;
+      //   &::before {
+      //     content: '';
+      //   }
+      // }
+    }
+  }
+
   .dashboard-proposals-stats {
     @extend .custom-font-anakotmai;
 
     .next-goal-progress {
-    @extend .custom-font-pracharath;
+      @extend .custom-font-pracharath;
     }
 
     .progress {
       background-color: $color-background-progress-bar;
     }
   }
+
+  .label {
+    border-radius: rem-calc(10);
+    @extend .custom-font-anakotmai;
+  }
+
+  .new_poll {
+    margin-top: rem-calc(20);
+    label:not([for*='search_text']):not(.checkbox-label) {
+      font-size: rem-calc(14);
+      margin-bottom: rem-calc(0);
+    }
+  }
+
+  .poll-count {
+    font-size: rem-calc(14);
+    font-weight: 400;
+    @extend .custom-font-anakotmai;
+  }
+
+  .next-goal-progress {
+    @extend .custom-font-pracharath;
+  }
+
+  .progress {
+    background-color: $color-background-progress-bar;
+  }
+
   .label {
     border-radius: 10px;
-    @extend .custom-font-anakotmai;
   }
 
   .new_poll {
@@ -24,19 +84,22 @@
     }
   }
 
-  .poll-count {
-    font-size: 14px;
-    font-weight: 400;
+  .tick text {
+    fill: $white;
+    font-size: rem-calc(10);
     @extend .custom-font-anakotmai;
   }
 
-  .c3-tooltip-container {
-    .c3-tooltip th,
-    tr,
-    td {
-      color: #000;
-      @extend .custom-font-pracharath;
-    }
+  text.c3-axis-y-label {
+    fill: $white;
+    font-size: rem-calc(14);
+    @extend .custom-font-anakotmai;
+  }
+
+  .c3-legend-item text {
+    fill: $white;
+    font-size: rem-calc(12);
+    @extend .custom-font-anakotmai;
   }
 
   .c3 path,
