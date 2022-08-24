@@ -1,3 +1,4 @@
+<div class="custom-topic-proposal">
 <h3 class="proposal-title">
   <%= link_to proposal.title, proposal, target: "_blank" %>
 </h3>
@@ -15,6 +16,7 @@
     <%= t("layouts.dashboard.proposal_header.draft") %>
   </div>
 <% end %>
+</div>
 
 <% if content_for?(:action_title) %>
   <h3 class="title title-<%= yield(:action_title) %>"><%= yield(:action_title) %></h3>

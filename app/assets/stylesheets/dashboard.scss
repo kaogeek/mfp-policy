@@ -36,13 +36,19 @@
    @author Panuwat Chaiwongthon
   */
   // border: 2px solid $highlight;
+  @extend .custom-font-anakotmai;
   background-color: $color-background-card;
-  font-family: 'Anakotmai' sans-serif;
   font-size: 16px;
+
 
   border-radius: rem-calc(6);
   margin-bottom: $line-height;
-  padding: $line-height / 2;
+  /**
+   Override class for MFP-POLICY
+   @author Panuwat Chaiwongthon
+  */
+  // padding: $line-height / 2;
+  padding: $line-height / 1.5 $line-height / 2;
   text-align: center;
 
   @include breakpoint(medium only) {
@@ -824,4 +830,3 @@
     padding-left: 4cm;
   }
 }
-

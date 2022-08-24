@@ -374,7 +374,7 @@ th:
         other: อื่นๆ
       search_form:
         button: ค้นหา
-        placeholder: ค้นหาข้อเสนอ...
+        placeholder: ค้นหา...
         title: ค้นหา
       search_results:
         one: "คำว่า <strong>'%{search_term}'</strong>"
@@ -489,7 +489,7 @@ th:
     new_request:
       links: Links
     resources:
-      available_resources: เครื่องมือรณรงค์ สำหรับคุณ
+      available_resources: เครื่องมือรณรงค์สำหรับคุณ
     resource:
       required_days: "%{days} days required"
       required_supports: "%{supports} supports required"
@@ -853,7 +853,7 @@ th:
       published: เผยแพร่
       see: "See proposal"
       actions: ข้อมูลเพิ่มเติม
-      retired_help_text: Dashboard not available for withdrawn proposals
+      retired_help_text: Dashboard ไม่พร้อมใช้งานสำหรับข้อเสนอที่ถอนออก
   votes:
     agree: I agree
     agree_label: "I agree with %{title}"

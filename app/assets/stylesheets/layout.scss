@@ -3079,59 +3079,48 @@ label:not([for*='search_text']):not(.checkbox-label) {
 
 // 31. social button
 // ------------------------
-.social a {
-  font-size: rem-calc(20) !important;
-}
 .custom-social-group {
   margin-bottom: rem-calc(10);
   .social-button-twitter {
-    background-color: #45b0e3;
-    border-radius: rem-calc(10);
-    color: $white;
-    transition: ease-out 300ms;
-    padding: rem-calc(5) rem-calc(3);
-    padding-top: rem-calc(7);
+    cursor: pointer;
+    width: rem-calc(36);
+    background-image: image-url('twitter-logo.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
 
-    .icon-twitter {
-      margin-top: rem-calc(10);
-      font-size: rem-calc(20);
-      &:hover {
-        background-color: $white;
-        color: #45b0e3;
-      }
-    }
-    &:hover {
-      background-color: $white;
-      color: #45b0e3;
+    &::before {
+      content: '';
     }
   }
 
   .social-button-facebook {
-    background-color: #3b5998;
-    border-radius: rem-calc(10);
-    color: $white;
-    min-width: rem-calc(49);
-    transition: ease-out 300ms;
-    padding: rem-calc(5) rem-calc(3);
-    padding-top: rem-calc(7);
+    cursor: pointer;
+    width: rem-calc(36);
+    background-image: image-url('facebook-logo.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
 
-    .icon-facebook {
-      margin-top: rem-calc(10);
-      font-size: rem-calc(20);
-      &:hover {
-        background-color: $white;
-        color: #3b5998;
-      }
-    }
-    &:hover {
-      background-color: $white;
-      color: #3b5998;
+    &::before {
+      content: '';
     }
   }
 
-  .social-button-youtube,
-  .social-button-telegram,
-  .social-button-instagram {
+
+  .social-button-telegram {
+    cursor: pointer;
+    width: rem-calc(36);
+    background-image: image-url('line-logo.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: '';
+    }
+  }
+
+
+  .social-button-youtube-wrapper,
+  .social-button-instagram-wrapper {
     display: none;
   }
 }

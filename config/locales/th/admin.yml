@@ -717,7 +717,7 @@ th:
         add: Add
     menu:
       activity: Moderator activity
-      admin: Admin menu
+      admin: เมูนูผู้ดูแล
       banner: Manage banners
       proposals: Proposals
       proposals_topics: Proposals topics
