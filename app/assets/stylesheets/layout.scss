@@ -3088,7 +3088,7 @@ label:not([for*='search_text']):not(.checkbox-label) {
     background-size: 100%;
     background-repeat: no-repeat;
 
-    &::before {
+    ::before {
       content: '';
     }
   }
@@ -3100,7 +3100,7 @@ label:not([for*='search_text']):not(.checkbox-label) {
     background-size: 100%;
     background-repeat: no-repeat;
 
-    &::before {
+    ::before {
       content: '';
     }
   }
@@ -3113,7 +3113,7 @@ label:not([for*='search_text']):not(.checkbox-label) {
     background-size: 100%;
     background-repeat: no-repeat;
 
-    &::before {
+    ::before {
       content: '';
     }
   }
