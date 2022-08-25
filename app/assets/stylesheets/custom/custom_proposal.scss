@@ -61,10 +61,16 @@
     }
 
     .button-custom {
-      border-radius: 22px !important;
+      border-radius: 20px !important;
     }
 
     .wrapper {
+      .proposal-new{
+        .proposal-form .required-fields legend{
+          color: $brand;
+          font-style: Anakotmai;
+        }
+      }
       main {
         .proposals-page {
           @include full-width-background;
@@ -74,6 +80,17 @@
           }
 
           .proposals-list {
+            .advanced-search-form{
+              .date-filters{
+                display: flex;
+              }
+              .custom-date-filters{
+                width: 66%;
+              }
+              .filter{
+                width: 50%;
+              }
+            }
             #proposals-list .clear .panel {
               background: $color-background-card;
             }

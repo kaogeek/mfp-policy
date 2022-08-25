@@ -117,7 +117,10 @@
         <div class="sidebar-divider"></div>
       <h2 class="sidebar-title"><%= t("proposals.index.selected_proposals") %></h2>
         <p class="small">
-          <%= link_to t("proposals.index.selected_proposals_link"), proposals_path(selected: "all") %>
+          <%= link_to t("proposals.index.selected_proposals_link"), proposals_path(selected: "all") %><br>
+          <%= link_to t("proposals.index.retired_proposals_link"),
+          proposals_path(retired: "all"),
+          class: "small" %>
         </p>
 
         <div class="tag-cloud">
