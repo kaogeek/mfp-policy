@@ -15,7 +15,7 @@ th:
         budget_investment: "Budget Investment created successfully."
         signature_sheet: "Signature sheet created successfully"
         support: "Investment supported successfully"
-        topic: "Topic created successfully."
+        topic: "บันทึกหัวข้อเรียบร้อยแล้ว"
         valuator_group: "Valuator group created successfully"
       save_changes:
         notice: บันทึกการเปลี่ยนแปลงสำเร็จ
@@ -25,8 +25,8 @@ th:
         poll: "แก้ไขโพลสำเร็จ"
         poll_booth: "แก้ไขบูธสำเร็จ"
         active_poll: "แก้ไขคำอธิบายโพลสำเร็จ"
-        proposal: "Proposal updated successfully."
-        budget_investment: "Investment project updated succesfully."
+        proposal: "แก้ไขนโยบายประชาชนเรียบร้อยแล้ว"
+        budget_investment: "Investment project updated successfully."
         topic: "แก้ไขเนื้อหาเรียบร้อยแล้ว"
         valuator_group: "Valuator group updated successfully"
         translation: "Translation updated successfully"

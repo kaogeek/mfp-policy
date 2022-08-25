@@ -274,7 +274,7 @@ th:
   map:
     title: "อำเภอ"
     proposal_for_district: "เริ่มข้อเสนอสำหรับเขตของคุณ"
-    start_proposal: สร้างข้อเสนอ
+    start_proposal: สร้างนโยบายประชาชน
   omniauth:
     facebook:
       sign_in: เข้าสู่ระบบด้วย Facebook
@@ -360,9 +360,9 @@ th:
           success: "คำแนะนำสำหรับข้อเสนอถูกปิดใช้งานสำหรับบัญชีนี้แล้ว"
           error: "เกิดข้อผิดพลาด. โปรดไปที่หน้า บัญชีของเพจ เพื่อปิดใช้งานคำแนะนำสำหรับข้อเสนอด้วยตนเอง"
       retired_proposals: ถอนข้อเสนอ
-      retired_proposals_link: "ข้อเสนอถอนโดยผู้เขียน"
-      selected_proposals: ข้อเสนอที่เลือก
-      selected_proposals_link: ดูข้อเสนอที่เลือก
+      retired_proposals_link: "นโยบายประชาชนที่ถูกถอนโดยผู้เขียน"
+      selected_proposals: การจัดการ
+      selected_proposals_link: ดูนโยบายที่ถูกเลือก
       archived_proposals: ข้อเสนอที่เก็บถาวร
       proposals_lists: รายการข้อเสนอ
       retired_links:
@@ -374,18 +374,18 @@ th:
         other: อื่นๆ
       search_form:
         button: ค้นหา
-        placeholder: ค้นหาข้อเสนอ...
+        placeholder: ค้นหา...
         title: ค้นหา
       search_results:
         one: "คำว่า <strong>'%{search_term}'</strong>"
         other: "คำว่า <strong>'%{search_term}'</strong>"
       select_order_long: "คุณกำลังดูข้อเสนอตาม:"
-      start_proposal: สร้างข้อเสนอ
+      start_proposal: สร้างนโยบายประชาชน
       title: นโยบายโดยประชาชน
       top_link_proposals: ข้อเสนอที่ได้รับการสนับสนุนมากที่สุดตามหมวดหมู่
       section_header:
         icon_alt: ไอคอนข้อเสนอ
-        title: นโยบายประชาชน
+        title: ย้อนกลัย
         help: ความช่วยเหลือเกี่ยวกับข้อเสนอ
       section_footer:
         title: นโยบายประชาชน คือ อะไร ?
@@ -393,13 +393,13 @@ th:
                      สำหรับข้อเสนอที่ได้รับเสียงสนับสนุนเกินเป้าหมาย ผู้เสนอจะได้มีโอกาสนำเสนอกับทีมนโยบายของพรรคก้าวไกลโดยตรง
     new:
       form:
-        submit_button: สร้างข้อเสนอ
+        submit_button: สร้างนโยบายประชาชน
       more_info: ข้อเสนอพลเมืองทำงานอย่างไร
       recommendation_one: อย่าใช้ตัวพิมพ์ใหญ่สำหรับชื่อข้อเสนอหรือทั้งประโยค บนอินเทอร์เน็ตนี่ถือเป็นการทอกซิน และไม่ชอบให้ใครมาด่า
       recommendation_three: เพลิดเพลินไปกับพื้นที่นี้และเสียงที่เติมเต็ม มันเป็นของคุณเช่นกัน
       recommendation_two: ข้อเสนอหรือความคิดเห็นใดๆ ที่เสนอแนะการกระทำที่ผิดกฎหมายจะถูกลบออก เช่นเดียวกับที่ตั้งใจจะก่อวินาศกรรมพื้นที่อภิปราย อนุญาตให้สิ่งอื่นใด
       recommendations_title: คำแนะนำในการสร้างข้อเสนอ
-      start_new: สร้างข้อเสนอใหม่
+      start_new: สร้างนโยบายประชาชนใหม่
     notice:
       retired: ถอนข้อเสนอแล้ว
       published: ข้อเสนอ ถูกเผยแพร่เรียบร้อย
@@ -489,7 +489,7 @@ th:
     new_request:
       links: Links
     resources:
-      available_resources: เครื่องมือรณรงค์ สำหรับคุณ
+      available_resources: เครื่องมือรณรงค์สำหรับคุณ
     resource:
       required_days: "%{days} days required"
       required_supports: "%{supports} supports required"
@@ -853,7 +853,7 @@ th:
       published: เผยแพร่
       see: "See proposal"
       actions: ข้อมูลเพิ่มเติม
-      retired_help_text: Dashboard not available for withdrawn proposals
+      retired_help_text: Dashboard ไม่พร้อมใช้งานสำหรับข้อเสนอที่ถอนออก
   votes:
     agree: I agree
     agree_label: "I agree with %{title}"

@@ -90,7 +90,7 @@
   border-top: 1px solid $border;
 
   @include breakpoint(medium) {
-    border-left: 1px solid $border;
+    border-left: 1px solid $border-proposal;
     border-top: 0;
   }
 }

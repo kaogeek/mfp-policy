@@ -1,8 +1,7 @@
 :root {
   .font-dashboard-side {
-    font-size: 14px;
+    font-size: rem-calc(14);
     font-weight: 400;
-    margin-left: 5px;
   }
 }
 
@@ -32,9 +31,116 @@
       // }
     }
   }
+  .admin-content {
+    .dashboard-proposals-stats {
 
-  .dashboard-proposals-stats {
-    @extend .custom-font-anakotmai;
+      .counter-label {
+        color: $color-text-base;
+        font-size: rem-calc(12);
+      }
+      .counter-value {
+        font-size: rem-calc(25);
+      }
+
+      .custom-goal-support {
+        .counter-value {
+          text-align: right;
+        }
+
+        .custom-goal-label {
+          font-size: rem-calc(12);
+          text-align: right;
+        }
+        .custom-goal-progress {
+          margin-top: rem-calc(20);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .next-goal-progress {
+            font-size: rem-calc(12);
+            font-weight: normal;
+          }
+        }
+      }
+
+      .counter {
+        .next-goal-progress {
+          @extend .custom-font-pracharath;
+        }
+
+        .custom-progress {
+          background-color: $color-background-progress-bar;
+        }
+      }
+
+      .custom-last-column {
+        padding-top: rem-calc(22.5);
+        border-left: 1px solid $color-border;
+        padding-right: rem-calc(0);
+      }
+
+      a[class*='button'] {
+        margin-bottom: 0;
+        border-radius: rem-calc(40);
+        color: $color-text-base;
+        background-color: $brand;
+        font-weight: normal;
+      }
+    }
+
+    .custom-topic-proposal {
+      display: flex;
+      align-items: center;
+
+      .proposal-title {
+        margin-bottom: 0;
+        font-weight: normal;
+      }
+      .label {
+        margin-left: rem-calc(10);
+        font-weight: normal;
+        height: rem-calc(25);
+        background-color: $color-background-card;
+        @extend .custom-font-anakotmai;
+      }
+    }
+
+    .title {
+      font-weight: normal;
+    }
+
+    .resource-card {
+      border-radius: rem-calc(10);
+      min-height: rem-calc(250);
+      background-color: $color-background-card;
+
+      h4 {
+        font-weight: normal;
+        color: $color-text-base;
+        margin-bottom: rem-calc(90);
+      }
+
+      a[class*='button'] {
+        margin-bottom: 0;
+        color: $color-text-base;
+        background-color: $brand;
+        font-weight: normal;
+      }
+    }
+
+    .new_poll {
+      margin-top: rem-calc(20);
+      label:not([for*='search_text']):not(.checkbox-label) {
+        font-size: rem-calc(14);
+        margin-bottom: rem-calc(0);
+      }
+    }
+
+    .poll-count {
+      font-size: rem-calc(14);
+      font-weight: 400;
+      @extend .custom-font-anakotmai;
+    }
 
     .next-goal-progress {
       @extend .custom-font-pracharath;
@@ -43,89 +149,50 @@
     .progress {
       background-color: $color-background-progress-bar;
     }
-  }
 
-  .label {
-    border-radius: rem-calc(10);
-    @extend .custom-font-anakotmai;
-  }
-
-  .new_poll {
-    margin-top: rem-calc(20);
-    label:not([for*='search_text']):not(.checkbox-label) {
-      font-size: rem-calc(14);
-      margin-bottom: rem-calc(0);
-    }
-  }
-
-  .poll-count {
-    font-size: rem-calc(14);
-    font-weight: 400;
-    @extend .custom-font-anakotmai;
-  }
-
-  .next-goal-progress {
-    @extend .custom-font-pracharath;
-  }
-
-  .progress {
-    background-color: $color-background-progress-bar;
-  }
-
-  .label {
-    border-radius: 10px;
-  }
-
-  .new_poll {
-    margin-top: 20px;
-    label:not([for*='search_text']):not(.checkbox-label) {
-      font-size: 14px;
-      margin-bottom: 0px;
-    }
-  }
-
-  .tick text {
-    fill: $white;
-    font-size: rem-calc(10);
-    @extend .custom-font-anakotmai;
-  }
-
-  text.c3-axis-y-label {
-    fill: $white;
-    font-size: rem-calc(14);
-    @extend .custom-font-anakotmai;
-  }
-
-  .c3-legend-item text {
-    fill: $white;
-    font-size: rem-calc(12);
-    @extend .custom-font-anakotmai;
-  }
-
-  .c3 path,
-  .c3 line {
-    stroke: $white;
-    stroke-width: 2;
-  }
-
-  #proposal-graph {
-    path.domain {
-      stroke: $white;
-    }
     .tick text {
       fill: $white;
-      font-size: 10px;
+      font-size: rem-calc(10);
       @extend .custom-font-anakotmai;
     }
+
     text.c3-axis-y-label {
       fill: $white;
-      font-size: 14px;
+      font-size: rem-calc(14);
       @extend .custom-font-anakotmai;
     }
+
     .c3-legend-item text {
       fill: $white;
-      font-size: 12px;
+      font-size: rem-calc(12);
       @extend .custom-font-anakotmai;
+    }
+
+    .c3 path,
+    .c3 line {
+      stroke: $white;
+      stroke-width: 2;
+    }
+
+    #proposal-graph {
+      path.domain {
+        stroke: $white;
+      }
+      .tick text {
+        fill: $white;
+        font-size: 10px;
+        @extend .custom-font-anakotmai;
+      }
+      text.c3-axis-y-label {
+        fill: $white;
+        font-size: 14px;
+        @extend .custom-font-anakotmai;
+      }
+      .c3-legend-item text {
+        fill: $white;
+        font-size: 12px;
+        @extend .custom-font-anakotmai;
+      }
     }
   }
 }
