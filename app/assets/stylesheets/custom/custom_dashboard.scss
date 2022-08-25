@@ -30,90 +30,102 @@
       //     content: '';
       //   }
       // }
-
-      // .icon-proposals {
-      //   background-image: image-url('dashboard-proposal.png');
-      // }
-
-      // .icon-stats {
-      //   background-image: image-url('dashboard-progress.png');
-      // }
-
-      // .icon-zip {
-      //   background-image: image-url('dashboard-tool.png');
-      // }
-
-      // .icon-organizations {
-      //   background-image: image-url('dashboard-community.png');
-      // }
     }
   }
 
-  .admin-content {
-    .dashboard-proposals-stats {
-      @extend .custom-font-anakotmai;
+  .dashboard-proposals-stats {
+    @extend .custom-font-anakotmai;
 
-      .next-goal-progress {
-        @extend .custom-font-pracharath;
-      }
-
-      .progress {
-        background-color: $color-background-progress-bar;
-      }
+    .next-goal-progress {
+      @extend .custom-font-pracharath;
     }
 
-    .label {
-      border-radius: 10px;
+    .progress {
+      background-color: $color-background-progress-bar;
     }
+  }
 
-    .new_poll {
-      margin-top: 20px;
-      label:not([for*='search_text']):not(.checkbox-label) {
-        font-size: 14px;
-        margin-bottom: 0px;
-      }
+  .label {
+    border-radius: rem-calc(10);
+    @extend .custom-font-anakotmai;
+  }
+
+  .new_poll {
+    margin-top: rem-calc(20);
+    label:not([for*='search_text']):not(.checkbox-label) {
+      font-size: rem-calc(14);
+      margin-bottom: rem-calc(0);
     }
+  }
 
-    .poll-count {
+  .poll-count {
+    font-size: rem-calc(14);
+    font-weight: 400;
+    @extend .custom-font-anakotmai;
+  }
+
+  .next-goal-progress {
+    @extend .custom-font-pracharath;
+  }
+
+  .progress {
+    background-color: $color-background-progress-bar;
+  }
+
+  .label {
+    border-radius: 10px;
+  }
+
+  .new_poll {
+    margin-top: 20px;
+    label:not([for*='search_text']):not(.checkbox-label) {
       font-size: 14px;
-      font-weight: 400;
+      margin-bottom: 0px;
+    }
+  }
+
+  .tick text {
+    fill: $white;
+    font-size: rem-calc(10);
+    @extend .custom-font-anakotmai;
+  }
+
+  text.c3-axis-y-label {
+    fill: $white;
+    font-size: rem-calc(14);
+    @extend .custom-font-anakotmai;
+  }
+
+  .c3-legend-item text {
+    fill: $white;
+    font-size: rem-calc(12);
+    @extend .custom-font-anakotmai;
+  }
+
+  .c3 path,
+  .c3 line {
+    stroke: $white;
+    stroke-width: 2;
+  }
+
+  #proposal-graph {
+    path.domain {
+      stroke: $white;
+    }
+    .tick text {
+      fill: $white;
+      font-size: 10px;
       @extend .custom-font-anakotmai;
     }
-
-    .c3-tooltip-container {
-      .c3-tooltip th,
-      tr,
-      td {
-        color: #000;
-        @extend .custom-font-pracharath;
-      }
+    text.c3-axis-y-label {
+      fill: $white;
+      font-size: 14px;
+      @extend .custom-font-anakotmai;
     }
-
-    .c3 path,
-    .c3 line {
-      stroke: $white;
-      stroke-width: 2;
-    }
-
-    #proposal-graph {
-      path.domain {
-        stroke: $white;
-      }
-      .tick text {
-        fill: $white;
-        font-size: 10px;
-        @extend .custom-font-anakotmai;
-      }
-      text.c3-axis-y-label {
-        fill: $white;
-        font-size: 14px;
-        @extend .custom-font-anakotmai;
-      }
-      .c3-legend-item text {
-        fill: $white;
-        font-size: 12px;
-        @extend .custom-font-anakotmai;
-      }
+    .c3-legend-item text {
+      fill: $white;
+      font-size: 12px;
+      @extend .custom-font-anakotmai;
     }
   }
 }
