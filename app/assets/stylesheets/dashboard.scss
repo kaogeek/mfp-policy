@@ -36,10 +36,9 @@
    @author Panuwat Chaiwongthon
   */
   // border: 2px solid $highlight;
-  @extend .custom-font-anakotmai;
+  font-family: 'Anakotmai', sans-serif;
   background-color: $color-background-card;
   font-size: 16px;
-
 
   border-radius: rem-calc(6);
   margin-bottom: $line-height;
