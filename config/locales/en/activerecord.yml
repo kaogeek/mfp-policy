@@ -261,7 +261,7 @@ en:
         terms_of_service: "Terms of service"
         video_url: "External video URL"
       proposal/translation:
-        title: "Proposal title"
+        title: "หัวข้อนโยบายประชาชน"
         description: "Proposal text"
         summary: "Proposal summary"
         retired_explanation: "Explanation"

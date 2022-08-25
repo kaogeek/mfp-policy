@@ -111,6 +111,8 @@ $text: $color-text-content !default;
 $text-medium: $color-text-medium !default;
 $text-light: $color-text-medium !default;
 $border: $color-border !default;
+$border-proposal:$color-border-proposal !default; 
+
 
 $link: $brand !default;
 $link-hover: darken($link, 20%) !default;

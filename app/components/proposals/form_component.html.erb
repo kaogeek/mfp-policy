@@ -184,7 +184,7 @@
       </div>
     <% end %>
 
-    <%= f.submit(class: "button", value: t("proposals.#{action_name}.form.submit_button")) %>
+    <%= f.submit(class: "button send-proposal", value: t("proposals.#{action_name}.form.submit_button")) %>
   </div>
 <% end %>
 
@@ -273,9 +273,9 @@ $('.actions a').click(function() {
                 dropdown.removeClass("-hasValue");
               }
               if ($("#category span.multiSelect_choice").length < 1) {
-                $(".send-debates").attr("disabled", true);
+                $(".send-proposal").attr("disabled", true);
               } else {
-                $(".send-debates").attr("disabled", false);
+                $(".send-proposal").attr("disabled", false);
               }
             });
           })
@@ -285,9 +285,9 @@ $('.actions a').click(function() {
           list.append('<h5 class="multiSelect_noselections">ไม่มีการเลือก</h5>');
         }
         if ($("#category span.multiSelect_choice").length < 1) {
-          $(".send-debates").attr("disabled", true);
+          $(".send-proposal").attr("disabled", true);
         } else {
-          $(".send-debates").attr("disabled", false);
+          $(".send-proposal").attr("disabled", false);
         }
       });
 
@@ -309,16 +309,16 @@ $('.actions a').click(function() {
       });
     });
 
-    $(".send-debates").on("click", (e) => {
+    $(".send-proposal").on("click", (e) => {
       let categories = [];
       $("#category span.multiSelect_choice").map((index, elem) => {
         categories.push($(elem).attr("data-value").trim());
       });
-      $("#debate_tag_list").val(categories);
+      $("#proposal_tag_list").val(categories);
     });
 
-    if ($("#debate_tag_list").val()) {
-      $(".send-debates").attr("disabled", false);
+    if ($("#proposal_tag_list").val()) {
+      $(".send-proposal").attr("disabled", false);
       $(".multiSelect").each(function (e) {
         const self = $(this);
         const field = self.find(".multiSelect_field");
@@ -330,7 +330,7 @@ $('.actions a').click(function() {
         const option = self.find(".multiSelect_option");
         const optionText = self.find(".multiSelect_text");
 
-        $("#debate_tag_list")
+        $("#proposal_tag_list")
           .val()
           .split(",")
           .map((elem, index) => {
@@ -376,9 +376,9 @@ $('.actions a').click(function() {
                           dropdown.removeClass("-hasValue");
                         }
                         if ($("#category span.multiSelect_choice").length < 1) {
-                          $(".send-debates").attr("disabled", true);
+                          $(".proposal_tag_list").attr("disabled", true);
                         } else {
-                          $(".send-debates").attr("disabled", false);
+                          $(".proposal_tag_list").attr("disabled", false);
                         }
                       });
                     })
@@ -389,7 +389,7 @@ $('.actions a').click(function() {
           });
       });
     } else {
-      $(".send-debates").attr("disabled", true);
+      $(".proposal_tag_list").attr("disabled", true);
     }
 
     $(document).on('click', '.actions a', function(e){
