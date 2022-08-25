@@ -11,7 +11,7 @@
       <%= text_field_tag "search", params[:search] %>
     </div>
 
-    <div class="date-filters">
+    <div class="small-12 medium-4 date-filters">
       <div class="filter">
         <label for="js-advanced-search-date-min"><%= t("shared.advanced_search.date") %></label>
         <%= select_tag("advanced_search[date_min]", date_range_options,
