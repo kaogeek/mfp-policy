@@ -304,12 +304,12 @@ th:
       form:
         submit_button: สร้างข้อเสนอ
     created:
-      title: ข้อเสนอของคุณพร้อมแล้ว
-      motivation: "คุณต้องการเผยแพร์ข้อเสนอทันทีหรือไม่"
+      title: นโยบายประชาชนของคุณพร้อมแล้ว
+      motivation: "คุณต้องการเผยแพร่ข้อเสนอทันทีหรือไม่"
       motivation_2: "<strong>หากคุณต้องการคำแนะนำในการจัดเตรียมสิ่งพิมพ์ ให้ทิ้งข้อเสนอของคุณไว้เป็นฉบับร่าง แล้วเราจะแนะนำคุณ</strong>"
-      publish: ใช่ - เผยแพร์เลย
+      publish: ใช่ - เผยแพร่เลย
       dashboard: ไม่ - บันทึกเป็นร่างไว้ก่อน
-      preview_title: ข้อเสนอของคุณจะมีหน้าตาแบบนี้ เมื่อเผยแพร่ออกไป
+      preview_title: นโยบายประชาชนของคุณจะมีหน้าตาแบบนี้ เมื่อเผยแพร่ออกไป
     share:
       improve_it: สนใจดูสถิติการสนับสนุน และ เพิ่มช่องทางการรณรงค์?
       dashboard: ไปที่ dashboard ของคุณ
@@ -336,8 +336,8 @@ th:
       proposal_summary_note: "(สูงสุด 200 ตัวอักษร)"
       proposal_video_url_note: คุณสามารถเพิ่มลิงก์ไปสู่คลิปวิดีโอใน YouTube หรือ Vimeo
       tag_category_label: "หมวดหมู่"
-      tags_instructions: "แท็กข้อเสนอนี้ คุณสามารถเลือกจากหมวดหมู่ที่เสนอหรือเพิ่มของคุณเอง"
-      tags_label: แท็ก
+      tags_instructions: "หมวดหมู่สามารถเลือกได้สูงสุด 6 หมวด"
+      tags_label: หมวดหมู่
       tags_placeholder: "ป้อนแท็กที่คุณต้องการใช้ โดยคั่นด้วยเครื่องหมายจุลภาค (',')"
       map_location: "ที่ตั้งแผนที่"
       map_location_instructions: "นำทางแผนที่ไปยังตำแหน่งและวางเครื่องหมาย"
@@ -386,6 +386,7 @@ th:
       section_header:
         icon_alt: ไอคอนข้อเสนอ
         title: นโยบายประชาชน
+        back: ย้อนกลับ
         help: ความช่วยเหลือเกี่ยวกับข้อเสนอ
       section_footer:
         title: นโยบายประชาชน คือ อะไร ?
@@ -665,8 +666,8 @@ th:
   proposal_notifications:
     new:
       title: "ส่งการแจ้งเตือน"
-      create_proposals_notification: ข้อเสนอ ถูกร่างขึ้นมาเรียบร้อย
-      created_proposals_notification: ข้อเสนอ ถูกเผยแพร่เรียบร้อย
+      create_proposals_notification: นโยบายถูกร่างขึ้นแล้ว
+      created_proposals_notification: นโยบายถูกเผยแพร่เรียบร้อย
       submit_button: "ส่งการแจ้งเตือน"
       info_about_receivers: "การแจ้งเตือนนี้จะถูกส่งไปถึง <strong>%{count} คน</strong> และจะแสดงขึ้นใน %{proposal_page}.<br> ระบบจะไม่ส่งการแจ้งเตือนทันที ผู้ใช้จะได้รับอีเมลพร้อมการแจ้งเตือนข้อเสนอทั้งหมดเป็นระยะ."
       proposal_page: "หน้าข้อเสนอ"
