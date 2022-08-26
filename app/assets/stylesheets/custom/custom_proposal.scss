@@ -66,10 +66,27 @@
 
     .wrapper {
       .proposal-new{
+        .proposal-form fieldset {
+          .images legend{
+            margin-left: 8px;
+          }
+          .documents .documents-list{
+            legend{
+              margin-left: 8px;
+            }
+          }
+        }
         .proposal-form .required-fields legend{
           color: $brand;
           font-style: Anakotmai;
         }
+        .proposal-form fieldset .images #nested-image .nested-fields .title{
+          display: none;
+        }
+        .proposal-form fieldset .documents .documents-list #nested-documents .nested-fields .title{
+          display:none;
+        }
+        
       }
       main {
         .help-header .row{

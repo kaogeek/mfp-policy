@@ -4,7 +4,7 @@ th:
     form:
       title: รูปภาพ
       title_placeholder: Add a descriptive title for the image
-      delete_button: Remove image
+      delete_button: ลบรูปภาพ
       note: "คุณสามารถอัปโหลด 1 ภาพ (%{accepted_content_types}, ไม่เกิน %{max_file_size} MB)"
       add_new_image: เพิ่มภาพ 
       title_placeholder: Add a descriptive title for the image

@@ -443,10 +443,10 @@ th:
         text: Comment
       document:
         title: Title
-        attachment: "Choose document"
+        attachment: "เลือกเอกสาร"
       image:
         title: Title
-        attachment: "Choose image"
+        attachment: "เลือกรูปภาพ"
       poll/question/answer:
         title: คำตอบ
         description: รายละเอียด
