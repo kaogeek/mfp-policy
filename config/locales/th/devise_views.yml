@@ -20,7 +20,7 @@ th:
     mailer:
       confirmation_instructions:
         confirm_link: กดยืนยันแอคเคาท์
-        text: "ความเห็นของทุกท่านคืออิฐคนละก้อนที่สร้างพรรคก้าวไกล:"
+        text: "ความคิดเห็นของทุกท่านคืออิฐคนละก้อนที่สร้างพรรคก้าวไกล:"
         title: สร้างพรรคร่วมกับเรา
         welcome: ต้อนรับคุณ
       reset_password_instructions:

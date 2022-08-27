@@ -4,12 +4,12 @@ th:
       title: การบริหาร
     actions:
       actions: การกระทำ
-      block_author: "บล็อก"
+      block_author: "บล็อกผู้เขียน"
       confirm_action: "คุณแน่ใจไหม? %{action} \"%{name}\""
       confirm_delete: "คุณแน่ใจไหม? การดำเนินการนี้จะลบ \"%{name}\" aไม่สามารถยกเลิกได้"
       confirm_hide: ยืนยันการดูแล
       delete: "ลบ"
-      hide: ซ่อน
+      hide: ซ่อนนโยบายประชาชน
       label: "%{action} %{name}"
       restore: คืนค่า
       mark_featured: ติดดาว
@@ -717,7 +717,7 @@ th:
         add: Add
     menu:
       activity: Moderator activity
-      admin: เมูนูผู้ดูแล
+      admin: เมนู
       banner: Manage banners
       proposals: Proposals
       proposals_topics: Proposals topics
