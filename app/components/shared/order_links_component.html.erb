@@ -1,4 +1,10 @@
-<ul class="no-bullet submenu order-links">
+<ul class="no-bullet submenu order-links custom-submenu">
+<div class="prev-button">
+  <span class="icon-angle-left"></span>
+</div>
+<div class="next-button">
+  <span class="icon-angle-right"></span>
+</div>
   <% valid_orders.each do |order| %>
     <li class="inline-block custom-font-anakotmai">
       <%= link_to link_path(order), class: html_class(order) do %>
@@ -7,3 +13,104 @@
     </li>
   <% end %>
 </ul>
+
+
+<script>
+
+
+
+function scroll () {
+   if(window.innerWidth < 641 && $(".custom-submenu").get(0).scrollWidth >= window.innerWidth) {
+    $('.prev-button, .next-button').css('display',  '');
+    $(".custom-submenu").css('paddingLeft', '30px')
+    $(".custom-submenu").css('paddingRight', '20px')
+  } else {
+    $('.prev-button, .next-button').css('display',  'none');
+  }
+    const scrollDuration = 300;
+    // paddles
+    const leftPaddle = document.getElementsByClassName('prev-button');
+    const rightPaddle = document.getElementsByClassName('next-button');
+    // get items dimensions
+    const itemsLength = $('.custom-submenu').length;
+    const itemSize = $('.custom-submenu').outerWidth(true);
+    // get some relevant size for the paddle triggering point
+    const paddleMargin = 20;
+
+    // get wrapper width
+    const getMenuWrapperSize = function() {
+      return $('.proposals-list').outerWidth();
+    }
+
+    let menuWrapperSize = getMenuWrapperSize();
+    // the wrapper is responsive
+    $(window).on('resize', function() {
+      if(window.innerWidth < 641 && $(".custom-submenu").get(0).scrollWidth >= window.innerWidth) {
+        $('.prev-button, .next-button').css('display',  '');
+      } else {
+        $('.prev-button, .next-button').css('display',  'none');
+      }
+      menuWrapperSize = getMenuWrapperSize();
+    });
+    // size of the visible part of the menu is equal as the wrapper size
+    const menuVisibleSize = menuWrapperSize;
+
+    // get total width of all menu items
+    const getMenuSize = function() {
+      return itemsLength * itemSize;
+    };
+    const menuSize = getMenuSize();
+    // get how much of menu is invisible
+    let menuInvisibleSize = menuSize - menuWrapperSize;
+
+    // get how much have we scrolled to the left
+    const getMenuPosition = function() {
+      return $('.custom-submenu').scrollLeft();
+    };
+
+    // finally, what happens when we are actually scrolling the menu
+    $('.custom-submenu').on('scroll', function() {
+
+      // get how much of menu is invisible
+      menuInvisibleSize = menuSize - menuWrapperSize;
+      // get how much have we scrolled so far
+      const menuPosition = getMenuPosition();
+
+      const menuEndOffset = menuInvisibleSize - paddleMargin;
+
+      // show & hide the paddles
+      // depending on scroll position
+      if (menuPosition <= paddleMargin) {
+        $(leftPaddle).addClass('hidden');
+        $(rightPaddle).removeClass('hidden');
+      } else if (menuPosition < menuEndOffset) {
+        // show both paddles in the middle
+        $(leftPaddle).removeClass('hidden');
+        $(rightPaddle).removeClass('hidden');
+      } else if (menuPosition >= menuEndOffset) {
+        $(leftPaddle).removeClass('hidden');
+        $(rightPaddle).addClass('hidden');
+      }
+
+    });
+
+    // scroll to left
+    $(rightPaddle).on('click', function() {
+      $('.custom-submenu').animate({
+        scrollLeft: getMenuPosition() + 100
+      }, scrollDuration);
+    });
+
+    // scroll to right
+    $(leftPaddle).on('click', function() {
+
+      $('.custom-submenu').animate({
+        scrollLeft: getMenuPosition() - 100
+      }, scrollDuration);
+    });
+}
+
+$(document).ready(() => {
+  scroll();
+})
+</script>

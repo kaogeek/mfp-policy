@@ -1,6 +1,6 @@
 <div class="votes">
   <%= t("comments.comment.votes", count: comment.total_votes) %>
-  &nbsp;|&nbsp;
+  <span class="divider">&nbsp;|&nbsp;</span>
 
   <span class="in-favor">
     <%= button_to vote_comment_path(comment, value: "yes"),

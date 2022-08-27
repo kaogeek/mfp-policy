@@ -1,5 +1,5 @@
 <%= link_to admin_budget_budget_investment_path(@budget, @investment, Budget::Investment.filter_params(params).to_h), class: "back" do %>
-  <span class="icon-angle-left"></span> <%= t("shared.back") %>
+  <span class="icon-angle-left custom-icon-back"></span> <%= t("shared.back") %>
 <% end %>
 
 <%= render "shared/globalize_locales", resource: @investment %>

@@ -383,6 +383,7 @@ button,
 // Override class for MFP-POLICY
 .back {
   @extend .custom-font-anakotmai;
+  padding-left: $line-height / 2;
 }
 
 .back,
@@ -392,7 +393,10 @@ button,
   // color: $text-medium;
   color: $color-text-button-light;
   display: inline-block;
-  padding-right: $line-height / 2;
+}
+
+.custom-icon-back {
+  margin-right: rem-calc(10);
 }
 
 .back:not([class^='icon-']) {
@@ -848,12 +852,18 @@ body > header,
     // background: $body-background;
     // color: $text-color-reduce;
 
+    background-color: $color-background-nav;
     flex-direction: row;
     padding-bottom: 0;
 
     > :first-child {
       flex-grow: 1;
     }
+  }
+
+  // Add style for MFP-POLICY
+  @include breakpoint(small) {
+    background-color: $color-background-header;
   }
 
   ul {
@@ -1926,6 +1936,17 @@ table {
 }
 
 @include breakpoint(medium) {
+  .ssb-telegram,
+  .ssb-whatsapp_app {
+    display: none !important;
+  }
+}
+
+/**
+    Override class for MFP-POLICY
+    @author Panuwat Chaiwongthon
+*/
+@include breakpoint(small) {
   .ssb-telegram,
   .ssb-whatsapp_app {
     display: none !important;
@@ -3105,7 +3126,6 @@ label:not([for*='search_text']):not(.checkbox-label) {
     }
   }
 
-
   .social-button-telegram {
     cursor: pointer;
     width: rem-calc(36);
@@ -3117,7 +3137,6 @@ label:not([for*='search_text']):not(.checkbox-label) {
       content: '';
     }
   }
-
 
   .social-button-youtube-wrapper,
   .social-button-instagram-wrapper {
@@ -3177,3 +3196,63 @@ label:not([for*='search_text']):not(.checkbox-label) {
 .tooltip {
   @extend .custom-font-anakotmai;
 }
+
+// 36. Custom card background color strong
+// ------------------------
+.custom-card-strong-wrapper {
+  @include breakpoint(medium up) {
+    background-color: $color-background-content-strong;
+    padding: rem-calc(20);
+    border-radius: rem-calc(6);
+  }
+
+}
+
+// 37. Custom sub navigation background mobile
+// ------------------------
+.custom-subnavigation {
+  @include breakpoint(small) {
+    background-color: $color-background-nav;
+  }
+}
+
+// 38. Custom sub menu background mobile
+// ------------------------
+.custom-submenu {
+  @include breakpoint(small) {
+    display: flex;
+    overflow-y: auto;
+    li {
+      white-space: nowrap;
+    }
+  }
+
+  .prev-button {
+    @extend .button;
+    position: absolute;
+    left: rem-calc(10);
+    z-index: 1000;
+    padding: rem-calc(5) rem-calc(7);
+  }
+
+  .next-button {
+    @extend .button;
+    position: absolute;
+    right: rem-calc(10);
+    z-index: 1000;
+    padding: rem-calc(5) rem-calc(7);
+  }
+}
+.cke_chrome {
+  border: none !important;
+}
+// .cke_top, .cke_inner {
+//   background-color: $color-background-form !important;
+// }
+
+// .cke_wysiwyg_frame {
+//   background-color: $color-background-form !important;
+// }
+// .cke_editable {
+//   background-color: $color-background-form !important;
+// }

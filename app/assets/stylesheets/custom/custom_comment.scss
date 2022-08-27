@@ -1,0 +1,68 @@
+.custom-comments {
+  .submenu {
+    padding: 0;
+    li > a {
+      padding: rem-calc(8);
+    }
+  }
+
+  div[class='callout primary'] {
+    color: $color-text-base;
+    background-color: $color-background-alert-strong;
+    a {
+      font-weight: lighter !important;
+      color: $color-text-base !important;
+    }
+  }
+
+  .comment-info {
+    span.label {
+      background-color: $color-background-card;
+    }
+    span:last-child {
+      a {
+        font-weight: lighter;
+        color: $color-text-base;
+      }
+    }
+  }
+
+  .comment-user {
+    p {
+      color: $color-text-content;
+    }
+  }
+
+  .comment-form {
+    @include breakpoint(small down) {
+      input[type='submit'] {
+        width: 100%;
+      }
+    }
+  }
+
+  .reply {
+    .responses-count,
+    .delete-comment,
+    .js-add-comment-link {
+      font-weight: normal;
+      color: $color-text-base;
+    }
+  }
+
+  .comment-votes {
+    .votes {
+      font-weight: normal;
+
+      .divider {
+        font-weight: lighter;
+      }
+      .button_to {
+        color: $brand;
+        button[type='submit'] {
+          color: $brand;
+        }
+      }
+    }
+  }
+}

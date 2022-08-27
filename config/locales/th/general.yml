@@ -240,7 +240,7 @@ th:
       my_account_link: บัญชีของฉัน
       my_activity_link: เนื้อหาของฉัน
       open_gov: รัฐเปิดเผย
-      proposals: นโยบายประชาชน
+      proposals: หน้าหลัก
       poll_questions: โหวต
       budgets: งบประมาณแบบมีส่วนร่วม
       notification_item:
@@ -349,7 +349,7 @@ th:
         created_at: ใหม่ล่าสุด
         hot_score: คะแนนที่มากที่สุด
         most_commented: แสดงความคิดเห็นมากที่สุด
-        relevance: ความเกี่ยวข้อง
+        relevance: ผลลัพธ์ที่เกี่ยวข้อง
         archival_date: เก็บถาวร
         recommendations: คำแนะนำ
       recommendations:
@@ -381,7 +381,7 @@ th:
         other: "คำว่า <strong>'%{search_term}'</strong>"
       select_order_long: "คุณกำลังดูข้อเสนอตาม:"
       start_proposal: สร้างนโยบายประชาชน
-      title: นโยบายโดยประชาชน
+      title: นโยบายประชาชน
       top_link_proposals: ข้อเสนอที่ได้รับการสนับสนุนมากที่สุดตามหมวดหมู่
       section_header:
         icon_alt: ไอคอนข้อเสนอ
@@ -434,14 +434,14 @@ th:
       selected: "Selected proposal"
     show:
       author_deleted: User deleted
-      code: "Proposal code:"
+      code: "รหัสนโยบายประชาชน:"
       comments:
         one: 1 ความคิดเห็น
         other: "%{count} ความคิดเห็น"
         zero: ไม่มีความคิดเห็น
-      comments_tab: ความเห็น
+      comments_tab: ความคิดเห็น
       dashboard_proposal_link: Dashboard
-      flag: This proposal has been flagged as inappropriate by several users.
+      flag: นโยบายประชาชนนี้ถูกตั้งค่าสถานะว่าไม่เหมาะสมโดยผู้ใช้หลายคน
       notifications_tab: การแจ้งเตือน
       milestones_tab: หมุดหมายสำคัญ
       retired_warning: "ผู้เสนอไม่ต้องการให้ข้อเสนอนี้ได้รับการสนับสนุนต่อ"

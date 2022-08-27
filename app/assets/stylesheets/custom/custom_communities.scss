@@ -3,19 +3,35 @@
     ul > li {
       margin-bottom: 0px;
     }
+
+    .topic-info {
+      ::before {
+        content: '';
+      }
+    }
   }
+
 }
 .communities-participant {
   .tabs {
-    height: rem-calc(49);
-    padding: 0px;
-    border: none;
+    background-color: $color-background-content !important;
+
     .tabs-title {
       a > h3 {
-        font-weight: 400;
         padding-left: rem-calc(10);
         padding-right: rem-calc(10);
         margin-bottom: 0px;
+      }
+      a[aria-selected='true'] {
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  .tabs-content {
+    .comment-info {
+      span.label {
+        background-color: $color-background-card;
       }
     }
   }

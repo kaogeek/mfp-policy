@@ -125,8 +125,8 @@ th:
         one: "Image"
         other: "Images"
       topic:
-        one: "Topic"
-        other: "Topics"
+        one: "หัวข้อพูดคุย"
+        other: "หัวข้อพูดคุย"
       poll:
         one: "Poll"
         other: "Polls"

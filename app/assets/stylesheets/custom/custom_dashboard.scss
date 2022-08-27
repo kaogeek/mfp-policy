@@ -31,8 +31,42 @@
       // }
     }
   }
+
+  legend, label {
+    font-weight: normal;
+  }
+
+  .question-fields {
+    @include breakpoint(small down) {
+      .custom-question {
+        margin-top: -10px;
+        margin-bottom: rem-calc(10);
+      }
+    }
+
+    @include breakpoint(medium up) {
+      .custom-question {
+        margin-top: rem-calc(25);
+      }
+    }
+  }
+
   .admin-content {
+
+    @include breakpoint(small down) {
+      a.button {
+        width: 100%;
+      }
+    }
+
+    label.button {
+      margin-left: 0;
+    }
+
     .dashboard-proposals-stats {
+      .progress-meter {
+        background-color: $brand;
+      }
 
       .counter-label {
         color: $color-text-base;
@@ -43,14 +77,26 @@
       }
 
       .custom-goal-support {
+        @include breakpoint(small down) {
+          margin-top: rem-calc(10);
+        }
+
         .counter-value {
           text-align: right;
+
+          @include breakpoint(small down) {
+            text-align: center;
+          }
         }
 
         .custom-goal-label {
           font-size: rem-calc(12);
           text-align: right;
+          @include breakpoint(small down) {
+            text-align: center;
+          }
         }
+
         .custom-goal-progress {
           margin-top: rem-calc(20);
           display: flex;
@@ -65,11 +111,13 @@
 
       .counter {
         .next-goal-progress {
+          font-weight: normal;
           @extend .custom-font-pracharath;
         }
 
         .custom-progress {
           background-color: $color-background-progress-bar;
+          border: none;
         }
       }
 
@@ -77,6 +125,10 @@
         padding-top: rem-calc(22.5);
         border-left: 1px solid $color-border;
         padding-right: rem-calc(0);
+
+        @include breakpoint(small down) {
+          border-left: none;
+        }
       }
 
       a[class*='button'] {
@@ -85,6 +137,11 @@
         color: $color-text-base;
         background-color: $brand;
         font-weight: normal;
+      }
+    }
+    .dashboard-community {
+      a[class='button'] {
+        width: 100%;
       }
     }
 
@@ -130,10 +187,6 @@
 
     .new_poll {
       margin-top: rem-calc(20);
-      label:not([for*='search_text']):not(.checkbox-label) {
-        font-size: rem-calc(14);
-        margin-bottom: rem-calc(0);
-      }
     }
 
     .poll-count {

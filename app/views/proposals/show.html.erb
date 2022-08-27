@@ -53,6 +53,7 @@
 
       <% unless preview %>
         <aside class="small-12 medium-3 column">
+        <div class="custom-card-strong-wrapper">
           <% if can?(:dashboard, @proposal) %>
             <div class="sidebar-divider"></div>
             <h2><%= t("proposals.show.author") %></h2>
@@ -78,6 +79,7 @@
           <% end %>
 
           <%= render "communities/access_button", community: @proposal.community %>
+          </div>
         </aside>
       <% end %>
     </div>
