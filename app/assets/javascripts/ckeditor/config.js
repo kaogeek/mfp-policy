@@ -3,33 +3,39 @@ Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
-CKEDITOR.editorConfig = function( config )
-{
+CKEDITOR.editorConfig = function (config) {
+  // Override class for MFP-POLICY
+  // @author Panuwat Chaiwongthon
+  config.resize_enabled = false;
 
-  config.filebrowserImageBrowseLinkUrl = "/ckeditor/pictures";
-  config.filebrowserImageBrowseUrl = "/ckeditor/pictures";
-  config.filebrowserImageUploadUrl = "/ckeditor/pictures?";
-  config.filebrowserUploadMethod = "form";
+  config.skin = 'moono-lisa';
+
+  config.filebrowserImageBrowseLinkUrl = '/ckeditor/pictures';
+  config.filebrowserImageBrowseUrl = '/ckeditor/pictures';
+  config.filebrowserImageUploadUrl = '/ckeditor/pictures?';
+  config.filebrowserUploadMethod = 'form';
 
   config.allowedContent = true;
-  config.format_tags = "p;h2;h3";
+  config.format_tags = 'p;h2;h3';
 
-  config.removePlugins = "balloonpanel,balloontoolbar,copyformatting,scayt,wsc";
+  config.removePlugins = 'balloonpanel,balloontoolbar,copyformatting,scayt,wsc';
 
   // Rails CSRF token
-  config.filebrowserParams = function(){
-    var csrf_token, csrf_param, meta,
-        metas = document.getElementsByTagName("meta"),
-        params = new Object();
+  config.filebrowserParams = function () {
+    let csrf_token,
+      csrf_param,
+      meta,
+      metas = document.getElementsByTagName('meta'),
+      params = new Object();
 
-    for ( var i = 0 ; i < metas.length ; i++ ){
+    for (let i = 0; i < metas.length; i++) {
       meta = metas[i];
 
-      switch(meta.name) {
-        case "csrf-token":
+      switch (meta.name) {
+        case 'csrf-token':
           csrf_token = meta.content;
           break;
-        case "csrf-param":
+        case 'csrf-param':
           csrf_param = meta.content;
           break;
         default:
@@ -44,62 +50,153 @@ CKEDITOR.editorConfig = function( config )
     return params;
   };
 
-  config.addQueryString = function( url, params ){
-    var queryString = [];
+  config.addQueryString = function (url, params) {
+    const queryString = [];
 
-    if ( !params ) {
+    if (!params) {
       return url;
     } else {
-      for ( var i in params )
-        queryString.push( i + "=" + encodeURIComponent( params[ i ] ) );
+      for (const i in params)
+        queryString.push(i + '=' + encodeURIComponent(params[i]));
     }
 
-    return url + ( ( url.indexOf( "?" ) != -1 ) ? "&" : "?" ) + queryString.join( "&" );
+    return url + (url.indexOf('?') != -1 ? '&' : '?') + queryString.join('&');
   };
 
   // Integrate Rails CSRF token into file upload dialogs (link, image, attachment and flash)
-  CKEDITOR.on( "dialogDefinition", function( ev ){
+  CKEDITOR.on('dialogDefinition', function (ev) {
+    // Override class for MFP-POLICY
+    // @author Panuwat Chaiwongthon
+    ev.data.definition.resizable = CKEDITOR.DIALOG_RESIZE_NONE;
+
     // Take the dialog name and its definition from the event data.
-    var dialogName = ev.data.name;
-    var dialogDefinition = ev.data.definition;
-    var content, upload;
+    const dialogName = ev.data.name;
+    const dialogDefinition = ev.data.definition;
+    let content, upload;
 
-    if (CKEDITOR.tools.indexOf(["link", "image", "attachment", "flash"], dialogName) > -1) {
-      content = (dialogDefinition.getContents("Upload") || dialogDefinition.getContents("upload"));
-      upload = (content == null ? null : content.get("upload"));
+    if (
+      CKEDITOR.tools.indexOf(
+        ['link', 'image', 'attachment', 'flash'],
+        dialogName
+      ) > -1
+    ) {
+      content =
+        dialogDefinition.getContents('Upload') ||
+        dialogDefinition.getContents('upload');
+      upload = content == null ? null : content.get('upload');
 
-      if (upload && upload.filebrowser && upload.filebrowser["params"] === undefined) {
-        upload.filebrowser["params"] = config.filebrowserParams();
-        upload.action = config.addQueryString(upload.action, upload.filebrowser["params"]);
+      if (
+        upload &&
+        upload.filebrowser &&
+        upload.filebrowser['params'] === undefined
+      ) {
+        upload.filebrowser['params'] = config.filebrowserParams();
+        upload.action = config.addQueryString(
+          upload.action,
+          upload.filebrowser['params']
+        );
       }
     }
   });
 
   // Toolbar groups configuration.
   config.toolbar = [
-    { name: "document", groups: [ "mode", "document", "doctools" ], items: [ "Source"] },
-    { name: "clipboard", groups: [ "clipboard", "undo" ], items: [ "Cut", "Copy", "Paste", "PasteText", "PasteFromWord", "-", "Undo", "Redo" ] },
-    // { name: "editing", groups: [ "find", "selection", "spellchecker" ], items: [ "Find", "Replace", "-", "SelectAll", "-", "Scayt" ] },
-    // { name: "forms", items: [ "Form", "Checkbox", "Radio", "TextField", "Textarea", "Select", "Button", "ImageButton", "HiddenField" ] },
-    { name: "links", items: [ "Link", "Unlink", "Anchor" ] },
-    { name: "insert", items: [ "Image", "Flash", "Table", "HorizontalRule", "SpecialChar" ] },
-    { name: "paragraph", groups: [ "list", "indent", "blocks", "align", "bidi" ], items: [ "NumberedList", "BulletedList", "-", "Outdent", "Indent", "-", "Blockquote", "CreateDiv", "-", "JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock" ] },
-    "/",
-    { name: "styles", items: [ "Styles", "Format", "Font", "FontSize" ] },
-    { name: "colors", items: [ "TextColor", "BGColor" ] },
-    { name: "basicstyles", groups: [ "basicstyles", "cleanup" ], items: [ "Bold", "Italic", "Underline", "Strike", "Subscript", "Superscript", "-", "RemoveFormat" ] }
+    {
+      name: 'document',
+      groups: ['mode', 'document', 'doctools'],
+      items: ['Source'],
+    },
+    {
+      name: 'clipboard',
+      groups: ['clipboard', 'undo'],
+      items: [
+        'Cut',
+        'Copy',
+        'Paste',
+        'PasteText',
+        'PasteFromWord',
+        '-',
+        'Undo',
+        'Redo',
+      ],
+    },
+    // { name: 'editing', groups: [ 'find', 'selection', 'spellchecker' ], items: [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ] },
+    // { name: 'forms', items: [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField' ] },
+    { name: 'links', items: ['Link', 'Unlink', 'Anchor'] },
+    {
+      name: 'insert',
+      items: ['Image', 'Flash', 'Table', 'HorizontalRule', 'SpecialChar'],
+    },
+    {
+      name: 'paragraph',
+      groups: ['list', 'indent', 'blocks', 'align', 'bidi'],
+      items: [
+        'NumberedList',
+        'BulletedList',
+        '-',
+        'Outdent',
+        'Indent',
+        '-',
+        'Blockquote',
+        'CreateDiv',
+        '-',
+        'JustifyLeft',
+        'JustifyCenter',
+        'JustifyRight',
+        'JustifyBlock',
+      ],
+    },
+    '/',
+    { name: 'styles', items: ['Styles', 'Format', 'Font', 'FontSize'] },
+    { name: 'colors', items: ['TextColor', 'BGColor'] },
+    {
+      name: 'basicstyles',
+      groups: ['basicstyles', 'cleanup'],
+      items: [
+        'Bold',
+        'Italic',
+        'Underline',
+        'Strike',
+        'Subscript',
+        'Superscript',
+        '-',
+        'RemoveFormat',
+      ],
+    },
   ];
 
   config.toolbar_mini = [
-    { name: "paragraph", groups: [ "list" ], items: [ "NumberedList", "BulletedList" ] },
-    { name: "links", items: [ "Link", "Unlink" ] },
-    { name: "styles", items: [ "Format" ] },
-    { name: "basicstyles", groups: [ "basicstyles", "cleanup" ], items: [ "Bold", "Italic", "Underline", "Strike" ] }
+    {
+      name: 'paragraph',
+      groups: ['list', 'indent', 'blocks', 'align', 'bidi'],
+      items: [
+        'NumberedList',
+        'BulletedList',
+        '-',
+        'Outdent',
+        'Indent',
+        '-',
+        'Blockquote',
+      ],
+    },
+    { name: 'styles', items: ['Font', 'FontSize'] },
+    {
+      name: 'basicstyles',
+      groups: ['basicstyles', 'cleanup'],
+      items: [
+        'Bold',
+        'Italic',
+        'Underline',
+        'Strike',
+        'RemoveFormat',
+      ],
+    },
   ];
 
   config.toolbar_admin = config.toolbar_mini.concat([
-    { name: "insert", items: [ "Image", "Table" ] }
+    { name: 'insert', items: ['Image', 'Table'] },
   ]);
 
-  config.toolbar = "mini";
+  config.toolbar = 'mini';
+  config.removeDialogTabs = 'link:advanced';
 };
