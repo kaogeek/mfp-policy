@@ -1,5 +1,5 @@
 <%= translatable_form_for(proposal, url: url, html: { class: "proposal-form" }) do |f| %>
-  <%= render "shared/errors", resource: proposal %>
+  <!-- <%= render "shared/errors", resource: proposal %> -->
 
   <fieldset class="required-fields">
     <legend><%= t("shared.required") %></legend>
@@ -31,7 +31,7 @@
   <%= f.invisible_captcha :subtitle %>
 
   <fieldset>
-    <legend><%= t("shared.optional") %></legend>
+  
 
     <div>
       <%= f.text_field :video_url, hint: t("proposals.form.proposal_video_url_note") %>
@@ -79,70 +79,72 @@
           </div> -->
 
         <br>
-        <label for="select_mul"><%= t("activerecord.attributes.debate.category") %></label>
+        <%= f.label :tag_list, t("proposals.form.tags_label") %>
+        <p class="help-text" id="tag-list-help-text"><%= t("proposals.form.tags_instructions") %></p>
+
                 <div id="category" class="multiSelect">
-                <select id="select_mul" multiple class="multiSelect_field">
-                  <option value="เศรษฐกิจ ">
-                    เศรษฐกิจ
-                  </option>
-                  <option value="เกษตร">
-                    เกษตร
-                  </option>
-                  <option value="พลังงาน">
-                    พลังงาน
-                  </option>
-                  <option value="สาธารณสุข">
-                    สาธารณสุข
-                  </option>
-                  <option value="การศึกษา">
-                    การศึกษา
-                  </option>
-                  <option value="คมนาคม">
-                    คมนาคม
-                  </option>
-                  <option value="สิ่งแวดล้อม">
-                    สิ่งแวดล้อม
-                  </option>
-                  <option value="แรงงาน">
-                    แรงงาน
-                  </option>
-                  <option value="สวัสดิการ">
-                    สวัสดิการ
-                  </option>
-                  <option value="ระบบราชการ">
-                    ระบบราชการ
-                  </option>
-                  <option value="การทุจริต">
-                   การทุจริต
-                  </option>
-                  <option value="ดิจิทัล">
-                    ดิจิทัล
-                  </option>
-                  <option value="ประชาธิปไตย">
-                    ประชาธิปไตย
-                  </option>
-                  <option value="สิทธิมนุษยชน">
-                    สิทธิมนุษยชน
-                  </option>
-                  <option value="ความเท่าเทียมทางเพศ">
-                    ความเท่าเทียมทางเพศ
-                  </option>
-                  <option value="ความปลอดภัย">
-                    วามปลอดภัย
-                  </option>
-                  <option value="กองทัพ">
-                    กองทัพ
-                  </option>
-                  <option value="ตำรวจ">
-                    ตำรวจ
-                  </option>
-                  <option value="วัฒนธรรม">
-                    วัฒนธรรม
-                  </option>
-                  <option value="การต่างประเทศ">
-                    การต่างประเทศ
-                  </option>
-                </select>
+                  <select id="select_mul" multiple class="multiSelect_field">
+                    <option value="เศรษฐกิจ ">
+                      เศรษฐกิจ
+                    </option>
+                    <option value="เกษตร">
+                      เกษตร
+                    </option>
+                    <option value="พลังงาน">
+                      พลังงาน
+                    </option>
+                    <option value="สาธารณสุข">
+                      สาธารณสุข
+                    </option>
+                    <option value="การศึกษา">
+                      การศึกษา
+                    </option>
+                    <option value="คมนาคม">
+                      คมนาคม
+                    </option>
+                    <option value="สิ่งแวดล้อม">
+                      สิ่งแวดล้อม
+                    </option>
+                    <option value="แรงงาน">
+                      แรงงาน
+                    </option>
+                    <option value="สวัสดิการ">
+                      สวัสดิการ
+                    </option>
+                    <option value="ระบบราชการ">
+                      ระบบราชการ
+                    </option>
+                    <option value="การทุจริต">
+                    การทุจริต
+                    </option>
+                    <option value="ดิจิทัล">
+                      ดิจิทัล
+                    </option>
+                    <option value="ประชาธิปไตย">
+                      ประชาธิปไตย
+                    </option>
+                    <option value="สิทธิมนุษยชน">
+                      สิทธิมนุษยชน
+                    </option>
+                    <option value="ความเท่าเทียมทางเพศ">
+                      ความเท่าเทียมทางเพศ
+                    </option>
+                    <option value="ความปลอดภัย">
+                      ความปลอดภัย
+                    </option>
+                    <option value="กองทัพ">
+                      กองทัพ
+                    </option>
+                    <option value="ตำรวจ">
+                      ตำรวจ
+                    </option>
+                    <option value="วัฒนธรรม">
+                      วัฒนธรรม
+                    </option>
+                    <option value="การต่างประเทศ">
+                      การต่างประเทศ
+                    </option>
+                  </select>
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                 <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="iconX">
@@ -242,7 +244,7 @@ $('.actions a').click(function() {
         field
           .find("option:contains(" + self.children().text() + ")")
           .prop("selected", true);
-
+        
         dropdown
           .append(function (e) {
             return $(
@@ -312,7 +314,11 @@ $('.actions a').click(function() {
     $(".send-proposal").on("click", (e) => {
       let categories = [];
       $("#category span.multiSelect_choice").map((index, elem) => {
-        categories.push($(elem).attr("data-value").trim());
+        if(categories.length <= 5){
+          categories.push($(elem).attr("data-value").trim());
+          console.log(categories.length);
+        }
+        
       });
       $("#proposal_tag_list").val(categories);
     });

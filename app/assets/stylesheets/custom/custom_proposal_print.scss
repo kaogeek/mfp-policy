@@ -92,8 +92,8 @@
 
                 .percentage {
                   line-height: 1.9;
-                  font-weight: 300;
-                  font-size: 10px;
+                  font-weight: normal;
+                  font-size: rem-calc(10);
                 }
                 .meter {
                   height: rem-calc(14);

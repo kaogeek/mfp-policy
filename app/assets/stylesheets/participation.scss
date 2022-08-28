@@ -377,6 +377,7 @@
 .fixed-mobile-content {
   @include breakpoint(medium down) {
     background: $body-background;
+
     margin-bottom: rem-calc(-1) !important;
     padding-top: $line-height / 2;
   }

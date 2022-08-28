@@ -1,0 +1,12 @@
+.topic-new {
+  h1 {
+    margin-top: rem-calc(15);
+    font-weight: normal;
+  }
+
+  @include breakpoint(small down) {
+    input[type='submit'] {
+      width: 100%;
+    }
+  }
+}

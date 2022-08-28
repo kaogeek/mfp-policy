@@ -1,0 +1,92 @@
+.proposals-page {
+  .proposal-show {
+    .callout.alert {
+      background-color: $color-background-alert;
+      color: $color-text-dark;
+    }
+
+    h1 {
+      margin-top: rem-calc(10);
+      font-weight: normal;
+    }
+
+    legend, label {
+      font-weight: normal;
+    }
+
+    blockquote {
+      color: $color-text-desc;
+    }
+
+    p {
+      color: $color-text-content;
+    }
+
+    .custom-proposal-code {
+      font-weight: bold;
+      color: $color-text-content;
+    }
+
+    .js-moderator-proposal-actions {
+      background-color: $color-background-card;
+      padding: rem-calc(10);
+      border-radius: rem-calc(10);
+
+      .moderation-actions-title {
+        margin: 0;
+        font-size: rem-calc(16);
+      }
+
+      .moderation-actions-desc {
+        font-size: rem-calc(14);
+      }
+
+      .custom-moderation-actions {
+        margin-top: rem-calc(10);
+
+        form {
+          height: rem-calc(100);
+
+          .hide-link,
+          .block-author-link {
+            padding: rem-calc(8) rem-calc(10);
+            min-width: rem-calc(100);
+            @extend .button;
+            @extend .button-custom;
+          }
+        }
+      }
+    }
+  }
+
+  .tabs-panel {
+    @include breakpoint(small down) {
+      padding: rem-calc(10);
+    }
+  }
+
+  .filter-subnav {
+    margin-bottom: 0;
+    background-color: $color-background-content;
+
+    .tabs {
+      background-color: $color-background-content !important;
+      .is-active {
+        a[aria-selected='true'] {
+          background-color: transparent !important;
+          color: $color-text-base;
+          padding: 0;
+
+          h3 {
+            font-size: rem-calc(25);
+            font-weight: normal;
+          }
+        }
+
+        ::after {
+          border: none;
+        }
+      }
+    }
+  }
+}

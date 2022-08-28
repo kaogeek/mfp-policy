@@ -27,7 +27,6 @@ $font-size-3: 14px;
             height: 100vh;
             padding: 10px 13%;
           }
-
         }
         .column {
           display: flex;
@@ -112,7 +111,6 @@ $font-size-3: 14px;
                 font-size: $font-size-2;
                 @extend .custom-font-pracharath;
               }
-
             }
 
             .register-page {
@@ -131,6 +129,11 @@ $font-size-3: 14px;
                 margin: rem-calc(20) rem-calc(15);
                 a {
                   font-size: $font-size-h-2;
+                }
+              }
+              @include breakpoint(small down) {
+                .register_organization a {
+                  font-size: $font-size-2;
                 }
               }
 
@@ -174,7 +177,6 @@ $font-size-3: 14px;
                 }
               }
             }
-
             .forget_password_page {
               .title_all {
                 margin-left: rem-calc(16);
@@ -195,7 +197,8 @@ $font-size-3: 14px;
             }
           }
 
-          .account , .suggest-account{
+          .account,
+          .suggest-account {
             color: $color-text-desc;
             margin-bottom: 5px;
             font-size: $font-size-3;
@@ -244,9 +247,9 @@ $font-size-3: 14px;
       font-weight: normal;
       font-size: $font-size-h-2;
       @extend .custom-font-anakotmai;
+      padding-left: $line-height;
 
       .icon-angle-left {
-        padding-right: $line-height;
         font-size: 2rem;
       }
 

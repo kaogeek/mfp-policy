@@ -3,25 +3,25 @@ th:
     actions:
       create:
         notice: "สร้าง %{resource_name} สำเร็จแล้ว"
-        debate: "สร้างข้อเสนอสำเร็จแล้ว"
+        debate: "สร้างนโยบายประชาชนสำเร็จแล้ว"
         direct_message: "ข้อความของคุณถูกส่งเรียบร้อยแล้ว"
         poll: "สร้างโพลสำเร็จ"
         poll_booth: "สร้างบูธสำเร็จ"
         poll_question_answer: "สร้างคำตอบสำหรับโพลสำเร็จ"
         poll_question_answer_video: "อัพโหลดวิดิโอสำเร็จ"
         poll_question_answer_image: "อัพโหลดรูปสำเร็จ"
-        proposal: "ข้อเสนอ ถูกร่างขึ้นมาเรียบร้อย"
+        proposal: "นโยบายประชาชนถูกร่างขึ้นมาเรียบร้อย"
         proposal_notification: "ข้อความของคุณถูกส่งแจ้งเตือนไปเรียบร้อยแล้ว"
         budget_investment: "Budget Investment created successfully."
         signature_sheet: "Signature sheet created successfully"
         support: "Investment supported successfully"
-        topic: "บันทึกหัวข้อเรียบร้อยแล้ว"
+        topic: "บันทึกหัวข้อพูดคุยเรียบร้อยแล้ว"
         valuator_group: "Valuator group created successfully"
       save_changes:
         notice: บันทึกการเปลี่ยนแปลงสำเร็จ
       update:
         notice: "บันทึกการเปลี่ยนแปลง %{resource_name} สำเร็จ"
-        debate: "อัปเดตข้อเสนอเรียบร้อยแล้ว"
+        debate: "อัปเดตนโยบายประชาชนเรียบร้อยแล้ว"
         poll: "แก้ไขโพลสำเร็จ"
         poll_booth: "แก้ไขบูธสำเร็จ"
         active_poll: "แก้ไขคำอธิบายโพลสำเร็จ"

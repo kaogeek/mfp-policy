@@ -8,8 +8,6 @@
     Override class for MFP-POLICY
     @author Panuwat Chaiwongthon
   */
-  background: $color-background-form;
-  border-radius: 15px;
   position: relative;
 }
 
@@ -29,7 +27,7 @@
   min-height: $input-height;
   margin-bottom: rem-calc(16);
   color: $input-color;
-  // background: #f8f8f8;
+  background: $color-background-form;
   border: $input-border;
   padding: $input-padding;
   font-size: $form-label-font-size;

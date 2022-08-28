@@ -18,7 +18,7 @@
       <div class="sidebar-divider"></div>
       <h2><%= t("community.show.sidebar.participate") %></h2>
       <%= link_to t("community.show.sidebar.new_topic"),
-                  create_topic_link(@community), class: "button expanded" %>
+                  create_topic_link(@community), class: "button expanded button-custom" %>
     </aside>
 
     <div class="small-12 medium-9 column">
@@ -32,7 +32,7 @@
       <div class="sidebar-divider"></div>
       <h2><%= t("community.show.sidebar.participate") %></h2>
       <%= link_to t("community.show.sidebar.new_topic"),
-                  create_topic_link(@community), class: "button expanded" %>
+                  create_topic_link(@community), class: "button expanded button-custom" %>
 
       <% if @community.proposal&.polls&.current&.any? %>
         <div class="sidebar-divider"></div>

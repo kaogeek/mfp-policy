@@ -1,10 +1,10 @@
 th:
   community:
     sidebar:
-      title: ห้องกระทู้ สำหรับข้อเสนอ
+      title: ห้องกระทู้ สำหรับนโยบายประชาชน
       description:
-        proposal: มาร่วมพูดคุยแลกเปลี่ยนความเห็นกับ
-                  เพื่อนๆกันเพิ่มเติมเกี่ยวกับข้อเสนอนี้
+        proposal: มาร่วมพูดคุยแลกเปลี่ยนความคิดเห็นกับ
+                  เพื่อนๆกันเพิ่มเติมเกี่ยวกับนโยบายประชาชนนี้
         investment: Participate in the user community of this investment.
       button_to_access: เข้าร่วมห้องกระทู้
     show:
@@ -12,7 +12,7 @@ th:
         proposal: ห้องกระทู้
         investment: Budget Investment community
       description:
-        proposal: มาร่วมกันพูดคุย แลกเปล่ียนความเห็นกันเพิ่มเติม เพื่อทำให้ข้อเสนอมีความสมบูรณ์มากข้ึน
+        proposal: มาร่วมกันพูดคุย แลกเปล่ียนความคิดเห็นกันเพิ่มเติม เพื่อทำให้นโยบายประชาชนมีความสมบูรณ์มากข้ึน
         investment: Participate in the community of this budget investment. An active community can help to improve the content of the budget investment and boost its dissemination to get more support.
       create_first_community_topic:
         first_theme_not_logged_in: ตอนนี้ยังไม่มีเพื่อนๆตั้งหัวข้อมาพูดคุยกัน
@@ -21,7 +21,7 @@ th:
       tab:
         participants: ผู้ร่วมแลกเปลี่ยน
       sidebar:
-        participate: มาแลกเปลี่ยนความเห็นกัน
+        participate: มาแลกเปลี่ยนความคิดเห็นกัน
         new_topic: ตั้งหัวข้อพูดคุย
       topic:
         edit: แก้ไขเนื้อหา
@@ -30,7 +30,7 @@ th:
           one: 1 ความคิดเห็น
           other: "%{count} ความคิดเห็น"
           zero: ไม่มีความคิดเห็น
-      author: Author
+      author: ผู้เขียน
       back: กลับไปที่ %{community} %{proposal}
     topic:
       create: ตั้งหัวข้อพูดคุย

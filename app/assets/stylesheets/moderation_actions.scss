@@ -9,19 +9,23 @@
   }
 
   @mixin separator {
-    content: "";
+    content: '';
     display: inline-block;
     margin: 0 0.3em;
     vertical-align: middle;
   }
+  /**
+      Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+    */
+  // > * + *::before {
+  //   @include separator;
 
-  > * + *::before {
-    @include separator;
-    background: currentcolor;
-    height: 1em;
-    opacity: 0.5;
-    width: 1px;
-  }
+  // background: currentcolor;
+  // height: 1em;
+  // opacity: 0.5;
+  // width: 1px;
+  // }
 
   .comment & {
     > *::before {
