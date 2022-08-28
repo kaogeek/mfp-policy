@@ -3205,7 +3205,6 @@ label:not([for*='search_text']):not(.checkbox-label) {
     padding: rem-calc(20);
     border-radius: rem-calc(6);
   }
-
 }
 
 // 37. Custom sub navigation background mobile
@@ -3243,12 +3242,17 @@ label:not([for*='search_text']):not(.checkbox-label) {
     padding: rem-calc(5) rem-calc(7);
   }
 }
-.cke_chrome {
-  border: none !important;
+
+
+.cke_dialog {
+  @include breakpoint(small down) {
+    left: 0px !important;
+  }
 }
-// .cke_top, .cke_inner {
-//   background-color: $color-background-form !important;
-// }
+
+.cke_button_icon {
+  filter: brightness(250%);
+}
 
 // .cke_wysiwyg_frame {
 //   background-color: $color-background-form !important;
