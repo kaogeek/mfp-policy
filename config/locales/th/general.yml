@@ -349,7 +349,7 @@ th:
         created_at: ใหม่ล่าสุด
         hot_score: คะแนนที่มากที่สุด
         most_commented: แสดงความคิดเห็นมากที่สุด
-        relevance: ผลลัพธ์ที่เกี่ยวข้อง
+        relevance: ผลลัพธ์การค้นหา
         archival_date: เก็บถาวร
         recommendations: คำแนะนำ
       recommendations:
@@ -445,7 +445,7 @@ th:
       notifications_tab: การแจ้งเตือน
       milestones_tab: หมุดหมายสำคัญ
       retired_warning: "ผู้เสนอไม่ต้องการให้นโยบายประชาชนนี้ได้รับการสนับสนุนต่อ"
-      retired_warning_link_to_explanation: กดที่นี้เพื่อ่านคำอธิบายก่อนลงเสียงสนับสนุน
+      retired_warning_link_to_explanation: กดที่นี้เพื่ออ่านคำอธิบายก่อนลงเสียงสนับสนุน
       retired: นโยบายประชาชน ถูกถอนโดยผู้เสนอ
       share: แชร์
       no_notifications: "This proposal has no notifications."
@@ -801,7 +801,7 @@ th:
   unauthorized:
     default: You do not have permission to access this page.
     manage:
-      all: "You do not have permission to carry out the action '%{action}' on %{subject}."
+      all: "คุณไม่ได้รับอนุญาตให้ดำเนินการ '%{action}' บน %{subject}."
   users:
     login_to_comment: "คุณต้อง %{signin} หรือ %{signup} เพื่อแสดงความคิดเห็น"
     login_to_continue: "คุณต้อง %{signin} หรือ %{signup} เพื่อจะดำเนินการต่อ"

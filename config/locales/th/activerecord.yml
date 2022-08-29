@@ -532,8 +532,8 @@ th:
         image:
           attributes:
             attachment:
-              min_image_width: "Image Width must be at least %{required_min_width}px"
-              min_image_height: "Image Height must be at least %{required_min_height}px"
+              min_image_width: "ความกว้างของรูปภาพต้องมากกว่า %{required_min_width}px"
+              min_image_height: "ความสูงของรูปภาพต้องมากกว่า %{required_min_height}px"
         newsletter:
           attributes:
             segment_recipient:
