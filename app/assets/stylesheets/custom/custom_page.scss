@@ -28,6 +28,11 @@ $font-size-3: 14px;
             padding: 10px 13%;
           }
         }
+        @include breakpoint(large down){
+          .auth-wrapper{
+            overflow-y: hidden;
+          }
+        }
         .column {
           display: flex;
           flex-direction: column;
@@ -205,6 +210,11 @@ $font-size-3: 14px;
             @extend .custom-font-pracharath;
             text-align: center;
           }
+        }
+      }
+      @include breakpoint(large down){
+        .right_side{
+          width: 100%;
         }
       }
     }

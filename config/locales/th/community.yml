@@ -17,7 +17,7 @@ th:
       create_first_community_topic:
         first_theme_not_logged_in: ตอนนี้ยังไม่มีเพื่อนๆตั้งหัวข้อมาพูดคุยกัน
         first_theme: ตั้งหัวข้อแรก เพื่อเริ่มแลกเปลี่ยนกัน
-        sub_first_theme: "To create a theme you must %{sign_in} or %{sign_up}."
+        sub_first_theme: "ถ้าต้องการสร้างนโยบายประชาคุณจะต้อง %{sign_in} หรือ %{sign_up}."
       tab:
         participants: ผู้ร่วมแลกเปลี่ยน
       sidebar:
