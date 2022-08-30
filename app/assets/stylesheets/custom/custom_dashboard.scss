@@ -32,7 +32,8 @@
     }
   }
 
-  legend, label {
+  legend,
+  label {
     font-weight: normal;
   }
 
@@ -52,7 +53,6 @@
   }
 
   .admin-content {
-
     @include breakpoint(small down) {
       a.button {
         width: 100%;
@@ -247,5 +247,12 @@
         @extend .custom-font-anakotmai;
       }
     }
+  }
+}
+
+.activity {
+  div[class*='callout'] {
+    background-color: $color-background-alert;
+    color: $color-text-dark;
   }
 }
