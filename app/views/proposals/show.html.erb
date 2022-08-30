@@ -106,3 +106,11 @@
     <%= render "milestones/milestones", milestoneable: @proposal %>
   </div>
 <% end %>
+
+<script>
+$(document).ready(() => {
+  if(!$('.js-moderator-proposal-actions').children().length)
+
+  $('.js-moderator-proposal-actions').remove()
+})
+</script>
