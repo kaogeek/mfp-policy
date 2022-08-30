@@ -3243,7 +3243,6 @@ label:not([for*='search_text']):not(.checkbox-label) {
   }
 }
 
-
 .cke_dialog {
   @include breakpoint(small down) {
     left: 0px !important;
@@ -3254,9 +3253,11 @@ label:not([for*='search_text']):not(.checkbox-label) {
   filter: brightness(250%);
 }
 
-// .cke_wysiwyg_frame {
-//   background-color: $color-background-form !important;
-// }
-// .cke_editable {
-//   background-color: $color-background-form !important;
-// }
+/* Reset for elements and their children. */
+.cke_reset_all,
+.cke_reset_all *,
+.cke_reset_all a,
+.cke_reset_all textarea {
+  font-family: 'Anakotmai', sans-serif !important;
+  color: #fff;
+}

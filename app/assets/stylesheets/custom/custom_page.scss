@@ -270,6 +270,10 @@ $font-size-3: 14px;
       &:hover {
         color: $color-text-light;
       }
+
+      @include breakpoint(หทฟสส down) {
+        padding-left: rem-calc(0);
+      }
     }
 
     .back:not([class^='icon-']) {
