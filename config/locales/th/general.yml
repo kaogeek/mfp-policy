@@ -845,7 +845,7 @@ th:
           other: "%{count} ติดตามนโยบาย"
       no_activity: ไม่พบนโยบายประชาชน และ ความคิดเห็นของคุณ
       no_private_messages: "This user doesn't accept private messages."
-      private_activity: This user decided to keep the activity list private.
+      private_activity: ผู้ใช้รายนี้ตัดสินใจเก็บรายการกิจกรรมไว้เป็นส่วนตัว
       send_private_message: "ส่งข้อความส่วนตัว"
       delete_alert: "Are you sure you want to delete your investment project? This action can't be undone"
     proposals:

@@ -6,10 +6,10 @@
 
       <div class="row">
         <div class="small-12 columns">
-          <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email ), 
+          <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email ),
             class: "forget_password",
-            label: t("devise_views.passwords.edit.email"), 
-            placeholder: t("devise_views.passwords.edit.placeholder_email") 
+            label: t("devise_views.passwords.edit.email"),
+            placeholder: t("devise_views.passwords.edit.placeholder_email")
           %>
 
           <% if @requires_password %>
@@ -20,7 +20,7 @@
           <%= hidden_field_tag :confirmation_token, @confirmation_token %>
 
           <div class="small-12 medium-8 small-centered">
-            <%= f.submit(t("devise_views.confirmations.new.title"), class: "button expanded forget_password_login ") %>
+            <%= f.submit(t("devise_views.confirmations.new.title"), class: "button expanded forget_password_login") %>
           </div>
           <%= link_to t("devise_views.menu.login_items.login"),
             new_user_session_path, rel: "nofollow", class: "confirmations login_button" %>
