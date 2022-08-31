@@ -8,7 +8,7 @@ CKEDITOR.editorConfig = function (config) {
   // @author Panuwat Chaiwongthon
   config.resize_enabled = false;
 
-  config.uiColor = '#000000';
+  config.uiColor = '#242526';
 
   config.skin = 'moono-lisa';
 
