@@ -9,7 +9,7 @@ th:
       confirm_delete: "คุณแน่ใจไหม? การดำเนินการนี้จะลบ \"%{name}\" aไม่สามารถยกเลิกได้"
       confirm_hide: ยืนยันการดูแล
       delete: "ลบ"
-      hide: ซ่อนนโยบายประชาชน
+      hide: ซ่อนนโยบายนี้
       label: "%{action} %{name}"
       restore: คืนค่า
       mark_featured: ติดดาว
