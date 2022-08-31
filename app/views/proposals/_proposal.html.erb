@@ -16,7 +16,7 @@
     <% else %>
       <div class="row no-images">
         <div class="small-12 <%= css_for_proposal_info_row(proposal) %>">
-      <% end %>
+    <% end %>
         <div class="proposal-content">
           <% cache [locale_and_user_status(proposal), "index", proposal, proposal.author] do %>
             <h3><%= link_to proposal.title, namespaced_proposal_path(proposal) %></h3>
