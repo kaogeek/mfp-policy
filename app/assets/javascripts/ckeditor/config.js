@@ -8,6 +8,8 @@ CKEDITOR.editorConfig = function (config) {
   // @author Panuwat Chaiwongthon
   config.resize_enabled = false;
 
+  config.uiColor = '#000000';
+
   config.skin = 'moono-lisa';
 
   config.filebrowserImageBrowseLinkUrl = '/ckeditor/pictures';

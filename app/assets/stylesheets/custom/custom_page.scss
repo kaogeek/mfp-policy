@@ -16,23 +16,11 @@ $font-size-3: 14px;
 
     .wrapper_devise_right {
       .right_side {
+        flex: 1 1 0%;
         background-color: $color-background-content;
         display: flex;
         justify-content: center;
         min-height: 100vh;
-        .auth-wrapper {
-          width: 100%;
-          overflow-y: scroll;
-          @include breakpoint(large) {
-            height: 100vh;
-            padding: 10px 13%;
-          }
-        }
-        @include breakpoint(large down){
-          .auth-wrapper{
-            overflow-y: hidden;
-          }
-        }
         .column {
           display: flex;
           flex-direction: column;
@@ -51,7 +39,7 @@ $font-size-3: 14px;
 
             .title-login-page {
               text-align: center;
-              font-weight: 400;
+              font-weight: normal;
               font-size: $font-size-h-1;
             }
 
@@ -122,7 +110,7 @@ $font-size-3: 14px;
               h2 {
                 text-align: center;
                 font-size: $font-size-h-1;
-                font-weight: 400;
+                font-weight: normal;
               }
 
               .register_organization {
@@ -136,6 +124,7 @@ $font-size-3: 14px;
                   font-size: $font-size-h-2;
                 }
               }
+
               @include breakpoint(small down) {
                 .register_organization a {
                   font-size: $font-size-2;
@@ -212,8 +201,8 @@ $font-size-3: 14px;
           }
         }
       }
-      @include breakpoint(large down){
-        .right_side{
+      @include breakpoint(large down) {
+        .right_side {
           width: 100%;
         }
       }
@@ -221,31 +210,22 @@ $font-size-3: 14px;
   }
 
   .wrapper_devise_left {
-    padding: rem-calc(30);
-    .banner-logo {
-      height: calc(100vh - 100px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      h1 {
-        font-size: rem-calc(105);
-        font-weight: 400;
-        white-space: nowrap;
-      }
-    }
-
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    height: auto;
+    padding: 24px 16px;
+    position: static;
+    align-items: flex-start;
     background-color: $color-background-content-strong;
+
     @include breakpoint(large) {
+      position: sticky;
+      top: 0;
       height: 100vh;
     }
-
-    @include breakpoint(medium down) {
-      padding: rem-calc(20) rem-calc(30);
-      .banner-logo {
-        height: 15vh;
-      }
+    @include breakpoint(small down) {
+      min-height: 0vh;
     }
 
     .back {
@@ -270,6 +250,10 @@ $font-size-3: 14px;
       &:hover {
         color: $color-text-light;
       }
+
+      @include breakpoint(small down) {
+        padding-left: rem-calc(0);
+      }
     }
 
     .back:not([class^='icon-']) {
@@ -280,9 +264,36 @@ $font-size-3: 14px;
     //   width: 60%;
     //   margin: 60px auto;
     // }
+
     // .list_rule {
     //   margin: 0 auto;
     // }
+
+    .banner-logo {
+      height: calc(100vh - 100px);
+      display: flex;
+      align-items: center;
+      align-self: center;
+      h1 {
+        font-size: rem-calc(90);
+        font-weight: 400;
+        white-space: nowrap;
+      }
+
+      @include breakpoint(medium down) {
+        height: auto;
+        h1 {
+          font-size: rem-calc(70);
+        }
+      }
+
+      @include breakpoint(medium down) {
+        height: auto;
+        h1 {
+          font-size: rem-calc(60);
+        }
+      }
+    }
   }
 
   .title_login_header {
@@ -309,7 +320,7 @@ $font-size-3: 14px;
 .forget_password_login {
   margin-top: 35px;
   margin-bottom: 18px;
-  font-size: $font-size-3;
+  font-size: $font-size-2;
 }
 
 .confirmations {
@@ -401,6 +412,7 @@ $font-size-3: 14px;
 @include breakpoint(medium down) {
   .page-login {
     .wrapper_devise {
+      display: block;
       .wrapper_devise_right {
         display: flex;
         flex-direction: row;

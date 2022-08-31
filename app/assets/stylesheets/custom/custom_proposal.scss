@@ -2,6 +2,14 @@
   &.proposals-page {
     background-color: $color-background-content;
 
+    div[class*='callout'] {
+      background-color: $color-background-alert;
+      color: $color-text-dark;
+      p {
+        font-size: rem-calc(14);
+      }
+    }
+
     .social-share-full {
       .social-share-button a {
         transition: ease-in-out 300ms;
@@ -264,6 +272,14 @@
                   }
                 }
               }
+
+              .participation-not-allowed {
+                background-color: $color-background-alert;
+                color: $color-text-dark;
+                a {
+                  color: $brand !important;
+                }
+              }
             }
           }
 
@@ -303,6 +319,7 @@
         }
       }
     }
+
     .proposal-show {
       .tags {
         a {
@@ -329,7 +346,8 @@
         font-weight: normal;
       }
 
-      legend, label {
+      legend,
+      label {
         font-weight: normal;
       }
 
