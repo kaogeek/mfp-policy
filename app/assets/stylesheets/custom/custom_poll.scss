@@ -6,3 +6,37 @@
     }
   }
 }
+
+.polls-show {
+  .tabs-content {
+    .tabs {
+      background-color: $color-background-content !important;
+      .is-active {
+        a[aria-selected='true'] {
+          background-color: transparent !important;
+          color: $color-text-base;
+          padding: 0;
+
+          h3 {
+            font-size: rem-calc(25);
+            font-weight: normal;
+          }
+        }
+
+        ::after {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .submenu {
+    padding: 0;
+    li {
+      margin-bottom: 0;
+      a {
+        padding: rem-calc(8);
+      }
+    }
+  }
+}

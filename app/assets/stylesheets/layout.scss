@@ -3259,5 +3259,36 @@ label:not([for*='search_text']):not(.checkbox-label) {
 .cke_reset_all a,
 .cke_reset_all textarea {
   font-family: 'Anakotmai', sans-serif !important;
-  color: #fff;
+  color: $white;
+}
+
+.cke_combo_text {
+  color: $white !important;
+  font-weight: normal !important;
+}
+
+.cke_combo_arrow {
+  margin-top: 7px !important;
+  height: 5px !important;
+  width: 5px !important;
+  font-size: 0 !important;
+  border: none !important;
+  border-top: 2px solid $white !important;
+  border-left: 2px solid $white !important;
+  -webkit-transform: rotate(-135deg) !important;
+  -ms-transform: rotate(-135deg) !important;
+  transform: rotate(-135deg) !important;
+}
+a.cke_button_on {
+  border: none !important;
+  border-right: $color-border-dark solid 1px !important;
+  .cke_button_icon {
+    filter: brightness(20%);
+  }
+}
+.cke_1 .cke_top, .cke_bottom {
+  background-color: $color-background-card !important;
+}
+.cke_1.cke_chrome {
+  border: none !important;
 }
