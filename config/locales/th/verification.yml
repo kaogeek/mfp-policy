@@ -89,10 +89,10 @@ th:
     step_1: ที่อยู่อาศัย
     step_2: รหัสยืนยัน
     step_3: การตรวจสอบขั้นสุดท้าย
-    user_permission_debates: เขียนนโยบายประชาชนใหม่
+    user_permission_debates: สร้างนโยบายใหม่
     user_permission_info: การยืนยันข้อมูลของคุณคุณจะสามารถ...
-    user_permission_proposal: มีส่วนร่วมกับนโยบายประชาชน
-    user_permission_support_proposal: สนับสนุนนโยบายประชาชน
+    user_permission_proposal: มีส่วนร่วมกับตลาดนโยบาย
+    user_permission_support_proposal: สนับสนุนตลาดนโยบาย
     user_permission_votes: โหวตโครงการงบประมาณ
     verified_user:
       form:
