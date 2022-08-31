@@ -3294,8 +3294,7 @@ a.cke_button_on {
     filter: brightness(20%);
   }
 }
-.cke_1 .cke_top,
-.cke_bottom {
+.cke_1 .cke_top, .cke_bottom {
   background-color: $color-background-card !important;
 }
 .cke_1.cke_chrome {
