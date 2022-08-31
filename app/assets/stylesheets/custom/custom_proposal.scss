@@ -317,6 +317,11 @@
             }
           }
         }
+        @include breakpoint(small down){
+          .proposals-page .proposal-bottom .margin-bottom .button-custom{
+            display: none;
+          }
+        }
       }
     }
 

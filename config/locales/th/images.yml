@@ -15,4 +15,4 @@ th:
     errors:
       messages:
         in_between: must be in between %{min} and %{max}
-        wrong_content_type: content type %{content_type} does not match any of accepted content types %{accepted_content_types}
+        wrong_content_type: ประเภทของรูปภาพ %{content_type} ไม่ถูกรองรับ ยกเว้นประเภท %{accepted_content_types}
