@@ -33,3 +33,14 @@
     </div>
   </div>
 <% end %>
+
+<script>
+$(document).ready(() => {
+  const $a = $($('.menu.simple.clear').find('li > a'));
+  const splitURL = $($a).attr('href').split('/');
+
+  if(splitURL[2] === '') {
+    $($a).prop('href', '#')
+  }
+})
+</script>

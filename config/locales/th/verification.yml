@@ -91,7 +91,7 @@ th:
     step_3: การตรวจสอบขั้นสุดท้าย
     user_permission_debates: สร้างนโยบายใหม่
     user_permission_info: การยืนยันข้อมูลของคุณคุณจะสามารถ...
-    user_permission_proposal: มีส่วนร่วมในตลาดนโยบาย
+    user_permission_proposal: มีส่วนร่วมกับตลาดนโยบาย
     user_permission_support_proposal: สนับสนุนตลาดนโยบาย
     user_permission_votes: โหวตโครงการงบประมาณ
     verified_user:

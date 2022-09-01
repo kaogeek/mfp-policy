@@ -1,7 +1,7 @@
 th:
   account:
     show:
-      change_credentials_link: เปลี่ยนรายละเอียดการเข้าสู่ระบบของฉัน
+      change_credentials_link: เปลี่ยนการเข้าสู่ระบบ
       erase_account_link: ลบบัญชี
       finish_verification: ยืนยันเสร็จสิ้น
       notifications: การแจ้งเตือน
@@ -199,15 +199,15 @@ th:
       ie_title: เว็บไซต์นี้ไม่ได้รับการปรับให้เหมาะสมสำหรับเบราว์เซอร์ของคุณ
     dashboard:
       proposal_header:
-        published: เผยแพร่
+        published: เผยแพร่นโยบาย
         draft: บันทึกเป็นร่าง
-        retired: ถอนออก
+        retired: ถอนนโยบาย
         text_above: ความสำเร็จของนโยบาย
       proposal_totals:
         active_resources: เครื่องมือที่ใช้อยู่
         community: ผู้เข้าร่วมในกระทู้
-        show_proposal: แสดงนโยบายประชาชน
-        preview_proposal: กลับไปที่นโยบายประชาชน
+        show_proposal: แสดงนโยบาย
+        preview_proposal: กลับไปที่นโยบาย
         current_goal: เป้าหมาย
         supports:
           zero: ยังไม่ถึง
@@ -321,11 +321,11 @@ th:
         submit_button: บันทึกนโยบายประชาชน
       show_link: ดูนโยบายประชาชน
     retire_form:
-      title: ถอนนโยบายประชาชน
-      warning: "หากคุณถอนนโยบายประชาชน นโยบายประชาชนจะยังคงยอมรับการสนับสนุน, แต่จะถูกลบออกจากรายการหลักและข้อความจะปรากฏแก่ผู้ใช้ทั้งหมดที่ระบุว่าผู้เขียนเห็นว่านโยบายประชาชนไม่ควรได้รับการสนับสนุนอีกต่อไป"
+      title: ถอนนโยบาย
+      warning: "หากคุณถอนนโยบาย นโยบายจะยังคงยอมรับการสนับสนุน, แต่จะถูกลบออกจากรายการหลักและข้อความจะปรากฏแก่ผู้ใช้ทั้งหมดที่ระบุว่าผู้เขียนเห็นว่านโยบายไม่ควรได้รับการสนับสนุนอีกต่อไป"
       retired_reason_blank: ตัวเลือก
-      retired_explanation_placeholder: อธิบายสั้นๆ ว่าทำไมคุณถึงคิดว่านโยบายประชาชนนี้ไม่ควรได้รับการสนับสนุนมากกว่านี้
-      submit_button: ถอนนโยบายประชาชน
+      retired_explanation_placeholder: อธิบายสั้นๆ ว่าทำไมคุณถึงคิดว่านโยบายนี้ไม่ควรได้รับการสนับสนุนมากกว่านี้
+      submit_button: ถอนนโยบาย
     retire_options:
       duplicated: ซ้ำ
       started: กำลังดำเนินการ
@@ -411,7 +411,7 @@ th:
         guide: "นโยบายประชาชนของคุณถูกเผยแพร่สู่สาธารณะแล้ว!"
         edit: "แชร์เพิ่มเติมในช่องทางต่างๆ เพื่อเพิ่มผู้สนับสนุน"
         view_proposal: กลับไปที่นโยบายประชาชนของฉัน
-      already_supported: คุณได้สนับสนุนนโยบายประชาชนนี้แล้ว คุณสามารถแชร์ผ่าน Facebook หรือ Twitter ได้ด้วยนะ
+      already_supported: คุณได้สนับสนุนนโยบายนี้แล้ว สามารถแชร์ผ่าน Facebook หรือ Twitter ได้ด้วยนะ
       comments:
         one: 1 ความคิดเห็น
         other: "%{count} ความคิดเห็น"
@@ -435,19 +435,19 @@ th:
       selected: "Selected proposal"
     show:
       author_deleted: User deleted
-      code: "รหัสนโยบายประชาชน:"
+      code: "รหัสนโยบาย:"
       comments:
         one: 1 ความคิดเห็น
         other: "%{count} ความคิดเห็น"
         zero: ไม่มีความคิดเห็น
       comments_tab: ความคิดเห็น
       dashboard_proposal_link: Dashboard
-      flag: นโยบายประชาชนนี้ถูกตั้งค่าสถานะว่าไม่เหมาะสมโดยผู้ใช้หลายคน
+      flag: นโยบายนี้ ถูกตั้งค่าสถานะว่าไม่เหมาะสมโดยผู้ใช้หลายคน
       notifications_tab: การแจ้งเตือน
       milestones_tab: หมุดหมายสำคัญ
-      retired_warning: "ผู้เสนอไม่ต้องการให้นโยบายประชาชนนี้ได้รับการสนับสนุนต่อ"
+      retired_warning: "ผู้เสนอไม่ต้องการให้นโยบายนี้ได้รับการสนับสนุนต่อ"
       retired_warning_link_to_explanation: กดที่นี้เพื่ออ่านคำอธิบายก่อนลงเสียงสนับสนุน
-      retired: นโยบาย ถูกถอนโดยผู้เสนอ
+      retired: นโยบายนี้ ถูกถอนโดยผู้เสนอ
       share: แชร์
       no_notifications: "This proposal has no notifications."
       embed_video_title: "Video on %{proposal}"
@@ -459,7 +459,7 @@ th:
         submit_button: บันทึกนโยบายประชาชน
   dashboard:
     menu:
-      my_proposal: ปรับแต่งนโยบายประชาชน
+      my_proposal: ปรับแต่งนโยบายของคุณ
       progress: ความคืบหน้า
       resources: เครื่องมือรณรงค์
       community: ห้องกระทู้
@@ -484,10 +484,10 @@ th:
       success: ความคืบหน้าของอดุมการณ์
       new_action: ใหม่
     index:
-      title: ปรับแต่งนโยบายประชาชน
-      edit_proposal_link: แก้นโยบายประชาชน
-      publish: เผยแพร่นโยบายประชาชน
-      retire: ถอนนโยบายประชาชน
+      title: ปรับแต่งนโยบายของคุณ
+      edit_proposal_link: แก้ไขถอนนโยบาย
+      publish: เผยแพร่ถอนนโยบาย
+      retire: ถอนนโยบาย
     new_request:
       links: Links
     resources:
@@ -820,11 +820,11 @@ th:
     show:
       deleted: Deleted
       deleted_debate: This debate has been deleted
-      deleted_proposal: This proposal has been deleted
+      deleted_proposal: นโยบายนี้ถูกลบไปแล้ว
       deleted_budget_investment: This investment project has been deleted
       proposals: ตลาดนโยบาย
       proposals_status: สถานะ
-      debates: นโยบายประชาชน
+      debates: debates
       budget_investments: Budget investments
       comments: ความคิดเห็น
       actions: ข้อมูลเพิ่มเติม
@@ -836,26 +836,26 @@ th:
           one: 1 นโยบายประชาชน
           other: "%{count} นโยบายประชาชน"
         proposals:
-          one: 1 นโยบายประชาชน
+          one: 1 นโยบายที่เขียน
           other: "%{count} นโยบายที่เขียน"
         budget_investments:
           one: 1 Investment
           other: "%{count} Investments"
         follows:
-          one: 1 ติดตามนโยบาย
-          other: "%{count} นโยบายที่กำลังติดตาม"
-      no_activity: ไม่พบนโยบายประชาชน และ ความคิดเห็นของคุณ
-      no_private_messages: "This user doesn't accept private messages."
+          one: 1 นโยบายที่กําลังติดตาม
+          other: "%{count} นโยบายที่กําลังติดตาม"
+      no_activity: ไม่พบนโยบายที่เขียนและความคิดเห็น
+      no_private_messages: "ผู้ใช้รายนี้ไม่ยอมรับข้อความส่วนตัว"
       private_activity: ผู้ใช้รายนี้ตัดสินใจเก็บรายการกิจกรรมไว้เป็นส่วนตัว
       send_private_message: "ส่งข้อความส่วนตัว"
       delete_alert: "Are you sure you want to delete your investment project? This action can't be undone"
     proposals:
-      retired: "ถอนนโยบายประชาชน"
-      draft: บันทึกเป็นร่าง
-      published: เผยแพร่
-      see: "See proposal"
+      retired: "ถอนนโยบาย"
+      draft: บันทึกนโยบายเป็นร่าง
+      published: เผยแพร่นโยบาย
+      see: "แสดงนโยบาย"
       actions: ข้อมูลเพิ่มเติม
-      retired_help_text: Dashboard ไม่พร้อมใช้งานสำหรับนโยบายประชาชนที่ถอนออก
+      retired_help_text: Dashboard ไม่พร้อมใช้งานสำหรับนโยบายของคุณที่ถอนออก
   votes:
     agree: I agree
     agree_label: "I agree with %{title}"
