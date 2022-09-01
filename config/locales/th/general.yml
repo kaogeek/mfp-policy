@@ -410,7 +410,7 @@ th:
         guide: "นโยบายประชาชนของคุณถูกเผยแพร่สู่สาธารณะแล้ว!"
         edit: "แชร์เพิ่มเติมในช่องทางต่างๆ เพื่อเพิ่มผู้สนับสนุน"
         view_proposal: กลับไปที่นโยบายประชาชนของฉัน
-      already_supported: คุณได้สนับสนุนนโยบายประชาชนนี้แล้ว คุณสามารถแชร์ผ่าน Facebook หรือ Twitter ได้ด้วยนะ
+      already_supported: คุณได้สนับสนุนนโยบายประชาชนนี้แล้ว แบ่งปัน!
       comments:
         one: 1 ความคิดเห็น
         other: "%{count} ความคิดเห็น"
@@ -446,7 +446,7 @@ th:
       milestones_tab: หมุดหมายสำคัญ
       retired_warning: "ผู้เสนอไม่ต้องการให้นโยบายประชาชนนี้ได้รับการสนับสนุนต่อ"
       retired_warning_link_to_explanation: กดที่นี้เพื่ออ่านคำอธิบายก่อนลงเสียงสนับสนุน
-      retired: นโยบาย ถูกถอนโดยผู้เสนอ
+      retired: นโยบายประชาชน ถูกถอนโดยผู้เสนอ
       share: แชร์
       no_notifications: "This proposal has no notifications."
       embed_video_title: "Video on %{proposal}"
@@ -836,13 +836,13 @@ th:
           other: "%{count} นโยบายประชาชน"
         proposals:
           one: 1 นโยบายประชาชน
-          other: "%{count} นโยบายที่เขียน"
+          other: "%{count} นโยบายประชาชน"
         budget_investments:
           one: 1 Investment
           other: "%{count} Investments"
         follows:
           one: 1 ติดตามนโยบาย
-          other: "%{count} นโยบายที่กำลังติดตาม"
+          other: "%{count} ติดตามนโยบาย"
       no_activity: ไม่พบนโยบายประชาชน และ ความคิดเห็นของคุณ
       no_private_messages: "This user doesn't accept private messages."
       private_activity: ผู้ใช้รายนี้ตัดสินใจเก็บรายการกิจกรรมไว้เป็นส่วนตัว
