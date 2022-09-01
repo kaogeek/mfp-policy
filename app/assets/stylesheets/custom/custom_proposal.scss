@@ -160,6 +160,31 @@
             #proposals-list .clear .panel {
               background: $color-background-card;
             }
+            #proposals-list .clear .panel{
+              .row .supports-container .supports .text_above{
+                font-family:"Pracharath";
+                font-size: 18px;
+                color: $color-text-medium;
+              }
+              .row .supports-container .supports .progress{
+                margin-top: 15px;
+              }
+            }
+            @include breakpoint(large down){
+              #proposals-list .clear .panel{
+                .row .supports-container .supports .text_above{
+                  font-size: 14px;
+                }
+              }
+            }
+            @include breakpoint(medium down){
+              #proposals-list .clear .panel{
+                .row .supports-container .supports .text_above{
+                  font-size: 16px;
+                }
+              }
+            }
+
             .proposal {
               .panel {
                 .row {

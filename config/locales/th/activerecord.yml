@@ -262,9 +262,9 @@ th:
         terms_of_service: "Terms of service"
         video_url: "คลิปวิดีโอ"
       proposal/translation:
-        title: "หัวข้อนโยบายประชาชน"
-        description: "ข้อความนโยบายประชาชน"
-        summary: "ข้อสรุปนโยบายประชาชน"
+        title: "หัวข้อนโยบาย"
+        description: "รายละเอียดนโยบาย"
+        summary: "ข้อสรุปนโยบาย"
         retired_explanation: "คำอธิบาย"
       user:
         login: "Email or username"
