@@ -446,7 +446,7 @@ th:
       milestones_tab: หมุดหมายสำคัญ
       retired_warning: "ผู้เสนอไม่ต้องการให้นโยบายประชาชนนี้ได้รับการสนับสนุนต่อ"
       retired_warning_link_to_explanation: กดที่นี้เพื่ออ่านคำอธิบายก่อนลงเสียงสนับสนุน
-      retired: นโยบายประชาชน ถูกถอนโดยผู้เสนอ
+      retired: นโยบาย ถูกถอนโดยผู้เสนอ
       share: แชร์
       no_notifications: "This proposal has no notifications."
       embed_video_title: "Video on %{proposal}"
