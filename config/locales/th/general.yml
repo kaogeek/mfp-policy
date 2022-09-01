@@ -13,7 +13,7 @@ th:
       recommend_debates_to_me: แนะนำข้อเสนอที่น่าสนใจ
       recommend_proposals_to_me: แนะนำนโยบายประชาชนให้ฉัน
       title: จัดการบัญชี
-      user_permission_info: บัญชีของคุณสามารถ...
+      user_permission_info: การมีส่วนร่วมของคุณจะช่วย...
       user_permission_title: การมีส่วนร่วม
       user_permission_verify: ขอบคุณที่ช่วยยืนยันบัญชีผู้ใช้งานนะครับ
       verified_account: ยืนยันบัญชีแล้ว
@@ -63,7 +63,7 @@ th:
       leave_comment: แสดงความคิดเห็นของคุณ
     orders:
       most_voted: โหวตมากที่สุด
-      newest: ใหม่ล่าสุด
+      newest: นโยบายใหม่ล่าสุด
       oldest: เก่าสุด
       most_commented: แสดงความคิดเห็นมากที่สุด
     show:
@@ -202,6 +202,7 @@ th:
         published: เผยแพร่
         draft: บันทึกเป็นร่าง
         retired: ถอนออก
+        text_above: ความสำเร็จของนโยบาย
       proposal_totals:
         active_resources: เครื่องมือที่ใช้อยู่
         community: ผู้เข้าร่วมในกระทู้
@@ -238,7 +239,7 @@ th:
       officing: หน่วยเลือกตั้ง
       help: ช่วยเหลือ
       my_account_link: บัญชีของฉัน
-      my_activity_link: เนื้อหาของฉัน
+      my_activity_link: นโยบายของฉัน
       open_gov: รัฐเปิดเผย
       proposals: หน้าหลัก
       poll_questions: โหวต
@@ -304,9 +305,9 @@ th:
       form:
         submit_button: สร้างนโยบายประชาชน
     created:
-      title: นโยบายประชาชนของคุณพร้อมแล้ว
-      motivation: "คุณต้องการเผยแพร่นโยบายประชาชนทันทีหรือไม่"
-      motivation_2: "<strong>หากคุณต้องการคำแนะนำในการจัดเตรียมสิ่งพิมพ์ ให้ทิ้งนโยบายประชาชนของคุณไว้เป็นฉบับร่าง แล้วเราจะแนะนำคุณ</strong>"
+      title: นโยบายของคุณพร้อมแล้ว
+      motivation: "คุณต้องการเผยแพร่นโยบายของคุณทันทีเลยหรือไม่"
+      motivation_2: "<strong>หากคุณต้องการปรับแก้เพิ่มเติม ให้บันทึกนโยบายของคุณเป็นฉบับร่างไว้ก่อน</strong>"
       publish: ใช่ - เผยแพร่เลย
       dashboard: ไม่ - บันทึกเป็นร่างไว้ก่อน
       preview_title: นโยบายประชาชนของคุณจะมีหน้าตาแบบนี้ เมื่อเผยแพร่ออกไป
@@ -337,7 +338,7 @@ th:
       proposal_video_url_note: คุณสามารถเพิ่มลิงก์ไปสู่คลิปวิดีโอใน YouTube หรือ Vimeo
       tag_category_label: "หมวดหมู่"
       tags_instructions: "หมวดหมู่สามารถเลือกได้สูงสุด 6 หมวด"
-      tags_label: หมวดหมู่
+      tags_label: หมวดหมู่นโย
       tags_placeholder: "ป้อนแท็กที่คุณต้องการใช้ โดยคั่นด้วยเครื่องหมายจุลภาค (',')"
       map_location: "ที่ตั้งแผนที่"
       map_location_instructions: "นำทางแผนที่ไปยังตำแหน่งและวางเครื่องหมาย"
@@ -345,9 +346,9 @@ th:
     index:
       featured_proposals: จุดเด่น
       orders:
-        confidence_score: ความนิยมสูงสุด
+        confidence_score: นโยบายที่พูดถึงมากที่สุด
         created_at: ใหม่ล่าสุด
-        hot_score: คะแนนที่มากที่สุด
+        hot_score: นโยบายที่ถูกโหวตมากที่สุด
         most_commented: แสดงความคิดเห็นมากที่สุด
         relevance: ผลลัพธ์การค้นหา
         archival_date: เก็บถาวร
@@ -360,9 +361,9 @@ th:
           success: "คำแนะนำสำหรับนโยบายประชาชนถูกปิดใช้งานสำหรับบัญชีนี้แล้ว"
           error: "เกิดข้อผิดพลาด. โปรดไปที่หน้า บัญชีของเพจ เพื่อปิดใช้งานคำแนะนำสำหรับนโยบายประชาชนด้วยตนเอง"
       retired_proposals: ถอนนโยบายประชาชน
-      retired_proposals_link: "นโยบายประชาชนที่ถูกถอนโดยผู้เขียน"
-      selected_proposals: การจัดการ
-      selected_proposals_link: ดูนโยบายที่ถูกเลือก
+      retired_proposals_link: "นโยบายที่ถูกถอน"
+      selected_proposals: สถานะนโยบาย
+      selected_proposals_link: นโยบายที่ได้รับการสนับสนุน
       archived_proposals: นโยบายประชาชนที่เก็บถาวร
       proposals_lists: รายการนโยบายประชาชน
       retired_links:
@@ -380,18 +381,17 @@ th:
         one: "คำว่า <strong>'%{search_term}'</strong>"
         other: "คำว่า <strong>'%{search_term}'</strong>"
       select_order_long: "คุณกำลังดูนโยบายประชาชนตาม:"
-      start_proposal: สร้างนโยบายประชาชน
+      start_proposal: สร้างนโยบาย
       title: นโยบายประชาชน
       top_link_proposals: นโยบายประชาชนที่ได้รับการสนับสนุนมากที่สุดตามหมวดหมู่
       section_header:
         icon_alt: ไอคอนนโยบายประชาชน
-        title: นโยบายประชาชน
+        title: ตลาดนโยบาย
         back: ย้อนกลับ
         help: ความช่วยเหลือเกี่ยวกับนโยบายประชาชน
       section_footer:
-        title: นโยบายประชาชน คือ อะไร ?
-        description: นโยบายประชาชน เป็นพื้นที่ให้เสนอนโยบายที่คุณอยากเห็น หรือเลือกสนับสนุนนโยบายของเพื่อนๆที่ถูกใจคุณ
-                     สำหรับนโยบายประชาชนที่ได้รับเสียงสนับสนุนเกินเป้าหมาย ผู้เสนอจะได้มีโอกาสนำเสนอกับทีมนโยบายของพรรคก้าวไกลโดยตรง
+        title: ตลาดนโยบาย คือ อะไร ?
+        description: ตลาดนโยบาย คือ แพลตฟอร์มที่เปรียบเสมือนพื้นที่ที่ให้ทุกคนสามารถเสนอนโยบายต่างๆ รวมถึงร่วมผลักดันนโยบาย ของคนอื่นๆ ที่คุณเห็นด้วยได้ โดยนโยบายที่ได้รับการสนับสนุนตามเป้าหมายจะได้รับโอกาสนำนโยบายนั้นต่อทีมนโยบาย ของพรรคก้าวไกลโดยตรง
     new:
       form:
         submit_button: สร้างนโยบายประชาชน
@@ -400,17 +400,17 @@ th:
       recommendation_three: เพลิดเพลินไปกับพื้นที่นี้และเสียงที่เติมเต็ม มันเป็นของคุณเช่นกัน
       recommendation_two: นโยบายประชาชนหรือความคิดเห็นใดๆ ที่เสนอแนะการกระทำที่ผิดกฎหมายจะถูกลบออก เช่นเดียวกับที่ตั้งใจจะก่อวินาศกรรมพื้นที่อภิปราย อนุญาตให้สิ่งอื่นใด
       recommendations_title: คำแนะนำในการสร้างนโยบายประชาชน
-      start_new: สร้างนโยบายประชาชนใหม่
+      start_new: สร้างนโยบายใหม่
     notice:
-      retired: ถอนนโยบายประชาชนแล้ว
-      published: นโยบายประชาชน ถูกเผยแพร่เรียบร้อย
+      retired: ถอนนโยบายแล้ว
+      published: นโยบาย ถูกเผยแพร่เรียบร้อย
     proposal:
       created: "คุณได้สร้างนโยบายเรียบร้อยแล้ว!"
       share:
         guide: "นโยบายประชาชนของคุณถูกเผยแพร่สู่สาธารณะแล้ว!"
         edit: "แชร์เพิ่มเติมในช่องทางต่างๆ เพื่อเพิ่มผู้สนับสนุน"
         view_proposal: กลับไปที่นโยบายประชาชนของฉัน
-      already_supported: คุณได้สนับสนุนนโยบายประชาชนนี้แล้ว แบ่งปัน!
+      already_supported: คุณได้สนับสนุนนโยบายประชาชนนี้แล้ว คุณสามารถแชร์ผ่าน Facebook หรือ Twitter ได้ด้วยนะ
       comments:
         one: 1 ความคิดเห็น
         other: "%{count} ความคิดเห็น"
@@ -446,7 +446,7 @@ th:
       milestones_tab: หมุดหมายสำคัญ
       retired_warning: "ผู้เสนอไม่ต้องการให้นโยบายประชาชนนี้ได้รับการสนับสนุนต่อ"
       retired_warning_link_to_explanation: กดที่นี้เพื่ออ่านคำอธิบายก่อนลงเสียงสนับสนุน
-      retired: นโยบายประชาชน ถูกถอนโดยผู้เสนอ
+      retired: นโยบาย ถูกถอนโดยผู้เสนอ
       share: แชร์
       no_notifications: "This proposal has no notifications."
       embed_video_title: "Video on %{proposal}"
@@ -691,7 +691,7 @@ th:
       date_4: "ปีที่แล้ว"
       date_5: "กำหนดเอง"
       from: "เริ่ม"
-      general: "ค้นหา"
+      general: "ค้นหานโยบาย"
       goal: "By SDG"
       goal_blank: "เลือกเป้าหมาย"
       search: "ค้นหา"
@@ -746,7 +746,7 @@ th:
         message: "You are seeing %{limit} of %{count} proposals containing the term '%{query}'"
         see_all: "แสดงทั้งหมด"
     tags_cloud:
-      tags: หมวดหมู่
+      tags: หมวดหมู่นโยบาย
       districts: "Districts"
       districts_list: "Districts list"
       categories: "Categories"
@@ -779,7 +779,7 @@ th:
         one: "1 language in use"
         other: "%{count} languages in use"
     optional: "Optional fields"
-    required: "เขียนพรรคก้าวไกลที่คุณอยากเห็น!"
+    required: "นำเสนอนโยบายของคุณ"
   social:
     facebook: "%{org} Facebook"
     twitter: "%{org} Twitter"
@@ -821,7 +821,7 @@ th:
       deleted_debate: This debate has been deleted
       deleted_proposal: This proposal has been deleted
       deleted_budget_investment: This investment project has been deleted
-      proposals: นโยบายประชาชน
+      proposals: ตลาดนโยบาย
       proposals_status: สถานะ
       debates: นโยบายประชาชน
       budget_investments: Budget investments
@@ -836,13 +836,13 @@ th:
           other: "%{count} นโยบายประชาชน"
         proposals:
           one: 1 นโยบายประชาชน
-          other: "%{count} นโยบายประชาชน"
+          other: "%{count} นโยบายที่เขียน"
         budget_investments:
           one: 1 Investment
           other: "%{count} Investments"
         follows:
           one: 1 ติดตามนโยบาย
-          other: "%{count} ติดตามนโยบาย"
+          other: "%{count} นโยบายที่กำลังติดตาม"
       no_activity: ไม่พบนโยบายประชาชน และ ความคิดเห็นของคุณ
       no_private_messages: "This user doesn't accept private messages."
       private_activity: ผู้ใช้รายนี้ตัดสินใจเก็บรายการกิจกรรมไว้เป็นส่วนตัว
