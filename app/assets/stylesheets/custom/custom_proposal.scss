@@ -2,14 +2,6 @@
   &.proposals-page {
     background-color: $color-background-content;
 
-    div[class*='callout'] {
-      background-color: $color-background-alert;
-      color: $color-text-dark;
-      p {
-        font-size: rem-calc(14);
-      }
-    }
-
     .social-share-full {
       .social-share-button a {
         transition: ease-in-out 300ms;
@@ -236,6 +228,16 @@
                 }
               }
 
+              .supports-container {
+                .participation-not-allowed {
+                  background-color: $color-background-alert;
+                  color: $color-text-dark;
+                  a {
+                    color: $brand !important;
+                  }
+                }
+              }
+
               @include breakpoint(small down) {
                 .with-image {
                   .row {
@@ -270,14 +272,6 @@
                   .supports-container {
                     margin-left: -10px;
                   }
-                }
-              }
-
-              .participation-not-allowed {
-                background-color: $color-background-alert;
-                color: $color-text-dark;
-                a {
-                  color: $brand !important;
                 }
               }
             }
@@ -317,8 +311,8 @@
             }
           }
         }
-        @include breakpoint(small down){
-          .proposals-page .proposal-bottom .margin-bottom .button-custom{
+        @include breakpoint(small down) {
+          .proposals-page .proposal-bottom .margin-bottom .button-custom {
             display: none;
           }
         }
@@ -385,6 +379,12 @@
           background-color: $color-background-card;
         }
       }
+    }
+  }
+
+  .poll-question-answers {
+    .answered {
+      color: $color-text-button-dark;
     }
   }
 }
