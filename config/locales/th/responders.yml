@@ -10,7 +10,7 @@ th:
         poll_question_answer: "สร้างคำตอบสำหรับโพลสำเร็จ"
         poll_question_answer_video: "อัพโหลดวิดิโอสำเร็จ"
         poll_question_answer_image: "อัพโหลดรูปสำเร็จ"
-        proposal: "นโยบายประชาชนถูกร่างขึ้นมาเรียบร้อย"
+        proposal: "นโยบายถูกร่างขึ้นมาเรียบร้อย"
         proposal_notification: "ข้อความของคุณถูกส่งแจ้งเตือนไปเรียบร้อยแล้ว"
         budget_investment: "Budget Investment created successfully."
         signature_sheet: "Signature sheet created successfully"
