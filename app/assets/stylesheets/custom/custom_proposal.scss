@@ -101,6 +101,11 @@
         }
       }
       main {
+        .search-results-summary{
+          .back{
+            margin-bottom: 1.5rem;
+          }
+        }
         .help-header .row {
           margin-left: 52px;
 
@@ -335,6 +340,9 @@
               }
             }
           }
+        }
+        .proposals-page .proposal-bottom .margin-bottom .text-margin{
+          margin-top: 1rem;
         }
         @include breakpoint(small down) {
           .proposals-page .proposal-bottom .margin-bottom .button-custom {

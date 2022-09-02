@@ -25,7 +25,7 @@ th:
         poll: "แก้ไขโพลสำเร็จ"
         poll_booth: "แก้ไขบูธสำเร็จ"
         active_poll: "แก้ไขคำอธิบายโพลสำเร็จ"
-        proposal: "แก้ไขนโยบายประชาชนเรียบร้อยแล้ว"
+        proposal: "แก้ไขนโยบายเรียบร้อยแล้ว"
         budget_investment: "Investment project updated successfully."
         topic: "แก้ไขเนื้อหาเรียบร้อยแล้ว"
         valuator_group: "Valuator group updated successfully"
