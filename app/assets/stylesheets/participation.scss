@@ -274,8 +274,14 @@
   }
 
   .video-link {
-    background: $highlight-soft;
-    border: 1px solid $highlight;
+    /**
+      Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+    */
+    // background: $highlight-soft;
+    // border: 1px solid $highlight;
+    background-color: $color-background-card;
+    border: none;
     display: block;
     margin: $line-height / 2 0;
     padding: $line-height / 2;

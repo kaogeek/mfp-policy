@@ -27,10 +27,6 @@
 </div>
 <script>
 $(document).ready(() => {
-  if(!window.location.pathname.includes('/proposals')) {
-    $('.moderation-actions-title, .moderation-actions-desc').remove();
-    const contents = $(".custom-moderation-actions").contents();
-    $(".custom-moderation-actions").replaceWith(contents);
-  }
+  $('.reply-wrapper').find(".moderation-actions").css('display', 'inline-block');
 })
 </script>

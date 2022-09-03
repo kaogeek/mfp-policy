@@ -5,7 +5,7 @@ th:
         notice: "สร้าง %{resource_name} สำเร็จแล้ว"
         debate: "สร้างนโยบายประชาชนสำเร็จแล้ว"
         direct_message: "ข้อความของคุณถูกส่งเรียบร้อยแล้ว"
-        poll: "สร้างโพลสำเร็จ"
+        poll: "สร้างแบบสำรวจสำเร็จ"
         poll_booth: "สร้างบูธสำเร็จ"
         poll_question_answer: "สร้างคำตอบสำหรับโพลสำเร็จ"
         poll_question_answer_video: "อัพโหลดวิดิโอสำเร็จ"
