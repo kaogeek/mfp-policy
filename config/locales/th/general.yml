@@ -167,7 +167,7 @@ th:
     not_saved: "ข้อมูล %{resource} ไม่ถูกต้อง <br>โปรดตรวจสอบช่องที่ทำเครื่องหมายไว้เพื่อทราบวิธีแก้ไข:"
     policy: ข้อตกลงความเป็นส่วนตัว
     banner: แบนเนอร์
-    proposal: นโยบายประชาชน
+    proposal: นโยบาย
     proposal_notification: การแจ้งเตือน
     budget/investment: การลงทุน
     budget/group: กลุ่มงบประมาณ
@@ -382,7 +382,7 @@ th:
         other: "คำว่า <strong>'%{search_term}'</strong>"
       select_order_long: "คุณกำลังดูนโยบายประชาชนตาม:"
       start_proposal: สร้างนโยบาย
-      title: นโยบายประชาชน
+      title: นโยบาย
       top_link_proposals: นโยบายประชาชนที่ได้รับการสนับสนุนมากที่สุดตามหมวดหมู่
       section_header:
         icon_alt: ไอคอนนโยบายประชาชน
@@ -660,7 +660,7 @@ th:
         title: "คำถาม"
         most_voted_answer: "คำตอบที่ได้รับการโหวตมากที่สุด: "
     poll_header:
-      back_to_proposal: กลับไปที่นโยบายประชาชน
+      back_to_proposal: กลับไปที่นโยบาย
   poll_questions:
     show:
       vote_answer: "โหวต %{answer}"
@@ -792,7 +792,7 @@ th:
     index:
       visits: Visits
       debates: Debates
-      proposals: นโยบายประชาชน
+      proposals: นโยบาย
       comments: Comments
       proposal_votes: Votes on proposals
       debate_votes: Votes on debates
@@ -928,7 +928,7 @@ th:
     score_positive: "ใช่"
     score_negative: "ไม่ใช่"
     content_title:
-      proposal: "นโยบายประชาชน"
+      proposal: "นโยบาย"
       debate: "นโยบายประชาชน"
       budget_investment: "งบประมาณการลงทุน"
   admin/widget:
