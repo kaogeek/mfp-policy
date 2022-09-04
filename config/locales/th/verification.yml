@@ -22,13 +22,13 @@ th:
           # TODO
           success: ขอบคุณสำหรับการร้องขอของคุณ <b>maximum security code (only required for the final votes)</b>. In a few days we will send it to the address featuring in the data we have on file. Please remember that, if you prefer, you can collect your code from any of the Citizen Support Offices.
       edit:
-        see_all: ดูนโยบายประชาชน
+        see_all: ดูนโยบายของคุณ
         title: จดหมายร้องขอ
       errors:
         incorrect_code: รหัสยืนยันไม่ถูกต้อง
       new:
         explanation: "ในการลงคะแนนสำหรับโครงการงบประมาณคุณสามารถ:"
-        go_to_index: ดูนโยบายประชาชน
+        go_to_index: ดูนโยบายของคุณ
         office: ตรวจสอบกับสำนักงานสนับสนุนประชาชน
         send_letter: ส่งจดหมายพร้อมรหัส
         title: ยินดีด้วย!

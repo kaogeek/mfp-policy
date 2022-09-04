@@ -1,5 +1,7 @@
 <div class="search-results-summary">
+  <%= back_link_to proposals_path, t("proposals.index.section_header.back_custom") %>
   <% if search_terms || advanced_search_terms %>
+  
     <h2><%= t("shared.search_results") %></h2>
     <p>
       <%= page_entries_info results %>

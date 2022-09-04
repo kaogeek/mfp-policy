@@ -2227,6 +2227,9 @@ table {
         color: $text-light;
         display: inline-block;
       }
+      .moderation-actions-title, .moderation-actions-desc {
+        display: none;
+      }
     }
 
     .comment-form form {
@@ -2695,8 +2698,14 @@ table {
   }
 
   .document-link {
-    background: $highlight-soft;
-    border: 2px solid $highlight;
+    /**
+      Override class for MFP-POLICY
+      @author Panuwat Chaiwongthon
+    */
+    // background: $highlight-soft;
+    // border: 2px solid $highlight;
+    background-color: $color-background-card;
+    border: none;
     border-radius: rem-calc(5);
     display: block;
     margin: $line-height / 2 0;

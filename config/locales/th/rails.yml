@@ -98,10 +98,10 @@ th:
     format: "%{attribute} %{message}"
     messages:
       accepted: ต้องยอมรับ
-      blank: ว่างเปล่าไม่ได้
+      blank: กรุณากรอกข้อมูล
       present: ต้องว่าง
       confirmation: ไม่ตรงกัน %{attribute}
-      empty: ว่างเปล่าไม่ได้
+      empty: กรุณากรอกข้อมูล
       equal_to: ต้องเท่ากับ %{count}
       even: จะต้องเท่ากัน
       exclusion: สงวนไว้
