@@ -346,9 +346,9 @@ th:
     index:
       featured_proposals: จุดเด่น
       orders:
-        confidence_score: ที่พูดถึงมากที่สุด
+        confidence_score: ถูกสนับสนุนมากที่สุด
         created_at: ใหม่ล่าสุด
-        hot_score: ที่ถูกโหวตมากที่สุด
+        hot_score: กำลังมาแรง
         most_commented: แสดงความคิดเห็นมากที่สุด
         relevance: ผลลัพธ์การค้นหา
         archival_date: เก็บถาวร
