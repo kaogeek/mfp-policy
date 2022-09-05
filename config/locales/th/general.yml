@@ -1,7 +1,7 @@
 th:
   account:
     show:
-      change_credentials_link: เปลี่ยนการเข้าสู่ระบบ
+      change_credentials_link: เปลี่ยนรายละเอียดการเข้าสู่ระบบ
       erase_account_link: ลบบัญชี
       finish_verification: ยืนยันเสร็จสิ้น
       notifications: การแจ้งเตือน
@@ -84,9 +84,9 @@ th:
         other: "%{count} ความคิดเห็น"
         zero: ไม่มีความคิดเห็น
       votes:
-        one: 1 คะแนน
-        other: "%{count} คะแนน"
-        zero: 0 คะแนน
+        one: 1 โหวต
+        other: "%{count} โหวต"
+        zero: 0 โหวต
     edit:
       editing: แก้ไขข้อเสนอ
       form:
