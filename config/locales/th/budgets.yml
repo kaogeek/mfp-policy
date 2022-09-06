@@ -215,7 +215,7 @@ th:
       no_winner_investments: "ไม่มีโรงการการลงทุนที่ชนะการโหวต"
       filters:
         status:
-          label: "ถานะปัจจุบันของโครงการ"
+          label: "สถานะปัจจุบันของโครงการ"
           all: "ทั้งหมด (%{count})"
         milestone_tag:
           label: "ติดแท็กเหตุการณ์สำคัญ"
