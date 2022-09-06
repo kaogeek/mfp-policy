@@ -20,7 +20,7 @@ CKEDITOR.editorConfig = function (config) {
   config.allowedContent = true;
   config.format_tags = 'p;h2;h3';
 
-  config.removePlugins = 'balloonpanel,balloontoolbar,copyformatting,scayt,wsc';
+  config.removePlugins = 'elementspath,balloonpanel,balloontoolbar,copyformatting,scayt,wsc';
 
   // Rails CSRF token
   config.filebrowserParams = function () {
