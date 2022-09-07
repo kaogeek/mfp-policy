@@ -745,6 +745,7 @@ body > header,
     margin-right: 0;
 
     a img {
+      padding: rem-calc(10);
       height: rem-calc(48);
       margin: 0;
       width: auto;
