@@ -99,6 +99,13 @@
           .title {
           display: none;
         }
+        .proposal-form .required-fields .translatable-fields div{
+          #cke_proposal_translations_attributes_0_description{
+            .cke_inner .cke_bottom .cke_path{
+              display: none;
+            }
+          }
+        }
       }
       main {
         .search-results-summary{
