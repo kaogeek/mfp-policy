@@ -3,8 +3,8 @@ th:
     sidebar:
       title: ห้องกระทู้ สำหรับนโยบาย
       description:
-        proposal: มาร่วมพูดคุยแลกเปลี่ยนความคิดเห็นกับ
-                  เพื่อนๆกันเพิ่มเติมเกี่ยวกับนโยบายนี้
+        proposal: มาร่วมพูดคุยและแลกเปลี่ยนความ
+                  คิดเห็นกับเพื่อนๆ
         investment: Participate in the user community of this investment.
       button_to_access: เข้าร่วมห้องกระทู้
     show:
