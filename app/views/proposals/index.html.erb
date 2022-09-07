@@ -60,13 +60,13 @@
       -->
 
       <% unless params[:selected].present? %>
-      <% if @proposals.any? %>
+      <!-- <% if @proposals.any? %>
+      <% end %> -->
         <div class="show-for-small-only">
           <%= link_to t("proposals.index.start_proposal"),
                       new_proposal_path,
                       class: "button expanded button-custom" %>
         </div>
-      <% end %>
         <div class="row">
           <div class="small-12 column">
             <%= render "view_mode" %>

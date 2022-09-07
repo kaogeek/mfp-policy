@@ -337,7 +337,7 @@ th:
       proposal_summary_note: "(สูงสุด 200 ตัวอักษร)"
       proposal_video_url_note: คุณสามารถเพิ่มลิงก์ไปสู่คลิปวิดีโอใน YouTube หรือ Vimeo
       tag_category_label: "หมวดหมู่"
-      tags_instructions: "หมวดหมู่สามารถเลือกได้สูงสุด 6 หมวด"
+      tags_instructions: "สามารถเลือกได้สูงสุด 6 หมวด"
       tags_label: หมวดหมู่นโยบาย
       tags_placeholder: "ป้อนแท็กที่คุณต้องการใช้ โดยคั่นด้วยเครื่องหมายจุลภาค (',')"
       map_location: "ที่ตั้งแผนที่"
@@ -381,7 +381,7 @@ th:
         one: "คำว่า <strong>'%{search_term}'</strong>"
         other: "คำว่า <strong>'%{search_term}'</strong>"
       select_order_long: "คุณกำลังดูนโยบายประชาชนตาม:"
-      start_proposal: สร้างนโยบาย
+      start_proposal: เสนอนโยบาย
       title: นโยบาย
       top_link_proposals: นโยบายประชาชนที่ได้รับการสนับสนุนมากที่สุดตามหมวดหมู่
       section_header:
@@ -407,11 +407,11 @@ th:
       retired: ถอนนโยบายแล้ว
       published: นโยบาย ถูกเผยแพร่เรียบร้อย
     proposal:
-      created: "คุณได้สร้างนโยบายเรียบร้อยแล้ว!"
+      created: "คุณได้เสนอนโยบายเรียบร้อยแล้ว!"
       share:
-        guide: "นโยบายประชาชนของคุณถูกเผยแพร่สู่สาธารณะแล้ว!"
+        guide: "นโยบายของคุณถูกเผยแพร่ไปสู่ตลาดนโยบาย!"
         edit: "แชร์เพิ่มเติมในช่องทางต่างๆ เพื่อเพิ่มผู้สนับสนุน"
-        view_proposal: กลับไปที่นโยบายประชาชนของฉัน
+        view_proposal: กลับไปที่นโยบายของฉัน
       already_supported: คุณ ได้สนับสนุน นโยบายนี้แล้ว แชร์เลย
       comments:
         one: 1 ความคิดเห็น
@@ -912,7 +912,7 @@ th:
       user_permission_verify_my_account: ยืนยันบัญชีของฉัน
   invisible_captcha:
     sentence_for_humans: "หากคุณเป็นมนุษย์อย่าสนใจฟิลด์นี้"
-    timestamp_error_message: "ขออภัย มันเร็วเกินไป! กรุณาส่งใหม่"
+    timestamp_error_message: "ขออภัย กรุณาเสนอนโยบายของคุณอีกครั้ง"
   related_content:
     title: "เนื้อหาที่เกี่ยวข้อง"
     add: "เพิ่มเนื้อหาที่เกี่ยวข้อง"
