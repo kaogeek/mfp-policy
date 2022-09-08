@@ -2228,7 +2228,8 @@ table {
         color: $text-light;
         display: inline-block;
       }
-      .moderation-actions-title, .moderation-actions-desc {
+      .moderation-actions-title,
+      .moderation-actions-desc {
         display: none;
       }
     }
@@ -3148,7 +3149,18 @@ label:not([for*='search_text']):not(.checkbox-label) {
     }
   }
 
-  .social-button-youtube-wrapper,
+  .social-button-youtube-wrapper {
+    cursor: pointer;
+    width: rem-calc(36);
+    background-image: image-url('youtube-logo.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    ::before {
+      content: '';
+    }
+  }
+
   .social-button-instagram-wrapper {
     display: none;
   }
