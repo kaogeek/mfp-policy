@@ -126,7 +126,7 @@
           <div class="sidebar-divider"></div>
           <h1 class="sidebar-title"><%= t("shared.tags_cloud.tags") %></h1>
           <br>
-          <%# <a href="/proposals?search=เศรษฐกิจ">เศรษฐกิจ</a>
+          <a href="/proposals?search=เศรษฐกิจ">เศรษฐกิจ</a>
           <a href="/proposals?search=เกษตร">เกษตร</a>
           <a href="/proposals?search=พลังงาน">พลังงาน</a>
           <a href="/proposals?search=สาธารณสุข">สาธารณสุข</a>
@@ -145,42 +145,10 @@
           <a href="/proposals?search=กองทัพ">กองทัพ</a>
           <a href="/proposals?search=ตำรวจ">ตำรวจ</a>
           <a href="/proposals?search=วัฒนธรรม">วัฒนธรรม</a>
-          <a href="/proposals?search=การต่างประเทศ">การต่างประเทศ</a> %>
-          </div>
+          <a href="/proposals?search=การต่างประเทศ">การต่างประเทศ</a> 
+        </div>
           <%= render "proposals_lists" %>
       </aside>
     </div>
- <script>
-    $(document).ready(() => {
-        const categories = [
-        "เศรษฐกิจ",
-        "เกษตร",
-        "พลังงาน",
-        "สาธารณสุข",
-        "การศึกษา",
-        "คมนาคม",
-        "สิ่งแวดล้อม",
-        "แรงงาน",
-        "สวัสดิการ",
-        "ระบบราชการ",
-        "การทุจริต",
-        "ดิจิทัล",
-        "ประชาธิปไตย",
-        "สิทธิมนุษยชน",
-        "ความเท่าเทียมทางเพศ",
-        "ความปลอดภัย",
-        "กองทัพ",
-        "ตำรวจ",
-        "วัฒนธรรม",
-        "การต่างประเทศ",
-        ];
-
-       const prepareHTML = categories.map((category) =>
-          `<a href="/proposals?search=${category.replace(/\s/, '+')}">${category}</a>`
-        );
-        $('.tag-cloud').append(prepareHTML)
-
-      });
- </script>
   </div>
 </main>
