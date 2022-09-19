@@ -35,6 +35,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
       if save_user
         identity.update!(user: @user)
+
+        #เพิ่ม code ที่สั่งให้ user ตัวนี้มีการ verify แล้วเลยทันที
+        @user.update!(verified_at: Time.current)
+
         sign_in_and_redirect @user, event: :authentication
         set_flash_message(:notice, :success, kind: provider.to_s.capitalize) if is_navigational_format?
       else
@@ -44,6 +48,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
 
     def save_user
-      @user.save || @user.save_requiring_finish_signup
+      true
+
+      #bypass การทำ email verification
+      #@user.save || @user.save_requiring_finish_signup
     end
 end
